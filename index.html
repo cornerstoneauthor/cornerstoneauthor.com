@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Echoes of the Kingdom</title>
+  <meta name="description" content="Explore the world of Elarion through novels, maps, chronicles, and worldbuilding.">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="./">ECHOES OF THE KINGDOM</a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">MENU</button>
+    <nav id="site-nav" class="site-nav" aria-label="Main navigation">
+      <a href="read/">READ</a>
+      <a href="world/">WORLD</a>
+      <a href="chronicle/">CHRONICLE</a>
+      <a href="map/">MAP</a>
+      <a href="about/">ABOUT</a>
+      <a href="join/">JOIN</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <p class="eyebrow">THE FIRST CONTINENT · ELARION</p>
+        <h1>ECHOES OF THE KINGDOM</h1>
+        <p class="hero-copy">
+          A world fractured by crowns.<br>
+          A forgotten Echo calling humanity home.
+        </p>
+        <a class="button" href="read/">BEGIN READING</a>
+      </div>
+    </section>
+
+    <section class="intro section">
+      <p class="eyebrow">BOOK ONE</p>
+      <h2>THE AGE OF FRACTURE</h2>
+      <div class="ornament" aria-hidden="true">◇ ◇ ◇</div>
+      <p>History remembers kingdoms. Legends remember heroes. But what if both have forgotten the truth?</p>
+      <p>Enter Elarion. Follow the Echo. Uncover the forgotten truth behind human history.</p>
+      <a class="text-link" href="read/">READ THE STORY →</a>
+    </section>
+
+    <section class="world section">
+      <p class="eyebrow">THE WORLD</p>
+      <h2>A WORLD SHAPED BY MEMORY</h2>
+      <p>Explore civilizations, divided kingdoms, forgotten roads, and the histories buried beneath the ruins of Elarion.</p>
+      <a class="button secondary" href="world/">EXPLORE THE WORLD</a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2026 Michael He · Echoes of the Kingdom</p>
+  </footer>
+
+  <script>
+    const button = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('.site-nav');
+    button.addEventListener('click', () => {
+      const open = button.getAttribute('aria-expanded') === 'true';
+      button.setAttribute('aria-expanded', String(!open));
+      nav.classList.toggle('open');
+    });
+  </script>
+</body>
+</html>
