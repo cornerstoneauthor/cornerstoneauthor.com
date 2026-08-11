@@ -1,0 +1,2563 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>The Echo | Echoes of the Kingdom</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&amp;family=Cormorant+Garamond:wght@400;500;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: #050607;
+      color: #d8c49a;
+      font-family: Georgia, "Times New Roman", serif;
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* NAVIGATION */
+
+    .site-header {
+      min-height: 88px;
+      padding: 0 42px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 40px;
+      border-bottom: 1px solid rgba(216, 196, 154, 0.16);
+      background: #07090c;
+    }
+
+    .brand {
+      font-size: 20px;
+      letter-spacing: 2px;
+      white-space: nowrap;
+    }
+
+    .site-nav {
+      display: flex;
+      align-items: center;
+      gap: 38px;
+    }
+
+    .site-nav a {
+      color: #bdb6aa;
+      font-size: 15px;
+      letter-spacing: 1.5px;
+      transition: color 0.2s ease;
+    }
+
+    .site-nav a:hover,
+    .site-nav .active {
+      color: #d8c49a;
+    }
+
+    /* HERO */
+
+    .lore-hero {
+      min-height: 680px;
+      padding: 80px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+
+      background:
+    radial-gradient(
+        circle at 72% 22%,
+        rgba(228,199,138,.18),
+        transparent 32%
+    ),
+    linear-gradient(
+        to bottom,
+        rgba(8,11,15,.18),
+        rgba(3,4,6,.78)
+    ),
+     url("../../images/hero-echo.png");
+
+ background-size: cover;
+ background-position: center center;
+ background-repeat: no-repeat;
+    }
+
+    .lore-hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(
+          90deg,
+          rgba(0, 0, 0, 0.4),
+          transparent 50%,
+          rgba(0, 0, 0, 0.12)
+        ),
+        linear-gradient(
+          to top,
+          rgba(4, 5, 7, 0.9),
+          transparent 55%
+        );
+    }
+
+    .hero-content {
+      width: min(920px, 92%);
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-label {
+      margin-bottom: 24px;
+      color: #aa9875;
+      font-size: 14px;
+      letter-spacing: 4px;
+    }
+
+    .hero-title {
+      margin-bottom: 30px;
+      font-size: clamp(54px, 8vw, 108px);
+      font-weight: 400;
+      letter-spacing: 4px;
+      line-height: 0.95;
+    }
+
+    .hero-text {
+      margin-bottom: 38px;
+      color: #e5ddd0;
+      font-size: clamp(16px, 2vw, 22px);
+      letter-spacing: 1.5px;
+      line-height: 1.8;
+    }
+/* ===========================
+   Archives Introduction
+=========================== */
+
+.archives-intro{
+
+    max-width:760px;
+
+    margin:70px auto 90px;
+
+    text-align:center;
+
+}
+
+.archives-intro p{
+
+    margin:0 0 28px;
+
+    font-family:"Cormorant Garamond", serif;
+
+    font-size:26px;
+
+    line-height:1.8;
+
+    color:rgba(245,239,226,.82);
+
+}
+
+.archives-intro-lead{
+
+    font-size:34px !important;
+
+    color:#D4B06A !important;
+
+    margin-bottom:36px !important;
+
+}
+
+.archives-intro-end{
+
+    margin-top:46px !important;
+
+    font-style:italic;
+
+    color:#E7D7B0 !important;
+
+}
+    .main-button {
+      display: inline-block;
+      padding: 17px 42px;
+      border: 1px solid rgba(216, 196, 154, 0.75);
+      color: #d8c49a;
+      font-size: 14px;
+      letter-spacing: 2px;
+      transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
+    }
+
+    .main-button:hover {
+      background: #d8c49a;
+      color: #080a0d;
+      transform: translateY(-2px);
+    }
+
+    /* BOOK INTRODUCTION */
+
+    .book-section {
+      padding: 110px 24px;
+      background: #050607;
+      border-bottom: 1px solid rgba(216, 196, 154, 0.16);
+    }
+
+    .book-content {
+      width: min(900px, 92%);
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .section-label {
+      margin-bottom: 18px;
+      color: #aa9875;
+      font-size: 13px;
+      letter-spacing: 4px;
+    }
+
+    .book-title,
+    .chapters-title {
+      font-size: clamp(36px, 5vw, 62px);
+      font-weight: 400;
+      letter-spacing: 2px;
+      line-height: 1.15;
+    }
+
+    .book-subtitle {
+      margin-top: 14px;
+      color: #aa9875;
+      font-size: 17px;
+      letter-spacing: 3px;
+    }
+
+    .divider {
+      width: 100px;
+      height: 1px;
+      margin: 42px auto;
+      background: rgba(216, 196, 154, 0.45);
+    }
+
+    .book-description {
+      max-width: 720px;
+      margin: 0 auto;
+      color: #c9c1b4;
+      font-size: 17px;
+      line-height: 1.8;
+    }
+
+    .book-description p {
+      margin-bottom: 26px;
+    }
+
+    /* CHAPTERS */
+
+    .chapters-section {
+      padding: 110px 24px 130px;
+      background: #08090b;
+    }
+
+    .chapters-content {
+      width: min(960px, 92%);
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .chapter-list {
+      margin-top: 58px;
+      display: grid;
+      gap: 18px;
+    }
+
+    .chapter-card {
+      min-height: 112px;
+      padding: 26px 30px;
+      display: grid;
+      grid-template-columns: 180px 1fr auto;
+      align-items: center;
+      gap: 28px;
+      border: 1px solid rgba(216, 196, 154, 0.22);
+      background: #0c0e11;
+      text-align: left;
+      transition:
+        border-color 0.2s ease,
+        background 0.2s ease,
+        transform 0.2s ease;
+    }
+
+    .chapter-card:hover {
+      transform: translateY(-2px);
+      border-color: rgba(216, 196, 154, 0.7);
+      background: #111419;
+    }
+
+    .chapter-number {
+      color: #9f8e6c;
+      font-size: 13px;
+      letter-spacing: 2px;
+    }
+
+    .chapter-name {
+      color: #d8c49a;
+      font-size: clamp(20px, 3vw, 29px);
+      letter-spacing: 1px;
+    }
+
+    .chapter-action {
+      color: #b6a37f;
+      font-size: 12px;
+      letter-spacing: 2px;
+      white-space: nowrap;
+    }
+
+   /* ===========================
+   Cornerstone Footer
+=========================== */
+
+.site-footer{
+    margin-top:120px;
+    padding:72px 24px 58px;
+    border-top:1px solid rgba(212,176,106,0.22);
+    text-align:center;
+}
+
+.footer-brand{
+
+    font-family:"Cinzel", serif;
+
+    font-size:44px;
+
+    font-weight:500;
+
+    letter-spacing:.18em;
+
+    color:#D4B06A;
+
+    margin-bottom:10px;
+
+}
+
+.footer-tagline{
+    font-family:"Cormorant Garamond", serif;
+    font-style:italic;
+    font-size:18px;
+    color:#D8C8A8;
+    margin-bottom:32px;
+}
+
+.footer-studio{
+    font-family:Inter,sans-serif;
+    font-size:12px;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    color:rgba(245,239,226,.55);
+    margin-bottom:12px;
+}
+
+.footer-copyright{
+    font-family:Inter,sans-serif;
+    font-size:12px;
+    color:rgba(245,239,226,.35);
+}
+
+    /* MOBILE */
+
+    @media (max-width: 850px) {
+      .site-header {
+        padding: 24px;
+        flex-direction: column;
+      }
+
+      .site-nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 18px 25px;
+      }
+
+      .lore-hero {
+        min-height: 590px;
+      }
+
+      .chapter-card {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        padding: 24px;
+      }
+
+      .chapter-action {
+        margin-top: 8px;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .brand {
+        font-size: 16px;
+      }
+
+      .site-nav a {
+        font-size: 12px;
+      }
+
+      .hero-title {
+        font-size: 52px;
+      }
+
+      .book-section,
+      .chapters-section {
+        padding-top: 80px;
+        padding-bottom: 90px;
+      }
+    }
+    /* Chapter section refinement */
+
+.chapters-section {
+  background:
+    linear-gradient(
+      180deg,
+      #090b10 0%,
+      #07090d 55%,
+      #050607 100%
+    );
+}
+
+.chapter-list {
+  gap: 30px;
+}
+
+.chapter-card {
+  border-color: rgba(216, 196, 154, 0.26);
+  background: rgba(17, 20, 27, 0.72);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.02),
+    0 12px 35px rgba(0, 0, 0, 0.18);
+}
+
+.chapter-name {
+  font-weight: 500;
+}
+
+.chapter-action {
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.chapter-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(216, 196, 154, 0.42);
+  background: rgba(23, 27, 36, 0.9);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.035),
+    0 18px 44px rgba(0, 0, 0, 0.3);
+}
+
+.chapter-card:hover .chapter-action {
+  color: #e5d2a8;
+  transform: translateX(5px);
+}
+/* ===========================
+   Archive Cards
+=========================== */
+
+.archive-grid{
+
+    max-width:1200px;
+
+    margin:120px auto 160px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:34px;
+
+}
+
+.archive-card{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:48px 56px;
+
+    border:1px solid rgba(216,196,154,.22);
+
+    background:rgba(15,18,24,.55);
+
+    text-decoration:none;
+
+    transition:all .28s ease;
+
+}
+
+.archive-card:hover{
+
+    transform:translateY(-4px);
+
+    border-color:rgba(216,196,154,.75);
+
+    background:rgba(23,27,36,.92);
+
+    box-shadow:
+        inset 0 1px rgba(255,255,255,.04),
+        0 20px 48px rgba(0,0,0,.35);
+
+}
+
+.archive-label{
+
+    display:block;
+
+    margin-bottom:14px;
+
+    font-family:Inter,sans-serif;
+
+    font-size:13px;
+
+    letter-spacing:4px;
+
+    color:#b99d63;
+
+}
+
+.archive-card h2{
+
+    margin:0;
+
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:42px;
+
+    font-weight:500;
+
+    color:#f2e5c6;
+
+}
+
+.archive-arrow{
+
+    font-family:Inter,sans-serif;
+
+    font-size:14px;
+
+    letter-spacing:3px;
+
+    color:#d8c49a;
+
+    transition:all .25s ease;
+
+}
+
+.archive-card:hover .archive-arrow{
+
+    transform:translateX(8px);
+
+    color:#f1ddb1;
+
+}
+/* ===========================
+   World Hero
+=========================== */
+
+.world-hero {
+    position: relative;
+    min-height: calc(100vh - 84px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+    background-image: url("../../images/hero-echo.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.world-hero::before{
+    content:"";
+
+    position:absolute;
+    inset:0;
+
+    pointer-events:none;
+
+    background:
+        radial-gradient(
+            circle at 72% 18%,
+            rgba(228,199,138,.16),
+            transparent 32%
+        );
+
+    z-index:0;
+    animation:echoGlowBreath 9s ease-in-out infinite;
+    transform-origin:72% 18%;
+}
+@keyframes echoGlowBreath{
+    0%,100%{
+        opacity:.72;
+        transform:scale(1);
+    }
+
+    50%{
+        opacity:1;
+        transform:scale(1.035);
+    }
+}
+.world-hero-overlay{
+    position:absolute;
+    inset:0;
+    background:
+     linear-gradient(
+        to bottom,
+        rgba(3,4,6,.10) 0%,
+        rgba(3,4,6,.22) 42%,
+        rgba(3,4,6,.62) 100%
+     );
+}
+
+.world-hero-content{
+    position:relative;
+    z-index:2;
+    width:min(920px, calc(100% - 48px));
+    padding:90px 24px 80px;
+    text-align:center;
+}
+
+.world-hero-title{
+    margin:0;
+    font-family:"Cinzel", serif;
+    font-size:clamp(68px, 10vw, 150px);
+    font-weight:400;
+    line-height:.95;
+    letter-spacing:.10em;
+    color:#e6d2a3;
+    text-shadow:
+        0 3px 4px rgba(0,0,0,.85),
+        0 0 18px rgba(0,0,0,.55);
+}
+
+.world-ornament{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    width:min(520px, 78%);
+    margin:44px auto 34px;
+}
+
+.world-ornament span{
+    height:1px;
+    flex:1;
+    background:rgba(225,201,148,.72);
+}
+
+.world-ornament i{
+    width:14px;
+    height:14px;
+    margin:0 -2px;
+    border:1px solid #d7bc82;
+    transform:rotate(45deg);
+}
+
+.world-hero-text{
+    margin:0 0 48px;
+    font-family:"Cinzel", serif;
+    font-size:clamp(20px, 2.2vw, 31px);
+    font-weight:400;
+    line-height:1.5;
+    letter-spacing:.08em;
+    color:#e1c994;
+    text-shadow:0 2px 5px rgba(0,0,0,.9);
+}
+
+.world-hero-button{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    min-width:390px;
+    padding:23px 48px;
+
+    border:1px solid rgba(225,201,148,.85);
+    border-radius:12px;
+    background:rgba(6,9,15,.90);
+
+    font-family:"Cinzel", serif;
+    font-size:20px;
+    letter-spacing:.10em;
+    color:#ead5a3;
+    text-decoration:none;
+
+    box-shadow:
+        0 0 0 5px rgba(8,11,17,.62),
+        0 12px 32px rgba(0,0,0,.35);
+
+    transition:
+        transform .25s ease,
+        border-color .25s ease,
+        background-color .25s ease;
+}
+
+.world-hero-button:hover{
+    transform:translateY(-2px);
+    border-color:#f0d89d;
+    background:rgba(14,18,27,.96);
+}
+
+@media (max-width:600px){
+
+    .world-hero{
+        min-height:calc(100vh - 150px);
+    }
+
+    .world-hero-content{
+        width:100%;
+        padding:72px 24px;
+    }
+
+    .world-hero-title{
+        font-size:clamp(54px, 16vw, 82px);
+        letter-spacing:.05em;
+    }
+
+    .world-ornament{
+        margin:34px auto 28px;
+    }
+
+    .world-hero-text{
+        font-size:19px;
+    }
+
+    .world-hero-button{
+        min-width:0;
+        width:100%;
+        max-width:340px;
+        padding:20px 24px;
+        font-size:16px;
+    }
+}
+/* ===========================
+   World Introduction
+=========================== */
+
+.world-intro{
+    padding:90px 24px 120px;
+    background:#050607;
+}
+
+.world-intro-container{
+    width:min(1120px, 100%);
+    margin:0 auto;
+    text-align:center;
+}
+
+.world-intro-label{
+    margin:0 0 26px;
+    font-family:"Cinzel", serif;
+    font-size:18px;
+    letter-spacing:.34em;
+    color:#c8a96a;
+}
+
+.world-intro-title{
+    margin:0 0 28px;
+    font-family:"Cinzel", serif;
+    font-size:clamp(44px, 6vw, 76px);
+    font-weight:400;
+    line-height:1.08;
+    letter-spacing:.04em;
+    color:#e4c98f;
+}
+
+.world-intro-subtitle{
+    margin:0 0 48px;
+    font-family:"Cinzel", serif;
+    font-size:clamp(22px, 2.5vw, 34px);
+    font-weight:400;
+    letter-spacing:.06em;
+    color:#d8bd83;
+}
+
+.world-intro-text{
+    max-width:860px;
+    margin:0 auto;
+    font-family:"Cormorant Garamond", serif;
+    font-size:clamp(21px, 2vw, 28px);
+    line-height:1.65;
+    color:rgba(239,225,195,.86);
+}
+
+@media (max-width:600px){
+
+    .world-intro{
+        padding:72px 22px 90px;
+    }
+
+    .world-intro-label{
+        font-size:14px;
+        letter-spacing:.24em;
+    }
+
+    .world-intro-title{
+        font-size:42px;
+    }
+
+    .world-intro-subtitle{
+        font-size:22px;
+    }
+
+    .world-intro-text{
+        font-size:20px;
+        line-height:1.55;
+    }
+}
+/* ===========================
+   World at a Glance
+=========================== */
+
+.world-glance{
+    width:min(1400px, calc(100% - 48px));
+    margin:140px auto 0;
+    padding-bottom:140px;
+}
+
+.world-glance-heading{
+    margin-bottom:54px;
+    text-align:center;
+}
+
+.world-glance-heading h2{
+    margin:0 0 28px;
+
+    font-family:"Cinzel", serif;
+    font-size:clamp(42px, 5vw, 68px);
+    font-weight:400;
+    letter-spacing:.05em;
+
+    color:#e4c98f;
+}
+
+.world-glance-heading p{
+    margin:0 auto;
+    max-width:760px;
+
+    font-family:"Cormorant Garamond", serif;
+    font-size:clamp(20px, 2vw, 27px);
+    line-height:1.5;
+
+    color:rgba(239,225,195,.78);
+}
+
+.world-map-frame{
+    position:relative;
+    overflow:hidden;
+
+    border:1px solid rgba(216,196,154,.30);
+    background:#080a0d;
+
+    box-shadow:
+        0 24px 60px rgba(0,0,0,.42),
+        inset 0 1px rgba(255,255,255,.025);
+}
+
+.world-map-frame::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    pointer-events:none;
+
+    box-shadow:
+        inset 0 0 70px rgba(0,0,0,.32);
+}
+
+.world-map-image{
+    display:block;
+    width:100%;
+    height:auto;
+}
+
+@media (max-width:700px){
+
+    .world-glance{
+        width:calc(100% - 28px);
+        margin-top:100px;
+        padding-bottom:100px;
+    }
+
+    .world-glance-heading{
+        margin-bottom:38px;
+    }
+
+    .world-glance-heading h2{
+        font-size:38px;
+    }
+
+    .world-glance-heading p{
+        font-size:20px;
+    }
+}
+/* ===========================
+   World Entry Cards
+=========================== */
+
+.world-entry-list{
+    width:min(1100px, calc(100% - 48px));
+    margin:100px auto 0;
+
+    display:grid;
+    grid-template-columns:repeat(2, minmax(0, 1fr));
+    gap:28px;
+}
+
+.world-entry-card{
+    min-height:180px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border:1px solid rgba(216,196,154,.22);
+    border-radius:18px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(22,25,31,.88),
+            rgba(8,10,13,.94)
+        );
+
+    color:#e4c98f;
+    text-decoration:none;
+
+    box-shadow:
+        inset 0 1px 0 rgba(255,255,255,.025),
+        0 18px 42px rgba(0,0,0,.22);
+
+    transition:
+        transform .28s ease,
+        border-color .28s ease,
+        background .28s ease,
+        box-shadow .28s ease;
+}
+
+/* CIVILIZATIONS：顶部横跨两列 */
+.world-entry-card:nth-child(1){
+    grid-column:1 / -1;
+    min-height:210px;
+}
+
+/* THE ECHO：底部横跨两列，作为根基 */
+.world-entry-card:nth-child(4){
+    grid-column:1 / -1;
+    min-height:230px;
+
+    border-color:rgba(216,196,154,.38);
+
+    background:
+        radial-gradient(
+            circle at 50% 110%,
+            rgba(184,145,76,.14),
+            transparent 48%
+        ),
+        linear-gradient(
+            145deg,
+            rgba(20,23,29,.96),
+            rgba(6,8,11,.98)
+        );
+}
+
+.world-entry-card span{
+    position:relative;
+
+    font-family:"Cinzel", serif;
+    font-size:clamp(34px, 4vw, 58px);
+    font-weight:400;
+    letter-spacing:.05em;
+}
+
+.world-entry-card:hover{
+    transform:translateY(-5px);
+
+    border-color:rgba(229,202,145,.80);
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(30,34,42,.98),
+            rgba(12,15,20,.98)
+        );
+
+    box-shadow:
+        inset 0 1px 0 rgba(255,255,255,.045),
+        0 24px 56px rgba(0,0,0,.36);
+}
+
+.world-entry-card span::after{
+    content:"→";
+    position:absolute;
+    left:calc(100% + 18px);
+    top:50%;
+
+    opacity:0;
+    transform:translate(-8px,-50%);
+
+    font-family:Inter,sans-serif;
+    font-size:18px;
+    color:#d8c49a;
+
+    transition:
+        opacity .25s ease,
+        transform .25s ease;
+}
+
+.world-entry-card:hover span::after{
+    opacity:1;
+    transform:translate(0,-50%);
+}
+
+@media (max-width:700px){
+
+    .world-entry-list{
+        width:calc(100% - 36px);
+        margin-top:72px;
+        grid-template-columns:1fr;
+        gap:20px;
+    }
+
+    .world-entry-card,
+    .world-entry-card:nth-child(1),
+    .world-entry-card:nth-child(4){
+        grid-column:auto;
+        min-height:120px;
+        border-radius:12px;
+    }
+
+    .world-entry-card span{
+        font-size:30px;
+    }
+}
+.world-hero-title{
+    font-size:clamp(58px, 8.5vw, 136px);
+    letter-spacing:.02em;
+    white-space:nowrap;
+}
+@media (max-width:700px){
+
+    .world-hero-title{
+        font-size:clamp(38px, 11vw, 58px);
+        letter-spacing:.01em;
+        white-space:normal;
+        overflow-wrap:anywhere;
+    }
+}
+
+
+@media (max-width:800px){
+
+    
+}
+/* ==========================
+   THE ECHO — LISTEN
+========================== */
+
+.echo-stage{
+    position:relative;
+    min-height:100vh;
+    padding:150px 32px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    background:#040506;
+}
+
+.echo-stage-inner{
+    width:min(860px, 100%);
+    margin:0 auto;
+    text-align:center;
+}
+
+.echo-stage-number{
+    margin:0 0 30px;
+
+    font-family:"Cinzel", serif;
+    font-size:14px;
+    letter-spacing:.40em;
+
+    color:rgba(190,155,91,.72);
+}
+
+.echo-stage-title{
+    margin:0;
+
+    font-family:"Cinzel", serif;
+    font-size:clamp(58px, 8vw, 112px);
+    font-weight:400;
+    line-height:1;
+
+    letter-spacing:.08em;
+
+    color:#e8d19c;
+}
+
+.echo-stage-ornament{
+    width:min(300px, 68%);
+    margin:52px auto 64px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.echo-stage-ornament span{
+    height:1px;
+    flex:1;
+
+    background:
+        linear-gradient(
+            to right,
+            transparent,
+            rgba(204,174,111,.48)
+        );
+}
+
+.echo-stage-ornament span:last-child{
+    background:
+        linear-gradient(
+            to left,
+            transparent,
+            rgba(204,174,111,.48)
+        );
+}
+
+.echo-stage-ornament i{
+    width:11px;
+    height:11px;
+    margin:0 18px;
+
+    border:1px solid rgba(218,188,124,.78);
+
+    transform:rotate(45deg);
+}
+
+.echo-stage-text{
+    font-family:"Cormorant Garamond", serif;
+    font-size:clamp(24px, 2.4vw, 34px);
+    line-height:1.75;
+
+    color:rgba(235,223,199,.78);
+}
+
+.echo-stage-text p{
+    margin:0 0 18px;
+}
+
+.echo-stage-pause{
+    margin-top:72px !important;
+
+    color:rgba(235,223,199,.58);
+}
+
+.echo-stage-emphasis{
+    margin-top:42px !important;
+
+    font-size:clamp(31px, 3.4vw, 46px);
+    font-style:italic;
+    line-height:1.45;
+
+    color:#e3c98e;
+}
+
+.echo-stage-whisper{
+    margin:110px 0 0;
+
+    font-family:"Cormorant Garamond", serif;
+    font-size:clamp(25px, 2.6vw, 36px);
+    font-style:italic;
+    letter-spacing:.08em;
+
+    color:rgba(224,202,153,.72);
+}
+
+.echo-listen{
+    background:
+        radial-gradient(
+            circle at 50% 28%,
+            rgba(163,126,62,.06),
+            transparent 38%
+        ),
+        #040506;
+}
+
+@media (max-width:700px){
+
+    .echo-stage{
+        min-height:auto;
+        padding:120px 24px;
+    }
+
+    .echo-stage-title{
+        font-size:58px;
+        letter-spacing:.05em;
+    }
+
+    .echo-stage-ornament{
+        margin:42px auto 52px;
+    }
+
+    .echo-stage-text{
+        font-size:23px;
+        line-height:1.65;
+    }
+
+    .echo-stage-pause{
+        margin-top:58px !important;
+    }
+
+    .echo-stage-emphasis{
+        font-size:32px;
+    }
+
+    .echo-stage-whisper{
+        margin-top:86px;
+        font-size:28px;
+    }
+}
+/* ==========================
+   THE ECHO — SEE
+========================== */
+
+.echo-see{
+    background:
+        radial-gradient(
+            circle at 50% 38%,
+            rgba(202,170,103,.11),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 50% 100%,
+            rgba(110,130,145,.07),
+            transparent 42%
+        ),
+        linear-gradient(
+            to bottom,
+            #040506 0%,
+            #080909 54%,
+            #050607 100%
+        );
+}
+
+.echo-see::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    pointer-events:none;
+
+    background:
+        linear-gradient(
+            115deg,
+            transparent 24%,
+            rgba(222,198,146,.035) 48%,
+            transparent 68%
+        );
+}
+
+.echo-see .echo-stage-inner{
+    position:relative;
+    z-index:1;
+}
+
+.echo-see-opening{
+    margin-bottom:46px !important;
+
+    font-size:clamp(31px, 3.4vw, 46px);
+    font-style:italic;
+
+    color:#e3c98e;
+}
+
+.echo-see .echo-stage-emphasis{
+    text-shadow:
+        0 0 28px rgba(209,177,108,.10);
+}
+
+.echo-see .echo-stage-whisper{
+    color:rgba(225,207,169,.76);
+}
+/* ==========================
+   THE ECHO — FOLLOW
+========================== */
+
+.echo-follow{
+    background:
+        radial-gradient(
+            circle at 50% 72%,
+            rgba(188,148,72,.14),
+            transparent 34%
+        ),
+        linear-gradient(
+            to bottom,
+            #050607 0%,
+            #080909 48%,
+            #090807 100%
+        );
+}
+
+.echo-follow::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    pointer-events:none;
+
+    background:
+        linear-gradient(
+            to bottom,
+            transparent 18%,
+            rgba(221,192,132,.025) 58%,
+            rgba(221,192,132,.06) 100%
+        );
+}
+
+.echo-follow .echo-stage-inner{
+    position:relative;
+    z-index:1;
+}
+
+.echo-follow .echo-stage-title{
+    text-shadow:
+        0 0 34px rgba(203,161,86,.10);
+}
+
+.echo-follow .echo-stage-text p:nth-child(3),
+.echo-follow .echo-stage-text p:nth-child(4){
+    font-size:clamp(26px, 2.8vw, 38px);
+    color:rgba(235,223,199,.68);
+}
+
+.echo-follow .echo-stage-emphasis{
+    font-size:clamp(36px, 4vw, 54px);
+    color:#ead29b;
+    text-shadow:
+        0 0 30px rgba(210,169,87,.12);
+}
+
+.echo-follow .echo-stage-whisper{
+    position:relative;
+    margin-top:110px;
+    padding-top:58px;
+
+    color:rgba(230,208,162,.78);
+}
+
+.echo-follow .echo-stage-whisper::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:50%;
+
+    width:1px;
+    height:36px;
+
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(212,181,116,.10),
+            rgba(212,181,116,.72)
+        );
+
+    transform:translateX(-50%);
+}
+/* ==========================
+   THE ECHO — PATHS
+========================== */
+
+.echo-paths{
+    padding:140px 32px 160px;
+
+    background:
+        radial-gradient(
+            circle at 50% 0%,
+            rgba(181,143,75,.08),
+            transparent 38%
+        ),
+        #050607;
+}
+
+.echo-paths-heading{
+    width:min(860px, 100%);
+    margin:0 auto 90px;
+    text-align:center;
+}
+
+.echo-paths-label{
+    margin:0 0 24px;
+
+    font-family:"Cinzel", serif;
+    font-size:14px;
+    letter-spacing:.34em;
+
+    color:rgba(190,155,91,.78);
+}
+
+.echo-paths-title{
+    margin:0 0 32px;
+
+    font-family:"Cinzel", serif;
+    font-size:clamp(42px, 5.6vw, 74px);
+    font-weight:400;
+    line-height:1.12;
+    letter-spacing:.035em;
+
+    color:#e8d19c;
+}
+
+.echo-paths-text{
+    margin:0;
+
+    font-family:"Cormorant Garamond", serif;
+    font-size:clamp(22px, 2.2vw, 30px);
+    line-height:1.75;
+
+    color:rgba(235,223,199,.72);
+}
+
+.echo-paths-grid{
+    width:min(1120px, 100%);
+    margin:0 auto;
+
+    display:grid;
+    grid-template-columns:repeat(2, minmax(0, 1fr));
+    gap:28px;
+}
+/* ==========================
+   ECHO PATH CARD — FINAL
+========================== */
+
+ .echo-path-card{
+    position:relative;
+    overflow:hidden;
+
+    min-height:520px;
+
+    display:flex;
+    flex-direction:column;
+
+    border:1px solid rgba(220,196,146,.14);
+    border-radius:18px;
+
+    background:#070809;
+
+    color:#e7d09a;
+    text-decoration:none;
+
+    box-shadow:
+        inset 0 1px 0 rgba(255,255,255,.02),
+        0 24px 64px rgba(0,0,0,.44);
+
+    transition:
+        transform .35s ease,
+        border-color .35s ease,
+        box-shadow .35s ease;
+}
+
+/* ==========================
+   VISUAL AREA
+========================== */
+
+.echo-path-visual{
+    position:absolute;
+
+    top:0;
+    left:0;
+    right:0;
+
+    height:58%;
+
+    overflow:hidden;
+}
+
+/* 以后真实 Concept Art 放这里 */
+.echo-path-visual::before{
+    content:"";
+
+    position:absolute;
+    inset:-4%;
+
+    background:
+        radial-gradient(
+            circle at 50% 40%,
+            rgba(255,255,255,.06),
+            transparent 56%
+        );
+
+    transform:scale(1);
+
+    transition:
+        transform .8s ease,
+        opacity .8s ease;
+}
+
+/* 图片向文字区渐隐 */
+.echo-path-visual::after{
+    content:"";
+
+    position:absolute;
+    inset:0;
+
+    background:
+        linear-gradient(
+            to bottom,
+            transparent 0%,
+            transparent 42%,
+            rgba(7,8,9,.32) 58%,
+            rgba(7,8,9,.78) 78%,
+            #070809 100%
+        );
+}
+
+/* ==========================
+   CONTENT
+========================== */
+
+.echo-path-content{
+    position:relative;
+    z-index:3;
+
+    margin-top:auto;
+
+    padding:285px 44px 46px;
+}
+
+.echo-path-card h3{
+    margin:0 0 26px;
+
+    font-family:"Cinzel", serif;
+    font-size:clamp(38px, 3.7vw, 54px);
+    font-weight:400;
+    line-height:1.08;
+    letter-spacing:.035em;
+
+    color:#ead6a3;
+}
+
+.echo-path-card p{
+    margin:0;
+    max-width:440px;
+
+    font-family:"Cormorant Garamond", serif;
+    font-size:21px;
+    line-height:1.65;
+
+    color:rgba(239,225,195,.74);
+}
+
+.echo-path-card span{
+    display:inline-block;
+
+    margin-top:34px;
+
+    font-family:"Cinzel", serif;
+    font-size:13px;
+    letter-spacing:.20em;
+
+    color:#c8a96a;
+
+    transition:
+        color .3s ease,
+        opacity .3s ease;
+}
+
+/* ==========================
+   FOUR PATHS
+========================== */
+
+.echo-path-call .echo-path-visual::before{
+    background-image:url("../../images/the-call.png");
+     background-size:cover;
+     background-position:center;
+     background-repeat:no-repeat;
+        animation:callGlow 10s ease-in-out infinite;
+        transform-origin:72% 18%;
+}
+@keyframes callGlow{
+
+    0%,100%{
+        opacity:.68;
+        transform:scale(1);
+    }
+
+    50%{
+        opacity:.92;
+        transform:scale(1.035);
+    }
+
+}
+.echo-path-tree .echo-path-visual::before{
+    background-image:url("../../images/the-tree.png");
+      background-size:cover;
+      background-position:center;
+      background-repeat:no-repeat;
+        animation:treeBreath 12s ease-in-out infinite;
+        transform-origin:50% 55%;
+}
+@keyframes treeBreath{
+
+    0%,100%{
+        opacity:.66;
+        transform:scale(1);
+        filter:brightness(.94);
+    }
+
+    50%{
+        opacity:.92;
+        transform:scale(1.025);
+        filter:brightness(1.08);
+    }
+
+}
+
+.echo-path-keepers .echo-path-visual::before{
+    background-image:url("../../images/the-keepers.png");
+     background-size:cover;
+     background-position:center;
+     background-repeat:no-repeat;
+        animation:keepersFlame 7s ease-in-out infinite;
+        transform-origin:50% 65%;
+}
+@keyframes keepersFlame{
+
+    0%,100%{
+        opacity:.70;
+        transform:scale(1);
+        filter:brightness(.96);
+    }
+
+    35%{
+        opacity:.84;
+        transform:scale(1.012);
+        filter:brightness(1.05);
+    }
+
+    68%{
+        opacity:.76;
+        transform:scale(1.006);
+        filter:brightness(1.01);
+    }
+
+}
+.echo-path-veil .echo-path-visual::before{
+    background-image:url("../../images/the-veil.png");
+     background-size:cover;
+     background-position:center;
+     background-repeat:no-repeat;
+        animation:veilPulse 14s ease-in-out infinite;
+        transform-origin:50% 42%;
+}
+@keyframes veilPulse{
+
+    0%,100%{
+        opacity:.60;
+        transform:scale(1);
+        filter:brightness(.92);
+    }
+
+    50%{
+        opacity:.88;
+        transform:scale(1.03);
+        filter:brightness(1.10);
+    }
+
+}
+/* ==========================
+   HOVER
+========================== */
+
+.echo-path-card:hover{
+    transform:translateY(-2px);
+
+    border-color:rgba(229,202,145,.34);
+
+    box-shadow:
+        0 32px 78px rgba(0,0,0,.54);
+}
+
+.echo-path-card:hover .echo-path-visual::before{
+    transform:scale(1.02);
+}
+
+.echo-path-card span{
+    transition:
+        color .3s ease,
+        transform .3s ease;
+}
+
+.echo-path-card:hover span{
+    color:#ead29b;
+    transform:translateX(4px);
+}
+
+/* ==========================
+   MOBILE
+========================== */
+
+@media (max-width:800px){
+
+    .echo-path-card{
+        min-height:460px;
+    }
+
+    .echo-path-content{
+        padding:
+            245px
+            30px
+            38px;
+    }
+
+    .echo-path-card h3{
+        font-size:40px;
+    }
+
+    .echo-path-card p{
+        font-size:20px;
+    }
+}
+
+@media (max-width:800px){
+
+    .echo-paths{
+        padding:110px 20px 120px;
+    }
+
+    .echo-paths-heading{
+        margin-bottom:68px;
+    }
+
+    .echo-paths-grid{
+        grid-template-columns:1fr;
+        gap:20px;
+    }
+
+    .echo-path-card{
+        min-height:300px;
+        padding:38px 30px;
+        border-radius:12px;
+    }
+
+    .echo-path-card h3{
+        font-size:40px;
+    }
+
+    .echo-path-card p:not(.echo-path-number){
+        font-size:20px;
+    }
+}
+/* ==========================
+   THE ECHO — MYSTIC PATH CARDS
+========================== */
+
+.echo-path-card{
+    min-height:470px;
+    padding:0;
+
+    justify-content:flex-end;
+
+    border:1px solid rgba(220,196,146,.14);
+    border-radius:18px;
+
+    background:#070809;
+
+    box-shadow:
+        inset 0 1px 0 rgba(255,255,255,.02),
+        0 24px 64px rgba(0,0,0,.44);
+
+    transition:
+        transform .35s ease,
+        border-color .35s ease,
+        box-shadow .35s ease;
+}
+
+/* 上半部“场景区域” */
+.echo-path-card::before{
+    content:"";
+    position:absolute;
+    inset:0;
+
+    pointer-events:none;
+
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(255,255,255,.025) 0%,
+            transparent 35%,
+            rgba(5,6,8,.38) 56%,
+            rgba(5,6,8,.94) 78%,
+            #070809 100%
+        );
+}
+
+/* 每张卡顶部的微光 */
+.echo-path-card::after{
+    content:"";
+    position:absolute;
+
+    top:0;
+    left:0;
+    right:0;
+    height:58%;
+
+    pointer-events:none;
+
+    opacity:.72;
+}
+
+/* 文字区域 */
+.echo-path-card h3,
+ .echo-path-card p,
+ .echo-path-card span{
+
+    position:relative;
+    z-index:2;
+
+    margin-left:0;
+    margin-right:0;
+}
+
+.echo-path-card h3{
+    margin-top:0px;
+    margin-bottom:26px;
+
+    font-size:clamp(38px, 3.7vw, 54px);
+    letter-spacing:.035em;
+}
+
+.echo-path-card p{
+    max-width:440px;
+
+    font-size:21px;
+    line-height:1.65;
+}
+
+.echo-path-card span{
+    margin-top:32px;
+    margin-bottom:46px;
+
+    letter-spacing:.22em;
+}
+
+/* CALL — 暖金 */
+.echo-path-call::after{
+    background:
+        radial-gradient(
+            circle at 50% 72%,
+            rgba(215,165,69,.30),
+            transparent 20%
+        ),
+        radial-gradient(
+            circle at 50% 18%,
+            rgba(131,89,32,.18),
+            transparent 56%
+        );
+}
+
+/* TREE — 深绿 */
+.echo-path-tree::after{
+    background:
+        radial-gradient(
+            circle at 50% 70%,
+            rgba(101,143,76,.26),
+            transparent 23%
+        ),
+        radial-gradient(
+            circle at 50% 20%,
+            rgba(58,88,47,.18),
+            transparent 58%
+        );
+}
+
+/* KEEPERS — 冷蓝 */
+.echo-path-keepers::after{
+    background:
+        radial-gradient(
+            circle at 50% 70%,
+            rgba(82,112,151,.25),
+            transparent 24%
+        ),
+        radial-gradient(
+            circle at 50% 18%,
+            rgba(52,68,94,.18),
+            transparent 58%
+        );
+}
+
+/* VEIL — 暗紫 */
+.echo-path-veil::after{
+    background:
+        radial-gradient(
+            circle at 50% 70%,
+            rgba(120,89,145,.24),
+            transparent 23%
+        ),
+        radial-gradient(
+            circle at 50% 18%,
+            rgba(70,52,87,.18),
+            transparent 58%
+        );
+}
+
+.echo-path-card:hover{
+    transform:translateY(-5px);
+
+    border-color:rgba(229,202,145,.38);
+
+    box-shadow:
+        0 30px 74px rgba(0,0,0,.52);
+}
+
+.echo-path-card:hover::after{
+    opacity:.92;
+}
+
+@media (max-width:800px){
+
+    .echo-path-card{
+        min-height:420px;
+    }
+
+    .echo-path-card h3,
+    .echo-path-card p,
+    .echo-path-card span{
+        margin-left:30px;
+        margin-right:30px;
+    }
+
+    .echo-path-card h3{
+        margin-top:210px;
+        font-size:40px;
+    }
+
+    .echo-path-card span{
+        margin-bottom:38px;
+    }
+}
+/* ==========================
+   ECHO PATH VISUAL SYSTEM
+========================== */
+.echo-path-visual{
+    position:absolute;
+
+    top:0;
+    left:0;
+    right:0;
+
+    height:58%;
+
+    overflow:hidden;
+}
+.echo-path-content{
+    position:relative;
+
+    margin-top:auto;
+
+    padding:42px 44px 46px;
+
+    z-index:3;
+}
+.echo-path-visual::after{
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+        linear-gradient(
+
+            to bottom,
+
+            transparent 0%,
+
+            transparent 46%,
+
+            rgba(8,8,9,.45) 66%,
+
+            rgba(7,8,9,.88) 86%,
+
+            #070809 100%
+
+        );
+}
+.echo-path-card:hover .echo-path-visual::before{
+
+    transform:scale(1.08);
+
+    opacity:1;
+
+}
+/* ==========================
+   THE ECHO — ENDING
+========================== */
+
+.echo-ending{
+    min-height:100vh;
+    padding:170px 32px 190px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    background:
+        radial-gradient(
+            circle at 50% 42%,
+            rgba(184,145,73,.055),
+            transparent 34%
+        ),
+        #030404;
+}
+
+.echo-ending-inner{
+    width:min(900px, 100%);
+    margin:0 auto;
+    text-align:center;
+}
+
+.echo-ending-main{
+    margin:0;
+
+    font-family:"Cinzel", serif;
+    font-size:clamp(40px, 4.8vw, 66px);
+    font-weight:400;
+    line-height:1.25;
+
+    color:#e8d19c;
+}
+
+.echo-ending-secondary{
+    max-width:720px;
+    margin:72px auto 0;
+
+    font-family:"Cormorant Garamond", serif;
+    font-size:clamp(28px, 3vw, 42px);
+    font-style:italic;
+    line-height:1.55;
+
+    color:rgba(235,223,199,.72);
+}
+
+.echo-ending-ornament{
+    width:min(260px, 60%);
+    margin:120px auto 110px;
+
+    display:flex;
+    align-items:center;
+}
+
+.echo-ending-ornament span{
+    height:1px;
+    flex:1;
+
+    background:linear-gradient(
+        to right,
+        transparent,
+        rgba(201,167,101,.38)
+    );
+}
+
+.echo-ending-ornament span:last-child{
+    background:linear-gradient(
+        to left,
+        transparent,
+        rgba(201,167,101,.38)
+    );
+}
+
+.echo-ending-ornament i{
+    width:10px;
+    height:10px;
+    margin:0 16px;
+
+    border:1px solid rgba(215,183,119,.65);
+    transform:rotate(45deg);
+}
+
+.echo-ending-words{
+    display:flex;
+    justify-content:center;
+    gap:64px;
+
+    font-family:"Cinzel", serif;
+    font-size:clamp(18px, 1.8vw, 25px);
+    letter-spacing:.12em;
+
+    color:rgba(221,198,150,.58);
+}
+
+.echo-ending-words span{
+    display:block;
+}
+
+@media (max-width:700px){
+
+    .echo-ending{
+        min-height:auto;
+        padding:135px 24px 150px;
+    }
+
+    .echo-ending-main{
+        font-size:43px;
+    }
+
+    .echo-ending-secondary{
+        margin-top:46px;
+        font-size:28px;
+    }
+
+    .echo-ending-ornament{
+        margin:120px auto 130px;
+    }
+
+    .echo-ending-words{
+        flex-direction:column;
+        gap:24px;
+        font-size:20px;
+    }
+}
+  
+
+/* ======================================================
+   LORE MOBILE RESPONSIVE FIX — 2026-08
+   Mobile-only layout corrections. Desktop design unchanged.
+====================================================== */
+@media (max-width: 700px) {
+  html, body { max-width: 100%; overflow-x: hidden; }
+
+  .site-header {
+    min-height: 64px !important;
+    padding: 14px 18px !important;
+    gap: 14px !important;
+    flex-wrap: wrap !important;
+  }
+  .brand {
+    font-size: 13px !important;
+    letter-spacing: 1.2px !important;
+    white-space: nowrap !important;
+  }
+  .site-nav {
+    gap: 12px 16px !important;
+    flex-wrap: wrap !important;
+    justify-content: flex-end !important;
+  }
+  .site-nav a {
+    font-size: 11px !important;
+    letter-spacing: 1px !important;
+  }
+
+  .lore-hero, .world-hero {
+    min-height: 480px !important;
+    padding: 64px 22px !important;
+  }
+  .hero-content, .world-hero-content {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  .hero-title, .world-hero-title {
+    font-size: clamp(42px, 13vw, 62px) !important;
+    line-height: 1.02 !important;
+    letter-spacing: 1.5px !important;
+    overflow-wrap: normal !important;
+    word-break: normal !important;
+  }
+  .hero-text, .world-hero-text {
+    font-size: 16px !important;
+    line-height: 1.65 !important;
+    letter-spacing: .5px !important;
+  }
+
+  .archives-intro,
+  .world-intro-container,
+  .history-intro-inner,
+  .civilizations-intro-inner,
+  .human-intro-container,
+  .regions-intro-container,
+  .echo-stage-inner,
+  .chronicle-heading,
+  .human-pillars-heading,
+  .world-glance-heading {
+    width: auto !important;
+    max-width: none !important;
+    margin-left: 22px !important;
+    margin-right: 22px !important;
+  }
+
+  .archives-intro { margin-top: 56px !important; margin-bottom: 64px !important; }
+  .archives-intro p { font-size: 20px !important; line-height: 1.65 !important; }
+  .archives-intro-lead { font-size: 27px !important; }
+
+  .archive-grid {
+    width: auto !important;
+    max-width: none !important;
+    margin: 58px 20px 86px !important;
+    gap: 20px !important;
+  }
+  .archive-card {
+    width: 100% !important;
+    min-width: 0 !important;
+    padding: 30px 26px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    justify-content: flex-start !important;
+    gap: 22px !important;
+  }
+  .archive-card > div { width: 100% !important; min-width: 0 !important; }
+  .archive-label {
+    margin-bottom: 10px !important;
+    font-size: 11px !important;
+    letter-spacing: 3px !important;
+  }
+  .archive-card h2 {
+    width: 100% !important;
+    max-width: 100% !important;
+    font-size: clamp(31px, 9.5vw, 40px) !important;
+    line-height: 1.12 !important;
+    overflow-wrap: normal !important;
+    word-break: normal !important;
+  }
+  .archive-arrow {
+    display: block !important;
+    font-size: 12px !important;
+    letter-spacing: 2.5px !important;
+  }
+
+  .world-entry-list,
+  .civilizations-grid,
+  .human-pillars-grid,
+  .chronicle-timeline {
+    width: auto !important;
+    max-width: none !important;
+    margin-left: 20px !important;
+    margin-right: 20px !important;
+    grid-template-columns: 1fr !important;
+  }
+  .world-entry-card,
+  .civilization-card,
+  .human-pillar-card,
+  .chronicle-era,
+  .chronicle-page {
+    min-width: 0 !important;
+    max-width: 100% !important;
+  }
+  .civilization-card, .human-pillar-card, .world-entry-card {
+    padding-left: 24px !important;
+    padding-right: 24px !important;
+  }
+
+  .world-intro-title,
+  .history-intro-title,
+  .civilizations-intro-title,
+  .human-intro-title,
+  .regions-intro-title,
+  .echo-stage-title,
+  .chronicle-title,
+  .human-pillars-title {
+    font-size: clamp(34px, 10vw, 46px) !important;
+    line-height: 1.08 !important;
+    overflow-wrap: normal !important;
+    word-break: normal !important;
+  }
+
+  .world-map-frame {
+    width: auto !important;
+    max-width: none !important;
+    margin-left: 18px !important;
+    margin-right: 18px !important;
+    overflow: hidden !important;
+  }
+  .world-map-image { max-width: 100% !important; height: auto !important; }
+
+  .site-footer {
+    overflow: hidden !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+  .footer-brand { font-size: clamp(32px, 11vw, 48px) !important; letter-spacing: .12em !important; }
+}
+</style>
+</head>
+<body>
+<header class="site-header">
+<a class="brand" href="../../../index.html">
+    ECHOES OF THE KINGDOM
+    </a>
+<nav aria-label="Main navigation" class="site-nav" id="site-nav">
+<a href="../../../read/index.html">READ</a>
+<a href="../index.html">LORE</a>
+<a href="../../../chronicle/index.html">CHRONICLE</a>
+<a href="../../../map/index.html">MAP</a>
+<a href="../../about/index.html">ABOUT</a>
+<a href="../../join/index.html">JOIN</a>
+</nav>
+</header>
+<main>
+<section class="world-hero">
+<div class="world-hero-overlay"></div>
+<div class="world-hero-content">
+<h1 class="world-hero-title">
+        THE ECHO
+        </h1>
+<div class="world-ornament">
+<span></span>
+<i></i>
+<i></i>
+<i></i>
+<span></span>
+</div>
+<p class="world-hero-text">
+            Listen.<br/>
+
+            See.<br/>
+
+            Follow.
+       </p>
+<a class="world-hero-button" href="#echo-listen">
+
+           BEGIN THE JOURNEY
+
+      </a>
+</div>
+</section>
+<section class="echo-stage echo-listen" id="echo-listen">
+<div class="echo-stage-inner">
+<p class="echo-stage-number">
+            I
+        </p>
+<h2 class="echo-stage-title">
+            LISTEN
+        </h2>
+<div aria-hidden="true" class="echo-stage-ornament">
+<span></span>
+<i></i>
+<span></span>
+</div>
+<div class="echo-stage-text">
+<p>
+                Every kingdom has a voice.
+            </p>
+<p>
+                Every nation tells its own story.
+            </p>
+<p>
+                Every heart follows something.
+            </p>
+<p class="echo-stage-pause">
+                But beneath every voice...
+            </p>
+<p class="echo-stage-emphasis">
+                There has always been another.
+            </p>
+</div>
+<p class="echo-stage-whisper">
+            Be still.
+        </p>
+</div>
+</section>
+<section class="echo-stage echo-see" id="echo-see">
+<div class="echo-stage-inner">
+<p class="echo-stage-number">
+            II
+        </p>
+<h2 class="echo-stage-title">
+            SEE
+        </h2>
+<div aria-hidden="true" class="echo-stage-ornament">
+<span></span>
+<i></i>
+<span></span>
+</div>
+<div class="echo-stage-text">
+<p class="echo-see-opening">
+                Close your eyes.
+            </p>
+<p>
+                Not to escape the world.
+            </p>
+<p>
+                But to see beyond it.
+            </p>
+<p class="echo-stage-pause">
+                The eyes reveal what is passing.
+            </p>
+<p class="echo-stage-emphasis">
+                The heart begins to see what endures.
+            </p>
+</div>
+<p class="echo-stage-whisper">
+            Look beyond what can be seen.
+        </p>
+</div>
+</section>
+<section class="echo-stage echo-follow" id="echo-follow">
+<div class="echo-stage-inner">
+<p class="echo-stage-number">
+            III
+        </p>
+<h2 class="echo-stage-title">
+            FOLLOW
+        </h2>
+<div aria-hidden="true" class="echo-stage-ornament">
+<span></span>
+<i></i>
+<span></span>
+</div>
+<div class="echo-stage-text">
+<p>
+                Every journey begins with a single response.
+            </p>
+<p class="echo-stage-pause">
+                Not because the Voice has only just begun.
+            </p>
+<p>
+                But because,
+            </p>
+<p>
+                at last,
+            </p>
+<p class="echo-stage-emphasis">
+                someone listened.
+            </p>
+</div>
+<p class="echo-stage-whisper">
+            Take the next step.
+        </p>
+</div>
+</section>
+<section class="echo-paths">
+<div class="echo-paths-heading">
+<p class="echo-paths-label">
+            BEYOND THE JOURNEY
+        </p>
+<h2 class="echo-paths-title">
+            WHAT THE ECHO REVEALS
+        </h2>
+<p class="echo-paths-text">
+            To listen is to begin.<br/>
+            To see is to awaken.<br/>
+            To follow is to enter what has always been there.
+        </p>
+</div>
+<div class="echo-paths-grid">
+<a class="echo-path-card echo-path-call" href="./call/index.html">
+<div class="echo-path-visual"></div>
+<div class="echo-path-content">
+<h3>THE CALL</h3>
+<p>
+        The Voice that has never fallen silent.<br/>
+        It has only been forgotten.
+        </p>
+<span>
+        ENTER →
+       </span>
+</div>
+</a>
+<a class="echo-path-card echo-path-tree" href="./tree/index.html">
+<div class="echo-path-visual"></div>
+<div class="echo-path-content">
+<h3>
+             THE TREE
+         </h3>
+<p>
+             Where memory is older than history,
+             and life still remembers its beginning.
+         </p>
+<span>
+             See.
+         </span>
+</div>
+</a>
+<a class="echo-path-card echo-path-keepers" href="./keepers/index.html">
+<div class="echo-path-visual"></div>
+<div class="echo-path-content">
+<h3>
+                THE KEEPERS
+            </h3>
+<p>
+                Not guardians of knowledge,
+                but witnesses who never stopped listening.
+            </p>
+<span>
+                Follow.
+        </span>
+</div>
+</a>
+<a class="echo-path-card echo-path-veil" href="./veil/index.html">
+<div class="echo-path-visual"></div>
+<div class="echo-path-content">
+<h3>
+                  THE VEIL
+              </h3>
+<p>
+                  The forgotten distance between the visible world
+                  and what has always been true.
+              </p>
+<span>
+                  Look Beyond.
+              </span>
+</div>
+</a>
+</div>
+</section>
+<section class="echo-ending">
+<div class="echo-ending-inner">
+<p class="echo-ending-main">
+            The Echo has never ceased.
+        </p>
+<p class="echo-ending-secondary">
+            The world simply forgot how to listen.
+        </p>
+<div aria-hidden="true" class="echo-ending-ornament">
+<span></span>
+<i></i>
+<span></span>
+</div>
+<div class="echo-ending-words">
+<span>Listen.</span>
+<span>See.</span>
+<span>Follow.</span>
+</div>
+</div>
+</section>
+</main>
+<footer class="site-footer">
+<div class="footer-brand">Cornerstone</div>
+<div class="footer-tagline">
+        Building stories that endure.
+    </div>
+<div class="footer-studio">
+        Created by Echoes Studio
+    </div>
+<div class="footer-copyright">
+        © 2026 Michael He. All Rights Reserved.
+    </div>
+</footer>
+
+  <!-- GoatCounter: privacy-friendly page analytics -->
+  <script data-goatcounter="https://echoeskingdom.goatcounter.com/count"
+          async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

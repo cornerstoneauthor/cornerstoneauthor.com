@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Chapter One | Echoes of the Kingdom</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+.chapter-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  width: 100%;
+  margin-top: 100px;
+  padding-top: 40px;
+  border-top: 1px solid rgba(212, 184, 120, 0.18);
+}
+
+.chapter-navigation a {
+  color: #d8c49a;
+  font-family: Inter, sans-serif;
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+
+background:#070809;
+
+color:#ece2cf;
+
+font-family:"Cormorant Garamond",serif;
+
+line-height:1.9;
+
+}
+
+a{
+
+text-decoration:none;
+
+color:inherit;
+
+}
+
+.topbar{
+
+position:sticky;
+
+top:0;
+
+z-index:100;
+
+height:72px;
+
+background:rgba(7,8,9,.92);
+
+backdrop-filter:blur(10px);
+
+border-bottom:1px solid rgba(212,184,120,.12);
+
+display:flex;
+
+align-items:center;
+
+justify-content:space-between;
+
+padding:0 60px;
+
+}
+
+.logo{
+
+font-size:20px;
+
+letter-spacing:2px;
+
+color:#d8c08b;
+
+}
+
+.back{
+
+font-family:Inter,sans-serif;
+
+font-size:13px;
+
+letter-spacing:2px;
+
+text-transform:uppercase;
+
+color:#a89b7a;
+
+transition:.25s;
+
+}
+
+.back:hover{
+
+color:#e8d9b3;
+
+}
+
+.hero{
+
+padding:120px 20px 80px;
+
+text-align:center;
+
+}
+
+.eyebrow{
+
+font-size:18px;
+
+letter-spacing:6px;
+
+color:#a48c60;
+
+margin-bottom:20px;
+
+text-transform:uppercase;
+
+}
+
+h1{
+
+font-size:88px;
+
+font-weight:600;
+
+letter-spacing:2px;
+
+margin-bottom:24px;
+
+}
+
+.subtitle{
+
+max-width:700px;
+
+margin:auto;
+
+font-family:Inter,sans-serif;
+
+font-size:18px;
+
+color:#bfb5a2;
+
+line-height:1.8;
+
+}
+
+.article{
+
+max-width:680px;
+
+margin:100px auto 180px;
+
+padding:0 30px;
+
+font-size:28px;
+
+}
+
+.article p{
+  font-family:"Cormorant Garamond", serif;
+  font-size:28px;
+  line-height:2;
+  color:rgba(245,239,226,0.95);
+  margin-bottom:42px;
+}
+
+.dropcap::first-letter {
+  float: left;
+  font-size: 72px;
+  line-height: 0.8;
+  margin-right: 14px;
+  margin-top: 6px;
+  color: #d8c49a;
+}
+/* ===========================
+   Cornerstone Footer
+=========================== */
+
+.site-footer{
+    margin-top:120px;
+    padding:72px 24px 58px;
+    border-top:1px solid rgba(212,176,106,.18);
+    text-align:center;
+}
+
+.footer-brand{
+
+    font-family:"Cinzel", serif;
+
+    font-size:44px;
+
+    font-weight:500;
+
+    letter-spacing:.18em;
+
+    color:#D4B06A;
+
+    margin-bottom:10px;
+
+}
+
+.footer-tagline{
+    font-family:"Cormorant Garamond", serif;
+    font-style:italic;
+    font-size:18px;
+    color:#D8C8A8;
+    margin-bottom:32px;
+}
+
+.footer-studio{
+    font-family:Inter,sans-serif;
+    font-size:12px;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    color:rgba(245,239,226,.55);
+    margin-bottom:12px;
+}
+
+.footer-copyright{
+    font-family:Inter,sans-serif;
+    font-size:12px;
+    color:rgba(245,239,226,.35);
+}
+
+
+/* ===========================
+   Mobile Reading Layout
+=========================== */
+@media (max-width: 700px) {
+  html, body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .topbar {
+    height: auto;
+    min-height: 62px;
+    padding: 0 16px;
+    gap: 10px;
+  }
+
+  .logo {
+    min-width: 0;
+    white-space: nowrap;
+    font-size: 13px;
+    letter-spacing: 1.1px;
+    line-height: 1.2;
+  }
+
+  .back {
+    flex: 0 0 auto;
+    white-space: nowrap;
+    font-size: 10px;
+    letter-spacing: 1.1px;
+    line-height: 1.2;
+  }
+
+  .hero {
+    padding: 72px 18px 48px;
+  }
+
+  .eyebrow {
+    margin-bottom: 16px;
+    font-size: 13px;
+    letter-spacing: 4px;
+  }
+
+  h1 {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto 18px;
+    font-size: clamp(40px, 12vw, 54px);
+    line-height: 1.08;
+    letter-spacing: 1px;
+    overflow-wrap: break-word;
+    word-break: normal;
+  }
+
+  .subtitle {
+    max-width: 100%;
+    padding: 0 4px;
+    font-size: 16px;
+    line-height: 1.65;
+  }
+
+  .article {
+    width: 100%;
+    max-width: 100%;
+    margin: 48px auto 96px;
+    padding: 0 22px;
+    font-size: 22px;
+  }
+
+  .article p {
+    max-width: 100%;
+    font-size: 22px;
+    line-height: 1.78;
+    margin-bottom: 30px;
+  }
+
+  .dropcap::first-letter {
+    font-size: 58px;
+    line-height: .82;
+    margin-right: 10px;
+    margin-top: 5px;
+  }
+
+  .chapter-navigation {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    gap: 8px;
+    margin-top: 64px;
+    padding-top: 28px;
+  }
+
+  .chapter-navigation a {
+    min-width: 0;
+    font-size: 10px;
+    line-height: 1.4;
+    letter-spacing: 1.4px;
+  }
+
+  .chapter-navigation a:first-child { text-align: left; }
+  .chapter-navigation a:nth-child(2) { text-align: center; }
+  .chapter-navigation a:last-child { text-align: right; }
+
+  .site-footer {
+    margin-top: 72px;
+    padding: 54px 18px 40px;
+    overflow: hidden;
+  }
+
+  .footer-brand {
+    white-space: nowrap;
+    font-size: clamp(26px, 8vw, 32px);
+    letter-spacing: .12em;
+  }
+
+  .footer-tagline {
+    font-size: 16px;
+    margin-bottom: 28px;
+  }
+
+  .footer-studio,
+  .footer-copyright {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 390px) {
+  .topbar { padding: 0 12px; gap: 7px; }
+  .logo { font-size: 11.5px; letter-spacing: .9px; }
+  .back { font-size: 9px; letter-spacing: .9px; }
+  .hero { padding: 64px 16px 42px; }
+  h1 { font-size: clamp(38px, 11.5vw, 45px); }
+  .article { padding: 0 20px; }
+  .article p { font-size: 21px; line-height: 1.76; }
+  .chapter-navigation a { font-size: 9.5px; letter-spacing: 1.1px; }
+  .footer-brand { font-size: 27px; letter-spacing: .1em; }
+}
+</style>
+
+</head>
+
+<body>
+
+<header class="topbar">
+
+<div class="logo">
+
+ECHOES OF THE KINGDOM
+
+</div>
+
+<a href="../index.html" class="back">
+
+← Back to Chapters
+
+</a>
+
+</header>
+
+<section class="hero">
+
+<div class="eyebrow">
+CHAPTER ONE
+</div>
+
+<h1>
+THE SILENCE BENEATH THE TREE
+</h1>
+
+<div class="subtitle">
+The first silence is never empty.
+</div>
+
+</section>
+
+<main class="article">
+<p class="dropcap">
+Winter clutched the world earlier than usual that year. By the time the first snow drifted down, the grass of the wasteland had not yet fully withered.
+</p>
+
+<p>
+The wind bled from the north. It scaled the jagged crests of the mountains, tore through the lightless canopy of the ancient forests, and finally spilled into this forgotten trough of the world. Here, there were no kingdoms. There were no banners, no walls, no standing armies. The people who clung to this dirt did not even know what epoch they lived in.
+</p>
+
+<p>
+In the heart of this boundless desolation sat a scattering of a few dozen timber longhouses. The inhabitants called it Ashvale.
+</p>
+
+<p>
+Whenever winter arrived, the sky did not weep true snow. Instead, it shed a pale, chalky soot—like the calcified remnants of a primordial age. It settled upon the sod roofs, dusted the bare branches of the pines, and weighted the shoulders of men like an ember that refused to die.
+</p>
+
+<p>
+Because of this, the children of the vale learned one word before all others: <em>Ash.</em>
+</p>
+
+<p>
+The elders claimed that an eternity ago, the entire world had burned. They spoke of a time when the skies poured fire, when the rivers ran with liquid flame, and the mountains melted into slag. Eventually, the pyre went cold, leaving behind only these gray flakes that drifted through the millennia.
+</p>
+
+<p>
+The youth rarely believed them. Elders, after all, were prone to weaving ghosts out of nothing. They spoke of rivers that sang choruses, of trees that bled pure light, and of grand, marble cities that floated like swans upon a sea of clouds. They even claimed the wind itself used to answer when a mortal called its name.
+</p>
+
+<p>
+But what was reality?
+</p>
+
+<p>
+Reality was a winter that starved your cattle. Reality was the claw of a timber-wolf at the village gate. Reality was the fever that carried a child into the earth before they could hold a bow. Beyond the cold ache of survival, there were no miracles. At least, none that Ashvale had ever seen.
+</p>
+
+<div class="divider">❦</div>
+
+<p>
+At dawn, as the first seam of pale light cracked across the horizon, the heavy timber door of a longhouse creaked open. A small, lean boy slipped through the gap into the biting cold.
+</p>
+
+<p>
+The frost hit his face like a slap. He tucked his chin into his collar but did not retreat.
+</p>
+
+<p>
+He was perhaps eleven winters old, swallowed by an oversized coat stitched from old deer hides. His hair was a wild, tangled thicket, and the tip of his nose was bitten red by the frost.
+</p>
+
+<p>
+His name was Aether.
+</p>
+
+<p>
+It was the only inheritance his mother had left him before she slipped into the earth years ago. What the name meant, no soul in the vale could say; it was just a strange arrangement of sounds from a dead tongue.
+</p>
+
+<p>
+Aether stood in the gray snow, his gaze drifting toward the distance.
+</p>
+
+<p>
+There, atop a low, windswept knoll, stood the skeleton of a massive, dead tree. It had been dead for as long as the village memory stretched, its twisted, cracked boughs clawing at the heavens like the petrified hand of a buried giant.
+</p>
+
+<p>
+Aether loved that tree. Every time he looked upon its stark silhouette, he felt the stirrings of the tales old Garan used to tell around the hearth. Stories of another tree—a Great World-Tree so colossal its canopy brushed the stars. They said the wind used to weave music through its leaves, that light flowed like sap beneath its bark, and that all living things once gathered beneath its shadow.
+</p>
+
+<p>
+Of course, nobody believed it. No one but Aether.
+</p>
+
+<p class="dialogue">
+“Daydreaming again, boy?”
+</p>
+
+<p>
+A thick, gravelly voice broke the silence behind him. Aether turned to see a massive hunter approaching, his arms stacked high with split firewood. Heavy frost clung to the man's dense beard.
+</p>
+
+<p>
+That was Harold. His foster father, and one of the finest track-finders in Ashvale.
+</p>
+
+<p class="dialogue">
+“I was just looking at the tree,” Aether said softly.
+</p>
+
+<p class="dialogue">
+“That old deadwood?”
+</p>
+
+<p class="dialogue">
+“Yes.”
+</p>
+
+<p class="dialogue">
+“What is there to see?”
+</p>
+
+<p>
+Aether hesitated, searching for the right words.
+</p>
+
+<p class="dialogue">
+“How long has it stood there, Father?”
+</p>
+
+<p>
+Harold grunted, shifting the weight of the logs.
+</p>
+
+<p class="dialogue">
+“Who knows? A half-century? A hundred winters? The wood is as hard as iron and twice as dead.”
+</p>
+
+<p class="dialogue">
+“But why is it there?”
+</p>
+
+<p>
+Harold let out a rough laugh, shaking his head.
+</p>
+
+<p class="dialogue">
+“Child, do you spend every hour of the dawn filling your head with questions that won't put meat in the pot? When you track your first stag, then you can ask the timber why it grows.”
+</p>
+
+<p>
+With that, the hunter strode past, the heavy thud of his boots crunching into the crust of the snow.
+</p>
+
+<p>
+Yet Aether remained. His eyes stayed anchored to the far ridge. He could not shake the gnawing sensation that something in the world was profoundly wrong, though he lacked the words to define the void.
+</p>
+<p>
+By dusk, a communal bonfire roared in the center of the settlement. The men gathered to divide the day’s butchered meat, while the children huddled close around a frail figure seated on a hollow log.
+</p>
+
+<p>
+Garan. He was the oldest vessel of memory in Ashvale; none remembered the year of his birth. He lived in the past, forever spinning yarn about the First Days—tales of the Unbroken Light, of the High Kings, of cities swallowed by time, and of the Echoes.
+</p>
+
+<p class="dialogue">
+“Grandfather Garan,” Aether said, sliding into the dirt at the very front of the circle. “Tell us of the Echoes tonight.”
+</p>
+
+<p>
+A few of the older boys immediately scoffed.
+</p>
+
+<p class="dialogue">
+“The Echoes again?” one laughed. “He asks for it every night. Doesn’t he ever get tired of it?”
+</p>
+
+<p class="dialogue">
+“My da says the Echoes are just ghost stories told to keep children from wandering into the deep woods,” another chimed in.
+</p>
+
+<p>
+Garan smiled faintly, his milky eyes reflecting the dancing orange sparks. He showed no anger toward the boys’ cynicism. He stared into the heart of the fire for a long, quiet moment before his thin voice drifted over the crackle of the wood.
+</p>
+
+<p class="dialogue">
+“If one day,” the old man murmured, “every living soul were to forget the sun... would the sun cease to rise?”
+</p>
+
+<p>
+The children blinked, shifting in their furs.
+</p>
+
+<p class="dialogue">
+“No,” a few whispered.
+</p>
+
+<p class="dialogue">
+“And if the world forgot the wind... would the air turn still forever?”
+</p>
+
+<p class="dialogue">
+“The wind would still blow,” Aether answered firmly.
+</p>
+
+<p>
+Garan nodded, the firelight carving deep shadows into the landscape of his face.
+</p>
+
+<p class="dialogue">
+“Then tell me, little ones... could it be that some things do not vanish simply because men have lost the capacity to remember them?”
+</p>
+
+<p>
+The children grew quiet, the weight of the old man’s words settling over them. Only Aether leaned closer, his mind turning the thought over like a smooth river stone.
+</p>
+
+<p class="dialogue">
+“Some things endure beneath the frost,” Garan continued, his voice dropping to a rhythmic hum. “They do not die. They merely wait for ears that still know how to listen.”
+</p>
+
+<p>
+A sudden gust swept through the camp, causing the bonfire to flare and snap. In that brief fluctuation of light, Aether felt that Garan wasn’t merely reciting a fable. He looked like a man reaching backward into the dark, touching the hem of a garment he had once worn.
+</p>
+
+<p>
+When night fully fell, the blizzard arrived. The gale howled through the surrounding pine-stands like a pack of starving beasts. The villagers barred their heavy oak doors, drove the livestock into the low pens, and surrendered Ashvale to the white fury of the storm.
+</p>
+
+<p>
+Yet, it was in this very darkness that Aether found himself outside the safety of the walls.
+</p>
+
+<p>
+It was not his first time in the fringes of the wood; children of the vale were taught the grammar of the wild before they could write. They learned to read the moss, to scent the wind, to survive. But the squall grew too thick, too fast. Within minutes, the familiar landmarks dissolved into a blinding sheet of white.
+</p>
+
+<p>
+The pines became shifting, monstrous silhouettes. Sky and earth fused into a single, roaring void. Panic began to tighten its cold fingers around the boy's throat.
+</p>
+
+<p>
+Then, his boot struck something unyieldingly hard beneath the drift.
+</p>
+
+<p>
+Aether dropped to his knees, fumbling through the powder. Beneath the white shroud lay a massive, gray slab of dressed stone.
+</p>
+
+<p>
+He let out a ragged breath of relief. The Old Stone Road. Every hunter in the vale knew of its existence and used its spine to navigate when the trails failed. Some called it the Ash Road; others called it the Path of the First Men. Who had laid these colossal blocks, no one knew, and fewer cared. It yielded no grain, it trapped no game. It simply sat there, indifferent to the ages, as if it had been stitched into the earth during the creation of the world.
+</p>
+
+<p>
+Aether began to guide himself along the masonry, keeping his footing on the cleared center. But as he bent low to avoid a sudden blast of wind, his eyes caught something he had never noticed before.
+</p>
+
+<p>
+Along the weather-beaten edge of the stone slab, faint lines were carved into the rock. Normally choked with frozen mud and packed ice, the patterns were nearly invisible to a casual glance.
+</p>
+
+<p>
+The boy knelt in the teeth of the storm, using his mittened hands to scrape away the crust of frost.
+</p>
+
+<p>
+As the ice cleared, more of the relief was exposed to the moonlight. There were shapes of sweeping trees, winding rivers, and constellations that did not match the modern sky. Interspersed between the images were sharp, geometric runes—not pictures, but a script. A language written in stone.
+</p>
+
+<p class="dialogue">
+“Who made this?” he whispered to himself.
+</p>
+
+<p>
+The blizzard howled through the boughs, offering no reply. But the questions began to sprout in his chest like stubborn seeds. Who built this highway through the wild? For what purpose? Where did it lead, and how had it survived the fire that consumed the world? The people of Ashvale looked at the stones and saw only a guidepost; Aether looked at them and saw a monument that was waiting.
+</p>
+
+<p>
+Slowly, almost unconsciously, the boy pulled off his hide mitten. He pressed his bare palm against the frozen, ancient runes.
+</p>
+
+<p>
+The instant his skin met the stone, the wind died.
+</p>
+
+<p>
+Not the gale that lashed the valley—the blizzard still raged around him—but the wind <em>inside his own soul</em> went utterly, mathematically still. Time seemed to snag on a nail, freezing for a microsecond so brief it defied measure.
+</p>
+
+<p>
+And then, he felt it.
+</p>
+
+<p>
+It wasn't a sound that struck his ears, but a vibration that resonated within his bones. It felt as though, across leagues of unmapped mountains, something massive had just drawn a breath. It felt as though, at the very precipice of the world's edge, an ancient entity had shifted its weight, waiting.
+</p>
+
+<p>
+The sensation vanished as quickly as a spark in a chimney.
+</p>
+
+<p>
+The next second, the cold hit him like a physical blow as the blizzard rushed back into his senses. Aether stumbled backward, his heart hammering against his ribs like a trapped bird.
+</p>
+
+<p>
+He stared down at his bare hand, then at the stone trail beneath him. He didn't understand what had just transpired, but every instinct in his small frame screamed that it had been real.
+</p>
+
+<p>
+Through the driving snow, the ancient road stretched away—running blindly to the north, and plunging into the dark of the south. It cut through the forests, pierced the wilderness, and vanished into the deep obscurities of the continent, holding the entire world together.
+</p>
+
+<p>
+Aether stood alone in the storm, looking at the highway sleeping beneath the ash. For the first time in his eleven years, he understood that the world was infinitely vaster than the confines of Ashvale, and far more ancient than the stories told around the fire.
+</p>
+
+<p>
+And those runes, buried under the ice, felt like eyes that had just opened in the dark, waiting for someone to finally remember how to read them.
+</p>
+<div class="chapter-navigation">
+  <a href="../chapter-00-prologue/index.html">← Previous</a>
+  <a href="../index.html">Contents</a>
+  <a href="../chapter-02/index.html">Next →</a>
+</div>
+
+</main>
+<footer class="site-footer">
+    <div class="footer-brand">Cornerstone</div>
+
+    <div class="footer-tagline">
+        Building stories that endure.
+    </div>
+
+    <div class="footer-studio">
+        Created by Echoes Studio
+    </div>
+
+    <div class="footer-copyright">
+        © 2026 Michael He. All Rights Reserved.
+    </div>
+</footer>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const article = document.querySelector(".article");
+
+    if (!article) {
+        return;
+    }
+
+    const paragraphs = article.querySelectorAll("p");
+
+    paragraphs.forEach(function (paragraph) {
+        const text = paragraph.textContent.trim();
+
+        if (!text) {
+            return;
+        }
+
+        // 自动识别场景分隔符
+        if (text === "***" || text === "* * *") {
+            const divider = document.createElement("div");
+            divider.className = "divider";
+            divider.textContent = "❦";
+            paragraph.replaceWith(divider);
+            return;
+        }
+
+        // 自动识别以引号或长破折号开头的对白
+        const isDialogue =
+            text.startsWith('"') ||
+            text.startsWith("“") ||
+            text.startsWith("‘") ||
+            text.startsWith("'") ||
+            text.startsWith("—");
+
+        if (isDialogue) {
+            paragraph.classList.add("dialogue");
+        }
+    });
+});
+</script>
+
+  <!-- GoatCounter: privacy-friendly page analytics -->
+  <script data-goatcounter="https://echoeskingdom.goatcounter.com/count"
+          async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

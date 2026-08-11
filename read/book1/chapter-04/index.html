@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Chapter 4 | Echoes of the Kingdom</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&amp;family=Inter:wght@300;400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<style>
+.chapter-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  width: 100%;
+  margin-top: 100px;
+  padding-top: 40px;
+  border-top: 1px solid rgba(212, 184, 120, 0.18);
+}
+
+.chapter-navigation a {
+  color: #d8c49a;
+  font-family: Inter, sans-serif;
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+
+background:#070809;
+
+color:#ece2cf;
+
+font-family:"Cormorant Garamond",serif;
+
+line-height:1.9;
+
+}
+
+a{
+
+text-decoration:none;
+
+color:inherit;
+
+}
+
+.topbar{
+
+position:sticky;
+
+top:0;
+
+z-index:100;
+
+height:72px;
+
+background:rgba(7,8,9,.92);
+
+backdrop-filter:blur(10px);
+
+border-bottom:1px solid rgba(212,184,120,.12);
+
+display:flex;
+
+align-items:center;
+
+justify-content:space-between;
+
+padding:0 60px;
+
+}
+
+.logo{
+
+font-size:20px;
+
+letter-spacing:2px;
+
+color:#d8c08b;
+
+}
+
+.back{
+
+font-family:Inter,sans-serif;
+
+font-size:13px;
+
+letter-spacing:2px;
+
+text-transform:uppercase;
+
+color:#a89b7a;
+
+transition:.25s;
+
+}
+
+.back:hover{
+
+color:#e8d9b3;
+
+}
+
+.hero{
+
+padding:120px 20px 80px;
+
+text-align:center;
+
+}
+
+.eyebrow{
+
+font-size:18px;
+
+letter-spacing:6px;
+
+color:#a48c60;
+
+margin-bottom:20px;
+
+text-transform:uppercase;
+
+}
+
+h1{
+
+font-size:88px;
+
+font-weight:600;
+
+letter-spacing:2px;
+
+margin-bottom:24px;
+
+}
+
+.subtitle{
+
+max-width:700px;
+
+margin:auto;
+
+font-family:Inter,sans-serif;
+
+font-size:18px;
+
+color:#bfb5a2;
+
+line-height:1.8;
+
+}
+
+.article{
+
+max-width:680px;
+
+margin:100px auto 180px;
+
+padding:0 30px;
+
+font-size:28px;
+
+}
+
+.article p{
+  font-family:"Cormorant Garamond", serif;
+  font-size:28px;
+  line-height:2;
+  color:rgba(245,239,226,0.95);
+  margin-bottom:42px;
+}
+
+.dropcap::first-letter {
+  float: left;
+  font-size: 72px;
+  line-height: 0.8;
+  margin-right: 14px;
+  margin-top: 6px;
+  color: #d8c49a;
+}
+/* ===========================
+   Cornerstone Footer
+=========================== */
+
+.site-footer{
+    margin-top:120px;
+    padding:72px 24px 58px;
+    border-top:1px solid rgba(212,176,106,.18);
+    text-align:center;
+}
+
+.footer-brand{
+
+    font-family:"Cinzel", serif;
+
+    font-size:44px;
+
+    font-weight:500;
+
+    letter-spacing:.18em;
+
+    color:#D4B06A;
+
+    margin-bottom:10px;
+
+}
+
+.footer-tagline{
+    font-family:"Cormorant Garamond", serif;
+    font-style:italic;
+    font-size:18px;
+    color:#D8C8A8;
+    margin-bottom:32px;
+}
+
+.footer-studio{
+    font-family:Inter,sans-serif;
+    font-size:12px;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    color:rgba(245,239,226,.55);
+    margin-bottom:12px;
+}
+
+.footer-copyright{
+    font-family:Inter,sans-serif;
+    font-size:12px;
+    color:rgba(245,239,226,.35);
+}
+
+
+/* ===========================
+   Mobile Reading Layout
+=========================== */
+@media (max-width: 700px) {
+  html, body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .topbar {
+    height: auto;
+    min-height: 62px;
+    padding: 0 16px;
+    gap: 10px;
+  }
+
+  .logo {
+    min-width: 0;
+    white-space: nowrap;
+    font-size: 13px;
+    letter-spacing: 1.1px;
+    line-height: 1.2;
+  }
+
+  .back {
+    flex: 0 0 auto;
+    white-space: nowrap;
+    font-size: 10px;
+    letter-spacing: 1.1px;
+    line-height: 1.2;
+  }
+
+  .hero {
+    padding: 72px 18px 48px;
+  }
+
+  .eyebrow {
+    margin-bottom: 16px;
+    font-size: 13px;
+    letter-spacing: 4px;
+  }
+
+  h1 {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto 18px;
+    font-size: clamp(40px, 12vw, 54px);
+    line-height: 1.08;
+    letter-spacing: 1px;
+    overflow-wrap: break-word;
+    word-break: normal;
+  }
+
+  .subtitle {
+    max-width: 100%;
+    padding: 0 4px;
+    font-size: 16px;
+    line-height: 1.65;
+  }
+
+  .article {
+    width: 100%;
+    max-width: 100%;
+    margin: 48px auto 96px;
+    padding: 0 22px;
+    font-size: 22px;
+  }
+
+  .article p {
+    max-width: 100%;
+    font-size: 22px;
+    line-height: 1.78;
+    margin-bottom: 30px;
+  }
+
+  .dropcap::first-letter {
+    font-size: 58px;
+    line-height: .82;
+    margin-right: 10px;
+    margin-top: 5px;
+  }
+
+  .chapter-navigation {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    gap: 8px;
+    margin-top: 64px;
+    padding-top: 28px;
+  }
+
+  .chapter-navigation a {
+    min-width: 0;
+    font-size: 10px;
+    line-height: 1.4;
+    letter-spacing: 1.4px;
+  }
+
+  .chapter-navigation a:first-child { text-align: left; }
+  .chapter-navigation a:nth-child(2) { text-align: center; }
+  .chapter-navigation a:last-child { text-align: right; }
+
+  .site-footer {
+    margin-top: 72px;
+    padding: 54px 18px 40px;
+    overflow: hidden;
+  }
+
+  .footer-brand {
+    white-space: nowrap;
+    font-size: clamp(26px, 8vw, 32px);
+    letter-spacing: .12em;
+  }
+
+  .footer-tagline {
+    font-size: 16px;
+    margin-bottom: 28px;
+  }
+
+  .footer-studio,
+  .footer-copyright {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 390px) {
+  .topbar { padding: 0 12px; gap: 7px; }
+  .logo { font-size: 11.5px; letter-spacing: .9px; }
+  .back { font-size: 9px; letter-spacing: .9px; }
+  .hero { padding: 64px 16px 42px; }
+  h1 { font-size: clamp(38px, 11.5vw, 45px); }
+  .article { padding: 0 20px; }
+  .article p { font-size: 21px; line-height: 1.76; }
+  .chapter-navigation a { font-size: 9.5px; letter-spacing: 1.1px; }
+  .footer-brand { font-size: 27px; letter-spacing: .1em; }
+}
+</style>
+</head>
+<body>
+<header class="topbar">
+<div class="logo">
+
+ECHOES OF THE KINGDOM
+
+</div>
+<a class="back" href="../index.html">
+
+← Back to Chapters
+
+</a>
+</header>
+<section class="hero">
+<div class="eyebrow">CHAPTER 4</div>
+<h1>THE FIREKEEPER</h1>
+
+</section>
+<main class="article"><p class="dropcap">Night settled over Ashvale beneath a clear black sky.</p><p>The wind that had howled through the daylight hours was gone, leaving the snow to catch the faint, cold light of the stars. One by one, orange fires appeared inside the timber longhouses, and thin trails of smoke rose above the roofs.</p><p>The hunters were home. The children had been called inside. The livestock were penned for the night.</p><p>Ashvale grew quiet.</p><p>At the center of the village, the main hearth-fire was still burning.</p><p>It was no great beacon, only a low bed of amber coals glowing against the dark. Old Garan sat beside it with a ragged wool blanket wrapped around his narrow shoulders.</p><p>He was telling no stories tonight.</p><p>No children crowded around him. No one waited for tales of ancient trees, lost cities, winds that answered when called, or echoes that sounded like forgotten dreams.</p><p>Still, Garan remained.</p><p>Alone.</p><p>Keeping the fire alive.</p><p>Aether stood a short distance away, watching him.</p><p>He had never thought much about it before. In his mind, Garan and his stories had always belonged together. The old man sat by the fire because that was where stories were told.</p><p>But there was no one here to listen.</p><p>Aether crossed the clearing, his boots crunching over the crusted snow.</p><p>Garan did not turn.</p><p>“Sit, boy.”</p><p>Aether stopped.</p><p>“How did you know it was me?”</p><p>The old man gave a dry chuckle.</p><p>“There isn't another child in Ashvale foolish enough to stay outside when the soup is on.”</p><p>Aether sat beside him on a frost-covered log.</p><p>For a while, neither spoke.</p><p>Garan picked up a charred stick and pushed at the coals. A few sparks lifted into the darkness.</p><p>“Why do you sit here every night?” Aether asked.</p><p>“Because fires die, lad.”</p><p>“If it dies, you can light another.”</p><p>Garan looked into the embers.</p><p>“Some fires,” he said, “once they go out, there is no one left who remembers how to light them.”</p><p>Aether frowned.</p><p>The old man laid another split branch over the coals.</p><p>“Tales are much the same.”</p><p>Aether looked at him.</p><p>“If no one tells them, they fade. Give it long enough, and people begin to think they were never true at all.”</p><p>Aether thought of the Old Stone Road.</p><p>Everyone in Ashvale knew it was there. Everyone walked over it.</p><p>Almost no one asked who had built it.</p><p>“Do you believe them?” Aether asked. “The stories you tell?”</p><p>Garan's hand stopped above the fire.</p><p>For a long moment, he said nothing.</p><p>Then:</p><p>“I don't know.”</p><p>Aether blinked.</p><p>“You don't know?”</p><p>“No.”</p><p>“Then why do you keep telling them?”</p><p>Garan raised his head toward the stars.</p><p>“Because one winter, a long time ago, I was supposed to die in the snow.”</p><p>***</p><p>Aether went still.</p><p>Something in Garan's voice had changed.</p><p>This was not the storyteller's voice he used when children gathered around the hearth. It was quieter than that.</p><p>“I was young then,” Garan said. “Younger than Harold is now. And like most young men, I thought knowing how to draw a bow, bring down a stag, and survive a winter meant I understood the world.”</p><p>A faint smile touched his mouth.</p><p>“I was wrong.”</p><p>The fire cracked softly between them.</p><p>“That winter came early. Snow fell for seven days without stopping, and the game vanished from the ridges. People were beginning to go hungry.”</p><p>Garan leaned forward, elbows resting on his knees.</p><p>“So I went north with two other hunters. Deep into the high timber. We thought we could bring back meat before the real storm came.”</p><p>He shook his head.</p><p>“The storm came first.”</p><p>Aether listened.</p><p>“We were separated in the whiteout. I lost the trail. By the time darkness came, I couldn't feel my fingers.”</p><p>Garan stared into the fire.</p><p>“That kind of cold is different, boy. First you shake so hard you think your bones will break. Then, after a while, you stop shaking.”</p><p>His voice lowered.</p><p>“And that is when you should be afraid.”</p><p>Aether said nothing.</p><p>“I fell in a drift. I remember the snow landing on my face. I knew I needed to stand, but my legs wouldn't listen.”</p><p>Garan looked down at his hands—thin now, knotted with age.</p><p>“I thought I was finished.”</p><p>Silence settled over the clearing.</p><p>Somewhere beyond the longhouses, a dog barked once.</p><p>“What happened?” Aether asked.</p><p>Garan lifted his eyes.</p><p>“I heard the wind.”</p><p>Aether's expression changed.</p><p>“The wind?”</p><p>“At least, that is what I called it.”</p><p>Garan shook his head.</p><p>“It didn't feel like the storm anymore. The storm was everywhere. This was... different.”</p><p>He searched for the words.</p><p>“Clearer.”</p><p>Aether leaned closer.</p><p>“I was nearly gone when one thought came into my mind.”</p><p>“What thought?”</p><p>Garan looked directly at him.</p><p>“Keep walking.”</p><p>Aether felt a chill along his arms.</p><p>“It wasn't a voice,” Garan said. “No one spoke. I saw no light. Nothing appeared in the snow.”</p><p>He looked back toward the flames.</p><p>“Just that thought.”</p><p><em>Keep walking.</em></p><p>“So I did.”</p><p>Garan's fingers tightened around the charred stick.</p><p>“I stood. Fell. Stood again. I didn't know which direction I was going. I could barely see.”</p><p>He paused.</p><p>“Then my shoulder struck a door.”</p><p>“A door?”</p><p>“An old hunter's shack.”</p><p>Aether stared at him.</p><p>“I had hunted those woods for years,” Garan said. “I'd never seen it before.”</p><p>“What was inside?”</p><p>“No one.”</p><p>Garan's eyes remained on the fire.</p><p>“But there was this.”</p><p>He nodded toward the embers.</p><p>“A fire?”</p><p>“Aye. Nearly dead. But not quite.”</p><p>Aether looked from Garan to the glowing coals between them.</p><p>“That fire kept me alive until morning.”</p><p>***</p><p>By dawn, the storm had broken.</p><p>Garan found his way back to Ashvale.</p><p>“Some called it a miracle,” he said. “Some called it luck. Others said the cold had addled my mind and I'd imagined half of it.”</p><p>“Did you?”</p><p>Garan smiled faintly.</p><p>“I don't know.”</p><p>Aether frowned.</p><p>“You don't know?”</p><p>“I've gone back looking for that shack more times than I can count. Never found it.”</p><p>“But you know it was there.”</p><p>“I know I survived the night.”</p><p>Garan reached inside his tunic.</p><p>“That isn't quite the same thing.”</p><p>He drew out a small bundle wrapped in faded, oil-stained cloth.</p><p>Aether watched as he carefully unfolded it.</p><p>Inside was a piece of carved wood no larger than Garan's palm.</p><p>It was dark with age, the edges worn and cracked. Decades of handling had polished parts of its surface smooth.</p><p>At first, Aether saw nothing remarkable.</p><p>Then Garan turned it toward the fire.</p><p>Aether stopped breathing.</p><p>Lines ran across the wood.</p><p>Branching lines.</p><p>Curving lines like rivers.</p><p>Tiny dots like stars.</p><p>And between them, small angular marks cut into the grain.</p><p>Aether knew them.</p><p>He had seen them beneath the snow.</p><p>On the Old Stone Road.</p><p>Garan was still looking at the carving.</p><p>“I found it in the shack. Beside the fire.”</p><p>Aether could barely hear him.</p><p>“I don't know who made it. I don't know what it means. Perhaps it means nothing.”</p><p>Garan rubbed his thumb over one worn edge.</p><p>“But I've carried it ever since.”</p><p>“May I?”</p><p>Garan looked at him.</p><p>Aether held out his hand.</p><p>After a moment, the old man placed the carving in his palm.</p><p>It was lighter than Aether expected.</p><p>He brought it closer to the fire.</p><p>The lines were not random. They ran into one another, crossing and branching like roads, rivers, or roots.</p><p>Then he saw the mark along one edge.</p><p>Aether's heart began to pound.</p><p>It was the same.</p><p>Not merely similar.</p><p>The same thin branching mark carved into the stone beside the Old Stone Road.</p><p>“Grandpa Garan…”</p><p>Garan looked at him.</p><p>“What is it?”</p><p>Aether did not answer.</p><p>He traced the mark once with his thumb.</p><p>Eleven years old, and he understood almost nothing about the world beyond Ashvale.</p><p>But he knew this.</p><p>The road and the carving were connected.</p><p>Somehow.</p><p>“When I was young,” Garan said, “I thought if I searched long enough, I'd find an answer.”</p><p>Aether looked up.</p><p>“I grew old instead.”</p><p>There was no bitterness in the old man's voice.</p><p>“Sometimes I think it really was luck. Perhaps I was freezing to death and imagined the whole thing. Perhaps this is only a scrap of wood someone left behind.”</p><p>He looked into the fire.</p><p>“But I survived.”</p><p>Garan was quiet for a moment.</p><p>“That much I know.”</p><p>Aether looked again at the carving.</p><p>“Is that why you believe in the Echoes?”</p><p>Garan shook his head.</p><p>“It isn't about believing.”</p><p>“Then what?”</p><p>The old man considered the question.</p><p>“Remembering.”</p><p>He reached for the carving, and Aether returned it.</p><p>Garan turned the little piece of wood between his fingers.</p><p>“I don't tell the stories because I know they're true. I tell them because I don't know that they're false.”</p><p>He wrapped the carving again.</p><p>“Too many things disappear simply because the last person who remembered them died.”</p><p>The cloth disappeared beneath his tunic.</p><p>“So you keep the fire.”</p><p>Garan glanced at Aether.</p><p>A small smile appeared.</p><p>“Aye.”</p><p>***</p><p>The two sat together for a while.</p><p>The branch Garan had placed on the coals caught at last. A small flame worked its way along the bark.</p><p>“You searched your whole life?” Aether asked.</p><p>“My whole life.”</p><p>“And never found the shack?”</p><p>“No.”</p><p>“Or what the carving means?”</p><p>“No.”</p><p>Aether stared into the fire.</p><p>“Do you regret it?”</p><p>Garan thought for a moment.</p><p>“No.”</p><p>“Why?”</p><p>The old man leaned back.</p><p>“Because I saw something that night I couldn't explain.”</p><p>He looked toward the dark edge of the village.</p><p>“I could have forgotten it. That would have been easier.”</p><p>“And you didn't.”</p><p>“No.”</p><p>The fire settled with a soft hiss.</p><p>Garan reached over and rested a weathered hand on Aether's shoulder.</p><p>“You may search for something your whole life and never find it, lad.”</p><p>Aether looked at him.</p><p>“That doesn't always mean the search was wasted.”</p><p>Aether said nothing.</p><p>The words stayed with him.</p><p>***</p><p>After a while, Garan sent him home.</p><p>“Harold will be waiting.”</p><p>Aether stood and brushed snow from his coat.</p><p>He had taken several steps before stopping.</p><p>“Grandpa Garan?”</p><p>The old man looked up.</p><p>“If I find something someday… about the road, or the markings…”</p><p>Aether hesitated.</p><p>“Can I come back and tell you?”</p><p>For a moment, Garan only stared at him.</p><p>Then his face opened into a smile.</p><p>“Of course, lad.”</p><p>He turned back to the fire.</p><p>“I've waited fifty years. I can wait a little longer.”</p><p>Aether smiled and started home.</p><p>Behind him, Garan remained beside the hearth.</p><p>Keeping the fire.</p><p>***</p><p>Harold was already asleep when Aether slipped into the longhouse.</p><p>The hearth inside had burned low.</p><p>Aether climbed beneath his furs, but sleep did not come.</p><p>Every time he closed his eyes, he saw the carving.</p><p>Branches.</p><p>Rivers.</p><p>Stars.</p><p>The mark on the Old Stone Road.</p><p>The broken pillars in the forest.</p><p>And somewhere far to the north, a hunter's shack that an old man had spent fifty years trying to find again.</p><p>Outside, the wind began to rise.</p><p>It moved across the roofs of Ashvale and whispered through the cracks in the timber walls.</p><p>Aether lay awake in the darkness.</p><p>Garan had searched for an answer his entire life.</p><p>He had never found it.</p><p>Yet the old man was still sitting beside the fire.</p><p>Still remembering.</p><p>Still waiting.</p><p>Aether stared into the darkness for a long time.</p><p>Then he closed his eyes.</p><p>The question had not died with Garan.</p><p>Now Aether carried it too.</p><div class="chapter-navigation"><a href="../chapter-03/index.html">← Previous</a><a href="../index.html">Contents</a><a href="../chapter-05/index.html">Next →</a></div></main>
+<footer class="site-footer">
+<div class="footer-brand">Cornerstone</div>
+<div class="footer-tagline">
+        Building stories that endure.
+    </div>
+<div class="footer-studio">
+        Created by Echoes Studio
+    </div>
+<div class="footer-copyright">
+        © 2026 Michael He. All Rights Reserved.
+    </div>
+</footer>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const article = document.querySelector(".article");
+
+    if (!article) {
+        return;
+    }
+
+    const paragraphs = article.querySelectorAll("p");
+
+    paragraphs.forEach(function (paragraph) {
+        const text = paragraph.textContent.trim();
+
+        if (!text) {
+            return;
+        }
+
+        // 自动识别场景分隔符
+        if (text === "***" || text === "* * *") {
+            const divider = document.createElement("div");
+            divider.className = "divider";
+            divider.textContent = "❦";
+            paragraph.replaceWith(divider);
+            return;
+        }
+
+        // 自动识别以引号或长破折号开头的对白
+        const isDialogue =
+            text.startsWith('"') ||
+            text.startsWith("“") ||
+            text.startsWith("‘") ||
+            text.startsWith("'") ||
+            text.startsWith("—");
+
+        if (isDialogue) {
+            paragraph.classList.add("dialogue");
+        }
+    });
+});
+</script>
+
+  <!-- GoatCounter: privacy-friendly page analytics -->
+  <script data-goatcounter="https://echoeskingdom.goatcounter.com/count"
+          async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Lore | Echoes of the Kingdom</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&amp;family=Cormorant+Garamond:wght@400;500;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: #050607;
+      color: #d8c49a;
+      font-family: Georgia, "Times New Roman", serif;
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* NAVIGATION */
+
+    .site-header {
+      min-height: 88px;
+      padding: 0 42px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 40px;
+      border-bottom: 1px solid rgba(216, 196, 154, 0.16);
+      background: #07090c;
+    }
+
+    .brand {
+      font-size: 20px;
+      letter-spacing: 2px;
+      white-space: nowrap;
+    }
+
+    .site-nav {
+      display: flex;
+      align-items: center;
+      gap: 38px;
+    }
+
+    .site-nav a {
+      color: #bdb6aa;
+      font-size: 15px;
+      letter-spacing: 1.5px;
+      transition: color 0.2s ease;
+    }
+
+    .site-nav a:hover,
+    .site-nav .active {
+      color: #d8c49a;
+    }
+
+    /* HERO */
+
+    .lore-hero {
+      min-height: 680px;
+      padding: 80px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+
+      background:
+        radial-gradient(
+          circle at 72% 22%,
+          rgba(228, 199, 138, 0.25),
+          transparent 25%
+        ),
+        linear-gradient(
+          to bottom,
+          rgba(8, 11, 15, 0.18),
+          rgba(3, 4, 6, 0.95)
+        ),
+        linear-gradient(
+          135deg,
+          #253341 0%,
+          #10161d 48%,
+          #453720 100%
+        );
+    }
+
+    .lore-hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(
+          90deg,
+          rgba(0, 0, 0, 0.4),
+          transparent 50%,
+          rgba(0, 0, 0, 0.12)
+        ),
+        linear-gradient(
+          to top,
+          rgba(4, 5, 7, 0.9),
+          transparent 55%
+        );
+    }
+
+    .hero-content {
+      width: min(920px, 92%);
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-label {
+      margin-bottom: 24px;
+      color: #aa9875;
+      font-size: 14px;
+      letter-spacing: 4px;
+    }
+
+    .hero-title {
+      margin-bottom: 30px;
+      font-size: clamp(54px, 8vw, 108px);
+      font-weight: 400;
+      letter-spacing: 4px;
+      line-height: 0.95;
+    }
+
+    .hero-text {
+      margin-bottom: 38px;
+      color: #e5ddd0;
+      font-size: clamp(16px, 2vw, 22px);
+      letter-spacing: 1.5px;
+      line-height: 1.8;
+    }
+/* ===========================
+   Archives Introduction
+=========================== */
+
+.archives-intro{
+
+    max-width:760px;
+
+    margin:70px auto 90px;
+
+    text-align:center;
+
+}
+
+.archives-intro p{
+
+    margin:0 0 28px;
+
+    font-family:"Cormorant Garamond", serif;
+
+    font-size:26px;
+
+    line-height:1.8;
+
+    color:rgba(245,239,226,.82);
+
+}
+
+.archives-intro-lead{
+
+    font-size:34px !important;
+
+    color:#D4B06A !important;
+
+    margin-bottom:36px !important;
+
+}
+
+.archives-intro-end{
+
+    margin-top:46px !important;
+
+    font-style:italic;
+
+    color:#E7D7B0 !important;
+
+}
+    .main-button {
+      display: inline-block;
+      padding: 17px 42px;
+      border: 1px solid rgba(216, 196, 154, 0.75);
+      color: #d8c49a;
+      font-size: 14px;
+      letter-spacing: 2px;
+      transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
+    }
+
+    .main-button:hover {
+      background: #d8c49a;
+      color: #080a0d;
+      transform: translateY(-2px);
+    }
+
+    /* BOOK INTRODUCTION */
+
+    .book-section {
+      padding: 110px 24px;
+      background: #050607;
+      border-bottom: 1px solid rgba(216, 196, 154, 0.16);
+    }
+
+    .book-content {
+      width: min(900px, 92%);
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .section-label {
+      margin-bottom: 18px;
+      color: #aa9875;
+      font-size: 13px;
+      letter-spacing: 4px;
+    }
+
+    .book-title,
+    .chapters-title {
+      font-size: clamp(36px, 5vw, 62px);
+      font-weight: 400;
+      letter-spacing: 2px;
+      line-height: 1.15;
+    }
+
+    .book-subtitle {
+      margin-top: 14px;
+      color: #aa9875;
+      font-size: 17px;
+      letter-spacing: 3px;
+    }
+
+    .divider {
+      width: 100px;
+      height: 1px;
+      margin: 42px auto;
+      background: rgba(216, 196, 154, 0.45);
+    }
+
+    .book-description {
+      max-width: 720px;
+      margin: 0 auto;
+      color: #c9c1b4;
+      font-size: 17px;
+      line-height: 1.8;
+    }
+
+    .book-description p {
+      margin-bottom: 26px;
+    }
+
+    /* CHAPTERS */
+
+    .chapters-section {
+      padding: 110px 24px 130px;
+      background: #08090b;
+    }
+
+    .chapters-content {
+      width: min(960px, 92%);
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .chapter-list {
+      margin-top: 58px;
+      display: grid;
+      gap: 18px;
+    }
+
+    .chapter-card {
+      min-height: 112px;
+      padding: 26px 30px;
+      display: grid;
+      grid-template-columns: 180px 1fr auto;
+      align-items: center;
+      gap: 28px;
+      border: 1px solid rgba(216, 196, 154, 0.22);
+      background: #0c0e11;
+      text-align: left;
+      transition:
+        border-color 0.2s ease,
+        background 0.2s ease,
+        transform 0.2s ease;
+    }
+
+    .chapter-card:hover {
+      transform: translateY(-2px);
+      border-color: rgba(216, 196, 154, 0.7);
+      background: #111419;
+    }
+
+    .chapter-number {
+      color: #9f8e6c;
+      font-size: 13px;
+      letter-spacing: 2px;
+    }
+
+    .chapter-name {
+      color: #d8c49a;
+      font-size: clamp(20px, 3vw, 29px);
+      letter-spacing: 1px;
+    }
+
+    .chapter-action {
+      color: #b6a37f;
+      font-size: 12px;
+      letter-spacing: 2px;
+      white-space: nowrap;
+    }
+
+   /* ===========================
+   Cornerstone Footer
+=========================== */
+
+.site-footer{
+    margin-top:120px;
+    padding:72px 24px 58px;
+    border-top:1px solid rgba(212,176,106,0.22);
+    text-align:center;
+}
+
+.footer-brand{
+
+    font-family:"Cinzel", serif;
+
+    font-size:44px;
+
+    font-weight:500;
+
+    letter-spacing:.18em;
+
+    color:#D4B06A;
+
+    margin-bottom:10px;
+
+}
+
+.footer-tagline{
+    font-family:"Cormorant Garamond", serif;
+    font-style:italic;
+    font-size:18px;
+    color:#D8C8A8;
+    margin-bottom:32px;
+}
+
+.footer-studio{
+    font-family:Inter,sans-serif;
+    font-size:12px;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    color:rgba(245,239,226,.55);
+    margin-bottom:12px;
+}
+
+.footer-copyright{
+    font-family:Inter,sans-serif;
+    font-size:12px;
+    color:rgba(245,239,226,.35);
+}
+
+    /* MOBILE */
+
+    @media (max-width: 850px) {
+      .site-header {
+        padding: 24px;
+        flex-direction: column;
+      }
+
+      .site-nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 18px 25px;
+      }
+
+      .lore-hero {
+        min-height: 590px;
+      }
+
+      .chapter-card {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        padding: 24px;
+      }
+
+      .chapter-action {
+        margin-top: 8px;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .brand {
+        font-size: 16px;
+      }
+
+      .site-nav a {
+        font-size: 12px;
+      }
+
+      .hero-title {
+        font-size: 52px;
+      }
+
+      .book-section,
+      .chapters-section {
+        padding-top: 80px;
+        padding-bottom: 90px;
+      }
+    }
+    /* Chapter section refinement */
+
+.chapters-section {
+  background:
+    linear-gradient(
+      180deg,
+      #090b10 0%,
+      #07090d 55%,
+      #050607 100%
+    );
+}
+
+.chapter-list {
+  gap: 30px;
+}
+
+.chapter-card {
+  border-color: rgba(216, 196, 154, 0.26);
+  background: rgba(17, 20, 27, 0.72);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.02),
+    0 12px 35px rgba(0, 0, 0, 0.18);
+}
+
+.chapter-name {
+  font-weight: 500;
+}
+
+.chapter-action {
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.chapter-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(216, 196, 154, 0.42);
+  background: rgba(23, 27, 36, 0.9);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.035),
+    0 18px 44px rgba(0, 0, 0, 0.3);
+}
+
+.chapter-card:hover .chapter-action {
+  color: #e5d2a8;
+  transform: translateX(5px);
+}
+/* ===========================
+   Archive Cards
+=========================== */
+
+.archive-grid{
+
+    max-width:1200px;
+
+    margin:120px auto 160px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:34px;
+
+}
+
+.archive-card{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:48px 56px;
+
+    border:1px solid rgba(216,196,154,.22);
+
+    background:rgba(15,18,24,.55);
+
+    text-decoration:none;
+
+    transition:all .28s ease;
+
+}
+
+.archive-card:hover{
+
+    transform:translateY(-4px);
+
+    border-color:rgba(216,196,154,.75);
+
+    background:rgba(23,27,36,.92);
+
+    box-shadow:
+        inset 0 1px rgba(255,255,255,.04),
+        0 20px 48px rgba(0,0,0,.35);
+
+}
+
+.archive-label{
+
+    display:block;
+
+    margin-bottom:14px;
+
+    font-family:Inter,sans-serif;
+
+    font-size:13px;
+
+    letter-spacing:4px;
+
+    color:#b99d63;
+
+}
+
+.archive-card h2{
+
+    margin:0;
+
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:42px;
+
+    font-weight:500;
+
+    color:#f2e5c6;
+
+}
+
+.archive-arrow{
+
+    font-family:Inter,sans-serif;
+
+    font-size:14px;
+
+    letter-spacing:3px;
+
+    color:#d8c49a;
+
+    transition:all .25s ease;
+
+}
+
+.archive-card:hover .archive-arrow{
+
+    transform:translateX(8px);
+
+    color:#f1ddb1;
+
+}
+  
+
+/* ======================================================
+   LORE MOBILE RESPONSIVE FIX — 2026-08
+   Mobile-only layout corrections. Desktop design unchanged.
+====================================================== */
+@media (max-width: 700px) {
+  html, body { max-width: 100%; overflow-x: hidden; }
+
+  .site-header {
+    min-height: 64px !important;
+    padding: 14px 18px !important;
+    gap: 14px !important;
+    flex-wrap: wrap !important;
+  }
+  .brand {
+    font-size: 13px !important;
+    letter-spacing: 1.2px !important;
+    white-space: nowrap !important;
+  }
+  .site-nav {
+    gap: 12px 16px !important;
+    flex-wrap: wrap !important;
+    justify-content: flex-end !important;
+  }
+  .site-nav a {
+    font-size: 11px !important;
+    letter-spacing: 1px !important;
+  }
+
+  .lore-hero, .world-hero {
+    min-height: 480px !important;
+    padding: 64px 22px !important;
+  }
+  .hero-content, .world-hero-content {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  .hero-title, .world-hero-title {
+    font-size: clamp(42px, 13vw, 62px) !important;
+    line-height: 1.02 !important;
+    letter-spacing: 1.5px !important;
+    overflow-wrap: normal !important;
+    word-break: normal !important;
+  }
+  .hero-text, .world-hero-text {
+    font-size: 16px !important;
+    line-height: 1.65 !important;
+    letter-spacing: .5px !important;
+  }
+
+  .archives-intro,
+  .world-intro-container,
+  .history-intro-inner,
+  .civilizations-intro-inner,
+  .human-intro-container,
+  .regions-intro-container,
+  .echo-stage-inner,
+  .chronicle-heading,
+  .human-pillars-heading,
+  .world-glance-heading {
+    width: auto !important;
+    max-width: none !important;
+    margin-left: 22px !important;
+    margin-right: 22px !important;
+  }
+
+  .archives-intro { margin-top: 56px !important; margin-bottom: 64px !important; }
+  .archives-intro p { font-size: 20px !important; line-height: 1.65 !important; }
+  .archives-intro-lead { font-size: 27px !important; }
+
+  .archive-grid {
+    width: auto !important;
+    max-width: none !important;
+    margin: 58px 20px 86px !important;
+    gap: 20px !important;
+  }
+  .archive-card {
+    width: 100% !important;
+    min-width: 0 !important;
+    padding: 30px 26px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    justify-content: flex-start !important;
+    gap: 22px !important;
+  }
+  .archive-card > div { width: 100% !important; min-width: 0 !important; }
+  .archive-label {
+    margin-bottom: 10px !important;
+    font-size: 11px !important;
+    letter-spacing: 3px !important;
+  }
+  .archive-card h2 {
+    width: 100% !important;
+    max-width: 100% !important;
+    font-size: clamp(31px, 9.5vw, 40px) !important;
+    line-height: 1.12 !important;
+    overflow-wrap: normal !important;
+    word-break: normal !important;
+  }
+  .archive-arrow {
+    display: block !important;
+    font-size: 12px !important;
+    letter-spacing: 2.5px !important;
+  }
+
+  .world-entry-list,
+  .civilizations-grid,
+  .human-pillars-grid,
+  .chronicle-timeline {
+    width: auto !important;
+    max-width: none !important;
+    margin-left: 20px !important;
+    margin-right: 20px !important;
+    grid-template-columns: 1fr !important;
+  }
+  .world-entry-card,
+  .civilization-card,
+  .human-pillar-card,
+  .chronicle-era,
+  .chronicle-page {
+    min-width: 0 !important;
+    max-width: 100% !important;
+  }
+  .civilization-card, .human-pillar-card, .world-entry-card {
+    padding-left: 24px !important;
+    padding-right: 24px !important;
+  }
+
+  .world-intro-title,
+  .history-intro-title,
+  .civilizations-intro-title,
+  .human-intro-title,
+  .regions-intro-title,
+  .echo-stage-title,
+  .chronicle-title,
+  .human-pillars-title {
+    font-size: clamp(34px, 10vw, 46px) !important;
+    line-height: 1.08 !important;
+    overflow-wrap: normal !important;
+    word-break: normal !important;
+  }
+
+  .world-map-frame {
+    width: auto !important;
+    max-width: none !important;
+    margin-left: 18px !important;
+    margin-right: 18px !important;
+    overflow: hidden !important;
+  }
+  .world-map-image { max-width: 100% !important; height: auto !important; }
+
+  .site-footer {
+    overflow: hidden !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+  .footer-brand { font-size: clamp(32px, 11vw, 48px) !important; letter-spacing: .12em !important; }
+}
+</style>
+</head>
+<body>
+<header class="site-header">
+<a class="brand" href="../../index.html">
+    ECHOES OF THE KINGDOM
+    </a>
+<nav aria-label="Main navigation" class="site-nav" id="site-nav">
+<a href="../../read/index.html">READ</a>
+<a href="./index.html">LORE</a>
+<a href="../../chronicle/index.html">CHRONICLE</a>
+<a href="../../map/index.html">MAP</a>
+<a href="../about/index.html">ABOUT</a>
+<a href="../join/index.html">JOIN</a>
+</nav>
+</header>
+<main>
+<section class="lore-hero">
+<div class="hero-content">
+<p class="hero-label">
+    THE ARCHIVES
+</p>
+<h1 class="hero-title">
+    LORE OF ELARION
+</h1>
+<p class="hero-text">
+    Every civilization remembers differently.<br/>
+    Every history tells only part of the truth.
+</p>
+</div>
+</section>
+<div class="archives-intro">
+<p class="archives-intro-lead">
+        The world is remembered in fragments.
+    </p>
+<p>
+       Every kingdom writes its own history.<br/>
+       Every people guards its own memory.<br/>
+       Time buries the truth beneath countless voices.
+    </p>
+<p>
+        The Archives gather what the ages have left behind.
+    </p>
+<p class="archives-intro-end">
+        Begin your journey not with answers,<br/>
+        but with the stories that still remain.
+    </p>
+</div>
+<section class="archive-grid">
+<a class="archive-card" href="./world/index.html">
+<div>
+<span class="archive-label">THE WORLD</span>
+<h2>Explore the lands of Elarion.</h2>
+</div>
+<span class="archive-arrow">EXPLORE →</span>
+</a>
+<a class="archive-card" href="./history/index.html">
+<div>
+<span class="archive-label">HISTORY</span>
+<h2>Trace the ages that shaped Elarion.</h2>
+</div>
+<span class="archive-arrow">EXPLORE →</span>
+</a>
+<a class="archive-card" href="./civilization/index.html">
+<div>
+<span class="archive-label">CIVILIZATIONS</span>
+<h2>Discover the peoples and civilizations of the world.</h2>
+</div>
+<span class="archive-arrow">EXPLORE →</span>
+</a>
+<a class="archive-card" href="./human/index.html">
+<div>
+<span class="archive-label">HUMANITY</span>
+<h2>Follow the journey of mankind across the ages.</h2>
+</div>
+<span class="archive-arrow">EXPLORE →</span>
+</a>
+<a class="archive-card" href="./regions/index.html">
+<div>
+<span class="archive-label">REGIONS</span>
+<h2>Journey through kingdoms, frontiers, and forgotten lands.</h2>
+</div>
+<span class="archive-arrow">EXPLORE →</span>
+</a>
+<a class="archive-card" href="./echo/index.html">
+<div>
+<span class="archive-label">THE ECHO</span>
+<h2>Seek the mystery beyond the visible world.</h2>
+</div>
+<span class="archive-arrow">EXPLORE →</span>
+</a>
+</section>
+</main>
+<footer class="site-footer">
+<div class="footer-brand">Cornerstone</div>
+<div class="footer-tagline">
+        Building stories that endure.
+    </div>
+<div class="footer-studio">
+        Created by Echoes Studio
+    </div>
+<div class="footer-copyright">
+        © 2026 Michael He. All Rights Reserved.
+    </div>
+</footer>
+
+  <!-- GoatCounter: privacy-friendly page analytics -->
+  <script data-goatcounter="https://echoeskingdom.goatcounter.com/count"
+          async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

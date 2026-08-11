@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Map | Echoes of the Kingdom</title>
+  <meta name="description" content="Explore Elarion across five ages and see how the land bears witness to the changing relationship between the Creator and creation.">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+<link rel="stylesheet" href="../assets/css/mobile-nonread.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="../index.html">ECHOES OF THE KINGDOM</a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">MENU</button>
+    <nav id="site-nav" class="site-nav" aria-label="Main navigation">
+      <a href="../read/index.html">READ</a>
+      <a href="../assets/lore/index.html">LORE</a>
+      <a href="../chronicle/index.html">CHRONICLE</a>
+      <a class="active" href="./index.html">MAP</a>
+      <a href="../assets/about/index.html">ABOUT</a>
+      <a href="../assets/join/index.html">JOIN</a>
+    </nav>
+  </header>
+
+  <main class="map-page">
+    <section class="map-hero">
+      <div class="map-hero-overlay"></div>
+      <div class="map-hero-inner">
+        <p class="map-eyebrow">THE LANDS OF ELARION</p>
+        <h1>BEFORE KINGDOMS.<br>BEFORE BORDERS.<br>THERE WAS ELARION.</h1>
+        <p>The land is not a static stage. It remembers the changing relationship between the Creator and creation.</p>
+        <a href="#atlas">JOURNEY THROUGH THE AGES</a>
+      </div>
+    </section>
+
+    <section class="map-philosophy">
+      <p class="map-section-label">THE LIVING LAND</p>
+      <h2>AS CREATION CHANGED,<br>SO DID THE LAND.</h2>
+      <p>Chronicle tells the history in time. Map reveals the same history in space. Every age leaves a different Elarion behind.</p>
+    </section>
+
+    <section class="age-atlas" id="atlas">
+      <div class="atlas-heading">
+        <p class="map-section-label">THE FIVE MAPS</p>
+        <h2>ELARION THROUGH THE AGES</h2>
+      </div>
+
+      <div class="atlas-tabs" role="tablist" aria-label="Choose an age of Elarion">
+        <button class="atlas-tab active" data-age="elarion" role="tab" aria-selected="true">I · ELARION</button>
+        <button class="atlas-tab" data-age="division" role="tab" aria-selected="false">II · DIVISION</button>
+        <button class="atlas-tab" data-age="nations" role="tab" aria-selected="false">III · NATIONS</button>
+        <button class="atlas-tab" data-age="humanity" role="tab" aria-selected="false">IV · HUMANITY</button>
+        <button class="atlas-tab" data-age="return" role="tab" aria-selected="false">V · RETURN</button>
+      </div>
+
+      <div class="atlas-stage age-elarion" id="age-elarion">
+        <div class="atlas-image" aria-hidden="true"></div>
+        <div class="atlas-vignette"></div>
+        <div class="atlas-caption">
+          <p class="atlas-age">THE AGE OF ELARION</p>
+          <h3>THE FIRST MAP OF ELARION</h3>
+          <p class="atlas-subtitle">The Kingdom Undivided</p>
+          <p class="atlas-description">No political borders. No divided realms. Land, waters, forests, mountains, and living creation are understood as one kingdom beneath the Creator, with the Tree of Echoes as its living sign.</p>
+          <p class="atlas-note">The canonical first-age cartography will replace this atmospheric atlas view as the map archive grows.</p>
+          <a href="../chronicle/index.html#age-elarion">READ THIS AGE IN THE CHRONICLE →</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="map-age-index">
+      <div class="map-age-index-inner">
+        <p class="map-section-label">THE LAND REMEMBERS</p>
+        <div class="map-age-cards">
+          <a href="#atlas" class="map-age-card" data-switch-age="elarion"><span>I</span><strong>The Age of Elarion</strong><em>Wholeness</em></a>
+          <a href="#atlas" class="map-age-card" data-switch-age="division"><span>II</span><strong>The Age of Division</strong><em>Separation Begins</em></a>
+          <a href="#atlas" class="map-age-card" data-switch-age="nations"><span>III</span><strong>The Age of Nations</strong><em>Five Civilizations</em></a>
+          <a href="#atlas" class="map-age-card" data-switch-age="humanity"><span>IV</span><strong>The Age of Humanity</strong><em>The Story Begins</em></a>
+          <a href="#atlas" class="map-age-card" data-switch-age="return"><span>V</span><strong>The Age of Return</strong><em>Awaiting</em></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="map-closing">
+      <p>Time changes the story. The land bears the mark.</p>
+      <h2>FOLLOW ELARION THROUGH BOTH.</h2>
+      <div class="map-closing-links">
+        <a href="../chronicle/index.html">ENTER THE CHRONICLE →</a>
+        <a href="../assets/lore/world/index.html">EXPLORE THE WORLD LORE →</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-brand">Cornerstone</div>
+    <div class="footer-tagline">Building stories that endure.</div>
+    <div class="footer-studio">Created by Echoes Studio</div>
+    <div class="footer-copyright">© 2026 Michael He. All Rights Reserved.</div>
+  </footer>
+
+  <script>
+    const menuButton = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('.site-nav');
+    if (menuButton && nav) {
+      menuButton.addEventListener('click', () => {
+        const open = menuButton.getAttribute('aria-expanded') === 'true';
+        menuButton.setAttribute('aria-expanded', String(!open));
+        nav.classList.toggle('open');
+      });
+    }
+
+    const atlasData = {
+      elarion: {
+        age: 'THE AGE OF ELARION', title: 'THE FIRST MAP OF ELARION', subtitle: 'The Kingdom Undivided',
+        description: 'No political borders. No divided realms. Land, waters, forests, mountains, and living creation are understood as one kingdom beneath the Creator, with the Tree of Echoes as its living sign.',
+        note: 'The canonical first-age cartography will replace this atmospheric atlas view as the map archive grows.',
+        link: '../chronicle/index.html#age-elarion', linkText: 'READ THIS AGE IN THE CHRONICLE →'
+      },
+      division: {
+        age: 'THE AGE OF DIVISION', title: 'THE LAND BEGINS TO SEPARATE', subtitle: 'The First Fractures',
+        description: 'The first change is not a political border. It is a loss of shared orientation. Paths diverge, places withdraw from one another, and the land begins to reflect a relationship no longer held in wholeness.',
+        note: 'This age will receive its own canonical map as the historical atlas expands.',
+        link: '../chronicle/index.html#age-division', linkText: 'READ THIS AGE IN THE CHRONICLE →'
+      },
+      nations: {
+        age: 'THE AGE OF NATIONS', title: 'FIVE WORLDS WITHIN ONE LAND', subtitle: 'Civilizations Become Separate',
+        description: 'The separation becomes durable. Five peoples now inhabit distinct civilizations and spheres of power. Roads, borders, settlements, and ways of life increasingly reveal the distance between them.',
+        note: 'The civilization-era map will be added as the canonical political geography is finalized.',
+        link: '../chronicle/index.html#age-nations', linkText: 'READ THIS AGE IN THE CHRONICLE →'
+      },
+      humanity: {
+        age: 'THE AGE OF HUMANITY', title: 'THE WORLD OF THE STORY', subtitle: 'Humanity Rises',
+        description: 'This is the age in which the novel begins. Human powers grow, roads and cities become decisive, and the geography of ambition begins to reshape the Middle Lands.',
+        note: 'The current Elarion atlas is shown here as the first working map of the story era.',
+        link: '../read/book1/index.html', linkText: 'ENTER BOOK ONE →'
+      },
+      return: {
+        age: 'THE AGE OF RETURN', title: 'THE MAP NOT YET DRAWN', subtitle: 'The Final Age',
+        description: 'The land of the final age cannot yet be shown without revealing where the story is going.',
+        note: 'This map remains intentionally veiled.',
+        link: '../chronicle/index.html#age-return', linkText: 'READ THE AGE OF RETURN →'
+      }
+    };
+
+    const stage = document.querySelector('.atlas-stage');
+    const tabs = [...document.querySelectorAll('.atlas-tab')];
+    const caption = stage.querySelector('.atlas-caption');
+
+    function selectAge(key) {
+      const d = atlasData[key];
+      stage.className = `atlas-stage age-${key}`;
+      stage.id = `age-${key}`;
+      caption.innerHTML = `
+        <p class="atlas-age">${d.age}</p>
+        <h3>${d.title}</h3>
+        <p class="atlas-subtitle">${d.subtitle}</p>
+        <p class="atlas-description">${d.description}</p>
+        <p class="atlas-note">${d.note}</p>
+        <a href="${d.link}">${d.linkText}</a>`;
+      tabs.forEach(tab => {
+        const active = tab.dataset.age === key;
+        tab.classList.toggle('active', active);
+        tab.setAttribute('aria-selected', String(active));
+      });
+    }
+
+    tabs.forEach(tab => tab.addEventListener('click', () => selectAge(tab.dataset.age)));
+    document.querySelectorAll('[data-switch-age]').forEach(link => link.addEventListener('click', () => selectAge(link.dataset.switchAge)));
+
+    if (location.hash.startsWith('#age-')) {
+      const key = location.hash.replace('#age-', '');
+      if (atlasData[key]) selectAge(key);
+    }
+  </script>
+
+  <!-- GoatCounter: privacy-friendly page analytics -->
+  <script data-goatcounter="https://echoeskingdom.goatcounter.com/count"
+          async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

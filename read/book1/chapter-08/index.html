@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Chapter 8 | Echoes of the Kingdom</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&amp;family=Inter:wght@300;400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<style>
+.chapter-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  width: 100%;
+  margin-top: 100px;
+  padding-top: 40px;
+  border-top: 1px solid rgba(212, 184, 120, 0.18);
+}
+
+.chapter-navigation a {
+  color: #d8c49a;
+  font-family: Inter, sans-serif;
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+
+background:#070809;
+
+color:#ece2cf;
+
+font-family:"Cormorant Garamond",serif;
+
+line-height:1.9;
+
+}
+
+a{
+
+text-decoration:none;
+
+color:inherit;
+
+}
+
+.topbar{
+
+position:sticky;
+
+top:0;
+
+z-index:100;
+
+height:72px;
+
+background:rgba(7,8,9,.92);
+
+backdrop-filter:blur(10px);
+
+border-bottom:1px solid rgba(212,184,120,.12);
+
+display:flex;
+
+align-items:center;
+
+justify-content:space-between;
+
+padding:0 60px;
+
+}
+
+.logo{
+
+font-size:20px;
+
+letter-spacing:2px;
+
+color:#d8c08b;
+
+}
+
+.back{
+
+font-family:Inter,sans-serif;
+
+font-size:13px;
+
+letter-spacing:2px;
+
+text-transform:uppercase;
+
+color:#a89b7a;
+
+transition:.25s;
+
+}
+
+.back:hover{
+
+color:#e8d9b3;
+
+}
+
+.hero{
+
+padding:120px 20px 80px;
+
+text-align:center;
+
+}
+
+.eyebrow{
+
+font-size:18px;
+
+letter-spacing:6px;
+
+color:#a48c60;
+
+margin-bottom:20px;
+
+text-transform:uppercase;
+
+}
+
+h1{
+
+font-size:88px;
+
+font-weight:600;
+
+letter-spacing:2px;
+
+margin-bottom:24px;
+
+}
+
+.subtitle{
+
+max-width:700px;
+
+margin:auto;
+
+font-family:Inter,sans-serif;
+
+font-size:18px;
+
+color:#bfb5a2;
+
+line-height:1.8;
+
+}
+
+.article{
+
+max-width:680px;
+
+margin:100px auto 180px;
+
+padding:0 30px;
+
+font-size:28px;
+
+}
+
+.article p{
+  font-family:"Cormorant Garamond", serif;
+  font-size:28px;
+  line-height:2;
+  color:rgba(245,239,226,0.95);
+  margin-bottom:42px;
+}
+
+.dropcap::first-letter {
+  float: left;
+  font-size: 72px;
+  line-height: 0.8;
+  margin-right: 14px;
+  margin-top: 6px;
+  color: #d8c49a;
+}
+/* ===========================
+   Cornerstone Footer
+=========================== */
+
+.site-footer{
+    margin-top:120px;
+    padding:72px 24px 58px;
+    border-top:1px solid rgba(212,176,106,.18);
+    text-align:center;
+}
+
+.footer-brand{
+
+    font-family:"Cinzel", serif;
+
+    font-size:44px;
+
+    font-weight:500;
+
+    letter-spacing:.18em;
+
+    color:#D4B06A;
+
+    margin-bottom:10px;
+
+}
+
+.footer-tagline{
+    font-family:"Cormorant Garamond", serif;
+    font-style:italic;
+    font-size:18px;
+    color:#D8C8A8;
+    margin-bottom:32px;
+}
+
+.footer-studio{
+    font-family:Inter,sans-serif;
+    font-size:12px;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    color:rgba(245,239,226,.55);
+    margin-bottom:12px;
+}
+
+.footer-copyright{
+    font-family:Inter,sans-serif;
+    font-size:12px;
+    color:rgba(245,239,226,.35);
+}
+
+
+/* ===========================
+   Mobile Reading Layout
+=========================== */
+@media (max-width: 700px) {
+  html, body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .topbar {
+    height: auto;
+    min-height: 62px;
+    padding: 0 16px;
+    gap: 10px;
+  }
+
+  .logo {
+    min-width: 0;
+    white-space: nowrap;
+    font-size: 13px;
+    letter-spacing: 1.1px;
+    line-height: 1.2;
+  }
+
+  .back {
+    flex: 0 0 auto;
+    white-space: nowrap;
+    font-size: 10px;
+    letter-spacing: 1.1px;
+    line-height: 1.2;
+  }
+
+  .hero {
+    padding: 72px 18px 48px;
+  }
+
+  .eyebrow {
+    margin-bottom: 16px;
+    font-size: 13px;
+    letter-spacing: 4px;
+  }
+
+  h1 {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto 18px;
+    font-size: clamp(40px, 12vw, 54px);
+    line-height: 1.08;
+    letter-spacing: 1px;
+    overflow-wrap: break-word;
+    word-break: normal;
+  }
+
+  .subtitle {
+    max-width: 100%;
+    padding: 0 4px;
+    font-size: 16px;
+    line-height: 1.65;
+  }
+
+  .article {
+    width: 100%;
+    max-width: 100%;
+    margin: 48px auto 96px;
+    padding: 0 22px;
+    font-size: 22px;
+  }
+
+  .article p {
+    max-width: 100%;
+    font-size: 22px;
+    line-height: 1.78;
+    margin-bottom: 30px;
+  }
+
+  .dropcap::first-letter {
+    font-size: 58px;
+    line-height: .82;
+    margin-right: 10px;
+    margin-top: 5px;
+  }
+
+  .chapter-navigation {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    gap: 8px;
+    margin-top: 64px;
+    padding-top: 28px;
+  }
+
+  .chapter-navigation a {
+    min-width: 0;
+    font-size: 10px;
+    line-height: 1.4;
+    letter-spacing: 1.4px;
+  }
+
+  .chapter-navigation a:first-child { text-align: left; }
+  .chapter-navigation a:nth-child(2) { text-align: center; }
+  .chapter-navigation a:last-child { text-align: right; }
+
+  .site-footer {
+    margin-top: 72px;
+    padding: 54px 18px 40px;
+    overflow: hidden;
+  }
+
+  .footer-brand {
+    white-space: nowrap;
+    font-size: clamp(26px, 8vw, 32px);
+    letter-spacing: .12em;
+  }
+
+  .footer-tagline {
+    font-size: 16px;
+    margin-bottom: 28px;
+  }
+
+  .footer-studio,
+  .footer-copyright {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 390px) {
+  .topbar { padding: 0 12px; gap: 7px; }
+  .logo { font-size: 11.5px; letter-spacing: .9px; }
+  .back { font-size: 9px; letter-spacing: .9px; }
+  .hero { padding: 64px 16px 42px; }
+  h1 { font-size: clamp(38px, 11.5vw, 45px); }
+  .article { padding: 0 20px; }
+  .article p { font-size: 21px; line-height: 1.76; }
+  .chapter-navigation a { font-size: 9.5px; letter-spacing: 1.1px; }
+  .footer-brand { font-size: 27px; letter-spacing: .1em; }
+}
+</style>
+</head>
+<body>
+<header class="topbar">
+<div class="logo">
+
+ECHOES OF THE KINGDOM
+
+</div>
+<a class="back" href="../index.html">
+
+← Back to Chapters
+
+</a>
+</header>
+<section class="hero">
+<div class="eyebrow">CHAPTER 8</div>
+<h1>THE DRIFT OF YEARS</h1>
+
+</section>
+<main class="article"><p class="dropcap">The leaves thickened over the Old Stone Road.</p><p>Summer sunlight broke through the canopy and scattered across the ancient stones. Deer moved through the brush. The river swelled with mountain runoff and then slowly fell again as harvest approached.</p><p>Life in Ashvale followed its old rhythm.</p><p>People planted.</p><p>Hunted.</p><p>Gathered.</p><p>Cut wood.</p><p>Then autumn came, and they prepared for winter.</p><p>For the adults, one year often looked much like another.</p><p>For children, a year could change everything.</p><p>Aether's corner of the sleeping loft began to fill with pine boards.</p><p>At first, he recorded little more than names.</p><p>Riverbend.</p><p>Windhill.</p><p>Pinewood Ridge.</p><p>Whitetail Slope.</p><p>Then the names gathered details.</p><p>The knots used in Riverbend fishing nets.</p><p>The number of sheep kept on the Windhill slopes.</p><p>The curve of a Pinewood Ridge longbow.</p><p>The scarred hands of an old tracker from Whitetail.</p><p>Whenever a traveler stopped at the village well, Aether found a reason to sit nearby.</p><p>He rarely interrupted.</p><p>He listened.</p><p>Then, after dark, he wrote down what he remembered.</p><p>Sometimes the same traveler returned months later and told a story differently.</p><p>Aether noticed that too.</p><p>He kept both versions.</p><p>One afternoon, Garan discovered the growing stack behind the grain jars.</p><p>The old man pulled out one board.</p><p>Then another.</p><p>He sat for some time reading what Aether had written and studying the charcoal lines.</p><p>Aether waited.</p><p>Finally, Garan returned the boards to the stack.</p><p>He said nothing.</p><p>But he smiled.</p><p>***</p><p>Autumn turned the ridges gold.</p><p>Then gray.</p><p>Then white.</p><p>Harold came inside one evening and stopped when he saw Aether sitting on the floor surrounded by blackened boards.</p><p>“Still at those?”</p><p>Aether nodded.</p><p>“Aye.”</p><p>Harold looked down.</p><p>Roads.</p><p>Names.</p><p>Fragments of conversations.</p><p>Marks copied from old stone.</p><p>Aether waited for him to say something.</p><p>Harold only removed his sword belt and hung it beside the door.</p><p>Then he stepped carefully over the boards.</p><p>“Don't leave them where someone can put a boot through them.”</p><p>“I won't.”</p><p>Harold grunted and went to wash.</p><p>Aether returned to his work.</p><p>***</p><p>The winter was harder on Garan.</p><p>For three days he did not leave his furs.</p><p>When he finally returned to the central fire, he walked slowly and leaned more heavily on his stick.</p><p>His stories had changed too.</p><p>Sometimes he stopped in the middle of one and stared into the flames.</p><p>Once, he forgot the name of a hunter he had known for forty years.</p><p>No one laughed.</p><p>Garan eventually remembered.</p><p>Or perhaps someone quietly reminded him.</p><p>Aether was not sure.</p><p>But the little wooden carving still hung beneath the old man's tunic.</p><p>And whenever the fire burned low, Garan noticed.</p><p>One night, wind shook the longhouse walls while Aether sat beside him feeding small branches into the hearth.</p><p>Garan watched the coals.</p><p>“The names,” he said.</p><p>Aether looked over.</p><p>“What about them?”</p><p>“You still keep them?”</p><p>“Yes.”</p><p>Garan nodded.</p><p>“Good.”</p><p>A long silence followed.</p><p>Then the old man spoke again.</p><p>“Keep them.”</p><p>Aether looked at him.</p><p>Garan's eyes remained on the fire.</p><p>Aether did not ask why.</p><p>“I will.”</p><p>***</p><p>Spring returned.</p><p>The second Spring Fair felt different.</p><p>Aether recognized people now.</p><p>The net-maker from Riverbend.</p><p>The old shepherd from Windhill.</p><p>The bowyer from Pinewood Ridge.</p><p>People who had once seemed to belong to stories now had names, habits, bad knees, missing teeth, loud laughs.</p><p>Some remembered Aether.</p><p>Others did not.</p><p>He remembered them anyway.</p><p>Kaelen had changed more visibly.</p><p>He was taller now, his shoulders broader. His hands had hardened from bowstrings, traps, and wet rope.</p><p>He sometimes disappeared into the timber for several days with Harold.</p><p>Then, eventually, without Harold.</p><p>When Harold gave him the watch horn for his first solitary night on the ridge, Kaelen took it without ceremony.</p><p>Aether noticed that Harold watched him climb the platform.</p><p>He kept watching long after Kaelen had reached the top.</p><p>***</p><p>One afternoon, Aether sat beneath the eaves with a fresh pine board across his knees.</p><p>Kaelen walked past carrying a bundle of cedar arrow shafts.</p><p>He stopped.</p><p>“You missed someone.”</p><p>Aether looked up.</p><p>“Who?”</p><p>“The boatbuilder from the river mouth.”</p><p>Aether frowned.</p><p>“When?”</p><p>“Last night.”</p><p>“You talked to him?”</p><p>“He talked. I ate.”</p><p>Kaelen pointed at an empty place on the board.</p><p>“He knew the southern currents. Said the river splits below Stone Bridge during the spring floods.”</p><p>Aether stared at him.</p><p>“What?”</p><p>Kaelen shifted the shafts under his arm.</p><p>“Are you going to write it down or not?”</p><p>Aether smiled.</p><p>Then he picked up the charcoal.</p><p>Kaelen continued toward the shed.</p><p>Aether bent over the board.</p><p>A moment later he called after him.</p><p>“Kaelen.”</p><p>His brother turned.</p><p>“What was his name?”</p><p>Kaelen told him.</p><p>Aether wrote that down first.</p><p>***</p><p>Another autumn came.</p><p>Another winter.</p><p>Ashvale changed slowly.</p><p>A roof collapsed beneath heavy snow and was rebuilt before spring.</p><p>A child was born in the northern longhouse.</p><p>An old woman who had lived beside the stream since before Harold was born did not wake one winter morning.</p><p>The following summer, two new families came from farther north.</p><p>They raised longhouses near the southern wall.</p><p>No one in Ashvale spoke of these things as history.</p><p>They were simply things that happened.</p><p>Aether wrote them down.</p><p>***</p><p>The third spring stripped the snow from the Old Stone Road.</p><p>Aether was twelve.</p><p>Kaelen was fifteen.</p><p>Gray had begun to spread through Harold's beard.</p><p>Garan walked more slowly now.</p><p>Two new longhouses stood near the southern wall, their fresh-cut pine still shining pale against the older timber.</p><p>And beneath the oaks beside the stream stood a new mound of earth.</p><p>Near twilight, Aether carried his boards up the slope overlooking the valley.</p><p>Below him, Ashvale went about its evening.</p><p>Kaelen emerged from the tree line with grouse hanging from his belt.</p><p>Harold worked beside the stable, the steady strike of his hammer carrying across the clearing.</p><p>Garan sat beside the central fire.</p><p>Aether lowered himself onto the grass.</p><p>He took the oldest board from the bottom of the stack.</p><p>Almost no bare wood remained.</p><p>Roads crossed it.</p><p>Names crowded its edges.</p><p>Some belonged to people who still came through Ashvale every spring.</p><p>Others belonged to people who would never come again.</p><p>Aether ran his thumb over one of them.</p><p>Then he placed the board back beneath the others.</p><p>From the top of the stack, he took a new piece of pine.</p><p>Clean.</p><p>Pale.</p><p>Empty.</p><p>He rested it across his knees.</p><p>Below, someone called for Kaelen.</p><p>A child began crying near one of the new longhouses.</p><p>Harold's hammer continued its steady rhythm.</p><p>And beside the fire, Garan bent forward to place another branch among the coals.</p><p>Aether pressed the charcoal to the wood.</p><p>Then he began again.</p><div class="chapter-navigation"><a href="../chapter-07/index.html">← Previous</a><a href="../index.html">Contents</a><a href="../chapter-09/index.html">Next →</a></div></main>
+<footer class="site-footer">
+<div class="footer-brand">Cornerstone</div>
+<div class="footer-tagline">
+        Building stories that endure.
+    </div>
+<div class="footer-studio">
+        Created by Echoes Studio
+    </div>
+<div class="footer-copyright">
+        © 2026 Michael He. All Rights Reserved.
+    </div>
+</footer>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const article = document.querySelector(".article");
+
+    if (!article) {
+        return;
+    }
+
+    const paragraphs = article.querySelectorAll("p");
+
+    paragraphs.forEach(function (paragraph) {
+        const text = paragraph.textContent.trim();
+
+        if (!text) {
+            return;
+        }
+
+        // 自动识别场景分隔符
+        if (text === "***" || text === "* * *") {
+            const divider = document.createElement("div");
+            divider.className = "divider";
+            divider.textContent = "❦";
+            paragraph.replaceWith(divider);
+            return;
+        }
+
+        // 自动识别以引号或长破折号开头的对白
+        const isDialogue =
+            text.startsWith('"') ||
+            text.startsWith("“") ||
+            text.startsWith("‘") ||
+            text.startsWith("'") ||
+            text.startsWith("—");
+
+        if (isDialogue) {
+            paragraph.classList.add("dialogue");
+        }
+    });
+});
+</script>
+
+  <!-- GoatCounter: privacy-friendly page analytics -->
+  <script data-goatcounter="https://echoeskingdom.goatcounter.com/count"
+          async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

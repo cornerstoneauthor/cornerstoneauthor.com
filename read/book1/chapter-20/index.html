@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Chapter 20 | Echoes of the Kingdom</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&amp;family=Inter:wght@300;400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<style>
+.chapter-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  width: 100%;
+  margin-top: 100px;
+  padding-top: 40px;
+  border-top: 1px solid rgba(212, 184, 120, 0.18);
+}
+
+.chapter-navigation a {
+  color: #d8c49a;
+  font-family: Inter, sans-serif;
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+
+background:#070809;
+
+color:#ece2cf;
+
+font-family:"Cormorant Garamond",serif;
+
+line-height:1.9;
+
+}
+
+a{
+
+text-decoration:none;
+
+color:inherit;
+
+}
+
+.topbar{
+
+position:sticky;
+
+top:0;
+
+z-index:100;
+
+height:72px;
+
+background:rgba(7,8,9,.92);
+
+backdrop-filter:blur(10px);
+
+border-bottom:1px solid rgba(212,184,120,.12);
+
+display:flex;
+
+align-items:center;
+
+justify-content:space-between;
+
+padding:0 60px;
+
+}
+
+.logo{
+
+font-size:20px;
+
+letter-spacing:2px;
+
+color:#d8c08b;
+
+}
+
+.back{
+
+font-family:Inter,sans-serif;
+
+font-size:13px;
+
+letter-spacing:2px;
+
+text-transform:uppercase;
+
+color:#a89b7a;
+
+transition:.25s;
+
+}
+
+.back:hover{
+
+color:#e8d9b3;
+
+}
+
+.hero{
+
+padding:120px 20px 80px;
+
+text-align:center;
+
+}
+
+.eyebrow{
+
+font-size:18px;
+
+letter-spacing:6px;
+
+color:#a48c60;
+
+margin-bottom:20px;
+
+text-transform:uppercase;
+
+}
+
+h1{
+
+font-size:88px;
+
+font-weight:600;
+
+letter-spacing:2px;
+
+margin-bottom:24px;
+
+}
+
+.subtitle{
+
+max-width:700px;
+
+margin:auto;
+
+font-family:Inter,sans-serif;
+
+font-size:18px;
+
+color:#bfb5a2;
+
+line-height:1.8;
+
+}
+
+.article{
+
+max-width:680px;
+
+margin:100px auto 180px;
+
+padding:0 30px;
+
+font-size:28px;
+
+}
+
+.article p{
+  font-family:"Cormorant Garamond", serif;
+  font-size:28px;
+  line-height:2;
+  color:rgba(245,239,226,0.95);
+  margin-bottom:42px;
+}
+
+.dropcap::first-letter {
+  float: left;
+  font-size: 72px;
+  line-height: 0.8;
+  margin-right: 14px;
+  margin-top: 6px;
+  color: #d8c49a;
+}
+/* ===========================
+   Cornerstone Footer
+=========================== */
+
+.site-footer{
+    margin-top:120px;
+    padding:72px 24px 58px;
+    border-top:1px solid rgba(212,176,106,.18);
+    text-align:center;
+}
+
+.footer-brand{
+
+    font-family:"Cinzel", serif;
+
+    font-size:44px;
+
+    font-weight:500;
+
+    letter-spacing:.18em;
+
+    color:#D4B06A;
+
+    margin-bottom:10px;
+
+}
+
+.footer-tagline{
+    font-family:"Cormorant Garamond", serif;
+    font-style:italic;
+    font-size:18px;
+    color:#D8C8A8;
+    margin-bottom:32px;
+}
+
+.footer-studio{
+    font-family:Inter,sans-serif;
+    font-size:12px;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    color:rgba(245,239,226,.55);
+    margin-bottom:12px;
+}
+
+.footer-copyright{
+    font-family:Inter,sans-serif;
+    font-size:12px;
+    color:rgba(245,239,226,.35);
+}
+
+
+/* ===========================
+   Mobile Reading Layout
+=========================== */
+@media (max-width: 700px) {
+  html, body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .topbar {
+    height: auto;
+    min-height: 62px;
+    padding: 0 16px;
+    gap: 10px;
+  }
+
+  .logo {
+    min-width: 0;
+    white-space: nowrap;
+    font-size: 13px;
+    letter-spacing: 1.1px;
+    line-height: 1.2;
+  }
+
+  .back {
+    flex: 0 0 auto;
+    white-space: nowrap;
+    font-size: 10px;
+    letter-spacing: 1.1px;
+    line-height: 1.2;
+  }
+
+  .hero {
+    padding: 72px 18px 48px;
+  }
+
+  .eyebrow {
+    margin-bottom: 16px;
+    font-size: 13px;
+    letter-spacing: 4px;
+  }
+
+  h1 {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto 18px;
+    font-size: clamp(40px, 12vw, 54px);
+    line-height: 1.08;
+    letter-spacing: 1px;
+    overflow-wrap: break-word;
+    word-break: normal;
+  }
+
+  .subtitle {
+    max-width: 100%;
+    padding: 0 4px;
+    font-size: 16px;
+    line-height: 1.65;
+  }
+
+  .article {
+    width: 100%;
+    max-width: 100%;
+    margin: 48px auto 96px;
+    padding: 0 22px;
+    font-size: 22px;
+  }
+
+  .article p {
+    max-width: 100%;
+    font-size: 22px;
+    line-height: 1.78;
+    margin-bottom: 30px;
+  }
+
+  .dropcap::first-letter {
+    font-size: 58px;
+    line-height: .82;
+    margin-right: 10px;
+    margin-top: 5px;
+  }
+
+  .chapter-navigation {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    gap: 8px;
+    margin-top: 64px;
+    padding-top: 28px;
+  }
+
+  .chapter-navigation a {
+    min-width: 0;
+    font-size: 10px;
+    line-height: 1.4;
+    letter-spacing: 1.4px;
+  }
+
+  .chapter-navigation a:first-child { text-align: left; }
+  .chapter-navigation a:nth-child(2) { text-align: center; }
+  .chapter-navigation a:last-child { text-align: right; }
+
+  .site-footer {
+    margin-top: 72px;
+    padding: 54px 18px 40px;
+    overflow: hidden;
+  }
+
+  .footer-brand {
+    white-space: nowrap;
+    font-size: clamp(26px, 8vw, 32px);
+    letter-spacing: .12em;
+  }
+
+  .footer-tagline {
+    font-size: 16px;
+    margin-bottom: 28px;
+  }
+
+  .footer-studio,
+  .footer-copyright {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 390px) {
+  .topbar { padding: 0 12px; gap: 7px; }
+  .logo { font-size: 11.5px; letter-spacing: .9px; }
+  .back { font-size: 9px; letter-spacing: .9px; }
+  .hero { padding: 64px 16px 42px; }
+  h1 { font-size: clamp(38px, 11.5vw, 45px); }
+  .article { padding: 0 20px; }
+  .article p { font-size: 21px; line-height: 1.76; }
+  .chapter-navigation a { font-size: 9.5px; letter-spacing: 1.1px; }
+  .footer-brand { font-size: 27px; letter-spacing: .1em; }
+}
+</style>
+</head>
+<body>
+<header class="topbar">
+<div class="logo">
+
+ECHOES OF THE KINGDOM
+
+</div>
+<a class="back" href="../index.html">
+
+← Back to Chapters
+
+</a>
+</header>
+<section class="hero">
+<div class="eyebrow">CHAPTER 20</div>
+<h1>THE FEAR IN THE STRAW</h1>
+</section>
+<main class="article"><p class="dropcap">They reached Stony Creek on the third evening.</p><p>The village sat in a narrow gravel basin, a dozen timber houses clustered around a fast, shallow stream. A few thin strips of barley grew between the boulders; women were gathering dry hay from the racks; two boys were driving a small flock of black-faced sheep into a stone pen.</p><p>Aether stood on the crest of the trail, his hands loose on his pack-straps, feeling a sudden sense of confusion. After all of Bren’s talk about the mountain packs, he had expected a ruined wall, burned timbers, and the smell of old iron. But the lane looked ordinary—almost like home.</p><p>"It's just another longhouse plot," Aether muttered.</p><p>Kaelen adjusted his spear. "Dirt is dirt, lad. Move your boots."</p><p>Yet, as the line approached the low timber palisade at the entry, Harold suddenly raised a flat hand. The entire line froze in their tracks.</p><p>Harold stepped off the gravel toward the pine stakes. He knelt and ran his thick fingers over a shattered oak post. The timber had not been cut; it had been twisted apart, the grain torn into three deep, uneven gouges. The spacing was wrong for a wolf and too narrow for the black bears Harold knew from the southern slopes.</p><p>Marcus leaned over, his weathered face darkening. "That’s no clean bear strike," he said. "Look at the spread. And whatever hit it kept pulling after the wood gave way."</p><p>Harold didn't answer. He stood up slowly, his heavy gaze sweeping the treeline that blanketed the upper ridge. The easy familiarity Aether had felt moments ago vanished, replaced by a cold knot in his throat.</p><p>As the Ashvale line entered the lane, the villagers stopped their work. They looked at the heavy spears and the iron-shod wood with a mixture of exhaustion and sharp, desperate hope.</p><p>A woman ran out from the first cabin, her tunic stained with grease and wood-smoke. When she saw Bren walking upright, her face went slack with a relief she had carried for three moons. "You're back," she breathed.</p><p>"Aye," Bren said, gesturing to Harold. "The valley spears are here."</p><p>The village elder came down from the mill—a man named Ren, whose spine had curved from forty winters of stone-work. He took Harold and the senior hunters into the main longhouse to settle the watch, leaving the boys in the lane.</p><p>Aether stopped near an old elm tree. A small boy sat in the dust, cradling a prick-eared hound whose left hind leg was bound tightly with clean wool rags.</p><p>Aether knelt beside him. "What took its leg?"</p><p>The child didn't look up, his small fingers stroking the dog’s snout. "I don’t know. It came out of the scrub."</p><p>"A wolf?" Aether asked.</p><p>The boy shook his head. "It didn’t move like one."</p><p>Before Aether could ask more, the sun dipped fully behind the jagged peak.</p><p>The moment the last amber light faded from the sky, a sound rose from the black timber miles up the valley.</p><p>It was neither a howl nor a roar. A low, rough rumble rolled out of the timber—too deep for a wolf, too uneven for the bears the Ashvale hunters knew. It lasted only a moment, but every dog in the lane reacted at once.</p><p>The entire village went dead silent in a heartbeat. The herders froze; the stone-cutter gripped his felling axe; the hound in the boy's lap let out a terrified, strangled whimper, shivering violently against the dirt.</p><p>Harold stepped out of the longhouse, his heavy hand coming down flat over the hilt of his hunting sword. Beside him, Kaelen stood rigid, his fingers locked around his spear shaft until his knuckles turned bone-white.</p><p>The sound lasted no more than three seconds before the mountain swallowed it back into the dark. But those three seconds hung in the cold air like smoke. Aether stood frozen, a sudden, icy shiver running straight down his spine.</p><p>By nightfall, torches burned everywhere—at the gate, along the sheep-fences, and in the hands of night-patrols walking the timber line.</p><p>The villagers had cleared a small storage hut for the Ashvale men. As the hunters prepared their blankets, Aether noticed that every man laid his blade directly beside his knee. Even in the neighboring cabin, a mother leaned an iron-tipped hayfork against the doorframe.</p><p>In the dim corner lit by a sputtering grease-lamp, the herder boy lay on his straw pallet. He was no longer holding his hound. Instead, his small arms were wrapped tightly around a three-foot hazel club, its tip charred sharp and black in the hearth.</p><p>Aether walked over, kneeling in the straw. "Can you sleep like that?"</p><p>The boy opened his eyes. The childhood innocence was completely gone, replaced by a flat, hardened vigilance. "If I don't hold it," the boy whispered, "I might not wake up tomorrow."</p><p>He pulled the charred club closer to his chest and closed his eyes.</p><p>The room fell quiet again, save for the bitter night wind slipping through the timber wall joints. Aether lay on his mat and watched the boy sleep with both arms wrapped around the blackened hazel club.</p><p>Outside, something moved through the trees. Aether listened until he could no longer tell which sounds were branches and which were not.</p><div class="chapter-navigation"><a href="../chapter-19/index.html">← Previous</a><a href="../index.html">Contents</a></div></main>
+<footer class="site-footer">
+<div class="footer-brand">Cornerstone</div>
+<div class="footer-tagline">
+        Building stories that endure.
+    </div>
+<div class="footer-studio">
+        Created by Echoes Studio
+    </div>
+<div class="footer-copyright">
+        © 2026 Michael He. All Rights Reserved.
+    </div>
+</footer>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const article = document.querySelector(".article");
+
+    if (!article) {
+        return;
+    }
+
+    const paragraphs = article.querySelectorAll("p");
+
+    paragraphs.forEach(function (paragraph) {
+        const text = paragraph.textContent.trim();
+
+        if (!text) {
+            return;
+        }
+
+        // 自动识别场景分隔符
+        if (text === "***" || text === "* * *") {
+            const divider = document.createElement("div");
+            divider.className = "divider";
+            divider.textContent = "❦";
+            paragraph.replaceWith(divider);
+            return;
+        }
+
+        // 自动识别以引号或长破折号开头的对白
+        const isDialogue =
+            text.startsWith('"') ||
+            text.startsWith("“") ||
+            text.startsWith("‘") ||
+            text.startsWith("'") ||
+            text.startsWith("—");
+
+        if (isDialogue) {
+            paragraph.classList.add("dialogue");
+        }
+    });
+});
+</script>
+<!-- GoatCounter: privacy-friendly page analytics -->
+<script async="" data-goatcounter="https://echoeskingdom.goatcounter.com/count" src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

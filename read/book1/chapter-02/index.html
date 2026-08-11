@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Chapter 2 | Echoes of the Kingdom</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&amp;family=Inter:wght@300;400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<style>
+.chapter-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  width: 100%;
+  margin-top: 100px;
+  padding-top: 40px;
+  border-top: 1px solid rgba(212, 184, 120, 0.18);
+}
+
+.chapter-navigation a {
+  color: #d8c49a;
+  font-family: Inter, sans-serif;
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+
+background:#070809;
+
+color:#ece2cf;
+
+font-family:"Cormorant Garamond",serif;
+
+line-height:1.9;
+
+}
+
+a{
+
+text-decoration:none;
+
+color:inherit;
+
+}
+
+.topbar{
+
+position:sticky;
+
+top:0;
+
+z-index:100;
+
+height:72px;
+
+background:rgba(7,8,9,.92);
+
+backdrop-filter:blur(10px);
+
+border-bottom:1px solid rgba(212,184,120,.12);
+
+display:flex;
+
+align-items:center;
+
+justify-content:space-between;
+
+padding:0 60px;
+
+}
+
+.logo{
+
+font-size:20px;
+
+letter-spacing:2px;
+
+color:#d8c08b;
+
+}
+
+.back{
+
+font-family:Inter,sans-serif;
+
+font-size:13px;
+
+letter-spacing:2px;
+
+text-transform:uppercase;
+
+color:#a89b7a;
+
+transition:.25s;
+
+}
+
+.back:hover{
+
+color:#e8d9b3;
+
+}
+
+.hero{
+
+padding:120px 20px 80px;
+
+text-align:center;
+
+}
+
+.eyebrow{
+
+font-size:18px;
+
+letter-spacing:6px;
+
+color:#a48c60;
+
+margin-bottom:20px;
+
+text-transform:uppercase;
+
+}
+
+h1{
+
+font-size:88px;
+
+font-weight:600;
+
+letter-spacing:2px;
+
+margin-bottom:24px;
+
+}
+
+.subtitle{
+
+max-width:700px;
+
+margin:auto;
+
+font-family:Inter,sans-serif;
+
+font-size:18px;
+
+color:#bfb5a2;
+
+line-height:1.8;
+
+}
+
+.article{
+
+max-width:680px;
+
+margin:100px auto 180px;
+
+padding:0 30px;
+
+font-size:28px;
+
+}
+
+.article p{
+  font-family:"Cormorant Garamond", serif;
+  font-size:28px;
+  line-height:2;
+  color:rgba(245,239,226,0.95);
+  margin-bottom:42px;
+}
+
+.dropcap::first-letter {
+  float: left;
+  font-size: 72px;
+  line-height: 0.8;
+  margin-right: 14px;
+  margin-top: 6px;
+  color: #d8c49a;
+}
+/* ===========================
+   Cornerstone Footer
+=========================== */
+
+.site-footer{
+    margin-top:120px;
+    padding:72px 24px 58px;
+    border-top:1px solid rgba(212,176,106,.18);
+    text-align:center;
+}
+
+.footer-brand{
+
+    font-family:"Cinzel", serif;
+
+    font-size:44px;
+
+    font-weight:500;
+
+    letter-spacing:.18em;
+
+    color:#D4B06A;
+
+    margin-bottom:10px;
+
+}
+
+.footer-tagline{
+    font-family:"Cormorant Garamond", serif;
+    font-style:italic;
+    font-size:18px;
+    color:#D8C8A8;
+    margin-bottom:32px;
+}
+
+.footer-studio{
+    font-family:Inter,sans-serif;
+    font-size:12px;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    color:rgba(245,239,226,.55);
+    margin-bottom:12px;
+}
+
+.footer-copyright{
+    font-family:Inter,sans-serif;
+    font-size:12px;
+    color:rgba(245,239,226,.35);
+}
+
+
+/* ===========================
+   Mobile Reading Layout
+=========================== */
+@media (max-width: 700px) {
+  html, body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .topbar {
+    height: auto;
+    min-height: 62px;
+    padding: 0 16px;
+    gap: 10px;
+  }
+
+  .logo {
+    min-width: 0;
+    white-space: nowrap;
+    font-size: 13px;
+    letter-spacing: 1.1px;
+    line-height: 1.2;
+  }
+
+  .back {
+    flex: 0 0 auto;
+    white-space: nowrap;
+    font-size: 10px;
+    letter-spacing: 1.1px;
+    line-height: 1.2;
+  }
+
+  .hero {
+    padding: 72px 18px 48px;
+  }
+
+  .eyebrow {
+    margin-bottom: 16px;
+    font-size: 13px;
+    letter-spacing: 4px;
+  }
+
+  h1 {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto 18px;
+    font-size: clamp(40px, 12vw, 54px);
+    line-height: 1.08;
+    letter-spacing: 1px;
+    overflow-wrap: break-word;
+    word-break: normal;
+  }
+
+  .subtitle {
+    max-width: 100%;
+    padding: 0 4px;
+    font-size: 16px;
+    line-height: 1.65;
+  }
+
+  .article {
+    width: 100%;
+    max-width: 100%;
+    margin: 48px auto 96px;
+    padding: 0 22px;
+    font-size: 22px;
+  }
+
+  .article p {
+    max-width: 100%;
+    font-size: 22px;
+    line-height: 1.78;
+    margin-bottom: 30px;
+  }
+
+  .dropcap::first-letter {
+    font-size: 58px;
+    line-height: .82;
+    margin-right: 10px;
+    margin-top: 5px;
+  }
+
+  .chapter-navigation {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    gap: 8px;
+    margin-top: 64px;
+    padding-top: 28px;
+  }
+
+  .chapter-navigation a {
+    min-width: 0;
+    font-size: 10px;
+    line-height: 1.4;
+    letter-spacing: 1.4px;
+  }
+
+  .chapter-navigation a:first-child { text-align: left; }
+  .chapter-navigation a:nth-child(2) { text-align: center; }
+  .chapter-navigation a:last-child { text-align: right; }
+
+  .site-footer {
+    margin-top: 72px;
+    padding: 54px 18px 40px;
+    overflow: hidden;
+  }
+
+  .footer-brand {
+    white-space: nowrap;
+    font-size: clamp(26px, 8vw, 32px);
+    letter-spacing: .12em;
+  }
+
+  .footer-tagline {
+    font-size: 16px;
+    margin-bottom: 28px;
+  }
+
+  .footer-studio,
+  .footer-copyright {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 390px) {
+  .topbar { padding: 0 12px; gap: 7px; }
+  .logo { font-size: 11.5px; letter-spacing: .9px; }
+  .back { font-size: 9px; letter-spacing: .9px; }
+  .hero { padding: 64px 16px 42px; }
+  h1 { font-size: clamp(38px, 11.5vw, 45px); }
+  .article { padding: 0 20px; }
+  .article p { font-size: 21px; line-height: 1.76; }
+  .chapter-navigation a { font-size: 9.5px; letter-spacing: 1.1px; }
+  .footer-brand { font-size: 27px; letter-spacing: .1em; }
+}
+</style>
+</head>
+<body>
+<header class="topbar">
+<div class="logo">
+
+ECHOES OF THE KINGDOM
+
+</div>
+<a class="back" href="../index.html">
+
+← Back to Chapters
+
+</a>
+</header>
+<section class="hero">
+<div class="eyebrow">CHAPTER 2</div>
+<h1>WHISPERS IN THE WIND</h1>
+
+</section>
+<main class="article"><p class="dropcap">Three days after the blizzard broke, the sky finally gave up its gray.</p><p>The sun returned, casting a hard silver glare across the drifts that buried Ashvale. The settlement slipped back into the familiar rhythm of survival. Hunters vanished into the white edge of the pine forest. Women scraped packed ice from the sod roofs. Children chased one another through the slush, their laughter carrying between the longhouses.</p><p>It was almost as if the storm had never happened.</p><p>Except for Aether.</p><p>Ever since that lightless night on the Old Stone Road, his thoughts kept returning to the markings he had uncovered there—weathered lines that looked like branches, rushing rivers, perhaps even stars.</p><p>Who had carved them?</p><p>Why were they here, buried at the edge of nowhere?</p><p>For three days, the questions followed him everywhere.</p><p>***</p><p>By morning, Aether was back at the ancient road.</p><p>The wind had swept the snow thin in places, exposing the pale dressed stone beneath. It lay across the valley as it always had: ancient, silent, indifferent to whoever happened to walk over it.</p><p>Aether knelt and brushed the fresh powder from the edge of one of the slabs.</p><p>The markings were still there.</p><p>They did not glow. They made no sound. Nothing stirred beneath his fingers.</p><p>He pulled off one mitten and pressed his bare palm against the stone.</p><p>Nothing.</p><p>The wind moved softly through the pines, carrying the sharp scent of frozen sap. Somewhere beyond the trees, snow slipped from a branch with a muffled thump.</p><p>Everything was stubbornly ordinary.</p><p>Aether sat back on his heels.</p><p>Perhaps what he had felt three nights ago—that strange moment when the world seemed to fall silent around him—had only been the cold. Perhaps he had imagined it.</p><p>“I knew I’d find you freezing your toes off out here.”</p><p>Aether turned.</p><p>A youth half a head taller than him was coming through the trees with a brace of winter hares over one shoulder and a chipped hunting knife at his thigh. His dark hair looked as though the wind had been fighting with it all morning.</p><p>Kaelen.</p><p>He dropped the hares into the snow and looked first at Aether, then at the exposed stone.</p><p>“You’re still picking at this old carcass?”</p><p>“Yes.”</p><p>“Found anything?”</p><p>“No.”</p><p>Kaelen nodded gravely and kicked a pebble aside. “Sounds about right.”</p><p>Aether frowned. “What’s that supposed to mean?”</p><p>“It means it’s a rock, little brother.”</p><p>“I’m not studying the rock.”</p><p>“Then what are you doing?”</p><p>“I’m trying to figure out who laid the road.”</p><p>Kaelen blinked.</p><p>Then he sat down on a patch of bare ground beside the stones.</p><p>“Why?”</p><p>“What do you mean, why?”</p><p>“Why do you need to know?” Kaelen gestured toward the valley. “What does it change?”</p><p>Aether opened his mouth.</p><p>Nothing came out.</p><p>After a moment, he shook his head. “I don’t know. I just… want to know.”</p><p>Kaelen studied him for a few seconds, then grinned.</p><p>“You really are an odd bird, Aether.”</p><p>Aether did not argue. Most of Ashvale probably agreed.</p><p>Kaelen picked up a twig and began drawing idle lines in the snow.</p><p>“My da says this road was here when he was a boy tracking his first fox. My grandsire says it was here when he was small enough to fit in a basket. Probably been here since the dirt was made.”</p><p>“But who built it?”</p><p>Kaelen shrugged. “Nobody knows.”</p><p>“Doesn’t your grandfather have a story about it?”</p><p>“If he does, he hasn’t told me.”</p><p>Aether leaned closer. “Doesn’t it make you wonder? Even a little?”</p><p>Kaelen glanced at the hares beside him.</p><p>“Not particularly. That stone road won’t snap a hare’s neck for me.”</p><p>He lifted one of the plump rabbits by the ears.</p><p>“This, on the other hand, keeps us from going hungry tonight.”</p><p>Aether laughed despite himself.</p><p>Kaelen grinned and clapped him on the shoulder.</p><p>For a while they sat together in the winter sun.</p><p>The crusted snow glittered across the valley. Somewhere in the trees, a lone bird called once and fell silent again.</p><p>Kaelen seemed perfectly content.</p><p>Aether looked down at the road.</p><p>It crossed the entire valley and disappeared into the forest on both sides. Everyone in Ashvale used it. Hunters followed it through fog. Children played on it in summer. Sleds crossed it in winter.</p><p>It had been beneath their feet for generations.</p><p>And no one seemed to care who had put it there.</p><p>***</p><p>Over the next few days, Aether asked anyone who would listen.</p><p>He found Harold behind the longhouse, repairing a section of split-log fence damaged by the storm. Even in the cold, sweat had cut dark lines through the soot on his face.</p><p>“The Stone Road?” Harold said without stopping his work. “Of course I know it. When the fog comes in from the mires, we use it to find our way home.”</p><p>The mallet struck wood.</p><p>Once.</p><p>Twice.</p><p>“But who laid the stones, Father?”</p><p>The mallet stopped.</p><p>Harold looked at him.</p><p>For a moment, neither of them spoke.</p><p>“Dead men,” Harold said.</p><p>Aether waited.</p><p>“Men who lived long before our people came to this valley.”</p><p>“Who were they?”</p><p>Harold looked past him toward the forest.</p><p>“I don’t know.”</p><p>“Where did the road go?”</p><p>“I don’t know that either.”</p><p>Aether frowned. “Don’t you ever wonder?”</p><p>Something changed in Harold’s face—not anger, exactly. Weariness, perhaps.</p><p>He rested both hands on the head of the mallet.</p><p>“There are men who spend their lives wondering where old roads lead,” he said. “And there are men who make sure the fence is standing when the wolves come.”</p><p>Aether glanced at the broken logs.</p><p>Harold’s expression softened.</p><p>“Go inside. Warm your hands.”</p><p>“But—”</p><p>“Inside.”</p><p>Harold reached out and gave the back of Aether’s head a gentle push toward the longhouse.</p><p>“Leave the dead to their stones. I need this wall finished before dark.”</p><p>Aether reluctantly obeyed.</p><p>Behind him, the mallet began to fall again.</p><p>***</p><p>The blacksmith proved no more helpful.</p><p>The forge was thick with coal smoke and heat. The smith stood over a glowing length of iron, hammering it into shape as sparks scattered across the packed-earth floor.</p><p>“Who built the old highway?” he repeated.</p><p>Aether nodded.</p><p>The smith wiped his brow with a blackened forearm.</p><p>“The Ancients, probably.”</p><p>“Which Ancients?”</p><p>“The ones before the other Ancients.”</p><p>Aether stared at him.</p><p>The smith turned back to his iron.</p><p>That, apparently, was the end of the conversation.</p><p>***</p><p>At dusk, Aether found Garan sitting on his usual log beside the central fire.</p><p>The old man’s thin figure was wrapped in furs, his face warmed by the amber glow of the coals.</p><p>Aether sat beside him and told him everything.</p><p>He told him about the markings. About Kaelen. About Harold. About the blacksmith and his useless Ancients.</p><p>Garan listened without interruption, his pale eyes resting on the fire.</p><p>When Aether finished, the old man remained silent so long that Aether wondered whether he had fallen asleep.</p><p>“Grandfather?”</p><p>Garan stirred.</p><p>“Do you know who built it?”</p><p>A faint smile touched the old man’s mouth.</p><p>“No.”</p><p>Aether’s shoulders sank.</p><p>“Not even you?”</p><p>Garan gave a dry little chuckle.</p><p>“I’m old, child. Not all-knowing.”</p><p>Aether stared into the fire.</p><p>Garan picked up a piece of pine and laid it among the coals. Flame curled slowly around the wood.</p><p>“Do you know why the mountains stand where they do?” he asked.</p><p>Aether looked up.</p><p>“No.”</p><p>“Do you know why the rivers choose one valley and not another?”</p><p>“No.”</p><p>“And yet you have walked past both all your life.”</p><p>Aether thought about that.</p><p>Garan nodded toward the darkness beyond the circle of firelight.</p><p>“To the people of Ashvale, that road is much the same. It was here when their fathers were children, and when their fathers’ fathers were children. After enough years, people stop seeing a thing as a question.”</p><p>Aether looked down at his boots.</p><p>“But it is a question.”</p><p>“Yes.”</p><p>“Then why doesn’t anyone want the answer?”</p><p>Garan smiled.</p><p>“Perhaps they have other questions.”</p><p>Aether remembered Kaelen’s rabbits.</p><p>Harold’s broken fence.</p><p>The blacksmith’s glowing iron.</p><p>Garan nudged the burning branch farther into the coals.</p><p>“There is nothing wrong with asking, Aether.”</p><p>“But what if I never find out?”</p><p>“Then you’ll have asked something worth asking.”</p><p>The old man turned his gaze back to the flames.</p><p>“For now, that may be enough.”</p><p>Aether said nothing.</p><p>The fire cracked between them.</p><p>Beyond the longhouses, the wind moved over the snow.</p><p>***</p><p>Night settled slowly over Ashvale.</p><p>Aether walked alone to the edge of the settlement.</p><p>The last of the sunlight was fading behind the western peaks, leaving a narrow band of gold beneath the gathering dark. Smoke rose from the longhouses behind him, and the smell of roasting meat drifted through the cold.</p><p>Kaelen’s hares, probably.</p><p>Voices carried from inside the houses—someone laughing, a child protesting bedtime, a woman calling for more firewood.</p><p>Ashvale was drawing inward for the night.</p><p>Aether sat on the edge of the Old Stone Road.</p><p>For a long time, he simply watched it.</p><p>Northward, it disappeared among the pines.</p><p>Southward, it crossed the snow and vanished beyond the far end of the valley.</p><p>He had seen it every day of his life.</p><p>Until now, he had never really seen it at all.</p><p>A thought came to him.</p><p>If the road kept going, where did it end?</p><p>He looked toward the southern darkness.</p><p>Were there other settlements beyond Ashvale?</p><p>Other longhouses?</p><p>Other children sitting beside other fires?</p><p>Other people who had never heard of Ashvale at all?</p><p>The thought was so strange that Aether almost laughed.</p><p>He had always known there was land beyond the valley. Of course there was.</p><p>But knowing it was not the same as imagining it.</p><p>For the first time, the mountains around Ashvale did not feel like the edge of the world.</p><p>They felt like walls.</p><p>The wind came down the road and tugged at his coat before rushing past him into the dark.</p><p>Aether rose.</p><p>Three days ago, he had wanted to know what the markings in the stone meant.</p><p>Now another question had taken their place.</p><p>Where does the road go?</p><p>He stood there until the last light disappeared behind the mountains and the stars sharpened overhead.</p><p>Then he turned toward home.</p><p>Behind him, the Old Stone Road stretched away into the night.</p><p>And for the first time in his eleven winters, Aether wanted to follow it.</p><div class="chapter-navigation"><a href="../chapter-01/index.html">← Previous</a><a href="../index.html">Contents</a><a href="../chapter-03/index.html">Next →</a></div></main>
+<footer class="site-footer">
+<div class="footer-brand">Cornerstone</div>
+<div class="footer-tagline">
+        Building stories that endure.
+    </div>
+<div class="footer-studio">
+        Created by Echoes Studio
+    </div>
+<div class="footer-copyright">
+        © 2026 Michael He. All Rights Reserved.
+    </div>
+</footer>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const article = document.querySelector(".article");
+
+    if (!article) {
+        return;
+    }
+
+    const paragraphs = article.querySelectorAll("p");
+
+    paragraphs.forEach(function (paragraph) {
+        const text = paragraph.textContent.trim();
+
+        if (!text) {
+            return;
+        }
+
+        // 自动识别场景分隔符
+        if (text === "***" || text === "* * *") {
+            const divider = document.createElement("div");
+            divider.className = "divider";
+            divider.textContent = "❦";
+            paragraph.replaceWith(divider);
+            return;
+        }
+
+        // 自动识别以引号或长破折号开头的对白
+        const isDialogue =
+            text.startsWith('"') ||
+            text.startsWith("“") ||
+            text.startsWith("‘") ||
+            text.startsWith("'") ||
+            text.startsWith("—");
+
+        if (isDialogue) {
+            paragraph.classList.add("dialogue");
+        }
+    });
+});
+</script>
+
+  <!-- GoatCounter: privacy-friendly page analytics -->
+  <script data-goatcounter="https://echoeskingdom.goatcounter.com/count"
+          async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

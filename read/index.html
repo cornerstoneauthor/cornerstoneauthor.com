@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Read | Echoes of the Kingdom</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&amp;family=Cormorant+Garamond:wght@400;500;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: #050607;
+      color: #d8c49a;
+      font-family: Georgia, "Times New Roman", serif;
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* NAVIGATION */
+
+    .site-header {
+      min-height: 88px;
+      padding: 0 42px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 40px;
+      border-bottom: 1px solid rgba(216, 196, 154, 0.16);
+      background: #07090c;
+    }
+
+    .brand {
+      font-size: 20px;
+      letter-spacing: 2px;
+      white-space: nowrap;
+    }
+
+    .site-nav {
+      display: flex;
+      align-items: center;
+      gap: 38px;
+    }
+
+    .site-nav a {
+      color: #bdb6aa;
+      font-size: 15px;
+      letter-spacing: 1.5px;
+      transition: color 0.2s ease;
+    }
+
+    .site-nav a:hover,
+    .site-nav .active {
+      color: #d8c49a;
+    }
+
+    /* HERO */
+
+    .read-hero {
+      min-height: 680px;
+      padding: 80px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+
+      background:
+        radial-gradient(
+          circle at 72% 22%,
+          rgba(228, 199, 138, 0.25),
+          transparent 25%
+        ),
+        linear-gradient(
+          to bottom,
+          rgba(8, 11, 15, 0.18),
+          rgba(3, 4, 6, 0.95)
+        ),
+        linear-gradient(
+          135deg,
+          #253341 0%,
+          #10161d 48%,
+          #453720 100%
+        );
+    }
+
+    .read-hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(
+          90deg,
+          rgba(0, 0, 0, 0.4),
+          transparent 50%,
+          rgba(0, 0, 0, 0.12)
+        ),
+        linear-gradient(
+          to top,
+          rgba(4, 5, 7, 0.9),
+          transparent 55%
+        );
+    }
+
+    .hero-content {
+      width: min(920px, 92%);
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-label {
+      margin-bottom: 24px;
+      color: #aa9875;
+      font-size: 14px;
+      letter-spacing: 4px;
+    }
+
+    .hero-title {
+      margin-bottom: 30px;
+      font-size: clamp(54px, 8vw, 108px);
+      font-weight: 400;
+      letter-spacing: 4px;
+      line-height: 0.95;
+    }
+
+    .hero-text {
+      margin-bottom: 38px;
+      color: #e5ddd0;
+      font-size: clamp(16px, 2vw, 22px);
+      letter-spacing: 1.5px;
+      line-height: 1.8;
+    }
+
+    .main-button {
+      display: inline-block;
+      padding: 17px 42px;
+      border: 1px solid rgba(216, 196, 154, 0.75);
+      color: #d8c49a;
+      font-size: 14px;
+      letter-spacing: 2px;
+      transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
+    }
+
+    .main-button:hover {
+      background: #d8c49a;
+      color: #080a0d;
+      transform: translateY(-2px);
+    }
+
+    /* BOOK INTRODUCTION */
+
+    .book-section {
+      padding: 110px 24px;
+      background: #050607;
+      border-bottom: 1px solid rgba(216, 196, 154, 0.16);
+    }
+
+    .book-content {
+      width: min(900px, 92%);
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .section-label {
+      margin-bottom: 18px;
+      color: #aa9875;
+      font-size: 13px;
+      letter-spacing: 4px;
+    }
+
+    .book-title,
+    .chapters-title {
+      font-size: clamp(36px, 5vw, 62px);
+      font-weight: 400;
+      letter-spacing: 2px;
+      line-height: 1.15;
+    }
+
+    .book-subtitle {
+      margin-top: 14px;
+      color: #aa9875;
+      font-size: 17px;
+      letter-spacing: 3px;
+    }
+
+    .divider {
+      width: 100px;
+      height: 1px;
+      margin: 42px auto;
+      background: rgba(216, 196, 154, 0.45);
+    }
+
+    .book-description {
+      max-width: 720px;
+      margin: 0 auto;
+      color: #c9c1b4;
+      font-size: 17px;
+      line-height: 1.8;
+    }
+
+    .book-description p {
+      margin-bottom: 26px;
+    }
+
+    /* CHAPTERS */
+
+    .chapters-section {
+      padding: 110px 24px 130px;
+      background: #08090b;
+    }
+
+    .chapters-content {
+      width: min(960px, 92%);
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .chapter-list {
+      margin-top: 58px;
+      display: grid;
+      gap: 18px;
+    }
+
+    .chapter-card {
+      min-height: 112px;
+      padding: 26px 30px;
+      display: grid;
+      grid-template-columns: 180px 1fr auto;
+      align-items: center;
+      gap: 28px;
+      border: 1px solid rgba(216, 196, 154, 0.22);
+      background: #0c0e11;
+      text-align: left;
+      transition:
+        border-color 0.2s ease,
+        background 0.2s ease,
+        transform 0.2s ease;
+    }
+
+    .chapter-card:hover {
+      transform: translateY(-2px);
+      border-color: rgba(216, 196, 154, 0.7);
+      background: #111419;
+    }
+
+    .chapter-number {
+      color: #9f8e6c;
+      font-size: 13px;
+      letter-spacing: 2px;
+    }
+
+    .chapter-name {
+      color: #d8c49a;
+      font-size: clamp(20px, 3vw, 29px);
+      letter-spacing: 1px;
+    }
+
+    .chapter-action {
+      color: #b6a37f;
+      font-size: 12px;
+      letter-spacing: 2px;
+      white-space: nowrap;
+    }
+
+   /* ===========================
+   Cornerstone Footer
+=========================== */
+
+.site-footer{
+    margin-top:120px;
+    padding:72px 24px 58px;
+    border-top:1px solid rgba(212,176,106,0.22);
+    text-align:center;
+}
+
+.footer-brand{
+
+    font-family:"Cinzel", serif;
+
+    font-size:44px;
+
+    font-weight:500;
+
+    letter-spacing:.18em;
+
+    color:#D4B06A;
+
+    margin-bottom:10px;
+
+}
+
+.footer-tagline{
+    font-family:"Cormorant Garamond", serif;
+    font-style:italic;
+    font-size:18px;
+    color:#D8C8A8;
+    margin-bottom:32px;
+}
+
+.footer-studio{
+    font-family:Inter,sans-serif;
+    font-size:12px;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    color:rgba(245,239,226,.55);
+    margin-bottom:12px;
+}
+
+.footer-copyright{
+    font-family:Inter,sans-serif;
+    font-size:12px;
+    color:rgba(245,239,226,.35);
+}
+
+    /* MOBILE */
+
+    @media (max-width: 850px) {
+      .site-header {
+        padding: 24px;
+        flex-direction: column;
+      }
+
+      .site-nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 18px 25px;
+      }
+
+      .read-hero {
+        min-height: 590px;
+      }
+
+      .chapter-card {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        padding: 24px;
+      }
+
+      .chapter-action {
+        margin-top: 8px;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .brand {
+        font-size: 16px;
+      }
+
+      .site-nav a {
+        font-size: 12px;
+      }
+
+      .hero-title {
+        font-size: 52px;
+      }
+
+      .book-section,
+      .chapters-section {
+        padding-top: 80px;
+        padding-bottom: 90px;
+      }
+    }
+    /* Chapter section refinement */
+
+.chapters-section {
+  background:
+    linear-gradient(
+      180deg,
+      #090b10 0%,
+      #07090d 55%,
+      #050607 100%
+    );
+}
+
+.chapter-list {
+  gap: 30px;
+}
+
+.chapter-card {
+  border-color: rgba(216, 196, 154, 0.26);
+  background: rgba(17, 20, 27, 0.72);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.02),
+    0 12px 35px rgba(0, 0, 0, 0.18);
+}
+
+.chapter-name {
+  font-weight: 500;
+}
+
+.chapter-action {
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.chapter-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(216, 196, 154, 0.42);
+  background: rgba(23, 27, 36, 0.9);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.035),
+    0 18px 44px rgba(0, 0, 0, 0.3);
+}
+
+.chapter-card:hover .chapter-action {
+  color: #e5d2a8;
+  transform: translateX(5px);
+}
+  </style>
+</head>
+<body>
+<header class="site-header">
+<a class="brand" href="../index.html">
+    ECHOES OF THE KINGDOM
+    </a>
+<nav aria-label="Main navigation" class="site-nav" id="site-nav">
+<a href="./index.html">READ</a>
+<a href="../assets/lore/index.html">LORE</a>
+<a href="../chronicle/index.html">CHRONICLE</a>
+<a href="../map/index.html">MAP</a>
+<a href="../assets/about/index.html">ABOUT</a>
+<a href="../assets/join/index.html">JOIN</a>
+</nav>
+</header>
+<main>
+<section class="read-hero">
+<div class="hero-content">
+<p class="hero-label">ENTER THE STORY</p>
+<h1 class="hero-title">READ THE STORY</h1>
+<p class="hero-text">THE JOURNEY BEGINS HERE.<br/>FOLLOW THE ECHO.</p>
+<a class="main-button" href="#books">BEGIN READING</a>
+</div>
+</section>
+<section class="book-section" id="books">
+<div class="book-content">
+<p class="section-label">THE STORY</p>
+<h2 class="book-title">ECHOES OF THE KINGDOM</h2>
+<p class="book-subtitle">A LONG-FORM FANTASY SAGA</p>
+<div class="divider"></div>
+<div class="book-description">
+<p>Kingdoms rise. Memories fade. The Echo remains.</p>
+<p>Enter Elarion and follow a story of faith, power, memory, and the search for what lies beyond the visible world.</p>
+</div>
+</div>
+</section>
+<section class="chapters-section">
+<div class="chapters-content">
+<p class="section-label">AVAILABLE NOW</p>
+<h2 class="chapters-title">BOOKS</h2>
+<div class="chapter-list">
+<a class="chapter-card" href="./book1/index.html">
+<span class="chapter-number">BOOK ONE</span>
+<span class="chapter-name">THE RISE OF THE EMPIRE</span>
+<span class="chapter-action">ENTER →</span>
+</a>
+</div>
+</div>
+</section>
+</main>
+<footer class="site-footer">
+<div class="footer-brand">Cornerstone</div>
+<div class="footer-tagline">
+        Building stories that endure.
+    </div>
+<div class="footer-studio">
+        Created by Echoes Studio
+    </div>
+<div class="footer-copyright">
+        © 2026 Michael He. All Rights Reserved.
+    </div>
+</footer>
+
+  <!-- GoatCounter: privacy-friendly page analytics -->
+  <script data-goatcounter="https://echoeskingdom.goatcounter.com/count"
+          async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

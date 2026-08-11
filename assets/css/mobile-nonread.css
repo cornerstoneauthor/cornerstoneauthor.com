@@ -1,0 +1,113 @@
+/* Mobile-only responsive refinements for non-READ pages.
+   Desktop styles are intentionally untouched. */
+@media (max-width: 700px) {
+  html, body { max-width: 100%; overflow-x: hidden; }
+  img, svg, video, canvas { max-width: 100%; height: auto; }
+
+  /* Shared header/footer on non-read pages */
+  .site-header { padding: 12px 16px; gap: 14px; min-height: 62px; }
+  .brand { max-width: calc(100% - 84px); font-size: 12px; line-height: 1.3; letter-spacing: .08em; white-space: normal; }
+  .menu-toggle { flex: 0 0 auto; font-size: 11px; padding: 8px 10px; }
+  .site-nav { padding-top: 8px; }
+  .site-nav a { font-size: 12px; }
+  .site-footer { margin-top: 72px; padding: 54px 18px 42px; }
+  .footer-brand { font-size: clamp(28px, 10vw, 38px); letter-spacing: .12em; overflow-wrap: anywhere; }
+  .footer-tagline { font-size: 17px; }
+
+  /* Home */
+  .home-hero { min-height: auto; padding: 92px 18px 88px; }
+  .home-hero-content { width: 100%; max-width: 100%; padding: 0; }
+  .home-hero-eyebrow { font-size: 11px; letter-spacing: .24em; }
+  .home-hero-title { font-size: clamp(42px, 13vw, 58px); line-height: 1.04; overflow-wrap: normal; }
+  .home-hero-text { font-size: 19px; line-height: 1.55; }
+  .home-hero-actions, .home-reading-actions, .home-join-actions { width: 100%; flex-direction: column; align-items: stretch; }
+  .home-primary-button, .home-reading-primary, .home-join-primary { width: 100%; max-width: none; text-align: center; }
+  .home-secondary-link, .home-reading-secondary, .home-join-secondary { align-self: center; }
+
+  .home-gateways, .home-reading, .home-explore, .home-join { padding-left: 18px; padding-right: 18px; }
+  .home-gateways-title, .home-reading-title, .home-explore-title, .home-join-title { font-size: clamp(34px, 10.5vw, 42px); line-height: 1.08; }
+  .home-gateway-card, .home-explore-card { min-height: 0; padding: 30px 24px; }
+  .home-gateway-content h3, .home-explore-content h3 { font-size: clamp(29px, 9vw, 36px); line-height: 1.1; }
+  .home-gateway-content p, .home-explore-content p:not(.home-explore-label) { font-size: 18px; line-height: 1.55; }
+  .home-reading-inner { grid-template-columns: 1fr; gap: 52px; }
+  .home-reading-copy { max-width: 100%; }
+  .home-reading-visual { width: 100%; }
+  .home-reading-book { width: min(100%, 330px); min-height: 430px; margin: 0 auto; padding: 38px 26px; }
+  .home-join-emphasis { font-size: 24px; }
+
+  /* About */
+  .about-hero { min-height: auto; padding: 95px 18px 90px; }
+  .about-hero-content { width: 100%; max-width: 100%; }
+  .about-hero-title, .about-manifesto-quote blockquote, .about-themes-title,
+  .about-studio-title, .about-creator-title, .about-final-title {
+    font-size: clamp(34px, 10.5vw, 43px); line-height: 1.08;
+  }
+  .about-hero-text, .about-themes-text, .about-studio-text,
+  .about-creator-text, .about-final-text { font-size: 19px; line-height: 1.6; }
+  .about-manifesto, .about-themes, .about-studio, .about-creator, .about-final { padding-left: 18px; padding-right: 18px; }
+  .about-manifesto-inner, .about-studio-inner, .about-creator-inner { grid-template-columns: 1fr; gap: 44px; }
+  .about-theme-card { padding: 34px 24px; }
+  .about-studio-principle { grid-template-columns: 42px 1fr; gap: 14px; }
+  .about-creator-note { padding: 30px 22px; }
+  .about-final-actions { width: 100%; flex-direction: column; align-items: stretch; }
+  .about-final-primary { width: 100%; max-width: none; text-align: center; }
+  .about-final-secondary { align-self: center; }
+
+  /* Join */
+  .join-hero { min-height: auto; padding: 95px 18px 90px; }
+  .join-hero-content { width: 100%; max-width: 100%; }
+  .join-hero-title, .join-together-title, .join-contribute-title,
+  .join-honesty-title, .join-final-title { font-size: clamp(34px, 10.5vw, 43px); line-height: 1.08; }
+  .join-hero-copy, .join-contribute-text, .join-final-text { font-size: 19px; line-height: 1.6; }
+  .join-hero-actions, .join-final-actions { width: 100%; flex-direction: column; align-items: stretch; }
+  .join-primary-button, .join-final-primary { width: 100%; max-width: none; text-align: center; }
+  .join-secondary-link, .join-final-secondary { align-self: center; }
+  .join-together, .join-contribute, .join-honesty, .join-final { padding-left: 18px; padding-right: 18px; }
+  .join-together-inner, .join-honesty-inner { grid-template-columns: 1fr; gap: 42px; }
+  .join-contribute-card { padding: 34px 24px; }
+  .join-final-emphasis { font-size: 24px; }
+
+  /* Chronicle */
+  .chronicle-hero { min-height: auto; padding: 100px 18px 82px; }
+  .chronicle-hero h1 { font-size: clamp(42px, 12vw, 56px); line-height: 1.03; }
+  .chronicle-lead { font-size: 24px; line-height: 1.35; }
+  .chronicle-copy { font-size: 19px; line-height: 1.55; }
+  .chronicle-enter { max-width: 100%; padding: 15px 18px; letter-spacing: .14em; }
+  .chronicle-intro { padding: 76px 18px 58px; }
+  .chronicle-intro h2, .age-panel h2, .chronicle-closing h2 { font-size: clamp(31px, 9vw, 40px); line-height: 1.08; }
+  .chronicle-intro p:last-child, .age-panel>p:not(.age-kicker):not(.age-return-line) { font-size: 19px; line-height: 1.6; }
+  .ages-timeline { width: calc(100% - 24px); }
+  .age-panel { padding: 25px 18px; }
+  .age-panel h3 { font-size: 22px; }
+  .age-links { flex-direction: column; gap: 14px; align-items: flex-start; }
+  .age-story-callout { padding: 18px; }
+  .chronicle-closing { padding: 78px 18px 92px; }
+
+  /* Map / atlas */
+  .map-hero { min-height: auto; padding: 105px 18px 72px; }
+  .map-hero h1 { font-size: clamp(40px, 11vw, 52px); line-height: 1.04; }
+  .map-hero p:not(.map-eyebrow) { font-size: 19px; line-height: 1.55; }
+  .map-philosophy { width: calc(100% - 36px); padding: 78px 0 64px; }
+  .map-philosophy h2, .atlas-heading h2, .map-closing h2 { font-size: clamp(31px, 9vw, 40px); line-height: 1.08; }
+  .map-philosophy p:last-child { font-size: 19px; line-height: 1.6; }
+  .age-atlas { padding: 28px 14px 70px; }
+  .atlas-tabs { grid-template-columns: 1fr 1fr; }
+  .atlas-tab { min-width: 0; padding: 13px 6px; font-size: 9px; letter-spacing: .08em; }
+  .atlas-stage { min-height: 600px; }
+  .atlas-caption { left: 14px; right: 14px; bottom: 14px; width: auto; padding: 22px 18px; }
+  .atlas-caption h3 { font-size: 30px; line-height: 1.08; }
+  .atlas-subtitle { font-size: 20px !important; }
+  .atlas-description { font-size: 17px; }
+  .map-age-index { padding: 64px 18px 86px; }
+  .map-age-cards { grid-template-columns: 1fr; }
+  .map-age-card { border-right: 0; }
+  .map-closing { padding: 78px 18px 92px; }
+}
+
+@media (max-width: 390px) {
+  .brand { font-size: 11px; }
+  .home-hero-title, .about-hero-title, .join-hero-title,
+  .chronicle-hero h1, .map-hero h1 { font-size: 38px; }
+  .atlas-tabs { grid-template-columns: 1fr; }
+  .footer-brand { font-size: 28px; }
+}
