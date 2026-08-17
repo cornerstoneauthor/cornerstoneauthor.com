@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Chapter 24 | Echoes of the Kingdom</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&amp;family=Inter:wght@300;400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<style>
+.chapter-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  width: 100%;
+  margin-top: 100px;
+  padding-top: 40px;
+  border-top: 1px solid rgba(212, 184, 120, 0.18);
+}
+
+.chapter-navigation a {
+  color: #d8c49a;
+  font-family: Inter, sans-serif;
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+
+background:#070809;
+
+color:#ece2cf;
+
+font-family:"Cormorant Garamond",serif;
+
+line-height:1.9;
+
+}
+
+a{
+
+text-decoration:none;
+
+color:inherit;
+
+}
+
+.topbar{
+
+position:sticky;
+
+top:0;
+
+z-index:100;
+
+height:72px;
+
+background:rgba(7,8,9,.92);
+
+backdrop-filter:blur(10px);
+
+border-bottom:1px solid rgba(212,184,120,.12);
+
+display:flex;
+
+align-items:center;
+
+justify-content:space-between;
+
+padding:0 60px;
+
+}
+
+.logo{
+
+font-size:20px;
+
+letter-spacing:2px;
+
+color:#d8c08b;
+
+}
+
+.back{
+
+font-family:Inter,sans-serif;
+
+font-size:13px;
+
+letter-spacing:2px;
+
+text-transform:uppercase;
+
+color:#a89b7a;
+
+transition:.25s;
+
+}
+
+.back:hover{
+
+color:#e8d9b3;
+
+}
+
+.hero{
+
+padding:120px 20px 80px;
+
+text-align:center;
+
+}
+
+.eyebrow{
+
+font-size:18px;
+
+letter-spacing:6px;
+
+color:#a48c60;
+
+margin-bottom:20px;
+
+text-transform:uppercase;
+
+}
+
+h1{
+
+font-size:88px;
+
+font-weight:600;
+
+letter-spacing:2px;
+
+margin-bottom:24px;
+
+}
+
+.subtitle{
+
+max-width:700px;
+
+margin:auto;
+
+font-family:Inter,sans-serif;
+
+font-size:18px;
+
+color:#bfb5a2;
+
+line-height:1.8;
+
+}
+
+.article{
+
+max-width:680px;
+
+margin:100px auto 180px;
+
+padding:0 30px;
+
+font-size:28px;
+
+}
+
+.article p{
+  font-family:"Cormorant Garamond", serif;
+  font-size:28px;
+  line-height:2;
+  color:rgba(245,239,226,0.95);
+  margin-bottom:42px;
+}
+
+.dropcap::first-letter {
+  float: left;
+  font-size: 72px;
+  line-height: 0.8;
+  margin-right: 14px;
+  margin-top: 6px;
+  color: #d8c49a;
+}
+/* ===========================
+   Cornerstone Footer
+=========================== */
+
+.site-footer{
+    margin-top:120px;
+    padding:72px 24px 58px;
+    border-top:1px solid rgba(212,176,106,.18);
+    text-align:center;
+}
+
+.footer-brand{
+
+    font-family:"Cinzel", serif;
+
+    font-size:44px;
+
+    font-weight:500;
+
+    letter-spacing:.18em;
+
+    color:#D4B06A;
+
+    margin-bottom:10px;
+
+}
+
+.footer-tagline{
+    font-family:"Cormorant Garamond", serif;
+    font-style:italic;
+    font-size:18px;
+    color:#D8C8A8;
+    margin-bottom:32px;
+}
+
+.footer-studio{
+    font-family:Inter,sans-serif;
+    font-size:12px;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    color:rgba(245,239,226,.55);
+    margin-bottom:12px;
+}
+
+.footer-copyright{
+    font-family:Inter,sans-serif;
+    font-size:12px;
+    color:rgba(245,239,226,.35);
+}
+
+
+/* ===========================
+   Mobile Reading Layout
+=========================== */
+@media (max-width: 700px) {
+  html, body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .topbar {
+    height: auto;
+    min-height: 62px;
+    padding: 0 16px;
+    gap: 10px;
+  }
+
+  .logo {
+    min-width: 0;
+    white-space: nowrap;
+    font-size: 13px;
+    letter-spacing: 1.1px;
+    line-height: 1.2;
+  }
+
+  .back {
+    flex: 0 0 auto;
+    white-space: nowrap;
+    font-size: 10px;
+    letter-spacing: 1.1px;
+    line-height: 1.2;
+  }
+
+  .hero {
+    padding: 72px 18px 48px;
+  }
+
+  .eyebrow {
+    margin-bottom: 16px;
+    font-size: 13px;
+    letter-spacing: 4px;
+  }
+
+  h1 {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto 18px;
+    font-size: clamp(40px, 12vw, 54px);
+    line-height: 1.08;
+    letter-spacing: 1px;
+    overflow-wrap: break-word;
+    word-break: normal;
+  }
+
+  .subtitle {
+    max-width: 100%;
+    padding: 0 4px;
+    font-size: 16px;
+    line-height: 1.65;
+  }
+
+  .article {
+    width: 100%;
+    max-width: 100%;
+    margin: 48px auto 96px;
+    padding: 0 22px;
+    font-size: 22px;
+  }
+
+  .article p {
+    max-width: 100%;
+    font-size: 22px;
+    line-height: 1.78;
+    margin-bottom: 30px;
+  }
+
+  .dropcap::first-letter {
+    font-size: 58px;
+    line-height: .82;
+    margin-right: 10px;
+    margin-top: 5px;
+  }
+
+  .chapter-navigation {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    gap: 8px;
+    margin-top: 64px;
+    padding-top: 28px;
+  }
+
+  .chapter-navigation a {
+    min-width: 0;
+    font-size: 10px;
+    line-height: 1.4;
+    letter-spacing: 1.4px;
+  }
+
+  .chapter-navigation a:first-child { text-align: left; }
+  .chapter-navigation a:nth-child(2) { text-align: center; }
+  .chapter-navigation a:last-child { text-align: right; }
+
+  .site-footer {
+    margin-top: 72px;
+    padding: 54px 18px 40px;
+    overflow: hidden;
+  }
+
+  .footer-brand {
+    white-space: nowrap;
+    font-size: clamp(26px, 8vw, 32px);
+    letter-spacing: .12em;
+  }
+
+  .footer-tagline {
+    font-size: 16px;
+    margin-bottom: 28px;
+  }
+
+  .footer-studio,
+  .footer-copyright {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 390px) {
+  .topbar { padding: 0 12px; gap: 7px; }
+  .logo { font-size: 11.5px; letter-spacing: .9px; }
+  .back { font-size: 9px; letter-spacing: .9px; }
+  .hero { padding: 64px 16px 42px; }
+  h1 { font-size: clamp(38px, 11.5vw, 45px); }
+  .article { padding: 0 20px; }
+  .article p { font-size: 21px; line-height: 1.76; }
+  .chapter-navigation a { font-size: 9.5px; letter-spacing: 1.1px; }
+  .footer-brand { font-size: 27px; letter-spacing: .1em; }
+}
+</style>
+</head>
+<body>
+<header class="topbar">
+<div class="logo">
+
+ECHOES OF THE KINGDOM
+
+</div>
+<a class="back" href="../index.html">
+
+← Back to Chapters
+
+</a>
+</header>
+<section class="hero">
+<div class="eyebrow">CHAPTER 24</div>
+<h1>The First Stand</h1>
+</section>
+<main class="article"><p class="dropcap">The darkness returned with the weight of wet iron. Stony Creek settled into its nightly siege. The pitch torches were lit along the perimeter, sending thick, black smoke curling up into the cold, starry air. Guards walked the line; sheep stirred nervously in their pens; families huddled close to their hearths, listening to the night. Aether sat against the inner wall of the granary, the young boy and his recovering pup sitting beside him.</p><p>The little dog’s leg was healing well, its small tail thumping against the dry dirt floor every time Aether patted its head. Near the timber gate, Ren was inspecting the lashings on the outer stakes. Kaelen walked beside him, his longbow held loosely in his left hand.</p><p>"Think they’ll try the gap tonight?"</p><p>Kaelen asked, his eyes scanning the pitch-black tree line. Ren let out a soft snort.</p><p>"If I knew that, kid, I’d be sleeping in a soft bed in the high city instead of freezing my tail off here."</p><p>A faint, nervous grin crossed Kaelen's face. The tension between them had dissolved into the shared rhythm of the watch. The night dragged on. The wind died down, leaving the forest unnaturally still. The silence stretched so thin it felt as though the entire valley were holding its breath. Then— A panicked, shrill bleat tore through the quiet. It came from the livestock pens on the southern flank. A split second later, a second ewe screamed, followed by the heavy, chaotic thud of bodies slamming against cedar rails.</p><p>"Breach! Southern pen!" a voice shouted from the guard platform. The hamlet erupted. Doors banged open. Men shouted. Torchlight bounced wildly across the mud as hunters scrambled from their quarters. Ren moved instantly. There was no hesitation, no calculation—his boots hit the ground running before the second alarm call had even died away. Kaelen was right on his heels, his heart hammering against his ribs like a trapped bird.</p><p>"Form up on the pens!"</p><p>Harold's thunderous voice echoed across the yard, cutting through the panic like an iron bell.</p><p>"Keep the torches high!"</p><p>Aether scrambled to his feet inside the granary. His blood ran cold. This wasn't a story told by the fire; this was real, raw, and terrifyingly close. He took two steps toward the door, his hand instinctively reaching for the hunting knife at his hip. But as he reached the threshold, a terrified sob stopped him. He turned. The small boy was huddled in the corner of the granary, his arms wrapped tightly around three younger children who had woken up screaming.</p><p>They had nowhere to go, no one to stand between them and the dark. Aether looked toward the southern pen, where torches were flashing and steel was clashing against bone. Then he looked at the terrified eyes of the children. Some paths, no one can walk for you. Harold's words came back to him. Aether stopped. He turned around, grabbed a heavy oak beam leaning against the wall, and slammed the granary door shut from the inside. He slid the iron bolt into place with a heavy clack.</p><p>"Stay back,"</p><p>Aether said, his voice surprisingly steady as he drew his iron knife and stood before the barred door.</p><p>"No one comes through this door."</p><p>The children nodded frantically, huddled in the straw behind him. Outside, the southern pen was a chaos of blood, fire, and snapping jaws. Kaelen rounded the corner of the barn, his bow raised, his eyes wide. In the dancing orange light of a fallen torch, he saw them. Three wolves. But these were not the sleek, grey hunters of the lower valleys. Their coats were mangy, caked with frozen mud, their ribs showing sharp beneath their hides. Their eyes reflected the firelight with an unnatural, sickly amber glow.</p><p>One sheep lay dying in the straw, its throat torn open. The other two wolves were snarling at a timber post, trying to force their way into the main barn. Ren vaulted over the broken fence rail, his boar-spear striking out with vicious speed. The iron tip caught the lead wolf in the shoulder. The beast snarled, a wet, guttural sound, and snapped at the ash shaft, splintering the wood.</p><p>"Kaelen! Hold the flank!"</p><p>Ren yelled, forcing the beast back with his weight. A wolf lunged from the shadows on Kaelen's right. It moved with terrifying speed. In a normal hunt, the prey fled; it ran until it collapsed. But this creature was charging straight at his throat, its yellow fangs gleaming with saliva. Kaelen's breath caught in his chest. His feet froze. His fingers slipped on the bowstring. Panic, cold and paralyzing, gripped his limbs. Die here, or draw. The thought flashed like lightning.</p><p>Before the wolf could clear the rail, a heavy wooden shield slammed into its side with the force of a falling ox. Harold was there. The wolf crashed into the mud with a yelp. Harold didn't waste a breath. He stepped over the squirming beast, his short-sword flashing down in a clean, brutal arc.</p><p>"Stand firm, Kaelen!"</p><p>Harold barked, his eyes never leaving the dark treeline beyond the broken fence.</p><p>"They smell your fear before they smell your blood!"</p><p>Kaelen sucked in a ragged breath, his vision clearing. He set his stance, drew his feather-fletched arrow to his ear, and released. The arrow struck the second wolf in the flank. The beast let out a pained yelp and turned to flee. With Harold's iron wall present and the torches closing in from all sides, the remaining wolves realized the attack had turned against them. With a low, synchronized snarl, the three mangy beasts scrambled over the low wall and vanished into the impenetrable black of the northern woods.</p><p>Silence rushed back into the pen, heavy and suffocating, broken only by the ragged breathing of the men. No one gave chase. The darkness belonged to the mountain; their duty ended at the fence line. When the headman arrived with fresh torches, the tally was taken. One ewe dead. One guard with a torn forearm. The fence splinters were coated in dark, slick blood. Ren collapsed against a water barrel, his chest heaving, sweat dripping from his chin despite the biting cold. His spear arm was trembling violently.</p><p>Kaelen slid down the wooden wall beside him, his bow unstrung, his hands raw from the string.</p><p>"Not the worst night we've had,"</p><p>Ren muttered, offering a weak, trembling grin. Kaelen turned to him, his voice barely a whisper.</p><p>"Has it been worse than this?"</p><p>"Aye,"</p><p>Ren said softly, his smile fading into the dark.</p><p>"One night they took down six paces of the west wall. Almost got into the nursery."</p><p>Kaelen closed his eyes. The fear was still sloshing in his stomach like cold water, but beneath it, something else had taken root. He had stood his ground. He had felt his knees go soft, yet he hadn't run. Near the granary, Aether slowly pulled back the iron bolt and pushed the door open. The small boy peered out, still clutching his pup.</p><p>When he saw the torches moving calmly across the yard and heard the men calling out calls that the danger had passed, the terror melted from his small face. Villagers began creeping out of their homes, checking on their neighbors, carrying warm water to bandage the wounded guard. The fear that had gripped the hamlet an hour ago was slowly dissolving into the mundane routines of repair.</p><p>Ren watched the villagers return to their beds, then looked up at the eastern sky, where the first faint traces of gray were beginning to bleed through the night.</p><p>"Well,"</p><p>Ren said, picking up his nicked spear with a grunt.</p><p>"At least they get to sleep until morning."</p><p>Kaelen sat in the dirt, watching his father inspect the wooden stakes near the gap. For the first time, he understood the true burden of the watch. Guardianship was not a grand song sung by a bard's song. It was dirty, terrifying, and thankless. It was standing in the mud with shaking hands, so that someone else could close their eyes and dream of a peaceful dawn.</p><div class="chapter-navigation"><a href="../chapter-23/index.html">← Previous</a><a href="../index.html">Contents</a><a href="../chapter-25/index.html">Next →</a></div></main>
+<footer class="site-footer">
+<div class="footer-brand">Cornerstone</div>
+<div class="footer-tagline">
+        Building stories that endure.
+    </div>
+<div class="footer-studio">
+        Created by Echoes Studio
+    </div>
+<div class="footer-copyright">
+        © 2026 Michael He. All Rights Reserved.
+    </div>
+</footer>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const article = document.querySelector(".article");
+
+    if (!article) {
+        return;
+    }
+
+    const paragraphs = article.querySelectorAll("p");
+
+    paragraphs.forEach(function (paragraph) {
+        const text = paragraph.textContent.trim();
+
+        if (!text) {
+            return;
+        }
+
+        // 自动识别场景分隔符
+        if (text === "***" || text === "* * *") {
+            const divider = document.createElement("div");
+            divider.className = "divider";
+            divider.textContent = "❦";
+            paragraph.replaceWith(divider);
+            return;
+        }
+
+        // 自动识别以引号或长破折号开头的对白
+        const isDialogue =
+            text.startsWith('"') ||
+            text.startsWith("“") ||
+            text.startsWith("‘") ||
+            text.startsWith("'") ||
+            text.startsWith("—");
+
+        if (isDialogue) {
+            paragraph.classList.add("dialogue");
+        }
+    });
+});
+</script>
+<!-- GoatCounter: privacy-friendly page analytics -->
+<script async="" data-goatcounter="https://echoeskingdom.goatcounter.com/count" src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

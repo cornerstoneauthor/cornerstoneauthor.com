@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Chapter 23 | Echoes of the Kingdom</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&amp;family=Inter:wght@300;400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<style>
+.chapter-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  width: 100%;
+  margin-top: 100px;
+  padding-top: 40px;
+  border-top: 1px solid rgba(212, 184, 120, 0.18);
+}
+
+.chapter-navigation a {
+  color: #d8c49a;
+  font-family: Inter, sans-serif;
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+
+background:#070809;
+
+color:#ece2cf;
+
+font-family:"Cormorant Garamond",serif;
+
+line-height:1.9;
+
+}
+
+a{
+
+text-decoration:none;
+
+color:inherit;
+
+}
+
+.topbar{
+
+position:sticky;
+
+top:0;
+
+z-index:100;
+
+height:72px;
+
+background:rgba(7,8,9,.92);
+
+backdrop-filter:blur(10px);
+
+border-bottom:1px solid rgba(212,184,120,.12);
+
+display:flex;
+
+align-items:center;
+
+justify-content:space-between;
+
+padding:0 60px;
+
+}
+
+.logo{
+
+font-size:20px;
+
+letter-spacing:2px;
+
+color:#d8c08b;
+
+}
+
+.back{
+
+font-family:Inter,sans-serif;
+
+font-size:13px;
+
+letter-spacing:2px;
+
+text-transform:uppercase;
+
+color:#a89b7a;
+
+transition:.25s;
+
+}
+
+.back:hover{
+
+color:#e8d9b3;
+
+}
+
+.hero{
+
+padding:120px 20px 80px;
+
+text-align:center;
+
+}
+
+.eyebrow{
+
+font-size:18px;
+
+letter-spacing:6px;
+
+color:#a48c60;
+
+margin-bottom:20px;
+
+text-transform:uppercase;
+
+}
+
+h1{
+
+font-size:88px;
+
+font-weight:600;
+
+letter-spacing:2px;
+
+margin-bottom:24px;
+
+}
+
+.subtitle{
+
+max-width:700px;
+
+margin:auto;
+
+font-family:Inter,sans-serif;
+
+font-size:18px;
+
+color:#bfb5a2;
+
+line-height:1.8;
+
+}
+
+.article{
+
+max-width:680px;
+
+margin:100px auto 180px;
+
+padding:0 30px;
+
+font-size:28px;
+
+}
+
+.article p{
+  font-family:"Cormorant Garamond", serif;
+  font-size:28px;
+  line-height:2;
+  color:rgba(245,239,226,0.95);
+  margin-bottom:42px;
+}
+
+.dropcap::first-letter {
+  float: left;
+  font-size: 72px;
+  line-height: 0.8;
+  margin-right: 14px;
+  margin-top: 6px;
+  color: #d8c49a;
+}
+/* ===========================
+   Cornerstone Footer
+=========================== */
+
+.site-footer{
+    margin-top:120px;
+    padding:72px 24px 58px;
+    border-top:1px solid rgba(212,176,106,.18);
+    text-align:center;
+}
+
+.footer-brand{
+
+    font-family:"Cinzel", serif;
+
+    font-size:44px;
+
+    font-weight:500;
+
+    letter-spacing:.18em;
+
+    color:#D4B06A;
+
+    margin-bottom:10px;
+
+}
+
+.footer-tagline{
+    font-family:"Cormorant Garamond", serif;
+    font-style:italic;
+    font-size:18px;
+    color:#D8C8A8;
+    margin-bottom:32px;
+}
+
+.footer-studio{
+    font-family:Inter,sans-serif;
+    font-size:12px;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    color:rgba(245,239,226,.55);
+    margin-bottom:12px;
+}
+
+.footer-copyright{
+    font-family:Inter,sans-serif;
+    font-size:12px;
+    color:rgba(245,239,226,.35);
+}
+
+
+/* ===========================
+   Mobile Reading Layout
+=========================== */
+@media (max-width: 700px) {
+  html, body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .topbar {
+    height: auto;
+    min-height: 62px;
+    padding: 0 16px;
+    gap: 10px;
+  }
+
+  .logo {
+    min-width: 0;
+    white-space: nowrap;
+    font-size: 13px;
+    letter-spacing: 1.1px;
+    line-height: 1.2;
+  }
+
+  .back {
+    flex: 0 0 auto;
+    white-space: nowrap;
+    font-size: 10px;
+    letter-spacing: 1.1px;
+    line-height: 1.2;
+  }
+
+  .hero {
+    padding: 72px 18px 48px;
+  }
+
+  .eyebrow {
+    margin-bottom: 16px;
+    font-size: 13px;
+    letter-spacing: 4px;
+  }
+
+  h1 {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto 18px;
+    font-size: clamp(40px, 12vw, 54px);
+    line-height: 1.08;
+    letter-spacing: 1px;
+    overflow-wrap: break-word;
+    word-break: normal;
+  }
+
+  .subtitle {
+    max-width: 100%;
+    padding: 0 4px;
+    font-size: 16px;
+    line-height: 1.65;
+  }
+
+  .article {
+    width: 100%;
+    max-width: 100%;
+    margin: 48px auto 96px;
+    padding: 0 22px;
+    font-size: 22px;
+  }
+
+  .article p {
+    max-width: 100%;
+    font-size: 22px;
+    line-height: 1.78;
+    margin-bottom: 30px;
+  }
+
+  .dropcap::first-letter {
+    font-size: 58px;
+    line-height: .82;
+    margin-right: 10px;
+    margin-top: 5px;
+  }
+
+  .chapter-navigation {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    gap: 8px;
+    margin-top: 64px;
+    padding-top: 28px;
+  }
+
+  .chapter-navigation a {
+    min-width: 0;
+    font-size: 10px;
+    line-height: 1.4;
+    letter-spacing: 1.4px;
+  }
+
+  .chapter-navigation a:first-child { text-align: left; }
+  .chapter-navigation a:nth-child(2) { text-align: center; }
+  .chapter-navigation a:last-child { text-align: right; }
+
+  .site-footer {
+    margin-top: 72px;
+    padding: 54px 18px 40px;
+    overflow: hidden;
+  }
+
+  .footer-brand {
+    white-space: nowrap;
+    font-size: clamp(26px, 8vw, 32px);
+    letter-spacing: .12em;
+  }
+
+  .footer-tagline {
+    font-size: 16px;
+    margin-bottom: 28px;
+  }
+
+  .footer-studio,
+  .footer-copyright {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 390px) {
+  .topbar { padding: 0 12px; gap: 7px; }
+  .logo { font-size: 11.5px; letter-spacing: .9px; }
+  .back { font-size: 9px; letter-spacing: .9px; }
+  .hero { padding: 64px 16px 42px; }
+  h1 { font-size: clamp(38px, 11.5vw, 45px); }
+  .article { padding: 0 20px; }
+  .article p { font-size: 21px; line-height: 1.76; }
+  .chapter-navigation a { font-size: 9.5px; letter-spacing: 1.1px; }
+  .footer-brand { font-size: 27px; letter-spacing: .1em; }
+}
+</style>
+</head>
+<body>
+<header class="topbar">
+<div class="logo">
+
+ECHOES OF THE KINGDOM
+
+</div>
+<a class="back" href="../index.html">
+
+← Back to Chapters
+
+</a>
+</header>
+<section class="hero">
+<div class="eyebrow">CHAPTER 23</div>
+<h1>The Unseen Ledger</h1>
+</section>
+<main class="article"><p class="dropcap">The next dawn broke under a heavy, iron-colored sky. Harold, Ren, and Kaelen departed the village before the morning mist had cleared from the valley floor. Aether stood near the timber gate, watching their tall silhouettes dissolve into the gray timber until there was nothing left to see. He didn't ask to follow today. He knew his place. A hunter earned his boots on the trail; a boy who didn't know how to read the moss was only an extra mouth for the shadows to feed on.</p><p>Stony Creek awoke to its usual rhythm of survival. Men hauled oak logs to reinforce the western ditch; women mended hemp grain sacks; elders sharpened rusty sickles on whetstones. Everyone moved with a quiet, urgent efficiency. Before long, Aether was pulled into the machinery of the hamlet. First came the heavy labor— hauling wet spruce trunks from the timber pile to the fence line until his shoulders burned. Then came the repairs, helping an old shepherd hammer fresh splints onto a collapsed sheepfold.</p><p>By early afternoon, the sun had climbed high, trapped behind a thick blanket of pale cloud. Aether sat on a dry pine stump near the well, wiping sweat from his forehead with a filthy sleeve. Footsteps approached. It was the village headman. He held a thick, leather-bound register beneath his arm, its corners dark with grease and age. Aether didn't pay much attention at first, but as the old man flipped through the pages, Aether caught sight of neat rows of scratched figures and names. Grain bushels. Ewes. Iron nails.</p><p>Axes. Names crossed out with thick black lines. The headman felt the boy's eyes on the book and offered a tired, dry smile.</p><p>"Can't make sense of it, can you, lad?"</p><p>Aether shook his head honestly.</p><p>"No, sir."</p><p>The headman dropped onto the stump beside him with a groan, rubbing the bridge of his nose where the skin was red and inflamed.</p><p>"Truth be told, I hate looking at the bloody thing myself."</p><p>Aether looked at the old man's weathered profile.</p><p>"Then why do you carry it around all day?"</p><p>The headman stared out over the village, watching two young men drag an iron-tipped beam toward the gate.</p><p>"Because if I don't keep count, nobody will."</p><p>He opened the book across his knees, tapping a dirt-caked thumbnail against a column of faded ink.</p><p>"Right here. Spring count: eighty-four sheep. Over here..."</p><p>He slid his finger down.</p><p>"...fifty- two left. Three killed by wolves, four drowned in the marsh, the rest taken during the night attacks."</p><p>He turned another page.</p><p>"This was our autumn harvest plan. Four fields of rye. But we had to pull six men off the scythes to build the northern ditch. Now half the crop is rotting in the mud."</p><p>He flipped again, his finger stopping over a line of names.</p><p>"This lad here—Joran. Took a gash to his thigh during the second night strike. Fever took him four days later. This one—Tobin. Stood three watches in a row during the heavy rains. Lung rot took him before the week was out."</p><p>He spoke without drama. His tone was as flat and detached as a town merchant reading off a shipping ledger. But to Aether, every stroke of ink felt like a stone dropping into a deep well. Behind those numbers were men who used to sit by the hearth. Behind those tally-marks were families who were going to starve come winter. The headman closed the register with a soft thud.</p><p>"Folks think being a leader is about giving orders and wearing a fine cloak," he whispered, staring into the dirt between his boots.</p><p>"It isn't. It's just sitting here, watching the numbers shrink, and knowing you're the one who has to face the tally at the end of the night."</p><p>He stood up, adjusted his worn wool tunic, and trudged off toward the granary without another word. Later that afternoon, Aether found himself back near the timber-cutter's shed. The old cooper was sitting outside on his three-legged stool, slowly tapping wooden hoops around a water cask. His movements were painfully slow, his knuckles swollen with arthritis. Aether sat on a pile of oak shavings beside him, letting the pale afternoon sun warm his face. For a long time, neither spoke.</p><p>Only the rhythmic tap-tap-tap of the cooper's mallet filled the yard.</p><p>"Three months ago," the old cooper said suddenly, his voice raspy like dry leaves, "we weren't talking about perimeter walls or iron spears."</p><p>Aether turned to look at him.</p><p>"We were arguing about the harvest festival," the old man chuckled softly, though there was no joy in it.</p><p>"Which farmer had the fattest sow. How many barrels of blackberry ale we ought to brew for the winter solstice. Who was going to wed the smith's daughter."</p><p>He paused, resting his wooden mallet on his knee, his milky eyes staring off toward the heavy wooden palisades.</p><p>"Nobody talks about that now," he whispered.</p><p>"Nobody talks about next winter. We only talk about tomorrow morning."</p><p>Aether followed his gaze. At the gate, two young men were laying out bundles of pitch-soaked torches. Near the barn, a woman was teaching a twelve-year-old boy how to hold a iron butchering knife. The wolves hadn't just stolen their sheep or broken their wooden fences. They had stolen the future. They had shrunk these people's world down to a fifteen-foot timber wall and the next twelve hours of dark. As dusk began to settle over the valley, the scent of boiled mutton and turnip soup drifted through the air.</p><p>Yet, few people sat down to eat in peace. Eyes kept darting toward the dark treeline beyond the gate. Just before the last light failed, three figures emerged from the northern woods. Aether sprang from his stool and ran to the gate. Kaelen looked exhausted, his boots coated in gray clay, his cloak torn by brambles. Ren looked no better. Harold walked behind them, his face impassive, his iron shield heavy on his back.</p><p>"Anything?"</p><p>Aether asked, running up to Kaelen's side. Kaelen paused, his chest heaving slightly. He shook his head in silence. Aether didn't press him. He was beginning to understand that in times like these, silence was often the only answer men had left. The headman approached them near the well. He took one look at Harold's face and knew. He didn't sigh. He didn't ask for details. He simply gave a firm nod.</p><p>"Get some warm broth into your bellies."</p><p>He turned and walked away to organize the night roster, moving with the mechanical endurance of a man who had suffered this disappointment a hundred times before. Night fell swiftly and cold. Aether sat near the eastern wall. The little boy with the pup crept over, sitting beside him in the dirt. The puppy’s leg was tightly bound in clean rags, and it wagged its tail weakly, licking the boy's chin. They sat together, watching the torches flicker against the black timber wall.</p><p>"Are your people going to find them?" the boy asked suddenly, his small hands buried in the pup's coarse fur. Aether went silent. He wanted to say yes. He wanted to promise him that Harold would drive a spear through whatever was lurking in the timber. But the lie stuck in his throat.</p><p>"I don't know,"</p><p>Aether admitted softly. The boy didn't cry. He just held his dog a little tighter and offered a tiny, tired smile.</p><p>"It's okay."</p><p>Aether looked at him, surprised.</p><p>"It is?"</p><p>"Aye," the boy whispered, staring at the blazing torch overhead.</p><p>"You're here. That's enough."</p><p>The night wind swept over the palisade, carrying the cold scent of distant snow. Aether sat frozen, the boy's words echoing in his mind. Across the yard, Harold was inspecting the iron tips of the gate guards' spears. Ren was checking his bowstring by the fire. The old cooper was stacking his wood. They were all exhausted, all bleeding from a thousand small wounds, yet none of them had laid down their tools. Aether finally understood. The hardest part of survival wasn't fighting the monster when it showed its teeth.</p><p>It was staying standing when there were no answers—choosing to hold the line day after day, simply so that a frightened child could sleep for one more night, believing that tomorrow might be slightly better than today.</p><div class="chapter-navigation"><a href="../chapter-22/index.html">← Previous</a><a href="../index.html">Contents</a><a href="../chapter-24/index.html">Next →</a></div></main>
+<footer class="site-footer">
+<div class="footer-brand">Cornerstone</div>
+<div class="footer-tagline">
+        Building stories that endure.
+    </div>
+<div class="footer-studio">
+        Created by Echoes Studio
+    </div>
+<div class="footer-copyright">
+        © 2026 Michael He. All Rights Reserved.
+    </div>
+</footer>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const article = document.querySelector(".article");
+
+    if (!article) {
+        return;
+    }
+
+    const paragraphs = article.querySelectorAll("p");
+
+    paragraphs.forEach(function (paragraph) {
+        const text = paragraph.textContent.trim();
+
+        if (!text) {
+            return;
+        }
+
+        // 自动识别场景分隔符
+        if (text === "***" || text === "* * *") {
+            const divider = document.createElement("div");
+            divider.className = "divider";
+            divider.textContent = "❦";
+            paragraph.replaceWith(divider);
+            return;
+        }
+
+        // 自动识别以引号或长破折号开头的对白
+        const isDialogue =
+            text.startsWith('"') ||
+            text.startsWith("“") ||
+            text.startsWith("‘") ||
+            text.startsWith("'") ||
+            text.startsWith("—");
+
+        if (isDialogue) {
+            paragraph.classList.add("dialogue");
+        }
+    });
+});
+</script>
+<!-- GoatCounter: privacy-friendly page analytics -->
+<script async="" data-goatcounter="https://echoeskingdom.goatcounter.com/count" src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

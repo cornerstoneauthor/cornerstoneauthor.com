@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Chapter 22 | Echoes of the Kingdom</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&amp;family=Inter:wght@300;400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<style>
+.chapter-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  width: 100%;
+  margin-top: 100px;
+  padding-top: 40px;
+  border-top: 1px solid rgba(212, 184, 120, 0.18);
+}
+
+.chapter-navigation a {
+  color: #d8c49a;
+  font-family: Inter, sans-serif;
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+
+background:#070809;
+
+color:#ece2cf;
+
+font-family:"Cormorant Garamond",serif;
+
+line-height:1.9;
+
+}
+
+a{
+
+text-decoration:none;
+
+color:inherit;
+
+}
+
+.topbar{
+
+position:sticky;
+
+top:0;
+
+z-index:100;
+
+height:72px;
+
+background:rgba(7,8,9,.92);
+
+backdrop-filter:blur(10px);
+
+border-bottom:1px solid rgba(212,184,120,.12);
+
+display:flex;
+
+align-items:center;
+
+justify-content:space-between;
+
+padding:0 60px;
+
+}
+
+.logo{
+
+font-size:20px;
+
+letter-spacing:2px;
+
+color:#d8c08b;
+
+}
+
+.back{
+
+font-family:Inter,sans-serif;
+
+font-size:13px;
+
+letter-spacing:2px;
+
+text-transform:uppercase;
+
+color:#a89b7a;
+
+transition:.25s;
+
+}
+
+.back:hover{
+
+color:#e8d9b3;
+
+}
+
+.hero{
+
+padding:120px 20px 80px;
+
+text-align:center;
+
+}
+
+.eyebrow{
+
+font-size:18px;
+
+letter-spacing:6px;
+
+color:#a48c60;
+
+margin-bottom:20px;
+
+text-transform:uppercase;
+
+}
+
+h1{
+
+font-size:88px;
+
+font-weight:600;
+
+letter-spacing:2px;
+
+margin-bottom:24px;
+
+}
+
+.subtitle{
+
+max-width:700px;
+
+margin:auto;
+
+font-family:Inter,sans-serif;
+
+font-size:18px;
+
+color:#bfb5a2;
+
+line-height:1.8;
+
+}
+
+.article{
+
+max-width:680px;
+
+margin:100px auto 180px;
+
+padding:0 30px;
+
+font-size:28px;
+
+}
+
+.article p{
+  font-family:"Cormorant Garamond", serif;
+  font-size:28px;
+  line-height:2;
+  color:rgba(245,239,226,0.95);
+  margin-bottom:42px;
+}
+
+.dropcap::first-letter {
+  float: left;
+  font-size: 72px;
+  line-height: 0.8;
+  margin-right: 14px;
+  margin-top: 6px;
+  color: #d8c49a;
+}
+/* ===========================
+   Cornerstone Footer
+=========================== */
+
+.site-footer{
+    margin-top:120px;
+    padding:72px 24px 58px;
+    border-top:1px solid rgba(212,176,106,.18);
+    text-align:center;
+}
+
+.footer-brand{
+
+    font-family:"Cinzel", serif;
+
+    font-size:44px;
+
+    font-weight:500;
+
+    letter-spacing:.18em;
+
+    color:#D4B06A;
+
+    margin-bottom:10px;
+
+}
+
+.footer-tagline{
+    font-family:"Cormorant Garamond", serif;
+    font-style:italic;
+    font-size:18px;
+    color:#D8C8A8;
+    margin-bottom:32px;
+}
+
+.footer-studio{
+    font-family:Inter,sans-serif;
+    font-size:12px;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    color:rgba(245,239,226,.55);
+    margin-bottom:12px;
+}
+
+.footer-copyright{
+    font-family:Inter,sans-serif;
+    font-size:12px;
+    color:rgba(245,239,226,.35);
+}
+
+
+/* ===========================
+   Mobile Reading Layout
+=========================== */
+@media (max-width: 700px) {
+  html, body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .topbar {
+    height: auto;
+    min-height: 62px;
+    padding: 0 16px;
+    gap: 10px;
+  }
+
+  .logo {
+    min-width: 0;
+    white-space: nowrap;
+    font-size: 13px;
+    letter-spacing: 1.1px;
+    line-height: 1.2;
+  }
+
+  .back {
+    flex: 0 0 auto;
+    white-space: nowrap;
+    font-size: 10px;
+    letter-spacing: 1.1px;
+    line-height: 1.2;
+  }
+
+  .hero {
+    padding: 72px 18px 48px;
+  }
+
+  .eyebrow {
+    margin-bottom: 16px;
+    font-size: 13px;
+    letter-spacing: 4px;
+  }
+
+  h1 {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto 18px;
+    font-size: clamp(40px, 12vw, 54px);
+    line-height: 1.08;
+    letter-spacing: 1px;
+    overflow-wrap: break-word;
+    word-break: normal;
+  }
+
+  .subtitle {
+    max-width: 100%;
+    padding: 0 4px;
+    font-size: 16px;
+    line-height: 1.65;
+  }
+
+  .article {
+    width: 100%;
+    max-width: 100%;
+    margin: 48px auto 96px;
+    padding: 0 22px;
+    font-size: 22px;
+  }
+
+  .article p {
+    max-width: 100%;
+    font-size: 22px;
+    line-height: 1.78;
+    margin-bottom: 30px;
+  }
+
+  .dropcap::first-letter {
+    font-size: 58px;
+    line-height: .82;
+    margin-right: 10px;
+    margin-top: 5px;
+  }
+
+  .chapter-navigation {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    gap: 8px;
+    margin-top: 64px;
+    padding-top: 28px;
+  }
+
+  .chapter-navigation a {
+    min-width: 0;
+    font-size: 10px;
+    line-height: 1.4;
+    letter-spacing: 1.4px;
+  }
+
+  .chapter-navigation a:first-child { text-align: left; }
+  .chapter-navigation a:nth-child(2) { text-align: center; }
+  .chapter-navigation a:last-child { text-align: right; }
+
+  .site-footer {
+    margin-top: 72px;
+    padding: 54px 18px 40px;
+    overflow: hidden;
+  }
+
+  .footer-brand {
+    white-space: nowrap;
+    font-size: clamp(26px, 8vw, 32px);
+    letter-spacing: .12em;
+  }
+
+  .footer-tagline {
+    font-size: 16px;
+    margin-bottom: 28px;
+  }
+
+  .footer-studio,
+  .footer-copyright {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 390px) {
+  .topbar { padding: 0 12px; gap: 7px; }
+  .logo { font-size: 11.5px; letter-spacing: .9px; }
+  .back { font-size: 9px; letter-spacing: .9px; }
+  .hero { padding: 64px 16px 42px; }
+  h1 { font-size: clamp(38px, 11.5vw, 45px); }
+  .article { padding: 0 20px; }
+  .article p { font-size: 21px; line-height: 1.76; }
+  .chapter-navigation a { font-size: 9.5px; letter-spacing: 1.1px; }
+  .footer-brand { font-size: 27px; letter-spacing: .1em; }
+}
+</style>
+</head>
+<body>
+<header class="topbar">
+<div class="logo">
+
+ECHOES OF THE KINGDOM
+
+</div>
+<a class="back" href="../index.html">
+
+← Back to Chapters
+
+</a>
+</header>
+<section class="hero">
+<div class="eyebrow">CHAPTER 22</div>
+<h1>Traces</h1>
+</section>
+<main class="article"><p class="dropcap">The morning air smelled of wet pine and old ash. Before the rest of Stony Creek had fully roused itself, Harold was already standing by the northern gap. Ren was there waiting, a leather-wrapped spear resting against his shoulder, beside Kaelen, who was silently tightening his arm-guards. They ate cold barley cakes in silence, then left the perimeter behind. Their destination was the Old Game Trail—an abandoned hunting path Harold had mentioned the day before.</p><p>Years ago, before the timber rotted and the high passes became treacherous, the village trappers had worked those ridges. If a pack was shifting its hunting ground, that abandoned trail was where the sign would be. They turned north, leaving the cleared farmland and stepping beneath the thick, interlocking boughs of the old growth. The sound of human life died away almost instantly, replaced by the damp crunch of dead pine needles beneath their boots. Kaelen's posture shifted the moment they crossed the shadow line.</p><p>He was no longer the restless youth of the watchtower; he was a hunter back in his element. His eyes darted across the underbrush, checking the moss on the roots, the lean of the ferns, the soft earth around the stream beds. Yet, before they had even covered a mile, a quiet unease began to gnaw at him. This was not Ashvale. In the woods surrounding his home, Kaelen knew every game trail, every hollow trunk, every bend in the creek where the red deer came to drink.</p><p>He knew the forest like the back of his own hand. But here, every trunk was a stranger. The ridges sloped at odd, unfamiliar angles, and the wind rustled through the gray birch leaves with a dry, alien hiss. For the first time in his life, Kaelen felt like a stranger in a forest. Ren stopped abruptly ahead, dropping to one knee. He brushed aside a layer of decaying oak leaves with a gloved hand.</p><p>"Here."</p><p>Kaelen moved up instantly, leaning over his shoulder. A faint, shallow drag-mark cut through the black soil. Kaelen studied it for several long seconds, his mind racing, but he couldn't make sense of the faint depression. Ren rose smoothly.</p><p>"Deer. Young buck."</p><p>Kaelen blinked up at him.</p><p>"How can you tell?"</p><p>Ren gestured with the tip of his spear toward a birch trunk three feet away. A small patch of silver bark had been shredded, leaving raw, pale wood beneath.</p><p>"Rubbed his velvet there. And look at the turf—hoof snapped the root, didn't crush it. He was light."</p><p>Kaelen followed the line of sight and caught two more faint nicks on the brush further up the ridge. Had he been alone, he would have walked right past them. They kept moving north. Over the next hour, the scene repeated itself a dozen times. Some signs Kaelen picked up on—a broken fern, a fox burrow—but more often than not, Ren saw them first.</p><p>Sometimes the older hunter needed nothing more than a glance at a bent blade of grass to know what had passed, when it had passed, and how fast it had been moving. A quiet respect settled in Kaelen's chest. Ren hadn't kept Stony Creek alive for three months on blind luck. The man was a master of his own soil. By noon, they reached the mouth of the Old Game Trail. The path was choked with wild briars and tall, yellowing weeds.</p><p>The trees grew thick and huddled close together, blocking out most of the sky. They slowed their pace, spreading out into a broad wedge as they began to sweep the ground. Signs were everywhere. Deep claw-marks on fallen logs. Torn earth. Snapped saplings. Tufted grey fur caught on thorn- bushes. Droppings scattered across the path. It was an explosion of movement. But as Kaelen dropped to his knees to inspect a cluster of tracks, his brow pulled tight. It was chaos.</p><p>Wolf prints overlapped with the deep, heavy pads of a mountain boar. A fox had run straight through a deer’s bed. Tracks crossed and recrossed in wild, frantic angles, as if every creature in the mountain range had gathered in this single gully to run in circles. Ren spat into the brush, his expression sour.</p><p>"Same damn thing."</p><p>Kaelen looked up.</p><p>"What do you mean?"</p><p>Ren crouched beside a torn patch of moss, rubbing the dirt between his fingers.</p><p>"It’s been like this for weeks. Everything’s mixed up. Wolves, deer, badgers—all fleeing through the same gap, leaving tracks on top of each other. Nothing makes sense. It’s like someone dumped a sack full of forest sign right into the dirt."</p><p>Kaelen felt the same unnatural chill. Tracks were supposed to tell a story. They had an origin, a direction, and a destination. But these signs carried no logic. It was as if the animals weren't hunting or grazing—they were just running. Harold had not spoken a word since they reached the ridge. He walked slowly through the choked trail, his heavy boots pressing deep into the mud, his eyes scanning the low canopy and the rock faces above. Kaelen couldn't hold back any longer.</p><p>"Father... do you see it?"</p><p>Harold paused near a shattered larch tree. He stared at the torn bark for a long, quiet moment, then slowly shook his head.</p><p>"No,"</p><p>Harold said softly. Kaelen felt a cold drop sink in his stomach. To him, Harold had always been an anchor. In Ashvale, Harold always had the answer—he knew when the hard freezes were coming, where the game had fled, how to butcher a kill, and how to survive the dark. For the first time in his life, Kaelen realized his father was staring into the dark just as blindly as the rest of them.</p><p>They searched until the sun began to dip behind the western crags, turning the sky a bruised purple. Nothing yielded. The trail simply swallowed itself in a maze of meaningless tracks.</p><p>"What do we do now?"</p><p>Kaelen asked, his voice rough from the cold dust. Harold withdrew his gaze from the deep woods. His face was set like iron in the dying light.</p><p>"We keep looking."</p><p>"And if we find nothing?"</p><p>"Then we look again tomorrow,"</p><p>Harold said plainly. No speech. No grand strategy. Just the stubborn, brutal persistence of an old man who refused to yield to the timber. They began the long trek back as the shadows lengthened over Stony Creek. No one spoke on the return journey. The silence of the forest weighed heavier on their shoulders than their axes. When they cleared the palisade, the headman was already standing near the well, his eyes wide with an unspoken question. He took three fast steps toward them.</p><p>"Well? Did you find their lair?"</p><p>Ren looked at Harold. Harold simply gave a small, negative sweep of his chin.</p><p>"Nothing definitive."</p><p>The faint glimmer of hope in the old headman’s eyes vanished, replaced by the same flat, grey resignation. He didn't yell. He didn't curse. He just gave a tired nod.</p><p>"Right. Thank you for the trial."</p><p>He turned on his heel and walked back toward the longhouse to fix another broken hinge, as if he had expected this exact answer all along. Ren stood near the gate, staring down at his boots in silence. Kaelen finally understood why Ren's eyes looked so hollow the night before. Three months of this. Rushing out with hope in the morning, hunting until your feet bled, and coming back at sunset with empty hands and the same terrible, silent threat waiting outside the wall.</p><p>Kaelen understood then that this was not the exhaustion of a long hunt. It was the wear of returning each evening with the same unanswered fear waiting at the wall. The sun sank fully below the horizon, and Stony Creek slid back into the twilight. Near the eastern fence, Aether was kneeling in the dirt beside the young boy with the injured pup. They were trying to mend a splintered wooden cage with a strip of boiled leather.</p><p>The boy was laughing as the pup nipped at his fingers, blissfully ignorant of the dark woods beyond the wall. Kaelen stood in the shadows, watching them. He realized then that as long as the children could still laugh in the dirt, the men would have to lace up their boots again tomorrow. They would go back into the mountains, back into the tracks that made no sense, until they found the answer—or until the mountains claimed them.</p><div class="chapter-navigation"><a href="../chapter-21/index.html">← Previous</a><a href="../index.html">Contents</a><a href="../chapter-23/index.html">Next →</a></div></main>
+<footer class="site-footer">
+<div class="footer-brand">Cornerstone</div>
+<div class="footer-tagline">
+        Building stories that endure.
+    </div>
+<div class="footer-studio">
+        Created by Echoes Studio
+    </div>
+<div class="footer-copyright">
+        © 2026 Michael He. All Rights Reserved.
+    </div>
+</footer>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const article = document.querySelector(".article");
+
+    if (!article) {
+        return;
+    }
+
+    const paragraphs = article.querySelectorAll("p");
+
+    paragraphs.forEach(function (paragraph) {
+        const text = paragraph.textContent.trim();
+
+        if (!text) {
+            return;
+        }
+
+        // 自动识别场景分隔符
+        if (text === "***" || text === "* * *") {
+            const divider = document.createElement("div");
+            divider.className = "divider";
+            divider.textContent = "❦";
+            paragraph.replaceWith(divider);
+            return;
+        }
+
+        // 自动识别以引号或长破折号开头的对白
+        const isDialogue =
+            text.startsWith('"') ||
+            text.startsWith("“") ||
+            text.startsWith("‘") ||
+            text.startsWith("'") ||
+            text.startsWith("—");
+
+        if (isDialogue) {
+            paragraph.classList.add("dialogue");
+        }
+    });
+});
+</script>
+<!-- GoatCounter: privacy-friendly page analytics -->
+<script async="" data-goatcounter="https://echoeskingdom.goatcounter.com/count" src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
