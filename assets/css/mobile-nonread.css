@@ -10,9 +10,11 @@
   .menu-toggle { flex: 0 0 auto; font-size: 11px; padding: 8px 10px; }
   .site-nav { padding-top: 8px; }
   .site-nav a { font-size: 12px; }
-  .site-footer { margin-top: 72px; padding: 54px 18px 42px; }
-  .footer-brand { font-size: clamp(28px, 10vw, 38px); letter-spacing: .12em; overflow-wrap: anywhere; }
-  .footer-tagline { font-size: 17px; }
+  .site-footer { margin-top: 72px; padding: 50px 16px 40px; overflow: hidden; }
+  .footer-brand { font-size: clamp(23px, 7.2vw, 32px); line-height: 1.15; letter-spacing: .08em; max-width: 100%; margin-left: auto; margin-right: auto; white-space: nowrap; overflow-wrap: normal; word-break: normal; }
+  .footer-tagline { font-size: 16px; margin-bottom: 26px; }
+  .footer-studio { font-size: 11px; letter-spacing: .14em; }
+  .footer-copyright { font-size: 11px; line-height: 1.5; }
 
   /* Home */
   .home-hero { min-height: auto; padding: 92px 18px 88px; }
@@ -109,5 +111,5 @@
   .home-hero-title, .about-hero-title, .join-hero-title,
   .chronicle-hero h1, .map-hero h1 { font-size: 38px; }
   .atlas-tabs { grid-template-columns: 1fr; }
-  .footer-brand { font-size: 28px; }
+  .footer-brand { font-size: 23px; letter-spacing: .07em; }
 }
