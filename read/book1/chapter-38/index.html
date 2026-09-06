@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Chapter 38: The Way of the Merchant | Echoes of the Kingdom</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&amp;family=Inter:wght@300;400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<style>
+.chapter-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  width: 100%;
+  margin-top: 100px;
+  padding-top: 40px;
+  border-top: 1px solid rgba(212, 184, 120, 0.18);
+}
+
+.chapter-navigation a {
+  color: #d8c49a;
+  font-family: Inter, sans-serif;
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+
+background:#070809;
+
+color:#ece2cf;
+
+font-family:"Cormorant Garamond",serif;
+
+line-height:1.9;
+
+}
+
+a{
+
+text-decoration:none;
+
+color:inherit;
+
+}
+
+.topbar{
+
+position:sticky;
+
+top:0;
+
+z-index:100;
+
+height:72px;
+
+background:rgba(7,8,9,.92);
+
+backdrop-filter:blur(10px);
+
+border-bottom:1px solid rgba(212,184,120,.12);
+
+display:flex;
+
+align-items:center;
+
+justify-content:space-between;
+
+padding:0 60px;
+
+}
+
+.logo{
+
+font-size:20px;
+
+letter-spacing:2px;
+
+color:#d8c08b;
+
+}
+
+.back{
+
+font-family:Inter,sans-serif;
+
+font-size:13px;
+
+letter-spacing:2px;
+
+text-transform:uppercase;
+
+color:#a89b7a;
+
+transition:.25s;
+
+}
+
+.back:hover{
+
+color:#e8d9b3;
+
+}
+
+.hero{
+
+padding:120px 20px 80px;
+
+text-align:center;
+
+}
+
+.eyebrow{
+
+font-size:18px;
+
+letter-spacing:6px;
+
+color:#a48c60;
+
+margin-bottom:20px;
+
+text-transform:uppercase;
+
+}
+
+h1{
+
+font-size:88px;
+
+font-weight:600;
+
+letter-spacing:2px;
+
+margin-bottom:24px;
+
+}
+
+.subtitle{
+
+max-width:700px;
+
+margin:auto;
+
+font-family:Inter,sans-serif;
+
+font-size:18px;
+
+color:#bfb5a2;
+
+line-height:1.8;
+
+}
+
+.article{
+
+max-width:680px;
+
+margin:100px auto 180px;
+
+padding:0 30px;
+
+font-size:28px;
+
+}
+
+.article p{
+  font-family:"Cormorant Garamond", serif;
+  font-size:28px;
+  line-height:2;
+  color:rgba(245,239,226,0.95);
+  margin-bottom:42px;
+}
+
+.dropcap::first-letter {
+  float: left;
+  font-size: 72px;
+  line-height: 0.8;
+  margin-right: 14px;
+  margin-top: 6px;
+  color: #d8c49a;
+}
+/* ===========================
+   Cornerstone Footer
+=========================== */
+
+.site-footer{
+    margin-top:120px;
+    padding:72px 24px 58px;
+    border-top:1px solid rgba(212,176,106,.18);
+    text-align:center;
+}
+
+.footer-brand{
+
+    font-family:"Cinzel", serif;
+
+    font-size:44px;
+
+    font-weight:500;
+
+    letter-spacing:.18em;
+
+    color:#D4B06A;
+
+    margin-bottom:10px;
+
+}
+
+.footer-tagline{
+    font-family:"Cormorant Garamond", serif;
+    font-style:italic;
+    font-size:18px;
+    color:#D8C8A8;
+    margin-bottom:32px;
+}
+
+.footer-studio{
+    font-family:Inter,sans-serif;
+    font-size:12px;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    color:rgba(245,239,226,.55);
+    margin-bottom:12px;
+}
+
+.footer-copyright{
+    font-family:Inter,sans-serif;
+    font-size:12px;
+    color:rgba(245,239,226,.35);
+}
+
+
+/* ===========================
+   Mobile Reading Layout
+=========================== */
+@media (max-width: 700px) {
+  html, body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .topbar {
+    height: auto;
+    min-height: 62px;
+    padding: 0 16px;
+    gap: 10px;
+  }
+
+  .logo {
+    min-width: 0;
+    white-space: nowrap;
+    font-size: 13px;
+    letter-spacing: 1.1px;
+    line-height: 1.2;
+  }
+
+  .back {
+    flex: 0 0 auto;
+    white-space: nowrap;
+    font-size: 10px;
+    letter-spacing: 1.1px;
+    line-height: 1.2;
+  }
+
+  .hero {
+    padding: 72px 18px 48px;
+  }
+
+  .eyebrow {
+    margin-bottom: 16px;
+    font-size: 13px;
+    letter-spacing: 4px;
+  }
+
+  h1 {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto 18px;
+    font-size: clamp(40px, 12vw, 54px);
+    line-height: 1.08;
+    letter-spacing: 1px;
+    overflow-wrap: break-word;
+    word-break: normal;
+  }
+
+  .subtitle {
+    max-width: 100%;
+    padding: 0 4px;
+    font-size: 16px;
+    line-height: 1.65;
+  }
+
+  .article {
+    width: 100%;
+    max-width: 100%;
+    margin: 48px auto 96px;
+    padding: 0 22px;
+    font-size: 22px;
+  }
+
+  .article p {
+    max-width: 100%;
+    font-size: 22px;
+    line-height: 1.78;
+    margin-bottom: 30px;
+  }
+
+  .dropcap::first-letter {
+    font-size: 58px;
+    line-height: .82;
+    margin-right: 10px;
+    margin-top: 5px;
+  }
+
+  .chapter-navigation {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    gap: 8px;
+    margin-top: 64px;
+    padding-top: 28px;
+  }
+
+  .chapter-navigation a {
+    min-width: 0;
+    font-size: 10px;
+    line-height: 1.4;
+    letter-spacing: 1.4px;
+  }
+
+  .chapter-navigation a:first-child { text-align: left; }
+  .chapter-navigation a:nth-child(2) { text-align: center; }
+  .chapter-navigation a:last-child { text-align: right; }
+
+  .site-footer {
+    margin-top: 72px;
+    padding: 54px 18px 40px;
+    overflow: hidden;
+  }
+
+  .footer-brand {
+    white-space: nowrap;
+    font-size: clamp(26px, 8vw, 32px);
+    letter-spacing: .12em;
+  }
+
+  .footer-tagline {
+    font-size: 16px;
+    margin-bottom: 28px;
+  }
+
+  .footer-studio,
+  .footer-copyright {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 390px) {
+  .topbar { padding: 0 12px; gap: 7px; }
+  .logo { font-size: 11.5px; letter-spacing: .9px; }
+  .back { font-size: 9px; letter-spacing: .9px; }
+  .hero { padding: 64px 16px 42px; }
+  h1 { font-size: clamp(38px, 11.5vw, 45px); }
+  .article { padding: 0 20px; }
+  .article p { font-size: 21px; line-height: 1.76; }
+  .chapter-navigation a { font-size: 9.5px; letter-spacing: 1.1px; }
+  .footer-brand { font-size: 27px; letter-spacing: .1em; }
+}
+
+/* Unified Cornerstone footer */
+.site-footer{margin-top:120px;padding:72px 24px 58px;border-top:1px solid rgba(212,176,106,.22);text-align:center;overflow:hidden}
+.footer-brand{font-family:"Cinzel",serif;font-size:44px;font-weight:500;letter-spacing:.14em;color:#D4B06A;margin:0 auto 10px;line-height:1.15;max-width:100%;white-space:nowrap}
+.footer-tagline{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:18px;color:#D8C8A8;margin-bottom:32px}
+.footer-studio{font-family:Inter,sans-serif;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:rgba(245,239,226,.55);margin-bottom:12px}
+.footer-copyright{font-family:Inter,sans-serif;font-size:12px;color:rgba(245,239,226,.35)}
+@media(max-width:700px){
+.site-footer{margin-top:72px;padding:50px 16px 40px}
+.footer-brand{font-size:clamp(23px,7.2vw,32px);letter-spacing:.08em;white-space:nowrap;overflow-wrap:normal;word-break:normal}
+.footer-tagline{font-size:16px;margin-bottom:26px}
+.footer-studio{font-size:11px;letter-spacing:.14em}
+.footer-copyright{font-size:11px;line-height:1.5}
+}
+
+</style>
+<style id="global-footer-unification">
+/* Final global footer override: keep every page visually identical. */
+.site-footer{
+  margin-top:120px !important;
+  padding:72px 24px 58px !important;
+  border-top:1px solid rgba(212,176,106,.22) !important;
+  text-align:center !important;
+  overflow:hidden !important;
+  box-sizing:border-box !important;
+}
+.footer-brand{
+  display:block !important;
+  font-family:"Cinzel",serif !important;
+  font-size:44px !important;
+  font-weight:500 !important;
+  letter-spacing:.10em !important;
+  line-height:1.12 !important;
+  color:#D4B06A !important;
+  width:auto !important;
+  max-width:100% !important;
+  margin:0 auto 10px !important;
+  padding:0 !important;
+  white-space:nowrap !important;
+  overflow-wrap:normal !important;
+  word-break:normal !important;
+  text-align:center !important;
+  box-sizing:border-box !important;
+}
+.footer-tagline{
+  font-family:"Cormorant Garamond",serif !important;
+  font-style:italic !important;
+  font-size:18px !important;
+  line-height:1.4 !important;
+  color:#D8C8A8 !important;
+  margin:0 auto 32px !important;
+}
+.footer-studio{
+  font-family:Inter,sans-serif !important;
+  font-size:12px !important;
+  line-height:1.5 !important;
+  letter-spacing:.18em !important;
+  text-transform:uppercase !important;
+  color:rgba(245,239,226,.55) !important;
+  margin:0 auto 12px !important;
+}
+.footer-copyright{
+  font-family:Inter,sans-serif !important;
+  font-size:12px !important;
+  line-height:1.5 !important;
+  color:rgba(245,239,226,.35) !important;
+  margin:0 auto !important;
+}
+@media (max-width:700px){
+  .site-footer{
+    margin-top:72px !important;
+    padding:48px 20px 38px !important;
+  }
+  .footer-brand{
+    font-size:clamp(22px,6.5vw,30px) !important;
+    letter-spacing:.06em !important;
+    line-height:1.12 !important;
+    max-width:calc(100% - 12px) !important;
+    margin:0 auto 12px !important;
+  }
+  .footer-tagline{font-size:16px !important;margin-bottom:26px !important;}
+  .footer-studio{font-size:11px !important;letter-spacing:.14em !important;margin-bottom:12px !important;}
+  .footer-copyright{font-size:11px !important;line-height:1.5 !important;}
+}
+@media (max-width:380px){
+  .site-footer{padding-left:16px !important;padding-right:16px !important;}
+  .footer-brand{font-size:21px !important;letter-spacing:.045em !important;max-width:100% !important;}
+}
+</style>
+</head>
+<body>
+<header class="topbar">
+<div class="logo">
+
+ECHOES OF THE KINGDOM
+
+</div>
+<a class="back" href="../index.html">
+
+← Back to Chapters
+
+</a>
+</header>
+<section class="hero">
+<div class="eyebrow">CHAPTER 38</div>
+<h1>The Way of the Merchant</h1>
+</section>
+<main class="article"><p class="dropcap">Three days had bled into the horizon since they left the shadow of the garrison post, and the road south stretched ahead like a pale, dusty ribbon. The biting edge of the chill had softened into a gentle warmth, bringing life back to the thoroughfare.</p><p>Where the path had once been quiet, it now thrummed with a steady pulse of travelers. Herders coaxed their lowing cattle along the verges, bands of wayfarers trudged shoulder- to-shoulder, and the occasional heavy freight wagon lumbered past in a cloud of grit, its wooden axles groaning under unseen weights.</p><p>Aether found himself drawn to the front of the carriage, perching as high as he could climb. Up there, the world met him first. Whenever a stranger flickered into view against the heat haze, he caught himself leaning forward, picking apart the details—a frayed cloak, a strange posture, the peculiar bend of a walking stick—wondering what land had birthed them and what desperate or hopeful task drove them forward.</p><p>By midday, the heat settled heavy over the road, and the drivers pulled the team aside into the scrub to rest.</p><p>Through the simmering dust from the opposite direction came another column, far larger than their own. A dozen heavy wagons rolled in a slow, rhythmic march, their iron-rimmed wheels churning up vast plumes of pale yellow earth. Each bed was stacked high—crates bound in iron, salted hides, bolts of coarse cloth, and monstrous oak casks that reeked of sour wine.</p><p>At the heart of the convoy rode a carriage that drew the eye. It was no noble’s gilded coach, but it was wide-framed and sturdily built, far grander than the freight carts flanking it. Sweeping across its timber flank was a crisp, painted crest: a black eagle, wings unfurled as if taking flight over the dusty road.</p><p>Aether lingered on the emblem, unable to look away. "What is that?"</p><p>The guard resting beside him tracked his gaze. "A merchant outfit."</p><p>"I can see it's a caravan," Aether replied. "I mean the mark on the wood."</p><p>The guard chuckled softly. "A guild. The big ones always brand their wagons with a mark so everyone knows whose coin is moving."</p><p>Aether nodded, though the concept felt distant and vague.</p><p>Across the road, the incoming convoy ground to a halt near the same watering hollow, clearly aiming to let their draft beasts drink. As the two groups mingled, a wave of easy familiarity broke across the dust. Drivers called out names; guards swapped nods of</p><p>recognition. They were men of the long trail, people who had crossed paths a dozen times before, traded rations, or argued over prices in distant taprooms.</p><p>Before long, a middle-aged man stepped down from the cabin of the black eagle carriage.</p><p>He wore a coat of heavy, dark wool despite the rising heat, and an iron ring of keys clinked against his belt with every step. An easy, practiced smile rested on his weathered face, but his eyes were a sharp, pale grey—keen enough to strip a man down to his boots in a single glance. Nothing seemed to slip past him.</p><p>It took only a moment for those sharp eyes to lock onto Aether and Kaelan.</p><p>"Two young travelers?" The man strolled over, his tone light and welcoming. "First time taking the long road?"</p><p>Aether blinked, taken aback. "How could you tell?"</p><p>The merchant let out a rich, booming laugh. "Because your head hasn't stopped turning since we pulled up. Fresh travelers always do that—they look at the dirt, the trees, the wagons, as if the world was born yesterday."</p><p>Kaelan remained standing a pace behind, silent and unreadable. The merchant hardly minded the cold shoulder; instead, he held out a broad, calloused hand.</p><p>"Caddel."</p><p>Aether hesitated a second before stepping forward to shake it. "Aether. And that's Kaelan."</p><p>"Good names," Caddel said, giving a single nod before settling onto a flat stone nearby.</p><p>On the road, traders treated conversation like water—something to be shared freely during a halt. And Aether, driven by a restless curiosity, had no shortage of questions. In minutes, the space between them melted away.</p><p>"Have you traveled far?" Aether asked, leaning against a wagon wheel.</p><p>"Far enough," Caddel replied smoothly. "Farther than a boy your age has words for."</p><p>"What’s the furthest place you've ever seen?"</p><p>"North past Whitestone City. Deep into the borderlands."</p><p>"And beyond that?"</p><p>Caddel grinned. "I’ve walked those tracks, too."</p><p>Aether’s eyes brightened. "What is it like up there?"</p><p>"That’s too big a question, lad," Caddel chuckled, taking a slow draught from his canteen. "That’s like asking what the sky looks like. It depends on where you stand."</p><p>Aether rubbed the back of his neck, feeling a bit foolish.</p><p>"Though," Caddel added, setting the canteen down, "there is one thing that never changes, no matter how many miles you put behind you."</p><p>"What's that?"</p><p>"The people." Caddel leaned back, resting his elbows on his knees. "A farmer frets over the rain and the frost. A blacksmith frets over his coal and his steel. A merchant frets over a bad turn of the market. And a mother frets over her children. Put 'em in silk or put 'em in rags, push 'em north or south—they're all running on the same gears."</p><p>Aether went quiet. The words were plain, almost blunt, yet they resonated deep within him. His mind drifted back along the dusty track they had trodden—to Vic, the weary blacksmith, the cold-eyed tax collector, the scarred guards at the outpost, and the bleeding farmer clutching his ruined tools. Every single one of them was carrying an invisible weight, waiting for the other shoe to drop.</p><p>Caddel watched his face, a faint, knowing smile playing on his lips. "Greenhorns always set out thinking the world is this vast, mysterious monster. Takes a few hundred miles to realize it’s just full of the same tired souls trying to get through the week."</p><p>◆</p><p>By afternoon, the two caravans had merged into a single, long line crawling across the plains.</p><p>Caddel rode near the front, his horse moving at a relaxed walk. Yet the man was never truly idle. He dropped brief remarks to the outriders, scanned the treeline, and periodically</p><p>glanced up at the shifting grey clouds overhead. Aether watched him from his perch; the merchant seemed to read the landscape the way a scholar read a ledger, constantly calculating, constantly taking notes.</p><p>As dusk began to bleed purple across the sky, they passed the bones of a dead settlement.</p><p>The wooden marker at the road’s edge had rotted through, lying half-buried in mud. Behind it, a cluster of cottages stood like hollow ribcages, their thatched roofs caved in and stone walls choked by wild brambles. The silence hanging over the place was heavy, thick with abandon.</p><p>Aether pulled himself up, staring into the shadow of a roofless doorway. "What happened here?"</p><p>Caddel didn't even slow his mount. "Nothing. People just stopped living in it."</p><p>"Why?"</p><p>"Because they left."</p><p>Aether frowned, dissatisfied. "Why would an entire village just leave?"</p><p>Caddel paused, the easy charm fading from his face for a fleeting moment. "The beast tide last winter," he said quietly. "Took too many of them. The ones left breathing packed what they could carry and walked away."</p><p>Aether felt a cold prickle at the base of his neck. Kaelan, too, lifted his head, his sharp eyes lingering on the ruined timber. It was another ghost story of the monster surges—only this one wasn't a rumor passed around a tavern fire. It was etched into the broken stones right before them.</p><p>Caddel’s voice remained entirely level, hardened by repetition. "There are more like this further north. Some didn't even leave ruins—just burnt grass. Used to be you couldn't walk two hours on this road without smelling cookfire smoke. Not anymore."</p><p>Aether stared back at the crumbling walls until they vanished into the twilight. Only days ago, he had been inside a bustling military camp, listening to soldiers talk strategy. Now, he was looking at the empty shell of ordinary lives wiped clean. The beast calamity wasn't</p><p>a distant legend told to scare children; it was a slow, creeping rot consuming the edges of the world.</p><p>◆</p><p>That night, they made camp under a clear, starlit sky beside the road.</p><p>The main fire crackled loudly, throwing dancing light across the rough faces of the traders. They sat in a circle, their talk a rhythmic murmur of grain tariffs, road tolls, guard contracts, and damaged crates. Aether sat off to the side, near Caddel, unable to pull himself away from the older man’s quiet authority.</p><p>"How do you know all these things?" Aether asked, watching the sparks rise into the dark. "About the roads, the towns, the timber?"</p><p>Caddel smiled, poking at the embers with a dry stick. "Because I don't stay still. A real merchant’s most valuable cargo isn't locked in the iron crates on those wagons, lad."</p><p>Aether blinked. "Then what is it?"</p><p>The merchant tapped his index finger against his temple. "What’s up here. Information."</p><p>He held up a hand, ticking off fingers one by one. "Who had a bumper crop of wheat. Who's starving because the frost came early. Which mountain pass has bandits, and which river bridge washed out. Where the beasts are gathering... and which noble lord is getting ready to squeeze his peasants with a new tax. You get that news three days before anyone else, and it’s worth more than a wagon full of solid gold."</p><p>It was a cold, pragmatic way to look at the world, yet Aether found himself fascinated by the sheer scope of it.</p><p>Before he could process it, Kaelan’s voice cut through the dark. "Do you think the beast tides will get worse?"</p><p>Caddel turned his head slightly. It was the first time the quiet boy had spoken all evening.</p><p>The merchant fell silent, the crackle of the wood filling the void between them. Finally, he gave a single, heavy nod. "Yes."</p><p>"Why?" Kaelan pressed.</p><p>"Because I’ve walked this dirt every season for twenty years," Caddel said softly, his grey eyes reflecting the orange glow of the fire. "Ten years ago, I could name every family in every hamlet from here to the coast. Five years ago, the edge villages started going dark, one by one. And now? Now every road I see is choked with carts going in only one direction: toward Whitestone City."</p><p>The chatter around the nearby fires seemed to dip, swallowed by the rising wind.</p><p>"Do you think they’re all heading there to make a fortune?" Caddel asked, looking between the two boys. He shook his head before they could answer. "They aren't looking for coin. They're running for their lives."</p><p>A night breeze swept through the campsite, causing the flames to pitch violently, casting long, frantic shadows across the grass.</p><p>Aether turned his eyes toward the south, staring into the pitch-black void where the road disappeared. He felt an unsettling realization settle over him—a sense that some invisible, massive force was slowly sweeping across the realm, herding highborn and lowborn alike down this singular path.</p><p>Toward Whitestone City.</p><p>What was waiting for them behind its massive walls? Why were thousands fleeing toward it? And what dark shift in the wild was driving the beasts from their mountains?</p><p>There were no answers in the dark night. None that he could reach, at least.</p><p>Caddel tossed the last crust of hard bread into his mouth, dusted his hands on his trousers, and stood up with a grunt. "Get some sleep, boys. The road doesn't get any shorter tomorrow."</p><p>He turned and melted into the shadows near his wagon.</p><p>Aether stayed by the dying embers, his hands wrapped around his knees, staring out into the endless night. And somewhere far beyond the horizon, beneath the quiet stars, Whitestone City lay waiting.</p><div class="chapter-navigation"><a href="../chapter-37/index.html">← Previous</a><a href="../index.html">Contents</a><a href="../chapter-39/index.html">Next →</a></div></main>
+<footer class="site-footer">
+<div class="footer-brand">Cornerstone</div>
+<div class="footer-tagline">Building stories that endure.</div>
+<div class="footer-studio">Created by Echoes Studio</div>
+<div class="footer-copyright">© 2026 Michael He. All Rights Reserved.</div>
+</footer>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const article = document.querySelector(".article");
+
+    if (!article) {
+        return;
+    }
+
+    const paragraphs = article.querySelectorAll("p");
+
+    paragraphs.forEach(function (paragraph) {
+        const text = paragraph.textContent.trim();
+
+        if (!text) {
+            return;
+        }
+
+        // 自动识别场景分隔符
+        if (text === "***" || text === "* * *") {
+            const divider = document.createElement("div");
+            divider.className = "divider";
+            divider.textContent = "❦";
+            paragraph.replaceWith(divider);
+            return;
+        }
+
+        // 自动识别以引号或长破折号开头的对白
+        const isDialogue =
+            text.startsWith('"') ||
+            text.startsWith("“") ||
+            text.startsWith("‘") ||
+            text.startsWith("'") ||
+            text.startsWith("—");
+
+        if (isDialogue) {
+            paragraph.classList.add("dialogue");
+        }
+    });
+});
+</script>
+<!-- GoatCounter: privacy-friendly page analytics -->
+<script async="" data-goatcounter="https://echoeskingdom.goatcounter.com/count" src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
