@@ -4,8 +4,8 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Book One | Echoes of the Kingdom</title>
-<meta content="Book One of Echoes of the Kingdom — The Rise of the Empire. Read the story by part and chapter." name="description"/>
+<title>Book One | The Rise of the Empire | Echoes of the Kingdom</title>
+<meta content="Book One of Echoes of the Kingdom — The Rise of the Empire. Explore Part I: Aether, Part II: Seren, and Part III: Riverport." name="description"/>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&amp;family=Cormorant+Garamond:wght@400;500;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
 <link href="../../assets/css/style.css" rel="stylesheet"/>
 <style id="unified-mobile-nav">
@@ -92,7 +92,22 @@
   .footer-brand{font-size:21px !important;letter-spacing:.045em !important;max-width:100% !important;}
 }
 </style>
-</head>
+<style id="book-parts-overview">
+.part-overview-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;margin-top:42px}
+.part-overview-card{min-height:430px;padding:34px 30px 30px;border:1px solid rgba(216,196,154,.18);border-radius:10px;background:linear-gradient(150deg,rgba(216,196,154,.055),rgba(7,8,9,.72));display:flex;flex-direction:column;transition:transform .28s ease,border-color .28s ease,background .28s ease}
+.part-overview-card.complete:hover{transform:translateY(-4px);border-color:rgba(216,196,154,.46);background:linear-gradient(150deg,rgba(216,196,154,.09),rgba(7,8,9,.8))}
+.part-card-top{display:flex;justify-content:space-between;gap:18px;align-items:flex-start;margin-bottom:76px}
+.part-card-number{font-family:Cinzel,serif;font-size:13px;letter-spacing:.24em;color:#d4b06a}
+.part-card-status{font-family:Inter,sans-serif;font-size:10px;letter-spacing:.14em;color:rgba(245,239,226,.45);text-align:right}
+.part-overview-card h3{font-family:Cinzel,serif;font-size:38px;font-weight:500;letter-spacing:.08em;color:#ead6a3;margin:0 0 24px}
+.part-overview-card p{font-family:"Cormorant Garamond",serif;font-size:21px;line-height:1.55;color:rgba(238,226,202,.72);margin:0 0 36px}
+.part-card-action{margin-top:auto;font-family:Inter,sans-serif;font-size:11px;letter-spacing:.16em;color:#d8c49a}
+.part-overview-card.next{opacity:.62;background:linear-gradient(150deg,rgba(216,196,154,.025),rgba(7,8,9,.62))}
+.part-overview-card.next h3{color:rgba(234,214,163,.72)}
+.book-prologue-card{margin-bottom:0}
+@media(max-width:900px){.part-overview-grid{grid-template-columns:1fr}.part-overview-card{min-height:300px}.part-card-top{margin-bottom:46px}}
+@media(max-width:600px){.part-overview-card{padding:28px 24px;min-height:285px}.part-overview-card h3{font-size:32px}.part-overview-card p{font-size:19px}.part-card-top{margin-bottom:38px}}
+</style></head>
 <body>
 <header class="site-header">
 <a class="brand" href="../../index.html">ECHOES OF THE KINGDOM</a>
@@ -112,95 +127,20 @@
 <p class="book-eyebrow">BOOK ONE</p>
 <h1 class="book-title">THE RISE OF THE EMPIRE</h1>
 <p class="book-hero-tagline">The first kingdom was not born from glory,<br/>but from ashes.</p>
-<a class="book-begin-button" href="#contents">VIEW CONTENTS</a>
+<a class="book-begin-button" href="#parts">EXPLORE THE PARTS</a>
 </div>
 </section>
 <section class="book-introduction">
 <div class="book-introduction-inner">
 <div>
-<p class="book-introduction-eyebrow">ABOUT THIS BOOK</p>
-<h2 class="book-introduction-title">BEFORE THERE WAS AN EMPIRE.</h2>
+<p class="book-introduction-eyebrow">BOOK STRUCTURE</p>
+<h2 class="book-introduction-title">A STORY THAT OPENS IN PARTS.</h2>
 </div>
-<div class="book-introduction-copy">
-<p>In a fractured age, a child begins to see what others have accepted: divided lands, broken loyalties, and a world slowly forgetting what once held it together.</p>
-<p>Book One follows the first steps of that journey—from a small valley and ordinary lives toward the beginnings of something far greater.</p>
-</div>
+<div class="book-introduction-copy"><p>Book One unfolds in parts, each opening a new stage of the journey.</p><p>Aether’s road begins the story. Seren’s follows. Beyond them, the world continues to open as the Kingdom rises.</p></div>
 </div>
 </section>
-<section class="book-contents" id="contents">
-<div class="book-contents-inner">
-<div class="book-contents-heading">
-<p class="book-contents-eyebrow">TABLE OF CONTENTS</p>
-<h2>BOOK ONE</h2>
-<p class="book-contents-note">Organized by parts for a story built to grow across many chapters.</p>
-</div>
-<a class="toc-prologue" href="./chapter-00-prologue/index.html">
-<span class="toc-prologue-kicker">PROLOGUE</span>
-<span class="toc-prologue-title">THE LAST ECHO</span>
-<span class="toc-prologue-action">BEGIN →</span>
-</a>
-<div class="toc-parts-grid">
-<section class="toc-part">
-<div class="toc-part-heading">
-<span class="toc-part-number">PART I</span>
-<h3>GREY VALLEY</h3>
-</div>
-<div class="toc-chapters">
-<a class="toc-chapter" href="./chapter-01/index.html">
-<span class="toc-chapter-number">01</span>
-<span class="toc-chapter-title">THE SILENCE BENEATH THE TREE</span>
-<span class="toc-chapter-arrow">→</span>
-</a>
-<a class="toc-chapter" href="./chapter-02/index.html">
-<span class="toc-chapter-number">02</span>
-<span class="toc-chapter-title">WHISPERS IN THE WIND</span>
-<span class="toc-chapter-arrow">→</span>
-</a>
-<a class="toc-chapter" href="./chapter-03/index.html">
-<span class="toc-chapter-number">03</span>
-<span class="toc-chapter-title">BEYOND THE VALE</span>
-<span class="toc-chapter-arrow">→</span>
-</a>
-<a class="toc-chapter" href="./chapter-04/index.html">
-<span class="toc-chapter-number">04</span>
-<span class="toc-chapter-title">THE FIREKEEPER</span>
-<span class="toc-chapter-arrow">→</span>
-</a>
-<a class="toc-chapter" href="./chapter-05/index.html">
-<span class="toc-chapter-number">05</span>
-<span class="toc-chapter-title">THE WAYFARER</span>
-<span class="toc-chapter-arrow">→</span>
-</a>
-<a class="toc-chapter" href="./chapter-06/index.html">
-<span class="toc-chapter-number">06</span>
-<span class="toc-chapter-title">THE THAW</span>
-<span class="toc-chapter-arrow">→</span>
-</a>
-<a class="toc-chapter" href="./chapter-07/index.html">
-<span class="toc-chapter-number">07</span>
-<span class="toc-chapter-title">THE SPRING FAIR</span>
-<span class="toc-chapter-arrow">→</span>
-</a>
-<a class="toc-chapter" href="./chapter-08/index.html">
-<span class="toc-chapter-number">08</span>
-<span class="toc-chapter-title">THE DRIFT OF YEARS</span>
-<span class="toc-chapter-arrow">→</span>
-</a>
-<a class="toc-chapter" href="./chapter-09/index.html">
-<span class="toc-chapter-number">09</span>
-<span class="toc-chapter-title">THE TRUST</span>
-<span class="toc-chapter-arrow">→</span>
-</a>
-<a class="toc-chapter" href="./chapter-10/index.html">
-<span class="toc-chapter-number">10</span>
-<span class="toc-chapter-title">THE QUARREL</span>
-<span class="toc-chapter-arrow">→</span>
-</a>
-<a class="toc-chapter" href="./chapter-11/index.html"><span class="toc-chapter-number">11</span><span class="toc-chapter-title">NO NEED</span><span class="toc-chapter-arrow">→</span></a><a class="toc-chapter" href="./chapter-12/index.html"><span class="toc-chapter-number">12</span><span class="toc-chapter-title">HAVE I EVER TOLD YOU?</span><span class="toc-chapter-arrow">→</span></a><a class="toc-chapter" href="./chapter-13/index.html"><span class="toc-chapter-number">13</span><span class="toc-chapter-title">THE UNOPENED DOOR</span><span class="toc-chapter-arrow">→</span></a><a class="toc-chapter" href="./chapter-14/index.html"><span class="toc-chapter-number">14</span><span class="toc-chapter-title">THE COST OF TOMORROW</span><span class="toc-chapter-arrow">→</span></a><a class="toc-chapter" href="./chapter-15/index.html"><span class="toc-chapter-number">15</span><span class="toc-chapter-title">THE ROAD BEYOND THE VALE</span><span class="toc-chapter-arrow">→</span></a><a class="toc-chapter" href="./chapter-16/index.html"><span class="toc-chapter-number">16</span><span class="toc-chapter-title">THE MAN FROM THE RIDGE</span><span class="toc-chapter-arrow">→</span></a><a class="toc-chapter" href="./chapter-17/index.html"><span class="toc-chapter-number">17</span><span class="toc-chapter-title">NOT YET</span><span class="toc-chapter-arrow">→</span></a><a class="toc-chapter" href="./chapter-18/index.html"><span class="toc-chapter-number">18</span><span class="toc-chapter-title">THE RECKONING OF THE TRACK</span><span class="toc-chapter-arrow">→</span></a><a class="toc-chapter" href="./chapter-19/index.html"><span class="toc-chapter-number">19</span><span class="toc-chapter-title">BEYOND THE GREATER CRAGS</span><span class="toc-chapter-arrow">→</span></a><a class="toc-chapter" href="./chapter-20/index.html"><span class="toc-chapter-number">20</span><span class="toc-chapter-title">THE FEAR IN THE STRAW</span><span class="toc-chapter-arrow">→</span></a><a class="toc-chapter" href="./chapter-21/index.html"><span class="toc-chapter-number">21</span><span class="toc-chapter-title">THE MEN WHO KEEP THE WATCH</span><span class="toc-chapter-arrow">→</span></a><a class="toc-chapter" href="./chapter-22/index.html"><span class="toc-chapter-number">22</span><span class="toc-chapter-title">TRACES</span><span class="toc-chapter-arrow">→</span></a><a class="toc-chapter" href="./chapter-23/index.html"><span class="toc-chapter-number">23</span><span class="toc-chapter-title">THE UNSEEN LEDGER</span><span class="toc-chapter-arrow">→</span></a><a class="toc-chapter" href="./chapter-24/index.html"><span class="toc-chapter-number">24</span><span class="toc-chapter-title">THE FIRST STAND</span><span class="toc-chapter-arrow">→</span></a><a class="toc-chapter" href="./chapter-25/index.html"><span class="toc-chapter-number">25</span><span class="toc-chapter-title">MORE THAN MEETS THE EYE</span><span class="toc-chapter-arrow">→</span></a><a class="toc-chapter" href="./chapter-26/index.html"><span class="toc-chapter-number">26</span><span class="toc-chapter-title">INTO THE THICKET</span><span class="toc-chapter-arrow">→</span></a><a class="toc-chapter" href="./chapter-27/index.html"><span class="toc-chapter-number">27</span><span class="toc-chapter-title">THE OLD CAMP</span><span class="toc-chapter-arrow">→</span></a><a class="toc-chapter" href="./chapter-28/index.html"><span class="toc-chapter-number">28</span><span class="toc-chapter-title">MORE THAN ONE VILLAGE</span><span class="toc-chapter-arrow">→</span></a><a class="toc-chapter" href="./chapter-29/index.html"><span class="toc-chapter-number">29</span><span class="toc-chapter-title">THE LIMITS OF SKILL</span><span class="toc-chapter-arrow">→</span></a><a class="toc-chapter" href="./chapter-30/index.html"><span class="toc-chapter-number">30</span><span class="toc-chapter-title">WHO TAKES THE ROAD</span><span class="toc-chapter-arrow">→</span></a><a class="toc-chapter" href="./chapter-31/index.html"><span class="toc-chapter-number">31</span><span class="toc-chapter-title">LEAVING STONY CREEK</span><span class="toc-chapter-arrow">→</span></a><a class="toc-chapter" href="./chapter-32/index.html"><span class="toc-chapter-number">32</span><span class="toc-chapter-title">THE GREAT ROAD</span><span class="toc-chapter-arrow">→</span></a><a class="toc-chapter" href="./chapter-33/index.html"><span class="toc-chapter-number">33</span><span class="toc-chapter-title">THE STRANGER</span><span class="toc-chapter-arrow">→</span></a><a class="toc-chapter" href="./chapter-34/index.html"><span class="toc-chapter-number">34</span><span class="toc-chapter-title">THE BLACKSMITH AND THE MERCHANTS</span><span class="toc-chapter-arrow">→</span></a><a class="toc-chapter" href="./chapter-35/index.html"><span class="toc-chapter-number">35</span><span class="toc-chapter-title">THE HARVEST AND THE TAX</span><span class="toc-chapter-arrow">→</span></a><a class="toc-chapter" href="./chapter-36/index.html"><span class="toc-chapter-number">36</span><span class="toc-chapter-title">THE GARRISON (PART I)</span><span class="toc-chapter-arrow">→</span></a><a class="toc-chapter" href="./chapter-37/index.html"><span class="toc-chapter-number">37</span><span class="toc-chapter-title">THE GARRISON (PART II)</span><span class="toc-chapter-arrow">→</span></a><a class="toc-chapter" href="./chapter-38/index.html"><span class="toc-chapter-number">38</span><span class="toc-chapter-title">THE WAY OF THE MERCHANT</span><span class="toc-chapter-arrow">→</span></a><a class="toc-chapter" href="./chapter-39/index.html"><span class="toc-chapter-number">39</span><span class="toc-chapter-title">EXODUS</span><span class="toc-chapter-arrow">→</span></a><a class="toc-chapter" href="./chapter-40/index.html"><span class="toc-chapter-number">40</span><span class="toc-chapter-title">THE DISTANT WALL</span><span class="toc-chapter-arrow">→</span></a></div>
-</section>
-<!-- Future parts are added as sibling .toc-part sections. The desktop grid automatically forms two columns; mobile collapses to one. -->
-</div>
-</div>
+<section class="book-contents" id="parts">
+<div class="book-contents-inner"><div class="book-contents-heading"><p class="book-contents-eyebrow">BOOK ONE</p><h2>THE STORY IN PARTS</h2><p class="book-contents-note">A story told in parts. Each part, a new beginning.</p></div><a class="toc-prologue book-prologue-card" href="./chapter-00-prologue/index.html"><span class="toc-prologue-kicker">BOOK PROLOGUE</span><span class="toc-prologue-title">THE LAST ECHO</span><span class="toc-prologue-action">READ →</span></a><div class="part-overview-grid"><a class="part-overview-card complete" href="./part1/index.html"><div class="part-card-top"><span class="part-card-number">PART I</span><span class="part-card-status">46 CHAPTERS · COMPLETE</span></div><h3>AETHER</h3><p>A boy leaves the world he knows and begins to see how far its troubles reach.</p><span class="part-card-action">ENTER PART I →</span></a><section class="part-overview-card next"><div class="part-card-top"><span class="part-card-number">PART II</span><span class="part-card-status">COMING NEXT</span></div><h3>SEREN</h3><p>A girl follows a call she does not yet understand, and faith becomes a road.</p><span class="part-card-action">COMING NEXT</span></section></div></div>
 </section>
 </main>
 <footer class="site-footer">
