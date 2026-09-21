@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Chapter 2: The White Bird | Echoes of the Kingdom</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&amp;family=Inter:wght@300;400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<style>
+.chapter-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  width: 100%;
+  margin-top: 100px;
+  padding-top: 40px;
+  border-top: 1px solid rgba(212, 184, 120, 0.18);
+}
+
+.chapter-navigation a {
+  color: #d8c49a;
+  font-family: Inter, sans-serif;
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+
+background:#070809;
+
+color:#ece2cf;
+
+font-family:"Cormorant Garamond",serif;
+
+line-height:1.9;
+
+}
+
+a{
+
+text-decoration:none;
+
+color:inherit;
+
+}
+
+.topbar{
+
+position:sticky;
+
+top:0;
+
+z-index:100;
+
+height:72px;
+
+background:rgba(7,8,9,.92);
+
+backdrop-filter:blur(10px);
+
+border-bottom:1px solid rgba(212,184,120,.12);
+
+display:flex;
+
+align-items:center;
+
+justify-content:space-between;
+
+padding:0 60px;
+
+}
+
+.logo{
+
+font-size:20px;
+
+letter-spacing:2px;
+
+color:#d8c08b;
+
+}
+
+.back{
+
+font-family:Inter,sans-serif;
+
+font-size:13px;
+
+letter-spacing:2px;
+
+text-transform:uppercase;
+
+color:#a89b7a;
+
+transition:.25s;
+
+}
+
+.back:hover{
+
+color:#e8d9b3;
+
+}
+
+.hero{
+
+padding:120px 20px 80px;
+
+text-align:center;
+
+}
+
+.eyebrow{
+
+font-size:18px;
+
+letter-spacing:6px;
+
+color:#a48c60;
+
+margin-bottom:20px;
+
+text-transform:uppercase;
+
+}
+
+h1{
+
+font-size:88px;
+
+font-weight:600;
+
+letter-spacing:2px;
+
+margin-bottom:24px;
+
+}
+
+.subtitle{
+
+max-width:700px;
+
+margin:auto;
+
+font-family:Inter,sans-serif;
+
+font-size:18px;
+
+color:#bfb5a2;
+
+line-height:1.8;
+
+}
+
+.article{
+
+max-width:680px;
+
+margin:100px auto 180px;
+
+padding:0 30px;
+
+font-size:28px;
+
+}
+
+.article p{
+  font-family:"Cormorant Garamond", serif;
+  font-size:28px;
+  line-height:2;
+  color:rgba(245,239,226,0.95);
+  margin-bottom:42px;
+}
+
+.dropcap::first-letter {
+  float: left;
+  font-size: 72px;
+  line-height: 0.8;
+  margin-right: 14px;
+  margin-top: 6px;
+  color: #d8c49a;
+}
+/* ===========================
+   Cornerstone Footer
+=========================== */
+
+.site-footer{
+    margin-top:120px;
+    padding:72px 24px 58px;
+    border-top:1px solid rgba(212,176,106,.18);
+    text-align:center;
+}
+
+.footer-brand{
+
+    font-family:"Cinzel", serif;
+
+    font-size:44px;
+
+    font-weight:500;
+
+    letter-spacing:.18em;
+
+    color:#D4B06A;
+
+    margin-bottom:10px;
+
+}
+
+.footer-tagline{
+    font-family:"Cormorant Garamond", serif;
+    font-style:italic;
+    font-size:18px;
+    color:#D8C8A8;
+    margin-bottom:32px;
+}
+
+.footer-studio{
+    font-family:Inter,sans-serif;
+    font-size:12px;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    color:rgba(245,239,226,.55);
+    margin-bottom:12px;
+}
+
+.footer-copyright{
+    font-family:Inter,sans-serif;
+    font-size:12px;
+    color:rgba(245,239,226,.35);
+}
+
+
+/* ===========================
+   Mobile Reading Layout
+=========================== */
+@media (max-width: 700px) {
+  html, body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .topbar {
+    height: auto;
+    min-height: 62px;
+    padding: 0 16px;
+    gap: 10px;
+  }
+
+  .logo {
+    min-width: 0;
+    white-space: nowrap;
+    font-size: 13px;
+    letter-spacing: 1.1px;
+    line-height: 1.2;
+  }
+
+  .back {
+    flex: 0 0 auto;
+    white-space: nowrap;
+    font-size: 10px;
+    letter-spacing: 1.1px;
+    line-height: 1.2;
+  }
+
+  .hero {
+    padding: 72px 18px 48px;
+  }
+
+  .eyebrow {
+    margin-bottom: 16px;
+    font-size: 13px;
+    letter-spacing: 4px;
+  }
+
+  h1 {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto 18px;
+    font-size: clamp(40px, 12vw, 54px);
+    line-height: 1.08;
+    letter-spacing: 1px;
+    overflow-wrap: break-word;
+    word-break: normal;
+  }
+
+  .subtitle {
+    max-width: 100%;
+    padding: 0 4px;
+    font-size: 16px;
+    line-height: 1.65;
+  }
+
+  .article {
+    width: 100%;
+    max-width: 100%;
+    margin: 48px auto 96px;
+    padding: 0 22px;
+    font-size: 22px;
+  }
+
+  .article p {
+    max-width: 100%;
+    font-size: 22px;
+    line-height: 1.78;
+    margin-bottom: 30px;
+  }
+
+  .dropcap::first-letter {
+    font-size: 58px;
+    line-height: .82;
+    margin-right: 10px;
+    margin-top: 5px;
+  }
+
+  .chapter-navigation {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    gap: 8px;
+    margin-top: 64px;
+    padding-top: 28px;
+  }
+
+  .chapter-navigation a {
+    min-width: 0;
+    font-size: 10px;
+    line-height: 1.4;
+    letter-spacing: 1.4px;
+  }
+
+  .chapter-navigation a:first-child { text-align: left; }
+  .chapter-navigation a:nth-child(2) { text-align: center; }
+  .chapter-navigation a:last-child { text-align: right; }
+
+  .site-footer {
+    margin-top: 72px;
+    padding: 54px 18px 40px;
+    overflow: hidden;
+  }
+
+  .footer-brand {
+    white-space: nowrap;
+    font-size: clamp(26px, 8vw, 32px);
+    letter-spacing: .12em;
+  }
+
+  .footer-tagline {
+    font-size: 16px;
+    margin-bottom: 28px;
+  }
+
+  .footer-studio,
+  .footer-copyright {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 390px) {
+  .topbar { padding: 0 12px; gap: 7px; }
+  .logo { font-size: 11.5px; letter-spacing: .9px; }
+  .back { font-size: 9px; letter-spacing: .9px; }
+  .hero { padding: 64px 16px 42px; }
+  h1 { font-size: clamp(38px, 11.5vw, 45px); }
+  .article { padding: 0 20px; }
+  .article p { font-size: 21px; line-height: 1.76; }
+  .chapter-navigation a { font-size: 9.5px; letter-spacing: 1.1px; }
+  .footer-brand { font-size: 27px; letter-spacing: .1em; }
+}
+
+/* Unified Cornerstone footer */
+.site-footer{margin-top:120px;padding:72px 24px 58px;border-top:1px solid rgba(212,176,106,.22);text-align:center;overflow:hidden}
+.footer-brand{font-family:"Cinzel",serif;font-size:44px;font-weight:500;letter-spacing:.14em;color:#D4B06A;margin:0 auto 10px;line-height:1.15;max-width:100%;white-space:nowrap}
+.footer-tagline{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:18px;color:#D8C8A8;margin-bottom:32px}
+.footer-studio{font-family:Inter,sans-serif;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:rgba(245,239,226,.55);margin-bottom:12px}
+.footer-copyright{font-family:Inter,sans-serif;font-size:12px;color:rgba(245,239,226,.35)}
+@media(max-width:700px){
+.site-footer{margin-top:72px;padding:50px 16px 40px}
+.footer-brand{font-size:clamp(23px,7.2vw,32px);letter-spacing:.08em;white-space:nowrap;overflow-wrap:normal;word-break:normal}
+.footer-tagline{font-size:16px;margin-bottom:26px}
+.footer-studio{font-size:11px;letter-spacing:.14em}
+.footer-copyright{font-size:11px;line-height:1.5}
+}
+
+</style>
+<style id="global-footer-unification">
+/* Final global footer override: keep every page visually identical. */
+.site-footer{
+  margin-top:120px !important;
+  padding:72px 24px 58px !important;
+  border-top:1px solid rgba(212,176,106,.22) !important;
+  text-align:center !important;
+  overflow:hidden !important;
+  box-sizing:border-box !important;
+}
+.footer-brand{
+  display:block !important;
+  font-family:"Cinzel",serif !important;
+  font-size:44px !important;
+  font-weight:500 !important;
+  letter-spacing:.10em !important;
+  line-height:1.12 !important;
+  color:#D4B06A !important;
+  width:auto !important;
+  max-width:100% !important;
+  margin:0 auto 10px !important;
+  padding:0 !important;
+  white-space:nowrap !important;
+  overflow-wrap:normal !important;
+  word-break:normal !important;
+  text-align:center !important;
+  box-sizing:border-box !important;
+}
+.footer-tagline{
+  font-family:"Cormorant Garamond",serif !important;
+  font-style:italic !important;
+  font-size:18px !important;
+  line-height:1.4 !important;
+  color:#D8C8A8 !important;
+  margin:0 auto 32px !important;
+}
+.footer-studio{
+  font-family:Inter,sans-serif !important;
+  font-size:12px !important;
+  line-height:1.5 !important;
+  letter-spacing:.18em !important;
+  text-transform:uppercase !important;
+  color:rgba(245,239,226,.55) !important;
+  margin:0 auto 12px !important;
+}
+.footer-copyright{
+  font-family:Inter,sans-serif !important;
+  font-size:12px !important;
+  line-height:1.5 !important;
+  color:rgba(245,239,226,.35) !important;
+  margin:0 auto !important;
+}
+@media (max-width:700px){
+  .site-footer{
+    margin-top:72px !important;
+    padding:48px 20px 38px !important;
+  }
+  .footer-brand{
+    font-size:clamp(22px,6.5vw,30px) !important;
+    letter-spacing:.06em !important;
+    line-height:1.12 !important;
+    max-width:calc(100% - 12px) !important;
+    margin:0 auto 12px !important;
+  }
+  .footer-tagline{font-size:16px !important;margin-bottom:26px !important;}
+  .footer-studio{font-size:11px !important;letter-spacing:.14em !important;margin-bottom:12px !important;}
+  .footer-copyright{font-size:11px !important;line-height:1.5 !important;}
+}
+@media (max-width:380px){
+  .site-footer{padding-left:16px !important;padding-right:16px !important;}
+  .footer-brand{font-size:21px !important;letter-spacing:.045em !important;max-width:100% !important;}
+}
+</style>
+</head>
+<body>
+<header class="topbar">
+<div class="logo"><a href="../../../../index.html" style="color:inherit;text-decoration:none">ECHOES OF THE KINGDOM</a></div>
+<a class="back" href="../index.html">← Back to Part II</a>
+</header>
+<section class="hero">
+<div class="eyebrow">CHAPTER 2</div>
+<h1>The White Bird</h1>
+</section>
+<main class="article"><p class="dropcap">After a moment, her mother shifted under the covers.</p><p>"Go back to sleep.</p><p>You've nets to help me mend come sunrise.</p><p>" "Alright.</p><p>" The cottage fell quiet again, save for the endless cadence of the waves.</p><p>And as Seren closed her eyes, the blurred vision of the stone city lingered in her mind.</p><div class="divider">❦</div><p>By the time the sun climbed over the horizon, Tidal Bay was already humming with activity. Seren walked down toward the piers carrying a bundle of neatly coiled ropes, passing a group of children playing on the paths.</p><p>"Lady Dreamer!</p><p>" one shouted.</p><p>Seren kept her steady pace.</p><p>"What did you dream of last night?</p><p>" "Did the fish talk to you again?</p><p>" The children giggled in unison.</p><p>Seren stopped, turning to them with a thoughtful look.</p><p>"I didn't dream of fish.</p><p>" The laughter sputtered, the children surprised by her direct response.</p><p>"What was it, then?</p><p>" "A city.</p><p>" "What city?</p><p>" "I don't know.</p><p>" The children exchanged bewildered looks before erupting into even louder laughter.</p><p>"Doesn't even know her own dream!</p><p>"</p><p>"That's our Lady Dreamer!</p><p>" They scurried off in search of new games, leaving Seren standing alone on the path.</p><p>She looked down at the coiled ropes in her hands. She took no offense at their teasing; truth be told, she found it peculiar herself. Why that same place, night after night?</p><p>Why that city? Why had the dream endured through all these years? She had no answers.</p><p>Old Eden had once remarked to her, *"Some dreams pass through like a summer breeze. Others linger. As to why they stay...</p><p>well, perhaps even the dream itself doesn't know."* She had thought his words nonsense at the time, but now they seemed to hold a grain of truth. At the dock, Old Eden was already busy mending a net.</p><p>"Dreamed of it again, did you?</p><p>" he asked, not looking up from his work.</p><p>"Yes.</p><p>" "Still the same city?</p><p>" "Yes.</p><p>" Old Eden tied off a fryesd line with a practiced flick of his fingers.</p><p>"I recall you drawing it when you were six.</p><p>" Seren smiled.</p><p>"You remember that?</p><p>" "Of course I do.</p><p>Looked like a wooden cask tossed up by the surf.</p><p>" Seren laughed softly.</p><p>"It wasn't <em>that</em> terrible.</p><p>" "Nigh on close," the old man chuckled.</p><p>A moment passed before he asked, "Why'd you stop drawing it?</p><p>" "I couldn't capture it anymore.</p><p>"</p><p>"How so?</p><p>" Seren gazed out over the open sea.</p><p>"Because it changes the moment I wake.</p><p>" "Meaning?</p><p>" Seren knit her brows, searching for the words.</p><p>"The <em>feeling</em> of the dream remains...</p><p>but the image slips away. It's like... I know it is there, yet I cannot see it clearly.</p><p>" Old Eden listened quietly.</p><p>"Sounds like sea mist," he murmured.</p><p>"You know it's there before your eyes, but your fingers can't grasp it.</p><p>" Seren nodded.</p><p>Yes, it was very much like that.</p><div class="divider">❦</div><p>By afternoon, the tide receded, exposing vast stretches of glistening wet sand. Seren walked alone along the waterline. She preferred the low tide, for it revealed what was usually hidden beneath the waves—shells, small stranded fish, hermit crabs, and the delicate prints left by sea birds.</p><p>Where others saw only a bare beach, her eyes found a world rich with detail. As a child, she had assumed everyone looked at the world this way, only to realize later that they merely saw the vast sea, while she was endlessly drawn to the tiny things hidden within it. She felt, somehow, as though certain answers lay buried there, though she had no notion of what questions she was asking.</p><p>Crouching down, she watched a hermit crab carefully inspect and claim a new shell, then turned her gaze upward toward the gulls gliding effortlessly on the coastal drafts. She watched them for a long while, oblivious to the passage of time. The villagers thought she was merely daydreaming, but she was watching—observing the details that others rushed past.</p><p>As dusk began to settle, the beach cleared of people. Seren crouched on the sand, using a driftwood twig to trace lines in the wet earth. First a stretch of wall,</p><p>then a arched gateway, then the faint outline of towers. Halfway through, her stick paused. The rest of the image had faded from her mind once more.</p><p>It was always so. Always a fragment missing, always a detail just beyond reach. She looked down at her drawing in the sand, realizing it had been a long time since she had asked herself <em>why</em>.</p><p>When she was small, she had plagued her mother with questions—<em>Why this dream? Why this city? Why me?</em> But over time, the questions had faded.</p><p>The dream had simply remained, constant as the tide, persistent as the wind, as certain as the morning sun. It had woven itself into the fabric of her life. A gentle swell swept over the sand, washing across her drawing.</p><p>It smoothed away the walls, erased the gate, and dissolved every trace of the city. Soon, nothing remained. Seren watched in silence, then rose to her feet.</p><p>The sun was sinking into the sea, bathing the waters in brilliant gold. The wind tugged at her hair. In that moment, she was struck by how much the light resembled the glow in her dream—similar, yet not quite the same.</p><p>She stood watching until the last sliver of sun vanished beneath the waves, then turned to make her way back to the village. Behind her, the waves continued their timeless rhythm, washing over the shore again and again—much like the dream that returned to her life, endlessly arriving, never truly leaving.</p><div class="divider">❦</div><p>The screeching of gulls roused Seren at dawn. The sharp, piercing calls drifted through the wooden shutters in an unbroken rhythm. Opening her eyes, she watched the pale morning light spill into the timber cottage.</p><p>Across the small room, her mother was already busy sorting fish baskets for the market docks.</p><p>"You’re awake?</p><p>" "Yes.</p><p>" Seren sat up, though she made no move to climb out of bed.</p><p>The night's dream still lingered in her mind. It was incomplete, as it always was; most of its details had dissolved the moment her eyes opened. Yet she remembered the wind.</p><p>She remembered the twilight, the ancient stone city, and a bird. A white bird, launching itself from the top of the ramparts and soaring high into the twilight sky before the dream dissolved. She tried to hold on to the memory, but no further details would come.</p><p>Her mother set a round of brown bread on the wooden table.</p><p>"Eat.</p><p>Then head down to the docks.</p><p>" "Alright.</p><p>" "Dreamed of it again?</p><p>" Seren nodded.</p><p>Her mother asked nothing more. It was an old exchange, repeated through the years until words seemed almost redundant. After breakfast, Seren shouldered a heavy coil of hemp rope and walked down the winding coastal track.</p><p>Tidal Bay was waking. Sea breezes swept between the weathered wooden homes, carrying the distant murmur of morning chatter. Fishermen were preparing their craft, women were gutting the morning catch, and children chased one another across the open yards.</p><p>Everything was as it had been yesterday, and the day before that. As she reached the timber piers, she cast an idle glance toward the horizon and froze. Gliding along the coastline against the morning sky was a solitary white bird.</p><p>Seren stared, surprised. She could not have explained what set it apart, only that it felt strangely familiar. The bird dipped low over the surf, caught a rising thermal, and banked back into the sky.</p><p>She watched it intently until it vanished into the bright distance.</p><p>"What are you staring at?</p><p>" a voice chimed beside her.</p><p>Seren turned to find a few local children standing nearby, including the boy who had called her "Lady Dreamer" the day before.</p><p>"A bird.</p><p>" "What's so grand about a bird?</p><p>" "I don't know.</p><p>" The boy tracked her former gaze into the open sky, finding nothing but vacant blue.</p><p>"There's nothing there.</p><p>" "It flew off.</p><p>" "Then why keep looking?</p><p>" Seren thought for a second.</p><p>"Because...</p><p>I think I've seen it before.</p><p>" The children perked up, curiosity piqued.</p><p>"Where'd you see it?</p><p>" Seren fell silent momentarily.</p><p>"In my dream.</p><p>" A pause gripped the children, followed instantly by a chorus of giggles.</p><p>"Another dream!</p><p>" "She sees everything in her dreams!</p><p>" "Tomorrow she'll probably dream about us!</p><p>" "Now that's terrifying!</p><p>"</p><p>They ran off, their laughter echoing down the pier. Seren remained where she was, unbothered. In truth, she was unsure herself—had she truly seen it, or was it merely a resemblance?</p><p>She had no answers. Yet the lingering impression would not fade. Through the morning, she helped her mother untangle the fishing nets.</p><p>Trapped within the twine were clumps of seaweed, small fry, broken shells, and a few snapping shore crabs. Seren picked them out one by one, dropping them back into the tide. One crab was particularly tiny.</p><p>The moment its feet touched the wet timber, it scurried toward the water's edge in a frantic rush. Watching its tumbling hurry, a small smile touched Seren's lips. She thought of the crab climbing the piling yesterday, and then of a dream long past.</p><p>There had been a crab in that dream too, though its exact likeness had long since slipped away. It happened often—a bird, a passing cloud, a strange pebble—something small would trigger a fleeting stir of memory. Yet whenever she tried to focus on it, the dream dissolved like foam on a receding wave, leaving behind only the faintest mark.</p><p>By noon, the harbour reached its daily bustle. Merchants shouted their prices, skiffs knocked against the pilings, and children darted through the crowd. Old Eden sat at the pier's edge, repairing a line.</p><p>As Seren passed by carrying a wooden bucket of water, the old man called out without looking up.</p><p>"What did you spot today?</p><p>" She stopped.</p><p>"A bird.</p><p>" "Coast is full of birds, girl.</p><p>" "Not like this one.</p><p>" "What kind, then?</p><p>"</p><p>Seren knit her brows, struggling to find the words.</p><p>"The kind from my dream.</p><p>" Old Eden chuckled softly.</p><p>"Dreamed of it again, did you?</p><p>" "No.</p><p>" "Then how do you know it was the same one?</p><p>" Seren fell silent as a salt breeze brushed past.</p><p>Farther out, a flock of gulls skimmed the crests of the water.</p><p>"Because it felt the same.</p><p>" Old Eden nodded slowly, not pressing her further.</p><p>After a beat, he said, "When I was young and out at sea... I'd get that feeling too.</p><p>" "What feeling?</p><p>" "I'd look at a stretch of water and swear I'd sailed it before.</p><p>" "Had you?</p><p>" "Maybe.</p><p>" The old man offered a wry smile.</p><p>"Maybe not.</p><p>" Seren considered his words, though she felt her experience was different.</p><p>That bird—she was certain she had seen it. Where, she could not say. By afternoon, the sky cleared into brilliant blue, and the sea turned as smooth as polished glass.</p><p>Seren walked along the shore alone. A short distance away, a few gulls rested atop a sea-crag. One of them unfurled its white wings to catch the sun.</p><p>In that fleeting instant, Seren froze. A sudden flash of memory clicked into place—not the whole dream, but a single, crystal- clear frame. Twilight.</p><p>The stone wall. The wind.</p><p>And the white bird launching itself from the ramparts, identical to the one before her eyes. The vision lasted no longer than a heartbeat before vanishing, but this time, Seren was certain. She had not imagined it.</p><p>She had truly seen it. As evening drew near, the sun sank low, flooding Tidal Bay with warm, golden light. Seren sat at the end of the pier, looking out toward the horizon.</p><p>Gulls crossed overhead. Watching their light-dappled wings, a quiet realization struck her. Perhaps that city in her dreams was real.</p><p>The thought startled her. In all these years, she had never considered it. She had always assumed it was merely a dream—a strange, persistent fantasy that had accompanied her childhood.</p><p>Yet today, with the appearance of that white bird, a new feeling took root. Perhaps the things in her dreams were not entirely made of air. The sea breeze blew soft as the last golden rays dipped beneath the waves.</p><p>The white bird was long gone, lost to the sky. But it had left behind a tiny seed in the mind of a ten-year-old girl—quietly settling into the earth, waiting for its time to sprout.</p><div class="chapter-navigation"><a href="../chapter-01/index.html">← Previous</a><a href="../index.html">Part II Contents</a><a href="../chapter-03/index.html">Next →</a></div></main>
+<footer class="site-footer">
+<div class="footer-brand">Cornerstone</div>
+<div class="footer-tagline">Building stories that endure.</div>
+<div class="footer-studio">Created by Echoes Studio</div>
+<div class="footer-copyright">© 2026 Michael He. All Rights Reserved.</div>
+</footer>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const article = document.querySelector(".article");
+
+    if (!article) {
+        return;
+    }
+
+    const paragraphs = article.querySelectorAll("p");
+
+    paragraphs.forEach(function (paragraph) {
+        const text = paragraph.textContent.trim();
+
+        if (!text) {
+            return;
+        }
+
+        // 自动识别场景分隔符
+        if (text === "***" || text === "* * *") {
+            const divider = document.createElement("div");
+            divider.className = "divider";
+            divider.textContent = "❦";
+            paragraph.replaceWith(divider);
+            return;
+        }
+
+        // 自动识别以引号或长破折号开头的对白
+        const isDialogue =
+            text.startsWith('"') ||
+            text.startsWith("“") ||
+            text.startsWith("‘") ||
+            text.startsWith("'") ||
+            text.startsWith("—");
+
+        if (isDialogue) {
+            paragraph.classList.add("dialogue");
+        }
+    });
+});
+</script>
+<!-- GoatCounter: privacy-friendly page analytics -->
+<script async="" data-goatcounter="https://echoeskingdom.goatcounter.com/count" src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
