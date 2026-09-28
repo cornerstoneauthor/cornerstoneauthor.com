@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Chapter 10: What the Road Reveals | Echoes of the Kingdom</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&amp;family=Inter:wght@300;400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<style>
+.chapter-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  width: 100%;
+  margin-top: 100px;
+  padding-top: 40px;
+  border-top: 1px solid rgba(212, 184, 120, 0.18);
+}
+
+.chapter-navigation a {
+  color: #d8c49a;
+  font-family: Inter, sans-serif;
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+
+background:#070809;
+
+color:#ece2cf;
+
+font-family:"Cormorant Garamond",serif;
+
+line-height:1.9;
+
+}
+
+a{
+
+text-decoration:none;
+
+color:inherit;
+
+}
+
+.topbar{
+
+position:sticky;
+
+top:0;
+
+z-index:100;
+
+height:72px;
+
+background:rgba(7,8,9,.92);
+
+backdrop-filter:blur(10px);
+
+border-bottom:1px solid rgba(212,184,120,.12);
+
+display:flex;
+
+align-items:center;
+
+justify-content:space-between;
+
+padding:0 60px;
+
+}
+
+.logo{
+
+font-size:20px;
+
+letter-spacing:2px;
+
+color:#d8c08b;
+
+}
+
+.back{
+
+font-family:Inter,sans-serif;
+
+font-size:13px;
+
+letter-spacing:2px;
+
+text-transform:uppercase;
+
+color:#a89b7a;
+
+transition:.25s;
+
+}
+
+.back:hover{
+
+color:#e8d9b3;
+
+}
+
+.hero{
+
+padding:120px 20px 80px;
+
+text-align:center;
+
+}
+
+.eyebrow{
+
+font-size:18px;
+
+letter-spacing:6px;
+
+color:#a48c60;
+
+margin-bottom:20px;
+
+text-transform:uppercase;
+
+}
+
+h1{
+
+font-size:88px;
+
+font-weight:600;
+
+letter-spacing:2px;
+
+margin-bottom:24px;
+
+}
+
+.subtitle{
+
+max-width:700px;
+
+margin:auto;
+
+font-family:Inter,sans-serif;
+
+font-size:18px;
+
+color:#bfb5a2;
+
+line-height:1.8;
+
+}
+
+.article{
+
+max-width:680px;
+
+margin:100px auto 180px;
+
+padding:0 30px;
+
+font-size:28px;
+
+}
+
+.article p{
+  font-family:"Cormorant Garamond", serif;
+  font-size:28px;
+  line-height:2;
+  color:rgba(245,239,226,0.95);
+  margin-bottom:42px;
+}
+
+.dropcap::first-letter {
+  float: left;
+  font-size: 72px;
+  line-height: 0.8;
+  margin-right: 14px;
+  margin-top: 6px;
+  color: #d8c49a;
+}
+/* ===========================
+   Cornerstone Footer
+=========================== */
+
+.site-footer{
+    margin-top:120px;
+    padding:72px 24px 58px;
+    border-top:1px solid rgba(212,176,106,.18);
+    text-align:center;
+}
+
+.footer-brand{
+
+    font-family:"Cinzel", serif;
+
+    font-size:44px;
+
+    font-weight:500;
+
+    letter-spacing:.18em;
+
+    color:#D4B06A;
+
+    margin-bottom:10px;
+
+}
+
+.footer-tagline{
+    font-family:"Cormorant Garamond", serif;
+    font-style:italic;
+    font-size:18px;
+    color:#D8C8A8;
+    margin-bottom:32px;
+}
+
+.footer-studio{
+    font-family:Inter,sans-serif;
+    font-size:12px;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    color:rgba(245,239,226,.55);
+    margin-bottom:12px;
+}
+
+.footer-copyright{
+    font-family:Inter,sans-serif;
+    font-size:12px;
+    color:rgba(245,239,226,.35);
+}
+
+
+/* ===========================
+   Mobile Reading Layout
+=========================== */
+@media (max-width: 700px) {
+  html, body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .topbar {
+    height: auto;
+    min-height: 62px;
+    padding: 0 16px;
+    gap: 10px;
+  }
+
+  .logo {
+    min-width: 0;
+    white-space: nowrap;
+    font-size: 13px;
+    letter-spacing: 1.1px;
+    line-height: 1.2;
+  }
+
+  .back {
+    flex: 0 0 auto;
+    white-space: nowrap;
+    font-size: 10px;
+    letter-spacing: 1.1px;
+    line-height: 1.2;
+  }
+
+  .hero {
+    padding: 72px 18px 48px;
+  }
+
+  .eyebrow {
+    margin-bottom: 16px;
+    font-size: 13px;
+    letter-spacing: 4px;
+  }
+
+  h1 {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto 18px;
+    font-size: clamp(40px, 12vw, 54px);
+    line-height: 1.08;
+    letter-spacing: 1px;
+    overflow-wrap: break-word;
+    word-break: normal;
+  }
+
+  .subtitle {
+    max-width: 100%;
+    padding: 0 4px;
+    font-size: 16px;
+    line-height: 1.65;
+  }
+
+  .article {
+    width: 100%;
+    max-width: 100%;
+    margin: 48px auto 96px;
+    padding: 0 22px;
+    font-size: 22px;
+  }
+
+  .article p {
+    max-width: 100%;
+    font-size: 22px;
+    line-height: 1.78;
+    margin-bottom: 30px;
+  }
+
+  .dropcap::first-letter {
+    font-size: 58px;
+    line-height: .82;
+    margin-right: 10px;
+    margin-top: 5px;
+  }
+
+  .chapter-navigation {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    gap: 8px;
+    margin-top: 64px;
+    padding-top: 28px;
+  }
+
+  .chapter-navigation a {
+    min-width: 0;
+    font-size: 10px;
+    line-height: 1.4;
+    letter-spacing: 1.4px;
+  }
+
+  .chapter-navigation a:first-child { text-align: left; }
+  .chapter-navigation a:nth-child(2) { text-align: center; }
+  .chapter-navigation a:last-child { text-align: right; }
+
+  .site-footer {
+    margin-top: 72px;
+    padding: 54px 18px 40px;
+    overflow: hidden;
+  }
+
+  .footer-brand {
+    white-space: nowrap;
+    font-size: clamp(26px, 8vw, 32px);
+    letter-spacing: .12em;
+  }
+
+  .footer-tagline {
+    font-size: 16px;
+    margin-bottom: 28px;
+  }
+
+  .footer-studio,
+  .footer-copyright {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 390px) {
+  .topbar { padding: 0 12px; gap: 7px; }
+  .logo { font-size: 11.5px; letter-spacing: .9px; }
+  .back { font-size: 9px; letter-spacing: .9px; }
+  .hero { padding: 64px 16px 42px; }
+  h1 { font-size: clamp(38px, 11.5vw, 45px); }
+  .article { padding: 0 20px; }
+  .article p { font-size: 21px; line-height: 1.76; }
+  .chapter-navigation a { font-size: 9.5px; letter-spacing: 1.1px; }
+  .footer-brand { font-size: 27px; letter-spacing: .1em; }
+}
+
+/* Unified Cornerstone footer */
+.site-footer{margin-top:120px;padding:72px 24px 58px;border-top:1px solid rgba(212,176,106,.22);text-align:center;overflow:hidden}
+.footer-brand{font-family:"Cinzel",serif;font-size:44px;font-weight:500;letter-spacing:.14em;color:#D4B06A;margin:0 auto 10px;line-height:1.15;max-width:100%;white-space:nowrap}
+.footer-tagline{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:18px;color:#D8C8A8;margin-bottom:32px}
+.footer-studio{font-family:Inter,sans-serif;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:rgba(245,239,226,.55);margin-bottom:12px}
+.footer-copyright{font-family:Inter,sans-serif;font-size:12px;color:rgba(245,239,226,.35)}
+@media(max-width:700px){
+.site-footer{margin-top:72px;padding:50px 16px 40px}
+.footer-brand{font-size:clamp(23px,7.2vw,32px);letter-spacing:.08em;white-space:nowrap;overflow-wrap:normal;word-break:normal}
+.footer-tagline{font-size:16px;margin-bottom:26px}
+.footer-studio{font-size:11px;letter-spacing:.14em}
+.footer-copyright{font-size:11px;line-height:1.5}
+}
+
+</style>
+<style id="global-footer-unification">
+/* Final global footer override: keep every page visually identical. */
+.site-footer{
+  margin-top:120px !important;
+  padding:72px 24px 58px !important;
+  border-top:1px solid rgba(212,176,106,.22) !important;
+  text-align:center !important;
+  overflow:hidden !important;
+  box-sizing:border-box !important;
+}
+.footer-brand{
+  display:block !important;
+  font-family:"Cinzel",serif !important;
+  font-size:44px !important;
+  font-weight:500 !important;
+  letter-spacing:.10em !important;
+  line-height:1.12 !important;
+  color:#D4B06A !important;
+  width:auto !important;
+  max-width:100% !important;
+  margin:0 auto 10px !important;
+  padding:0 !important;
+  white-space:nowrap !important;
+  overflow-wrap:normal !important;
+  word-break:normal !important;
+  text-align:center !important;
+  box-sizing:border-box !important;
+}
+.footer-tagline{
+  font-family:"Cormorant Garamond",serif !important;
+  font-style:italic !important;
+  font-size:18px !important;
+  line-height:1.4 !important;
+  color:#D8C8A8 !important;
+  margin:0 auto 32px !important;
+}
+.footer-studio{
+  font-family:Inter,sans-serif !important;
+  font-size:12px !important;
+  line-height:1.5 !important;
+  letter-spacing:.18em !important;
+  text-transform:uppercase !important;
+  color:rgba(245,239,226,.55) !important;
+  margin:0 auto 12px !important;
+}
+.footer-copyright{
+  font-family:Inter,sans-serif !important;
+  font-size:12px !important;
+  line-height:1.5 !important;
+  color:rgba(245,239,226,.35) !important;
+  margin:0 auto !important;
+}
+@media (max-width:700px){
+  .site-footer{
+    margin-top:72px !important;
+    padding:48px 20px 38px !important;
+  }
+  .footer-brand{
+    font-size:clamp(22px,6.5vw,30px) !important;
+    letter-spacing:.06em !important;
+    line-height:1.12 !important;
+    max-width:calc(100% - 12px) !important;
+    margin:0 auto 12px !important;
+  }
+  .footer-tagline{font-size:16px !important;margin-bottom:26px !important;}
+  .footer-studio{font-size:11px !important;letter-spacing:.14em !important;margin-bottom:12px !important;}
+  .footer-copyright{font-size:11px !important;line-height:1.5 !important;}
+}
+@media (max-width:380px){
+  .site-footer{padding-left:16px !important;padding-right:16px !important;}
+  .footer-brand{font-size:21px !important;letter-spacing:.045em !important;max-width:100% !important;}
+}
+</style>
+</head>
+<body>
+<header class="topbar">
+<div class="logo"><a href="../../../../index.html" style="color:inherit;text-decoration:none">ECHOES OF THE KINGDOM</a></div>
+<a class="back" href="../index.html">← Back to Part II</a>
+</header>
+<section class="hero">
+<div class="eyebrow">CHAPTER 10</div>
+<h1>What the Road Reveals</h1>
+</section>
+<main class="article"><p class="dropcap">The first day after leaving Tide Bay was not as easy as Seren had imagined.</p><p>At dawn, everything had felt new. The coastal road ran north with the sea at her left, sunlight flashing across the water while seabirds circled high overhead. Old Eden's travel bag rested against her hip, and for the first few hours her steps were so light that the journey felt almost like one of her long walks along the shore.</p><p>By midday, reality had begun to catch up with her.</p><p>The bag seemed heavier with every mile. Her shoulders ached beneath the strap, and the soles of her feet had begun to complain in ways they never had on the familiar paths around Tide Bay. When she finally sat beside the road to drink, she looked back and realized she had not traveled nearly as far as she had imagined.</p><p>Seren laughed quietly to herself.</p><p>The roads in her dreams never made her tired. They did not raise blisters, empty waterskins, or make her long for the chair beside her mother's table.</p><p>Real roads, apparently, were less considerate.</p><p>The sun drifted westward, and the wind off the sea grew cooler.</p><p>Only then did Seren begin to consider a question she should probably have asked much earlier.</p><p>Where was she going to sleep?</p><p>She had food for several days and enough water to reach another settlement if the road remained clear, but she had never spent a night alone beyond Tide Bay. In her thoughts, leaving had always been the difficult part. She had given much less attention to what came after.</p><p>She adjusted the strap of the old bag and kept walking.</p><p>Not far ahead, an elderly man stood beside a wooden cart loaded with dried fishing nets and rough-cut timber. One wheel had dropped into a narrow break between two stones. He leaned against the cart, pushed, stopped to catch his breath, and muttered to himself.</p><p>"Should've made that boy pull this thing."</p><p>He pushed again.</p><p>"At my age..."</p><p>The wheel did not move.</p><p>"Of course it had to happen today."</p><p>Seren slowed.</p><p>It was not her problem.</p><p>She could have walked past. The light was already beginning to soften, and she still did not know where she would spend the night.</p><p>Then something familiar stirred inside her.</p><p>It was faint. Quiet. Nothing like a command.</p><p>More like the touch of wind she sometimes felt in her dreams.</p><p>Seren stopped thinking about it and walked over.</p><p>"Do you need help?"</p><p>The old man looked up. Surprise crossed his face before turning into relief.</p><p>"If you're willing."</p><p>Together they lifted one side of the cart. It took several attempts, a great deal of pushing, and more strength than Seren expected, but at last the wheel climbed free of the stones.</p><p>The old man let out a long breath.</p><p>"Thank you, girl."</p><p>"You're welcome."</p><p>He took hold of the cart again. "Traveling the coast road?"</p><p>"I suppose I am."</p><p>"Where to?"</p><p>Seren hesitated.</p><p>"Forward."</p><p>The old man stared at her.</p><p>Then he laughed.</p><p>"Forward isn't a place."</p><p>"I know."</p><p>"Surely you've got a destination."</p><p>"Not yet."</p><p>He gave her a sideways glance, but there was no mockery in it. After a moment, he nodded.</p><p>"When I was young, I met someone about your age who said much the same thing."</p><p>"Really?"</p><p>"Asked him where he was going. He said he didn't know. Asked why he was walking. He said he thought he was supposed to."</p><p>Seren looked at him. "What happened to him?"</p><p>"What happened?"</p><p>The old man shrugged.</p><p>"Never saw him again."</p><p>Seren laughed.</p><p>"But," he added,</p><p>"he didn't look lost."</p><p>They continued along the road together.</p><p>By the time the sun touched the edge of the sea, thin lines of smoke had appeared ahead.</p><p>"There," the old man said, lifting his chin.</p><p>"White Bay."</p><p>The village was smaller than Tide Bay. It had no true harbor, only a handful of wooden piers reaching into the water. A few dozen timber houses followed the curve of the shore, with fishing nets hanging from posts and racks of drying fish standing in the salt air.</p><p>Seren felt an immediate familiarity.</p><p>White Bay looked like Tide Bay.</p><p>And it did not.</p><p>Children ran between the houses. Women talked from their doorways. Fishermen sat repairing nets beneath the last light of day. The motions were familiar, but the faces were not. Even the smell of salt and dried fish carried a slightly different character here.</p><p>The old man brought Seren to his home, where his wife welcomed her with the ease of someone who had long ago stopped treating unexpected guests as an inconvenience.</p><p>"You helped him with that cart?" she asked.</p><p>Seren nodded.</p><p>"Then you've already done more useful work today than he has."</p><p>The old man protested from the doorway, and his wife ignored him.</p><p>Dinner was fish soup, bread, and grilled fish. It was simple food, much like the meals Seren had eaten all her life, but sitting at a stranger's table made every familiar taste feel new.</p><p>It was her first evening meal away from home.</p><p>That thought came quietly.</p><p>Seren did not let it stay long.</p><p>After dark, a fire was lit near the center of the village.</p><p>The children arrived first. Some chased one another around the flames. Others waved sticks and declared themselves warriors, captains, or monsters depending on who was winning. Young men sat nearby mending nets while older villagers gathered close enough to the fire to complain about the cold.</p><p>The conversation wandered from the weather to the catch, from the catch to someone's missing sheep, and from the missing sheep to an argument about whether the animal had ever possessed enough sense to be considered lost in the first place.</p><p>Laughter moved easily through the night.</p><p>Seren sat near the edge of the gathering.</p><p>For the first time in her life, she was surrounded by people she did not know, listening to stories that belonged to lives she had never seen.</p><p>Strangely, she did not feel out of place.</p><p>A boy near the fire looked up at one of the older men.</p><p>"Grandfather, were you afraid of the dark when you were little?"</p><p>"Of course."</p><p>"What did you do?"</p><p>"Listened to stories."</p><p>That answer immediately caused trouble.</p><p>"Tell one!"</p><p>"Yes, tell us!"</p><p>The old man surrendered with exaggerated reluctance and began with a fishing story from his youth. According to him, he had once caught a fish nearly as large as a house.</p><p>Another elder interrupted.</p><p>"Don't listen to him. It was barely larger than his head."</p><p>Everyone burst out laughing.</p><p>A second story followed, this one about a storm. Then another about getting lost far from home when the speaker was young.</p><p>"How did you find your way back?" one of the children asked.</p><p>The old man rubbed his beard.</p><p>"My grandfather used to say that people in the old days never got lost."</p><p>"Why?"</p><p>Several children leaned forward at once.</p><p>The answer came casually.</p><p>"Because they could hear the wind."</p><p>The fire cracked.</p><p>For a heartbeat, Seren forgot the laughter around her.</p><p>The children did not.</p><p>"The wind can't talk."</p><p>"That's not a real story."</p><p>Another old man waved a hand. "Ignore him. His grandfather believed anything after enough drink."</p><p>The circle erupted again.</p><p>The conversation moved on almost immediately.</p><p>No one returned to the remark.</p><p>Seren did not ask about it.</p><p>She only sat very still for a moment, remembering the road in her dreams and the wind that had accompanied her for so many years.</p><p>Then she let the thought pass.</p><p>But she remembered the words.</p><p>Late that night, the old couple gave Seren a small room.</p><p>She lay beneath an unfamiliar roof and listened to waves beyond the window. They sounded almost like the waves at Tide Bay.</p><p>Almost.</p><p>She thought of the road, the stuck cart, the fire, the strangers laughing as if she had been among them longer than a single evening.</p><p>And she thought of one sentence that everyone else had dismissed as a joke.</p><p>Because they could hear the wind.</p><p>A breeze moved lightly against the window.</p><p>Seren closed her eyes.</p><p>Sleep came quickly.</p><div class="divider">❦</div><p>Morning in White Bay was quieter than morning in Tide Bay.</p><p>The sun had not fully risen when Seren opened her eyes. A thin mist rested over the sea, and the waves tapped gently against the wooden piers, one after another, like a slow rhythm carried through years too numerous to count.</p><p>She remained in bed for a moment, looking at the timber ceiling.</p><p>This was her second morning since leaving Tide Bay, and the first time she had awakened in a place that was entirely unfamiliar.</p><p>To her surprise, she was not uneasy.</p><p>She had slept deeply.</p><p>No dream had come.</p><p>Neither had the wind.</p><p>Instead, she felt a kind of peace she had not known before.</p><p>Not because she understood what lay ahead.</p><p>Because, at last, she had accepted that she did not.</p><p>Outside, someone was splitting wood.</p><p>Seren pulled on her cloak and stepped through the door.</p><p>The old man from the road was stacking dry logs against the side of the house. He hummed as he worked, a slow and ordinary tune that somehow made the little yard feel warm.</p><p>When he saw her, he smiled.</p><p>"Awake?"</p><p>"Yes."</p><p>"Sleep all right?"</p><p>"Very well."</p><p>He laughed. "Good. I was worried that old bed would creak every time you moved and frighten you back to Tide Bay."</p><p>His wife called from the kitchen.</p><p>"Stop talking. The soup's getting cold."</p><p>"Coming."</p><p>Breakfast was fish soup, dark bread, and a little of the grilled fish left from the night before. The three of them sat around a small wooden table without trying to fill every silence.</p><p>The old man commented on the weather.</p><p>His wife complained that one of the buckets had split again.</p><p>Seren answered when there was something to answer.</p><p>The ease of the morning reminded her of home.</p><p>Of her mother.</p><p>The thought hurt less than she expected.</p><p>She let it come, then let it pass.</p><p>After breakfast, Seren returned to the small room, straightened her cloak, and lifted Old Eden's travel bag onto her shoulder.</p><p>It was time to continue north.</p><p>She stepped into the yard and looked toward the narrow road following the coast.</p><p>Then the familiar feeling returned.</p><p>No voice.</p><p>No dream.</p><p>No clear words.</p><p>Her heart simply became still.</p><p>Like wind touching the surface of water and leaving behind a ripple too slight to see unless one was already watching.</p><p>Stay today.</p><p>Seren stopped.</p><p>She did not know why.</p><p>The decision made little sense. She had only just begun her journey. The road was clear. The weather was good. Nothing in White Bay required her.</p><p>Yet the peace within her was steadier than any reason she could offer.</p><p>Slowly, she lowered the travel bag beside the door.</p><p>The old man was preparing his cart for the day. When he saw her return, he raised an eyebrow.</p><p>"What happened? White Bay already too difficult to leave?"</p><p>Seren smiled.</p><p>"I think... I'll stay one more day."</p><p>"Why?"</p><p>"I don't know."</p><p>He studied her for a moment.</p><p>Then he laughed.</p><p>"At your age, not knowing why can be as good a reason as any."</p><p>He slapped the side of the cart.</p><p>"If you're staying, you can make yourself useful. Come with me."</p><p>The cart held repaired nets, a coil of rope, and several boards meant for one of the piers.</p><p>Seren nodded.</p><p>"All right."</p><p>The sun climbed higher as White Bay woke around them.</p><p>They had barely left the yard when a small boy came running down a slope with a wooden boat clutched to his chest. His foot slipped, and he landed face-first in the sand while the toy rolled several paces away.</p><p>The old man immediately stopped the cart and helped him up.</p><p>"Hurt?"</p><p>The boy brushed sand from his knees and grinned. "No."</p><p>The old man frowned with theatrical severity.</p><p>"Even if you're not hurt, slow down. You still want to come fishing with me?"</p><p>The boy's eyes widened. "Yes."</p><p>"Then remember. Don't run downhill."</p><p>The boy nodded with great seriousness, recovered his wooden boat, and ran off - more carefully this time.</p><p>"Tomorrow!" he shouted over his shoulder.</p><p>"If you keep your word!" the old man called back.</p><p>They had not gone much farther when they met an elderly woman carrying two buckets of seawater. She was breathing hard.</p><p>Without a word, the old man took one bucket from her.</p><p>"Where are those two grandsons of yours?"</p><p>"Sleeping like piglets."</p><p>"Ah. Youth. Sun can climb halfway up the sky and they still see no reason to hurry."</p><p>The woman laughed, and together they carried the water to her door.</p><p>Farther along, a young fisherman crouched beside a boat repairing an oar.</p><p>The old man called before they reached him.</p><p>"Where's the wooden wedge I told you to replace yesterday?"</p><p>The fisherman scratched his head.</p><p>"Forgot."</p><p>The old man sighed, stopped the cart, and pointed.</p><p>"Move."</p><p>He knelt beside the boat, removed the worn piece, and reset the board with practiced hands.</p><p>"You can catch fish tomorrow," he said as he worked.</p><p>"You've only got one life."</p><p>The younger man listened to the scolding with a grin.</p><p>Seren walked behind the cart and watched.</p><p>Nearly everyone they passed greeted the old man.</p><p>Someone invited him to drink that evening. Someone else asked if he could look at a leaking roof. A voice called from across the lane:</p><p>"Wayne! Helping someone again?"</p><p>The old man patted the cart.</p><p>"Better than sitting around. If I can help, I help."</p><p>Seren glanced at him.</p><p>Old Wayne.</p><p>She had heard his wife use the name once the night before, but only now did it settle in her mind.</p><p>He seemed to know everyone in White Bay.</p><p>More than that, he seemed willing to stop for everyone.</p><p>Sometimes it was nothing more than lifting a bucket.</p><p>Sometimes repairing a board.</p><p>Sometimes standing for a minute while an old neighbor complained about the weather.</p><p>Yet each time he stopped, the smile on his face was the same.</p><p>At the waterfront, Wayne pointed toward a wooden storehouse.</p><p>"I need nails. Walk around if you like. I'll find you when I'm done."</p><p>Seren nodded.</p><p>He disappeared through the door.</p><p>She wandered slowly along the shore.</p><p>Morning light fell across rows of drying nets. Fish hung from wooden racks and moved slightly whenever the sea wind passed. Several women worked nearby, turning the fish as they talked.</p><p>One looked up.</p><p>"Girl."</p><p>Seren stopped.</p><p>"You're the one staying with Old Wayne, aren't you?"</p><p>"Yes."</p><p>"He's taken care of me since I met him on the road."</p><p>The woman smiled.</p><p>"That's Wayne. Never learned how to leave other people's troubles alone."</p><p>She turned another fish.</p><p>"Roof leaking? He goes."</p><p>Another.</p><p>"Boat broken? He goes."</p><p>Another.</p><p>"Child sick? Somehow he's there too."</p><p>Her hands slowed.</p><p>She looked toward the sea and let out a quiet breath.</p><p>"Other people's troubles..."</p><p>The woman fell silent.</p><p>Then her voice changed.</p><p>Softer now.</p><p>"He can always do something about those."</p><p>She did not finish.</p><p>Her eyes lowered to the rack, and she carefully straightened a fish that did not need straightening.</p><p>Seren waited.</p><p>No explanation came.</p><p>She did not ask for one.</p><p>The unfinished sentence seemed heavier than anything the woman might have added.</p><p>A breeze moved off the water.</p><p>Behind Seren, the storehouse door opened.</p><p>Wayne stepped out carrying a small sack of iron nails, the same easy smile on his face as before.</p><p>As though nothing had happened.</p><p>Seren looked at him.</p><p>Then back at the woman, who had already returned to her work.</p><p>Something inside Seren shifted.</p><p>Not an answer.</p><p>A question.</p><p>For the first time since leaving Tide Bay, she wondered whether the road was not only taking her toward something in the distance.</p><p>Perhaps it was teaching her to see what had always been hidden inside the lives she passed.</p><p>She looked again at Old Wayne.</p><p>And suddenly she understood that staying in White Bay for another day might not have been about rest at all.</p><p>Perhaps she had stayed because there was something here she had not yet seen.</p><div class="chapter-navigation"><a href="../chapter-09/index.html">← Previous</a><a href="../index.html">Part II Contents</a><a href="../../index.html">Book One</a></div></main>
+<footer class="site-footer">
+<div class="footer-brand">Cornerstone</div>
+<div class="footer-tagline">Building stories that endure.</div>
+<div class="footer-studio">Created by Echoes Studio</div>
+<div class="footer-copyright">© 2026 Michael He. All Rights Reserved.</div>
+</footer>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const article = document.querySelector(".article");
+
+    if (!article) {
+        return;
+    }
+
+    const paragraphs = article.querySelectorAll("p");
+
+    paragraphs.forEach(function (paragraph) {
+        const text = paragraph.textContent.trim();
+
+        if (!text) {
+            return;
+        }
+
+        // 自动识别场景分隔符
+        if (text === "***" || text === "* * *") {
+            const divider = document.createElement("div");
+            divider.className = "divider";
+            divider.textContent = "❦";
+            paragraph.replaceWith(divider);
+            return;
+        }
+
+        // 自动识别以引号或长破折号开头的对白
+        const isDialogue =
+            text.startsWith('"') ||
+            text.startsWith("“") ||
+            text.startsWith("‘") ||
+            text.startsWith("'") ||
+            text.startsWith("—");
+
+        if (isDialogue) {
+            paragraph.classList.add("dialogue");
+        }
+    });
+});
+</script>
+<!-- GoatCounter: privacy-friendly page analytics -->
+<script async="" data-goatcounter="https://echoeskingdom.goatcounter.com/count" src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

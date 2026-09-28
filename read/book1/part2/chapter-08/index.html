@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Chapter 8: One Step at a Time | Echoes of the Kingdom</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&amp;family=Inter:wght@300;400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<style>
+.chapter-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  width: 100%;
+  margin-top: 100px;
+  padding-top: 40px;
+  border-top: 1px solid rgba(212, 184, 120, 0.18);
+}
+
+.chapter-navigation a {
+  color: #d8c49a;
+  font-family: Inter, sans-serif;
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+
+background:#070809;
+
+color:#ece2cf;
+
+font-family:"Cormorant Garamond",serif;
+
+line-height:1.9;
+
+}
+
+a{
+
+text-decoration:none;
+
+color:inherit;
+
+}
+
+.topbar{
+
+position:sticky;
+
+top:0;
+
+z-index:100;
+
+height:72px;
+
+background:rgba(7,8,9,.92);
+
+backdrop-filter:blur(10px);
+
+border-bottom:1px solid rgba(212,184,120,.12);
+
+display:flex;
+
+align-items:center;
+
+justify-content:space-between;
+
+padding:0 60px;
+
+}
+
+.logo{
+
+font-size:20px;
+
+letter-spacing:2px;
+
+color:#d8c08b;
+
+}
+
+.back{
+
+font-family:Inter,sans-serif;
+
+font-size:13px;
+
+letter-spacing:2px;
+
+text-transform:uppercase;
+
+color:#a89b7a;
+
+transition:.25s;
+
+}
+
+.back:hover{
+
+color:#e8d9b3;
+
+}
+
+.hero{
+
+padding:120px 20px 80px;
+
+text-align:center;
+
+}
+
+.eyebrow{
+
+font-size:18px;
+
+letter-spacing:6px;
+
+color:#a48c60;
+
+margin-bottom:20px;
+
+text-transform:uppercase;
+
+}
+
+h1{
+
+font-size:88px;
+
+font-weight:600;
+
+letter-spacing:2px;
+
+margin-bottom:24px;
+
+}
+
+.subtitle{
+
+max-width:700px;
+
+margin:auto;
+
+font-family:Inter,sans-serif;
+
+font-size:18px;
+
+color:#bfb5a2;
+
+line-height:1.8;
+
+}
+
+.article{
+
+max-width:680px;
+
+margin:100px auto 180px;
+
+padding:0 30px;
+
+font-size:28px;
+
+}
+
+.article p{
+  font-family:"Cormorant Garamond", serif;
+  font-size:28px;
+  line-height:2;
+  color:rgba(245,239,226,0.95);
+  margin-bottom:42px;
+}
+
+.dropcap::first-letter {
+  float: left;
+  font-size: 72px;
+  line-height: 0.8;
+  margin-right: 14px;
+  margin-top: 6px;
+  color: #d8c49a;
+}
+/* ===========================
+   Cornerstone Footer
+=========================== */
+
+.site-footer{
+    margin-top:120px;
+    padding:72px 24px 58px;
+    border-top:1px solid rgba(212,176,106,.18);
+    text-align:center;
+}
+
+.footer-brand{
+
+    font-family:"Cinzel", serif;
+
+    font-size:44px;
+
+    font-weight:500;
+
+    letter-spacing:.18em;
+
+    color:#D4B06A;
+
+    margin-bottom:10px;
+
+}
+
+.footer-tagline{
+    font-family:"Cormorant Garamond", serif;
+    font-style:italic;
+    font-size:18px;
+    color:#D8C8A8;
+    margin-bottom:32px;
+}
+
+.footer-studio{
+    font-family:Inter,sans-serif;
+    font-size:12px;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    color:rgba(245,239,226,.55);
+    margin-bottom:12px;
+}
+
+.footer-copyright{
+    font-family:Inter,sans-serif;
+    font-size:12px;
+    color:rgba(245,239,226,.35);
+}
+
+
+/* ===========================
+   Mobile Reading Layout
+=========================== */
+@media (max-width: 700px) {
+  html, body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .topbar {
+    height: auto;
+    min-height: 62px;
+    padding: 0 16px;
+    gap: 10px;
+  }
+
+  .logo {
+    min-width: 0;
+    white-space: nowrap;
+    font-size: 13px;
+    letter-spacing: 1.1px;
+    line-height: 1.2;
+  }
+
+  .back {
+    flex: 0 0 auto;
+    white-space: nowrap;
+    font-size: 10px;
+    letter-spacing: 1.1px;
+    line-height: 1.2;
+  }
+
+  .hero {
+    padding: 72px 18px 48px;
+  }
+
+  .eyebrow {
+    margin-bottom: 16px;
+    font-size: 13px;
+    letter-spacing: 4px;
+  }
+
+  h1 {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto 18px;
+    font-size: clamp(40px, 12vw, 54px);
+    line-height: 1.08;
+    letter-spacing: 1px;
+    overflow-wrap: break-word;
+    word-break: normal;
+  }
+
+  .subtitle {
+    max-width: 100%;
+    padding: 0 4px;
+    font-size: 16px;
+    line-height: 1.65;
+  }
+
+  .article {
+    width: 100%;
+    max-width: 100%;
+    margin: 48px auto 96px;
+    padding: 0 22px;
+    font-size: 22px;
+  }
+
+  .article p {
+    max-width: 100%;
+    font-size: 22px;
+    line-height: 1.78;
+    margin-bottom: 30px;
+  }
+
+  .dropcap::first-letter {
+    font-size: 58px;
+    line-height: .82;
+    margin-right: 10px;
+    margin-top: 5px;
+  }
+
+  .chapter-navigation {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    gap: 8px;
+    margin-top: 64px;
+    padding-top: 28px;
+  }
+
+  .chapter-navigation a {
+    min-width: 0;
+    font-size: 10px;
+    line-height: 1.4;
+    letter-spacing: 1.4px;
+  }
+
+  .chapter-navigation a:first-child { text-align: left; }
+  .chapter-navigation a:nth-child(2) { text-align: center; }
+  .chapter-navigation a:last-child { text-align: right; }
+
+  .site-footer {
+    margin-top: 72px;
+    padding: 54px 18px 40px;
+    overflow: hidden;
+  }
+
+  .footer-brand {
+    white-space: nowrap;
+    font-size: clamp(26px, 8vw, 32px);
+    letter-spacing: .12em;
+  }
+
+  .footer-tagline {
+    font-size: 16px;
+    margin-bottom: 28px;
+  }
+
+  .footer-studio,
+  .footer-copyright {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 390px) {
+  .topbar { padding: 0 12px; gap: 7px; }
+  .logo { font-size: 11.5px; letter-spacing: .9px; }
+  .back { font-size: 9px; letter-spacing: .9px; }
+  .hero { padding: 64px 16px 42px; }
+  h1 { font-size: clamp(38px, 11.5vw, 45px); }
+  .article { padding: 0 20px; }
+  .article p { font-size: 21px; line-height: 1.76; }
+  .chapter-navigation a { font-size: 9.5px; letter-spacing: 1.1px; }
+  .footer-brand { font-size: 27px; letter-spacing: .1em; }
+}
+
+/* Unified Cornerstone footer */
+.site-footer{margin-top:120px;padding:72px 24px 58px;border-top:1px solid rgba(212,176,106,.22);text-align:center;overflow:hidden}
+.footer-brand{font-family:"Cinzel",serif;font-size:44px;font-weight:500;letter-spacing:.14em;color:#D4B06A;margin:0 auto 10px;line-height:1.15;max-width:100%;white-space:nowrap}
+.footer-tagline{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:18px;color:#D8C8A8;margin-bottom:32px}
+.footer-studio{font-family:Inter,sans-serif;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:rgba(245,239,226,.55);margin-bottom:12px}
+.footer-copyright{font-family:Inter,sans-serif;font-size:12px;color:rgba(245,239,226,.35)}
+@media(max-width:700px){
+.site-footer{margin-top:72px;padding:50px 16px 40px}
+.footer-brand{font-size:clamp(23px,7.2vw,32px);letter-spacing:.08em;white-space:nowrap;overflow-wrap:normal;word-break:normal}
+.footer-tagline{font-size:16px;margin-bottom:26px}
+.footer-studio{font-size:11px;letter-spacing:.14em}
+.footer-copyright{font-size:11px;line-height:1.5}
+}
+
+</style>
+<style id="global-footer-unification">
+/* Final global footer override: keep every page visually identical. */
+.site-footer{
+  margin-top:120px !important;
+  padding:72px 24px 58px !important;
+  border-top:1px solid rgba(212,176,106,.22) !important;
+  text-align:center !important;
+  overflow:hidden !important;
+  box-sizing:border-box !important;
+}
+.footer-brand{
+  display:block !important;
+  font-family:"Cinzel",serif !important;
+  font-size:44px !important;
+  font-weight:500 !important;
+  letter-spacing:.10em !important;
+  line-height:1.12 !important;
+  color:#D4B06A !important;
+  width:auto !important;
+  max-width:100% !important;
+  margin:0 auto 10px !important;
+  padding:0 !important;
+  white-space:nowrap !important;
+  overflow-wrap:normal !important;
+  word-break:normal !important;
+  text-align:center !important;
+  box-sizing:border-box !important;
+}
+.footer-tagline{
+  font-family:"Cormorant Garamond",serif !important;
+  font-style:italic !important;
+  font-size:18px !important;
+  line-height:1.4 !important;
+  color:#D8C8A8 !important;
+  margin:0 auto 32px !important;
+}
+.footer-studio{
+  font-family:Inter,sans-serif !important;
+  font-size:12px !important;
+  line-height:1.5 !important;
+  letter-spacing:.18em !important;
+  text-transform:uppercase !important;
+  color:rgba(245,239,226,.55) !important;
+  margin:0 auto 12px !important;
+}
+.footer-copyright{
+  font-family:Inter,sans-serif !important;
+  font-size:12px !important;
+  line-height:1.5 !important;
+  color:rgba(245,239,226,.35) !important;
+  margin:0 auto !important;
+}
+@media (max-width:700px){
+  .site-footer{
+    margin-top:72px !important;
+    padding:48px 20px 38px !important;
+  }
+  .footer-brand{
+    font-size:clamp(22px,6.5vw,30px) !important;
+    letter-spacing:.06em !important;
+    line-height:1.12 !important;
+    max-width:calc(100% - 12px) !important;
+    margin:0 auto 12px !important;
+  }
+  .footer-tagline{font-size:16px !important;margin-bottom:26px !important;}
+  .footer-studio{font-size:11px !important;letter-spacing:.14em !important;margin-bottom:12px !important;}
+  .footer-copyright{font-size:11px !important;line-height:1.5 !important;}
+}
+@media (max-width:380px){
+  .site-footer{padding-left:16px !important;padding-right:16px !important;}
+  .footer-brand{font-size:21px !important;letter-spacing:.045em !important;max-width:100% !important;}
+}
+</style>
+</head>
+<body>
+<header class="topbar">
+<div class="logo"><a href="../../../../index.html" style="color:inherit;text-decoration:none">ECHOES OF THE KINGDOM</a></div>
+<a class="back" href="../index.html">← Back to Part II</a>
+</header>
+<section class="hero">
+<div class="eyebrow">CHAPTER 8</div>
+<h1>One Step at a Time</h1>
+</section>
+<main class="article"><p class="dropcap">Ever since that voice had first echoed in her heart, Seren found that she was no longer the same. Though she still tended the fish stall with her mother each day and walked the familiar beaten path between the village and the harbor, her thoughts drifted elsewhere—drawn irresistibly toward the night, toward her dreams, and toward that endless road. Toward that soft, whispered call: "Come."</p><p>It was the first time in over a decade she had truly heard a voice speak to her in that place. Her mother's soft revelations, old Eden's quiet wisdom, the foreign sailors' tales, and the voice within her sleep all seemed to weave together along a single invisible thread. She grew increasingly certain that none of this was coincidence. Yet if not chance, what was it? What was that distant city? Where did the path lead? Why her, and what awaited her in the unknown future? Questions haunted her mind, kindling a quiet desperation for answers. And so, she began to wait for the dream. On the first night, she retired early to her room. Lying in the stillness, sleep eluded her as she watched the moonlight stream through the window, her mind fixed on the road, the wind, and that lingering call. Before closing her eyes, she whispered into the quiet air,</p><p>"If that was truly you, come again tonight."</p><p>But when dawn broke, nothing had arrived—no dream, no path, no wind, no voice. A shadow of disappointment touched her, yet she dismissed it; perhaps it was merely for one night. On the second night, expectation rose again, only to end in silence. A third night passed, then a fourth, then a fifth. Time moved steadily onward. Spring asserted its hold over Tide Bay; fishing vessels braved the waves with greater frequency, and children reclaimed the sandy shores. Yet Seren grew increasingly quiet. She found herself waiting for each night, yearning for the vision to return. At times, she would deliberately sit upon the familiar crag, wondering if closeness to the sea might summon the dream. At other times, she would cradle the wooden seabird in her hands, hoping it might awaken forgotten truths. Still, nothing came. Gradually, a subtle restlessness took root in her spirit. It was not doubt—she never doubted the reality of her dreams or the calling she had heard—she simply yearned to know what lay ahead, what shape her destiny would take, and where that lonely road would ultimately lead her. Yet the answers remained withheld. One dusk, while she sat idle by the docks as seabirds skimmed the dark waters, old Eden passed by. Noticing her solitary figure, he paused.</p><p>"What are you waiting for?"</p><p>the old man asked. Seren blinked, caught off guard.</p><p>"Nothing."</p><p>Old Eden offered a faint smile. He did not pry, but turned his gaze toward the vast expanse of the ocean.</p><p>"The tide always comes,"</p><p>he murmured. With that, he resumed his walk. Seren watched his retreating shadow, his words settling deep in her heart. That night, she sat once more by the open window as a gentle sea breeze drifted in. Sunlight had faded long ago, and the carved seabird cast a long, slender shadow in the moonlight. She felt a profound weariness. For days she had waited, longed, and striven to grasp something elusive, yet her hands held only air. Leaning against the windowframe, she stared out into the pitch-black sea, silent for a long moment. Then, a faint smile touched her lips—without bitterness or disappointment, but with the quiet relief of letting go.</p><p>"Very well," she murmured softly.</p><p>"You will come when you will."</p><p>Rising, she asked for nothing more and expected no signs. She returned to her bed in peace, and slipped into sleep. That was the night the dream returned. She stood once again upon that ancient road. The wind blew from far off, and the path stretched ahead; yet this time, a dense, impenetrable mist shrouded the way forward, veiling all in mystery. Instinctively, she strained her eyes, striving to pierce the veil—to glimpse the city, her destiny, or the answers she sought. But no matter how hard she looked, the fog refused to yield. She began to run forward, yet the faster her legs carried her, the thicker the mist seemed to gather. At last, she halted, her breath coming in soft gasps. Then, a sudden breeze stirred the air. Looking down, she discovered a single flagstone illuminated beneath her feet—just wide enough for a single step. She paused, then stepped forward onto the stone. Instantly, another stone revealed itself in the dark. She took another step, and another appeared. Step by step, the path unveiled itself. The mist remained, and the distant horizon was still concealed; yet with every step she dared to take, the next flagstone emerged from the shadows.</p><p>She stopped, gazing at the path revealing itself step by step. The wind swept over her once more, and with it came that familiar, resonant whisper:</p><p>"Come."</p><p>The voice was gentle and steady, offering no grand explanations, no glimpses of her future, and no easy answers. It was simply a call.</p><p>"Come."</p><p>Gazing at the stones that appeared step by step, understanding dawned upon Seren at last. Though the future remained unseen, she knew what she had to do. She offered a quiet nod, and for the very first time, she answered the voice aloud:</p><p>"I hear you."</p><p>The wind rolled across the grassy plains, the mist still blanketing the world beyond. But the anxiety within her had vanished. The dream ebbed away. When she opened her eyes, the first gray light of dawn was breaking over the horizon. The morning light drifted through the window pane, bathing the wooden seabird in a faint, radiant glow. The room was wrapped in absolute stillness. Seren sat at the edge of her bed, reflecting upon all she had seen. A soft, peaceful smile spread across her face. So that was it. She had spent so long yearning to see the end of her journey, yet the path would never reveal the future all at once. It offered only the next single step. And one step was enough. Outside, the sea breeze moved softly through Tide Bay as a new day began. And Seren knew that the road carved for her was drawing nearer with every breath.</p><div class="divider">❦</div><p>By the time spring truly settled over Tide Bay, the wind had lost the last of its winter bite. Morning came earlier now. Sunlight reached the harbor before many doors had opened, and seabirds circled above the returning fishing boats as if the hard months had never happened.</p><p>Everything looked almost as it always had.</p><p>Seren knew better.</p><p>Since the dream of the hidden road, she had stopped trying to force another vision. The mist, the flagstones appearing one at a time, and the quiet word that had followed her out of sleep—Come—remained with her. But the lesson had changed something in her. She did not need to see the whole road. She needed only the next step.</p><p>And lately she had begun to wonder whether that next step was not waiting at all, but learning what kind of world lay beyond Tide Bay.</p><p>One morning a small merchant caravan came down the coastal road. It was hardly grand: three wagons, a handful of horses, and men and women whose clothes carried the dust of places Seren had never seen. They brought salt, bolts of cloth, iron tools, and small inland goods that drew curious hands from half the village.</p><p>Seren was passing the docks with a basket for her mother when she stopped.</p><p>The horses caught her attention first. Tide Bay had little use for them. Then she noticed the wheels, and the dried earth packed into the grooves.</p><p>It was not the dark, damp soil of the coast.</p><p>It had come from somewhere else.</p><p>She found an excuse to stay. By noon she was helping unload sacks and wooden crates, working beside the caravan as naturally as if she had been asked. The man directing the wagons was middle-aged, broad across the shoulders, his skin darkened by years beneath the sun.</p><p>"Thank you," he said when Seren set down another crate.</p><p>"Where did you come from?"</p><p>The man laughed. "That is harder to answer than you might think."</p><p>"Why?"</p><p>"Because we have been on the road for three months."</p><p>Three months.</p><p>Seren looked at him, certain she had misheard.</p><p>He saw her expression and crouched, taking up a thin stick. In a patch of bare earth beside the wagons, he drew a short line.</p><p>"This is Tide Bay."</p><p>He marked another point inland. "Cape Town."</p><p>A second. "White River Crossing."</p><p>A third. "Stonebridge."</p><p>Then he moved the stick farther north and tapped the ground several times. "And beyond those, more places than I could name before your mother came looking for you."</p><p>A few people nearby laughed.</p><p>Seren did not.</p><p>She crouched beside the rough map. "Are they far?"</p><p>"Some are. Some are not."</p><p>"What is the farthest place you have seen?"</p><p>The merchant considered the question, then smiled. "Far enough that you could walk for a year and still discover another road beyond it."</p><p>The others laughed again, but Seren remained intent on the marks in the dirt.</p><p>Until that moment, distance had always meant the horizon. A ship vanished beyond it; a traveler came from somewhere on the other side. The world beyond Tide Bay had been a collection of stories, broad and beautiful but without shape.</p><p>Now, for the first time, it had roads between its places.</p><p>In the afternoon more travelers joined the conversation. One had crossed mountain country. Another had followed a river valley for weeks. A woman traveling with the caravan spoke of northern lands where snow remained on the high slopes even in summer. Someone else described plains so wide that, on a clear day, the sky seemed to rest directly upon the grass.</p><p>Seren listened until the scenes crowded her imagination faster than she could arrange them.</p><p>She had never seen a mountain.</p><p>She had never stood beside a great river.</p><p>She had never walked anywhere that did not smell, at least faintly, of salt.</p><p>At dusk the caravan made ready to leave. Before he climbed onto the lead wagon, the merchant returned to the map and drew one final line from Tide Bay along the coast.</p><p>"If you keep following a road," he said,</p><p>"sooner or later it takes you somewhere new."</p><p>Then the wagons rolled away.</p><p>Seren stayed behind.</p><p>The tide was coming in. A thin wash of water reached the edge of the map and blurred the first line. Another wave erased Cape Town. Then White River Crossing. Then Stonebridge.</p><p>Within minutes the whole world the merchant had drawn was gone, and the sand lay smooth again.</p><p>Seren remained crouched there, watching.</p><p>The map had disappeared.</p><p>The places had not.</p><p>They had entered her mind, and she knew she would remember them.</p><p>On her way home she passed Old Eden's cottage. He was repairing an old wooden chest, working a warped hinge back into place.</p><p>"I heard merchants came today," he said.</p><p>"They did."</p><p>"Learn anything?"</p><p>Seren thought about the question. "The world is very large."</p><p>Old Eden chuckled. "That it is."</p><p>He tested the hinge, frowned, and adjusted it again. "Still, even the longest road is walked one step at a time."</p><p>Seren went still.</p><p>For an instant she saw the flagstones in her dream, each one appearing only after her foot had found the last.</p><p>Old Eden did not seem to notice. Or perhaps he did and chose not to say so. He simply bent over the chest again.</p><p>That night the dream returned.</p><p>Seren stood on the familiar road. Mist still covered the distance. The path still vanished into it. But this time she did not strain to see through the gray, and she did not run.</p><p>She walked.</p><p>One step.</p><p>Then another.</p><p>Each time her foot settled, another stone appeared ahead.</p><p>The wind moved softly through the grass. No new voice came. No revelation opened the horizon. There was only the road and the act of following it.</p><p>To her surprise, that was enough.</p><p>When she woke, morning light had already entered the room. The wooden seabird rested where she had left it.</p><p>Seren found a scrap of board and a piece of charcoal. From memory she began to draw what the travelers had shown her: Cape Town, White River Crossing, Stonebridge, and the road continuing north. Her first attempt was wrong. She wiped part of it away and tried again. Then again.</p><p>Her mother passed the doorway sometime later and stopped.</p><p>Seren did not notice. She was bent over the board, trying to decide whether the river should turn before or after Stonebridge.</p><p>Her mother watched for a while, smiled to herself, and continued down the hall.</p><p>The girl who had spent her childhood staring beyond the sea was beginning, at last, to give the wider world a shape.</p><p>And the day she would enter it no longer felt impossibly far away.</p><div class="chapter-navigation"><a href="../chapter-07/index.html">← Previous</a><a href="../index.html">Part II Contents</a><a href="../chapter-09/index.html">Next →</a></div></main>
+<footer class="site-footer">
+<div class="footer-brand">Cornerstone</div>
+<div class="footer-tagline">Building stories that endure.</div>
+<div class="footer-studio">Created by Echoes Studio</div>
+<div class="footer-copyright">© 2026 Michael He. All Rights Reserved.</div>
+</footer>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const article = document.querySelector(".article");
+
+    if (!article) {
+        return;
+    }
+
+    const paragraphs = article.querySelectorAll("p");
+
+    paragraphs.forEach(function (paragraph) {
+        const text = paragraph.textContent.trim();
+
+        if (!text) {
+            return;
+        }
+
+        // 自动识别场景分隔符
+        if (text === "***" || text === "* * *") {
+            const divider = document.createElement("div");
+            divider.className = "divider";
+            divider.textContent = "❦";
+            paragraph.replaceWith(divider);
+            return;
+        }
+
+        // 自动识别以引号或长破折号开头的对白
+        const isDialogue =
+            text.startsWith('"') ||
+            text.startsWith("“") ||
+            text.startsWith("‘") ||
+            text.startsWith("'") ||
+            text.startsWith("—");
+
+        if (isDialogue) {
+            paragraph.classList.add("dialogue");
+        }
+    });
+});
+</script>
+<!-- GoatCounter: privacy-friendly page analytics -->
+<script async="" data-goatcounter="https://echoeskingdom.goatcounter.com/count" src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

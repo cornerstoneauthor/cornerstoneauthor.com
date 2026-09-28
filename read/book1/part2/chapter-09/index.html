@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Chapter 9: Before Goodbye | Echoes of the Kingdom</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&amp;family=Inter:wght@300;400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<style>
+.chapter-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  width: 100%;
+  margin-top: 100px;
+  padding-top: 40px;
+  border-top: 1px solid rgba(212, 184, 120, 0.18);
+}
+
+.chapter-navigation a {
+  color: #d8c49a;
+  font-family: Inter, sans-serif;
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+
+background:#070809;
+
+color:#ece2cf;
+
+font-family:"Cormorant Garamond",serif;
+
+line-height:1.9;
+
+}
+
+a{
+
+text-decoration:none;
+
+color:inherit;
+
+}
+
+.topbar{
+
+position:sticky;
+
+top:0;
+
+z-index:100;
+
+height:72px;
+
+background:rgba(7,8,9,.92);
+
+backdrop-filter:blur(10px);
+
+border-bottom:1px solid rgba(212,184,120,.12);
+
+display:flex;
+
+align-items:center;
+
+justify-content:space-between;
+
+padding:0 60px;
+
+}
+
+.logo{
+
+font-size:20px;
+
+letter-spacing:2px;
+
+color:#d8c08b;
+
+}
+
+.back{
+
+font-family:Inter,sans-serif;
+
+font-size:13px;
+
+letter-spacing:2px;
+
+text-transform:uppercase;
+
+color:#a89b7a;
+
+transition:.25s;
+
+}
+
+.back:hover{
+
+color:#e8d9b3;
+
+}
+
+.hero{
+
+padding:120px 20px 80px;
+
+text-align:center;
+
+}
+
+.eyebrow{
+
+font-size:18px;
+
+letter-spacing:6px;
+
+color:#a48c60;
+
+margin-bottom:20px;
+
+text-transform:uppercase;
+
+}
+
+h1{
+
+font-size:88px;
+
+font-weight:600;
+
+letter-spacing:2px;
+
+margin-bottom:24px;
+
+}
+
+.subtitle{
+
+max-width:700px;
+
+margin:auto;
+
+font-family:Inter,sans-serif;
+
+font-size:18px;
+
+color:#bfb5a2;
+
+line-height:1.8;
+
+}
+
+.article{
+
+max-width:680px;
+
+margin:100px auto 180px;
+
+padding:0 30px;
+
+font-size:28px;
+
+}
+
+.article p{
+  font-family:"Cormorant Garamond", serif;
+  font-size:28px;
+  line-height:2;
+  color:rgba(245,239,226,0.95);
+  margin-bottom:42px;
+}
+
+.dropcap::first-letter {
+  float: left;
+  font-size: 72px;
+  line-height: 0.8;
+  margin-right: 14px;
+  margin-top: 6px;
+  color: #d8c49a;
+}
+/* ===========================
+   Cornerstone Footer
+=========================== */
+
+.site-footer{
+    margin-top:120px;
+    padding:72px 24px 58px;
+    border-top:1px solid rgba(212,176,106,.18);
+    text-align:center;
+}
+
+.footer-brand{
+
+    font-family:"Cinzel", serif;
+
+    font-size:44px;
+
+    font-weight:500;
+
+    letter-spacing:.18em;
+
+    color:#D4B06A;
+
+    margin-bottom:10px;
+
+}
+
+.footer-tagline{
+    font-family:"Cormorant Garamond", serif;
+    font-style:italic;
+    font-size:18px;
+    color:#D8C8A8;
+    margin-bottom:32px;
+}
+
+.footer-studio{
+    font-family:Inter,sans-serif;
+    font-size:12px;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    color:rgba(245,239,226,.55);
+    margin-bottom:12px;
+}
+
+.footer-copyright{
+    font-family:Inter,sans-serif;
+    font-size:12px;
+    color:rgba(245,239,226,.35);
+}
+
+
+/* ===========================
+   Mobile Reading Layout
+=========================== */
+@media (max-width: 700px) {
+  html, body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .topbar {
+    height: auto;
+    min-height: 62px;
+    padding: 0 16px;
+    gap: 10px;
+  }
+
+  .logo {
+    min-width: 0;
+    white-space: nowrap;
+    font-size: 13px;
+    letter-spacing: 1.1px;
+    line-height: 1.2;
+  }
+
+  .back {
+    flex: 0 0 auto;
+    white-space: nowrap;
+    font-size: 10px;
+    letter-spacing: 1.1px;
+    line-height: 1.2;
+  }
+
+  .hero {
+    padding: 72px 18px 48px;
+  }
+
+  .eyebrow {
+    margin-bottom: 16px;
+    font-size: 13px;
+    letter-spacing: 4px;
+  }
+
+  h1 {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto 18px;
+    font-size: clamp(40px, 12vw, 54px);
+    line-height: 1.08;
+    letter-spacing: 1px;
+    overflow-wrap: break-word;
+    word-break: normal;
+  }
+
+  .subtitle {
+    max-width: 100%;
+    padding: 0 4px;
+    font-size: 16px;
+    line-height: 1.65;
+  }
+
+  .article {
+    width: 100%;
+    max-width: 100%;
+    margin: 48px auto 96px;
+    padding: 0 22px;
+    font-size: 22px;
+  }
+
+  .article p {
+    max-width: 100%;
+    font-size: 22px;
+    line-height: 1.78;
+    margin-bottom: 30px;
+  }
+
+  .dropcap::first-letter {
+    font-size: 58px;
+    line-height: .82;
+    margin-right: 10px;
+    margin-top: 5px;
+  }
+
+  .chapter-navigation {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    gap: 8px;
+    margin-top: 64px;
+    padding-top: 28px;
+  }
+
+  .chapter-navigation a {
+    min-width: 0;
+    font-size: 10px;
+    line-height: 1.4;
+    letter-spacing: 1.4px;
+  }
+
+  .chapter-navigation a:first-child { text-align: left; }
+  .chapter-navigation a:nth-child(2) { text-align: center; }
+  .chapter-navigation a:last-child { text-align: right; }
+
+  .site-footer {
+    margin-top: 72px;
+    padding: 54px 18px 40px;
+    overflow: hidden;
+  }
+
+  .footer-brand {
+    white-space: nowrap;
+    font-size: clamp(26px, 8vw, 32px);
+    letter-spacing: .12em;
+  }
+
+  .footer-tagline {
+    font-size: 16px;
+    margin-bottom: 28px;
+  }
+
+  .footer-studio,
+  .footer-copyright {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 390px) {
+  .topbar { padding: 0 12px; gap: 7px; }
+  .logo { font-size: 11.5px; letter-spacing: .9px; }
+  .back { font-size: 9px; letter-spacing: .9px; }
+  .hero { padding: 64px 16px 42px; }
+  h1 { font-size: clamp(38px, 11.5vw, 45px); }
+  .article { padding: 0 20px; }
+  .article p { font-size: 21px; line-height: 1.76; }
+  .chapter-navigation a { font-size: 9.5px; letter-spacing: 1.1px; }
+  .footer-brand { font-size: 27px; letter-spacing: .1em; }
+}
+
+/* Unified Cornerstone footer */
+.site-footer{margin-top:120px;padding:72px 24px 58px;border-top:1px solid rgba(212,176,106,.22);text-align:center;overflow:hidden}
+.footer-brand{font-family:"Cinzel",serif;font-size:44px;font-weight:500;letter-spacing:.14em;color:#D4B06A;margin:0 auto 10px;line-height:1.15;max-width:100%;white-space:nowrap}
+.footer-tagline{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:18px;color:#D8C8A8;margin-bottom:32px}
+.footer-studio{font-family:Inter,sans-serif;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:rgba(245,239,226,.55);margin-bottom:12px}
+.footer-copyright{font-family:Inter,sans-serif;font-size:12px;color:rgba(245,239,226,.35)}
+@media(max-width:700px){
+.site-footer{margin-top:72px;padding:50px 16px 40px}
+.footer-brand{font-size:clamp(23px,7.2vw,32px);letter-spacing:.08em;white-space:nowrap;overflow-wrap:normal;word-break:normal}
+.footer-tagline{font-size:16px;margin-bottom:26px}
+.footer-studio{font-size:11px;letter-spacing:.14em}
+.footer-copyright{font-size:11px;line-height:1.5}
+}
+
+</style>
+<style id="global-footer-unification">
+/* Final global footer override: keep every page visually identical. */
+.site-footer{
+  margin-top:120px !important;
+  padding:72px 24px 58px !important;
+  border-top:1px solid rgba(212,176,106,.22) !important;
+  text-align:center !important;
+  overflow:hidden !important;
+  box-sizing:border-box !important;
+}
+.footer-brand{
+  display:block !important;
+  font-family:"Cinzel",serif !important;
+  font-size:44px !important;
+  font-weight:500 !important;
+  letter-spacing:.10em !important;
+  line-height:1.12 !important;
+  color:#D4B06A !important;
+  width:auto !important;
+  max-width:100% !important;
+  margin:0 auto 10px !important;
+  padding:0 !important;
+  white-space:nowrap !important;
+  overflow-wrap:normal !important;
+  word-break:normal !important;
+  text-align:center !important;
+  box-sizing:border-box !important;
+}
+.footer-tagline{
+  font-family:"Cormorant Garamond",serif !important;
+  font-style:italic !important;
+  font-size:18px !important;
+  line-height:1.4 !important;
+  color:#D8C8A8 !important;
+  margin:0 auto 32px !important;
+}
+.footer-studio{
+  font-family:Inter,sans-serif !important;
+  font-size:12px !important;
+  line-height:1.5 !important;
+  letter-spacing:.18em !important;
+  text-transform:uppercase !important;
+  color:rgba(245,239,226,.55) !important;
+  margin:0 auto 12px !important;
+}
+.footer-copyright{
+  font-family:Inter,sans-serif !important;
+  font-size:12px !important;
+  line-height:1.5 !important;
+  color:rgba(245,239,226,.35) !important;
+  margin:0 auto !important;
+}
+@media (max-width:700px){
+  .site-footer{
+    margin-top:72px !important;
+    padding:48px 20px 38px !important;
+  }
+  .footer-brand{
+    font-size:clamp(22px,6.5vw,30px) !important;
+    letter-spacing:.06em !important;
+    line-height:1.12 !important;
+    max-width:calc(100% - 12px) !important;
+    margin:0 auto 12px !important;
+  }
+  .footer-tagline{font-size:16px !important;margin-bottom:26px !important;}
+  .footer-studio{font-size:11px !important;letter-spacing:.14em !important;margin-bottom:12px !important;}
+  .footer-copyright{font-size:11px !important;line-height:1.5 !important;}
+}
+@media (max-width:380px){
+  .site-footer{padding-left:16px !important;padding-right:16px !important;}
+  .footer-brand{font-size:21px !important;letter-spacing:.045em !important;max-width:100% !important;}
+}
+</style>
+</head>
+<body>
+<header class="topbar">
+<div class="logo"><a href="../../../../index.html" style="color:inherit;text-decoration:none">ECHOES OF THE KINGDOM</a></div>
+<a class="back" href="../index.html">← Back to Part II</a>
+</header>
+<section class="hero">
+<div class="eyebrow">CHAPTER 9</div>
+<h1>Before Goodbye</h1>
+</section>
+<main class="article"><p class="dropcap">By late spring, Tide Bay had entered the gentlest part of the year. The sea wind was warm without the heaviness of summer, and the fishing boats left at first light and returned in the evening beneath skies that seemed to hold their color longer each day.</p><p>Nothing about the village announced that a farewell was approaching.</p><p>Perhaps that was why Seren began to notice everything.</p><p>She woke before dawn one morning and slipped outside while the village was still half asleep. A pale line had only just appeared along the eastern sky. The air smelled of salt, and waves broke against the rocks with the same steady rhythm she had heard all her life.</p><p>Today the sound seemed unusually clear.</p><p>At the harbor, old fishermen were already sorting nets. Younger hands rolled barrels across the planks. Seabirds wheeled between the masts, crying whenever a scrap of fish appeared. Someone called to Seren from a boat, and she lifted a hand in answer.</p><p>She knew this place so well that she could have crossed much of it with her eyes closed.</p><p>Standing at the edge of the pier, she remembered being small enough to believe every boat was bound for some mysterious country. Later she had learned that most of them sailed only to the fishing grounds and back. They did not cross unknown seas or return with tales of distant kingdoms.</p><p>Yet she had never stopped watching them leave.</p><p>Nor had she stopped watching them come home.</p><p>There was comfort in that rhythm: departure in the morning, return at dusk. A promise repeated so often that no one thought to call it a promise.</p><p>Later she went with her mother to the market. The woman at the fish stall called out her prices in the same booming voice she had used for years. The old baker had flour on his sleeves and somehow on his cheek. Children raced between the stalls until one fell, stared at his scraped knee for a heartbeat, then sprang up and chased the others again.</p><p>People laughed. Bargained. Complained. Told stories they had told before.</p><p>Seren moved among them and realized that she knew nearly everyone, even those whose names she could not remember. She knew the rhythm of their days as surely as she knew the tide: who arrived before sunrise, who lingered after the stalls closed, who argued loudly and forgot the quarrel by supper. The market had never seemed remarkable to her because it had always been there. Now its ordinariness felt like a kind of treasure. She knew who exaggerated every story. She knew who lost his temper too quickly and apologized just as quickly. She knew which woman always slipped an extra fish into a poor neighbor's basket and which children could not pass a stack of crates without trying to climb it.</p><p>These things had always been there.</p><p>She had simply never understood that one day she might miss them.</p><p>After midday Seren walked to the rocky place above the shore where she had spent so many hours as a child. Long before she had understood her dreams, before the distant city had acquired roads and gates and a voice, she had sat here and watched the sea.</p><p>She sat again now.</p><p>Wind moved through her hair. Sunlight scattered over the water. Farther out, seabirds skimmed the crests of the waves.</p><p>For once she did not ask what waited beyond the horizon.</p><p>She simply looked at what was in front of her.</p><p>The tide rose slowly. Seren knew which rocks would disappear first, which narrow pools would fill, and how long it would be before the water reached the lower ledge. She had watched it happen too many times to count.</p><p>Laughter carried down the beach.</p><p>Several children were running across the sand, chasing one another in a crooked circle. One stumbled and nearly brought two others down with him. Their shouts rose above the surf.</p><p>The sight pulled Seren backward through the years. She had run that way once. She had believed the whole world was no larger than Tide Bay and that the horizon existed mainly to give the sun somewhere to set.</p><p>She smiled.</p><p>Then, unexpectedly, her eyes burned.</p><p>Seren touched one corner and found it wet.</p><p>She was not sad. That surprised her most.</p><p>The day was bright. The wind was warm. People were laughing below her.</p><p>She had simply discovered, all at once, how deeply she loved this place.</p><p>The noise of the market. The stubborn boats. The smell of nets drying in the sun. The people who had known her before she knew herself. The sea that had filled every season of her childhood.</p><p>She stayed on the rock until the sun began to lean west. Once or twice she thought she should get up, but there was nowhere she needed to hurry. She listened instead: gulls overhead, water folding over stone, the faint knock of wood from the harbor. Each sound belonged to a life she had once assumed would continue around her forever. She understood now that Tide Bay would continue. The change was that she might not always be here to hear it.</p><p>Near evening she went to Old Eden's cottage. He was repairing a chair whose back had split cleanly along one rail.</p><p>"You have time to visit today?" he asked.</p><p>"I have been walking."</p><p>Old Eden nodded as if that explained everything.</p><p>They sat outside together while the sun lowered toward the water.</p><p>After a while he said, "The sea is beautiful today."</p><p>"It is."</p><p>"It was beautiful yesterday too."</p><p>Seren laughed. "That was different."</p><p>Old Eden smiled, and neither of them tried to explain why.</p><p>They watched the horizon until the light softened. Seren wondered whether Old Eden understood why she had come. He asked no questions. That, too, was familiar. He had always had a way of leaving space around the things she was not ready to name. Sitting beside him, she felt no pressure to explain the road, the dreams, or the growing certainty inside her. For a little while, it was enough simply to be there.</p><p>That evening her mother made a simple fish soup. It tasted exactly as it always had, yet Seren found herself taking a second bowl.</p><p>Her mother raised an eyebrow. "Hungry today?"</p><p>"I walked a lot."</p><p>"So I see."</p><p>Her mother smiled and returned to her meal.</p><p>Seren watched her for a moment: the familiar way she held the spoon, the small crease between her brows when the soup was too hot, the few silver strands that caught the lamplight. There were a hundred things Seren could have said. None seemed necessary. She could have told her mother that the dreams no longer frightened her, that the road felt nearer, that she had begun to imagine waking beneath a roof she did not know. But the quiet between them was not empty. It held years of shared mornings, tired evenings, small disagreements, meals, work, and all the ordinary care that had made Tide Bay home.</p><p>Night settled over Tide Bay. Lamps appeared one by one in the windows. Voices drifted from the harbor and faded. The waves continued against the shore as they had on thousands of nights before.</p><p>Seren stood by her window and looked out.</p><p>Familiar roofs. Familiar lanes. Familiar lights.</p><p>She understood now that leaving did not make any of them smaller.</p><p>If anything, the possibility of departure had made them more precious.</p><p>After a long while, she closed the window and lay down.</p><p>The room became quiet again.</p><p>Only the sea wind moved outside.</p><div class="divider">❦</div><p>The dream came again that night.</p><p>It was the same road, the same endless fields, the same mist waiting in the distance. Wind came from ahead and touched Seren's face as she walked.</p><p>One step.</p><p>Then another.</p><p>Stone appeared beneath her feet. The way beyond remained hidden.</p><p>There was no new vision. No answer. No promise of what she would find.</p><p>Only the word she had heard before.</p><p>"Come."</p><p>It was quiet and gentle, as if spoken from very far away and from somewhere close beside her at the same time.</p><p>Seren stopped.</p><p>She looked into the mist.</p><p>And without knowing how, she understood.</p><p>Not the destination. Not the future. Not what would happen when she reached the city.</p><p>Only this:</p><p>It was time.</p><p>The wind passed over the grass, and the dream dissolved.</p><p>Seren woke before dawn. The sky outside her window was barely beginning to pale. Tide Bay lay silent beneath it.</p><p>She sat on the edge of her bed for a long time.</p><p>Then she rose and went to the kitchen.</p><p>Her mother was already there, sorting fish bought for the morning stall. At the sound of Seren's steps, she looked up.</p><p>"You're awake early."</p><p>Seren stopped in the doorway.</p><p>She had imagined this conversation many times. In every version she had known what to say. Now that the moment had arrived, the words seemed too small.</p><p>After a silence, she said, "I'm leaving."</p><p>Her mother's hands paused.</p><p>Only for a moment.</p><p>Then she returned to her work. "When?"</p><p>"Today."</p><p>The room became very quiet. A seabird cried somewhere outside.</p><p>Her mother nodded. "All right."</p><p>Seren had expected questions. She had expected her mother to ask where she would go, how long she would be gone, whether she had enough coin, whether a dream was reason enough to leave the only home she had known. None came. The simple answer unsettled her more than resistance might have.</p><p>"That's all?" Seren asked.</p><p>Her mother looked at her then. "Would you stay if I asked you to?"</p><p>Seren opened her mouth, then closed it.</p><p>Her mother gave a small, tired smile. "Then there is no kindness in asking."</p><p>No surprise. No protest.</p><p>It was as if some part of her had been waiting for this morning for years.</p><p>They packed together after breakfast. Seren owned little that could be carried: a change of clothes, dried food, a waterskin, a small knife, cord, and a few ordinary things her mother insisted would become less ordinary once she needed them on the road.</p><p>They spoke about practical matters. Which cloth should wrap the food. How much water she could carry without making the bag too heavy. Whether the weather would hold.</p><p>Her mother folded each piece of clothing more carefully than it needed to be folded. Seren checked the waterskin twice. Once they both reached for the same length of cord and laughed, and for a moment the morning felt almost ordinary again.</p><p>Neither of them tried to turn the morning into something grand.</p><p>That made it harder, and easier, at the same time.</p><p>After midday Seren walked to Old Eden's cottage.</p><p>He was seated outside shaving thin curls from a piece of wood. Before she could speak, he looked up and smiled.</p><p>"Finally decided?"</p><p>Seren stopped. "You knew?"</p><p>"I suspected."</p><p>She nodded. "Today."</p><p>Old Eden set the wood aside and looked toward the sea. "I thought you might wait a few more days."</p><p>Seren laughed softly. "So did I."</p><p>He disappeared into the cottage and returned carrying an old travel bag. The leather had faded almost gray at the folds, and the corners were worn smooth, but every strap had been repaired and the buckles had been kept clean.</p><p>"Take it."</p><p>Seren accepted it with both hands.</p><p>She could tell from the weight and the care given to it that the bag had a history. She did not ask whose it had been.</p><p>Old Eden did not explain.</p><p>Some stories, she thought, could wait until the road was ready to tell them.</p><p>She ran her thumb over one of the repaired seams. "You used this."</p><p>Old Eden's eyes narrowed with amusement. "That is not a question."</p><p>"No."</p><p>He looked toward the sea. "Then I suppose I do not have to answer it."</p><p>Seren smiled and let the matter rest.</p><p>By afternoon Seren was home again. She checked her few belongings one final time, placed them in the old bag, and drew the strap over her shoulder.</p><p>When she stepped outside, the sea wind met her exactly as it had on countless mornings before.</p><p>Her mother was waiting.</p><p>Old Eden had come as well.</p><p>No crowd had gathered. No one had announced her departure. There were only the three of them walking the familiar path toward the edge of the village.</p><p>They passed the market. The harbor. The lane where Seren had run as a child. They passed houses whose doors she knew and people busy with the ordinary work of the day.</p><p>A woman at the market lifted a hand in greeting. A fisherman called something about the weather. Two children ran past them toward the docks without slowing. Seren answered as she always did. She wondered how many times she had walked this same route without seeing it as a last time.</p><p>Most did not realize she was leaving.</p><p>Seren found that she was grateful for that. Tide Bay did not stop because one girl had chosen a road. Nets still needed mending. Fish still needed cleaning. Children still shouted from the docks.</p><p>At the edge of the village, the path opened along the coast and bent north until it disappeared from sight.</p><p>Seren stopped.</p><p>Her mother reached up and straightened the collar of her coat, exactly as she had when Seren was a child.</p><p>"Take care of yourself."</p><p>"I will."</p><p>"Eat when you can. Not when you remember."</p><p>Seren smiled. "I will."</p><p>Her mother looked at her for a long moment. There was sadness in her face, but no fear.</p><p>Then she smiled too. "Go."</p><p>Old Eden tapped the side of the weathered bag. "And don't lose that."</p><p>Seren laughed, the sound catching unexpectedly in her throat. "I won't."</p><p>Seren looked from Old Eden to her mother. She wanted to memorize them exactly as they stood: the wind in her mother's hair, the set of Old Eden's shoulders, the road dust at their feet. She knew memory did not work that way. It kept strange details and surrendered others without permission. Still, she tried.</p><p>There was nothing else to wait for.</p><p>She turned and began to walk.</p><p>One step.</p><p>Then another.</p><p>The road beneath her feet was real now: packed earth, scattered stones, weeds along the edges. It did not appear from mist. It did not glow. It offered no sign of where it would end.</p><p>Seren did not know what she would meet beyond the bend. She did not even know, in any useful sense, where she was going.</p><p>She knew only that it was time to go.</p><p>After some distance, she looked back.</p><p>Her mother and Old Eden were still standing where she had left them. Wind moved their clothes. Neither waved. They simply watched her.</p><p>Seren stopped.</p><p>For a moment something tightened in her chest.</p><p>Behind them lay Tide Bay: the harbor, the roofs, the narrow lanes, and beyond all of it the sea that had filled her childhood.</p><p>A tear slipped down her cheek.</p><p>She touched it, almost surprised.</p><p>She had imagined that answering the call would make departure easy. It did not.</p><p>She was not leaving because she wanted less of this place.</p><p>She was leaving while loving it fully.</p><p>Perhaps that was why the moment mattered.</p><p>Seren looked back one last time.</p><p>Then she turned toward the road.</p><p>The coastline unfolded ahead of her. With every step, Tide Bay grew smaller behind her, until the village became a cluster of pale shapes against the sea and finally disappeared beyond the curve of the land.</p><p>Seren did not turn again.</p><p>The old travel bag rested against her hip. The road was unfamiliar. The world beyond it was larger than anything she could yet imagine.</p><p>She walked on.</p><p>One step at a time.</p><div class="chapter-navigation"><a href="../chapter-08/index.html">← Previous</a><a href="../index.html">Part II Contents</a><a href="../chapter-10/index.html">Next →</a></div></main>
+<footer class="site-footer">
+<div class="footer-brand">Cornerstone</div>
+<div class="footer-tagline">Building stories that endure.</div>
+<div class="footer-studio">Created by Echoes Studio</div>
+<div class="footer-copyright">© 2026 Michael He. All Rights Reserved.</div>
+</footer>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const article = document.querySelector(".article");
+
+    if (!article) {
+        return;
+    }
+
+    const paragraphs = article.querySelectorAll("p");
+
+    paragraphs.forEach(function (paragraph) {
+        const text = paragraph.textContent.trim();
+
+        if (!text) {
+            return;
+        }
+
+        // 自动识别场景分隔符
+        if (text === "***" || text === "* * *") {
+            const divider = document.createElement("div");
+            divider.className = "divider";
+            divider.textContent = "❦";
+            paragraph.replaceWith(divider);
+            return;
+        }
+
+        // 自动识别以引号或长破折号开头的对白
+        const isDialogue =
+            text.startsWith('"') ||
+            text.startsWith("“") ||
+            text.startsWith("‘") ||
+            text.startsWith("'") ||
+            text.startsWith("—");
+
+        if (isDialogue) {
+            paragraph.classList.add("dialogue");
+        }
+    });
+});
+</script>
+<!-- GoatCounter: privacy-friendly page analytics -->
+<script async="" data-goatcounter="https://echoeskingdom.goatcounter.com/count" src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
