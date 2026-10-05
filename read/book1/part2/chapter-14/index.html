@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Chapter 14: Rivergate | Echoes of the Kingdom</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&amp;family=Inter:wght@300;400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<style>
+.chapter-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  width: 100%;
+  margin-top: 100px;
+  padding-top: 40px;
+  border-top: 1px solid rgba(212, 184, 120, 0.18);
+}
+
+.chapter-navigation a {
+  color: #d8c49a;
+  font-family: Inter, sans-serif;
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+
+background:#070809;
+
+color:#ece2cf;
+
+font-family:"Cormorant Garamond",serif;
+
+line-height:1.9;
+
+}
+
+a{
+
+text-decoration:none;
+
+color:inherit;
+
+}
+
+.topbar{
+
+position:sticky;
+
+top:0;
+
+z-index:100;
+
+height:72px;
+
+background:rgba(7,8,9,.92);
+
+backdrop-filter:blur(10px);
+
+border-bottom:1px solid rgba(212,184,120,.12);
+
+display:flex;
+
+align-items:center;
+
+justify-content:space-between;
+
+padding:0 60px;
+
+}
+
+.logo{
+
+font-size:20px;
+
+letter-spacing:2px;
+
+color:#d8c08b;
+
+}
+
+.back{
+
+font-family:Inter,sans-serif;
+
+font-size:13px;
+
+letter-spacing:2px;
+
+text-transform:uppercase;
+
+color:#a89b7a;
+
+transition:.25s;
+
+}
+
+.back:hover{
+
+color:#e8d9b3;
+
+}
+
+.hero{
+
+padding:120px 20px 80px;
+
+text-align:center;
+
+}
+
+.eyebrow{
+
+font-size:18px;
+
+letter-spacing:6px;
+
+color:#a48c60;
+
+margin-bottom:20px;
+
+text-transform:uppercase;
+
+}
+
+h1{
+
+font-size:88px;
+
+font-weight:600;
+
+letter-spacing:2px;
+
+margin-bottom:24px;
+
+}
+
+.subtitle{
+
+max-width:700px;
+
+margin:auto;
+
+font-family:Inter,sans-serif;
+
+font-size:18px;
+
+color:#bfb5a2;
+
+line-height:1.8;
+
+}
+
+.article{
+
+max-width:680px;
+
+margin:100px auto 180px;
+
+padding:0 30px;
+
+font-size:28px;
+
+}
+
+.article p{
+  font-family:"Cormorant Garamond", serif;
+  font-size:28px;
+  line-height:2;
+  color:rgba(245,239,226,0.95);
+  margin-bottom:42px;
+}
+
+.dropcap::first-letter {
+  float: left;
+  font-size: 72px;
+  line-height: 0.8;
+  margin-right: 14px;
+  margin-top: 6px;
+  color: #d8c49a;
+}
+/* ===========================
+   Cornerstone Footer
+=========================== */
+
+.site-footer{
+    margin-top:120px;
+    padding:72px 24px 58px;
+    border-top:1px solid rgba(212,176,106,.18);
+    text-align:center;
+}
+
+.footer-brand{
+
+    font-family:"Cinzel", serif;
+
+    font-size:44px;
+
+    font-weight:500;
+
+    letter-spacing:.18em;
+
+    color:#D4B06A;
+
+    margin-bottom:10px;
+
+}
+
+.footer-tagline{
+    font-family:"Cormorant Garamond", serif;
+    font-style:italic;
+    font-size:18px;
+    color:#D8C8A8;
+    margin-bottom:32px;
+}
+
+.footer-studio{
+    font-family:Inter,sans-serif;
+    font-size:12px;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    color:rgba(245,239,226,.55);
+    margin-bottom:12px;
+}
+
+.footer-copyright{
+    font-family:Inter,sans-serif;
+    font-size:12px;
+    color:rgba(245,239,226,.35);
+}
+
+
+/* ===========================
+   Mobile Reading Layout
+=========================== */
+@media (max-width: 700px) {
+  html, body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .topbar {
+    height: auto;
+    min-height: 62px;
+    padding: 0 16px;
+    gap: 10px;
+  }
+
+  .logo {
+    min-width: 0;
+    white-space: nowrap;
+    font-size: 13px;
+    letter-spacing: 1.1px;
+    line-height: 1.2;
+  }
+
+  .back {
+    flex: 0 0 auto;
+    white-space: nowrap;
+    font-size: 10px;
+    letter-spacing: 1.1px;
+    line-height: 1.2;
+  }
+
+  .hero {
+    padding: 72px 18px 48px;
+  }
+
+  .eyebrow {
+    margin-bottom: 16px;
+    font-size: 13px;
+    letter-spacing: 4px;
+  }
+
+  h1 {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto 18px;
+    font-size: clamp(40px, 12vw, 54px);
+    line-height: 1.08;
+    letter-spacing: 1px;
+    overflow-wrap: break-word;
+    word-break: normal;
+  }
+
+  .subtitle {
+    max-width: 100%;
+    padding: 0 4px;
+    font-size: 16px;
+    line-height: 1.65;
+  }
+
+  .article {
+    width: 100%;
+    max-width: 100%;
+    margin: 48px auto 96px;
+    padding: 0 22px;
+    font-size: 22px;
+  }
+
+  .article p {
+    max-width: 100%;
+    font-size: 22px;
+    line-height: 1.78;
+    margin-bottom: 30px;
+  }
+
+  .dropcap::first-letter {
+    font-size: 58px;
+    line-height: .82;
+    margin-right: 10px;
+    margin-top: 5px;
+  }
+
+  .chapter-navigation {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    gap: 8px;
+    margin-top: 64px;
+    padding-top: 28px;
+  }
+
+  .chapter-navigation a {
+    min-width: 0;
+    font-size: 10px;
+    line-height: 1.4;
+    letter-spacing: 1.4px;
+  }
+
+  .chapter-navigation a:first-child { text-align: left; }
+  .chapter-navigation a:nth-child(2) { text-align: center; }
+  .chapter-navigation a:last-child { text-align: right; }
+
+  .site-footer {
+    margin-top: 72px;
+    padding: 54px 18px 40px;
+    overflow: hidden;
+  }
+
+  .footer-brand {
+    white-space: nowrap;
+    font-size: clamp(26px, 8vw, 32px);
+    letter-spacing: .12em;
+  }
+
+  .footer-tagline {
+    font-size: 16px;
+    margin-bottom: 28px;
+  }
+
+  .footer-studio,
+  .footer-copyright {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 390px) {
+  .topbar { padding: 0 12px; gap: 7px; }
+  .logo { font-size: 11.5px; letter-spacing: .9px; }
+  .back { font-size: 9px; letter-spacing: .9px; }
+  .hero { padding: 64px 16px 42px; }
+  h1 { font-size: clamp(38px, 11.5vw, 45px); }
+  .article { padding: 0 20px; }
+  .article p { font-size: 21px; line-height: 1.76; }
+  .chapter-navigation a { font-size: 9.5px; letter-spacing: 1.1px; }
+  .footer-brand { font-size: 27px; letter-spacing: .1em; }
+}
+
+/* Unified Cornerstone footer */
+.site-footer{margin-top:120px;padding:72px 24px 58px;border-top:1px solid rgba(212,176,106,.22);text-align:center;overflow:hidden}
+.footer-brand{font-family:"Cinzel",serif;font-size:44px;font-weight:500;letter-spacing:.14em;color:#D4B06A;margin:0 auto 10px;line-height:1.15;max-width:100%;white-space:nowrap}
+.footer-tagline{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:18px;color:#D8C8A8;margin-bottom:32px}
+.footer-studio{font-family:Inter,sans-serif;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:rgba(245,239,226,.55);margin-bottom:12px}
+.footer-copyright{font-family:Inter,sans-serif;font-size:12px;color:rgba(245,239,226,.35)}
+@media(max-width:700px){
+.site-footer{margin-top:72px;padding:50px 16px 40px}
+.footer-brand{font-size:clamp(23px,7.2vw,32px);letter-spacing:.08em;white-space:nowrap;overflow-wrap:normal;word-break:normal}
+.footer-tagline{font-size:16px;margin-bottom:26px}
+.footer-studio{font-size:11px;letter-spacing:.14em}
+.footer-copyright{font-size:11px;line-height:1.5}
+}
+
+</style>
+<style id="global-footer-unification">
+/* Final global footer override: keep every page visually identical. */
+.site-footer{
+  margin-top:120px !important;
+  padding:72px 24px 58px !important;
+  border-top:1px solid rgba(212,176,106,.22) !important;
+  text-align:center !important;
+  overflow:hidden !important;
+  box-sizing:border-box !important;
+}
+.footer-brand{
+  display:block !important;
+  font-family:"Cinzel",serif !important;
+  font-size:44px !important;
+  font-weight:500 !important;
+  letter-spacing:.10em !important;
+  line-height:1.12 !important;
+  color:#D4B06A !important;
+  width:auto !important;
+  max-width:100% !important;
+  margin:0 auto 10px !important;
+  padding:0 !important;
+  white-space:nowrap !important;
+  overflow-wrap:normal !important;
+  word-break:normal !important;
+  text-align:center !important;
+  box-sizing:border-box !important;
+}
+.footer-tagline{
+  font-family:"Cormorant Garamond",serif !important;
+  font-style:italic !important;
+  font-size:18px !important;
+  line-height:1.4 !important;
+  color:#D8C8A8 !important;
+  margin:0 auto 32px !important;
+}
+.footer-studio{
+  font-family:Inter,sans-serif !important;
+  font-size:12px !important;
+  line-height:1.5 !important;
+  letter-spacing:.18em !important;
+  text-transform:uppercase !important;
+  color:rgba(245,239,226,.55) !important;
+  margin:0 auto 12px !important;
+}
+.footer-copyright{
+  font-family:Inter,sans-serif !important;
+  font-size:12px !important;
+  line-height:1.5 !important;
+  color:rgba(245,239,226,.35) !important;
+  margin:0 auto !important;
+}
+@media (max-width:700px){
+  .site-footer{
+    margin-top:72px !important;
+    padding:48px 20px 38px !important;
+  }
+  .footer-brand{
+    font-size:clamp(22px,6.5vw,30px) !important;
+    letter-spacing:.06em !important;
+    line-height:1.12 !important;
+    max-width:calc(100% - 12px) !important;
+    margin:0 auto 12px !important;
+  }
+  .footer-tagline{font-size:16px !important;margin-bottom:26px !important;}
+  .footer-studio{font-size:11px !important;letter-spacing:.14em !important;margin-bottom:12px !important;}
+  .footer-copyright{font-size:11px !important;line-height:1.5 !important;}
+}
+@media (max-width:380px){
+  .site-footer{padding-left:16px !important;padding-right:16px !important;}
+  .footer-brand{font-size:21px !important;letter-spacing:.045em !important;max-width:100% !important;}
+}
+</style>
+</head>
+<body>
+<header class="topbar">
+<div class="logo"><a href="../../../../index.html" style="color:inherit;text-decoration:none">ECHOES OF THE KINGDOM</a></div>
+<a class="back" href="../index.html">← Back to Part II</a>
+</header>
+<section class="hero">
+<div class="eyebrow">CHAPTER 14</div>
+<h1>Rivergate</h1>
+</section>
+<main class="article"><p class="dropcap">The moment Seren crossed the final threshold stone, the ground beneath her feet changed.</p><p>Outside the wall, countless wagon wheels had pressed the road into hard, rutted earth. Inside, dark gray paving stones covered the street. Their surfaces had been polished by years of traffic, sunken slightly along the center and scored by two deep tracks where cart wheels had passed generation after generation.</p><p>Seren did not move at once.</p><p>The street beyond the gate was narrower than she had expected. Houses crowded close on both sides. Their lower floors were built of rough stone, while timbered upper stories leaned outward above the road until it seemed that a person at one window might almost reach across and touch the flowerpots opposite. Clean linen hung from some of the windows. A corner of cloth lifted in the wind. Startled pigeons burst from beneath an eave and settled again on a distant chimney.</p><p>A wagon loaded with oak barrels had stopped across part of the street. Two draft horses pawed impatiently at the stones while the driver removed his hat and wiped his forehead.</p><p>“Faster!” he shouted.</p><p>Several young workers were rolling barrels down planks into a tavern cellar. Each one landed below with a deep wooden thud. Above the tavern door, a sign painted with a drinking cup swung in the breeze. Merchants had already gathered outside, and one of them was holding what looked very much like his first beer of the morning.</p><p>The air smelled of rye bread, malt, damp timber, horses, and smoke.</p><p>Seren began walking.</p><p>A short packhorse passed with rolls of wool piled so high that they hid half its handler.</p><p>“Coming through. Make way.”</p><p>People shifted aside without complaint and flowed together again after it passed.</p><p>At the roadside, a cooper fitted a heated iron hoop around a barrel. His apprentice immediately threw a bucket of cold water over it. Steam rose with a hiss, carrying the sharp smell of scorched wood. The cooper struck the barrel twice with his rough palm, listened, and nodded with satisfaction.</p><p>Dozens of finished barrels stood in neat rows behind him. Each bore the same burned mark: a bridge and an open gate.</p><p>Seren paused.</p><p>It was the third time she had seen that emblem. It had flown above the city gate. It was carved into the wooden token in her hand. Now it marked the barrels being sent out into the world.</p><p>A long bell sounded somewhere ahead.</p><p>It did not ring urgently. Each note came slow and deep, rolling over the roofs of Gate Street. Men talking outside the tavern fell silent for a moment. The cooper lowered his mallet and traced an old sign across his chest. A woman selling cheese at the corner glanced toward the unseen bell tower, then returned to arranging her wares.</p><p>When the final note faded, the street resumed its noise.</p><p>No one explained the bell. No one asked what it meant. Everyone seemed to know except Seren.</p><p>She stood among them, taking in the unfamiliar city. Gate Street continued ahead, bent around a row of houses, and vanished beneath overlapping roofs. Seren tightened her fingers around the wooden token and followed the crowd.</p><p>As more caravans entered, the street grew busier. A boy herded a dozen white geese through the traffic with a thin willow switch, making soft hissing sounds. The birds waddled between boots and wheels, leaving damp prints behind them. A coal seller stopped his barrow to let a wagon pass, then lifted the handles and continued without complaint.</p><p>The people of Rivergate seemed practiced in sharing too little space.</p><p>Farther on, the road narrowed between timber houses whose eaves hid much of the sky. Signs hung from beams overhead: a horseshoe, a pair of shears, a roll of parchment. An inn displayed a blackened iron lamp above its door. The lamp was unlit in daylight, but it swung gently in the wind.</p><p>A boy crouched outside cleaning a traveler’s boots. Behind the counter, the innkeeper worked through a thick ledger, glancing up whenever someone entered before returning to his figures.</p><p>Seren passed without going inside.</p><p>A narrow lane opened between the houses. It was quieter there. Several elderly women sat in doorways shelling beans and speaking softly. Clay pots on the windowsills held rosemary and sage, and the scent of herbs drifted through the alley.</p><p>Then hoofbeats struck the street behind her.</p><p>This time no one looked surprised.</p><p>People moved toward the walls almost together, as naturally as water drawing away from a shore. Two tall chestnut horses raced along Gate Street. Their riders wore dark blue surcoats embroidered with the bridge-and-gate emblem. Neither man drew a weapon or shouted for space. They did not need to. The street opened before them.</p><p>Dust rose and settled.</p><p>The cobbler resumed hammering. The geese continued their uncertain march. The boy outside the inn bent over the boot in his hands.</p><p>Seren noticed what she had seen outside the wall: people moved aside before authority arrived close enough to ask them.</p><p>It was not an order anymore. It was a habit.</p><p>She continued until Gate Street widened near a stone bridge. The bridge was not large—two wagons could pass only with care—but beneath it a swift river cut through the city. Flat-bottomed cargo boats lay along the bank. Dockworkers unloaded wool, blocks of salt, and oak barrels. Men shouted timing to one another as they hauled rope. A clerk sat at a small table by the bridge and made a mark each time a loaded cart crossed.</p><p>Everything moved with a rhythm of its own.</p><p>Seren rested her hands on the stone parapet and looked down at the river. It came from the north, passed directly through Rivergate, and continued south. People crossed above while boats passed below.</p><p>Perhaps, she thought, the city had not grown because of its walls at all. Perhaps the walls existed because the river had first brought people here—traders, boats, warehouses, roads—and once the city became valuable, someone had decided it needed stone around it.</p><p>By evening Gate Street had begun to quiet. The caravans that had filled the road were dispersing into warehouses, yards, and inns. Lamps appeared behind windows. The first tavern fires glowed against the darkening street.</p><p>Seren returned to the inn with the black iron lamp.</p><p>When she opened the door, warmth and the smell of stew met her. Travelers sat near the hearth with cloaks loosened around their shoulders. Some warmed their hands. Others spoke over wooden cups. In one corner an old man shaved curls from a piece of wood with a small knife.</p><p>The innkeeper looked up. His gaze moved from Seren’s pack to the wooden token in her hand.</p><p>“First time in Rivergate?”</p><p>Seren nodded.</p><p>“Token.”</p><p>She handed it over. He examined the mark, opened a thick parchment ledger, and dipped his quill.</p><p>“Name?”</p><p>“Seren.”</p><p>“How many nights?”</p><p>“I don’t know.”</p><p>He looked up once, then simply wrote something down and returned the token.</p><p>“Room’s upstairs. The city gates close after sunset. If you go out tonight, be back before the final bell.”</p><p>Seren nodded.</p><p>A short while later she sat at a small table near the window with a bowl of hot stew. Outside, darkness settled between the buildings. Fewer people passed. A night watchman tapped his long staff against the paving stones as he made his rounds. Far away, a deeper evening bell sounded from the tower.</p><p>Seren had just lifted her spoon when running footsteps broke the quiet.</p><p>“Stop him!” someone shouted.</p><p>Conversation inside the inn ceased.</p><p>Heads turned toward the window.</p><p>A young man stumbled into view at the end of the street. His cloak was torn, and he held a cloth-wrapped bundle tightly against his chest. Four city guards ran behind him.</p><p>The young man cut around the corner too quickly.</p><p>An elderly woman carrying a vegetable basket stepped into his path.</p><p>He struck her hard enough to send her to the stones. Onions and carrots scattered across the street. The young man looked back once. His face tightened, but he did not stop. He clutched the bundle and ran on.</p><p>People drew away.</p><p>No one went to the fallen woman.</p><p>Seren set down her bowl, pushed open the inn door, and hurried across the street.</p><p>The basket had rolled toward the center of the road. Several onions continued down the sloping stones. A round cabbage struck a wooden barrel and came to rest beside it.</p><p>“Are you hurt?” Seren asked.</p><p>The old woman braced one hand against the street and tried to rise. The moment she put weight on one foot, she drew a sharp breath.</p><p>Seren caught her arm. “Slowly.”</p><p>“Only twisted my ankle,” the woman said.</p><p>They had barely steadied themselves when the guards arrived.</p><p>The youngest looked quickly around. “Which way?”</p><p>No one answered.</p><p>Men standing outside the tavern stared toward the end of the street. One lowered his eyes. Another became suddenly interested in arranging something in his hands. It was as if the question had never been asked.</p><p>The young guard frowned and continued after the fugitive. Two others stopped.</p><p>One noticed the scattered vegetables and then Seren supporting the old woman.</p><p>“What happened?”</p><p>The woman waved a hand. “Nothing much. Someone ran past and knocked me over.”</p><p>The guard looked at Seren. “You saw him?”</p><p>“Aye.”</p><p>“Know him?”</p><p>“No.”</p><p>“Did he say anything?”</p><p>Seren shook her head. “Nothing.”</p><p>His eyes moved to the wooden token at her waist. “Entered today?”</p><p>“Yes.”</p><p>He nodded. “City’s been unsettled lately. Don’t wander after dark.”</p><p>Then he turned to leave.</p><p>The old woman tugged lightly at Seren’s sleeve.</p><p>“Girl... my basket.”</p><p>Seren looked back at the vegetables scattered across the street and crouched to gather them. After a moment, several men from the tavern came over without speaking. One retrieved the cabbage. Another collected onions from beside the wall.</p><p>Soon the basket was full again.</p><p>“Thank you,” the old woman said.</p><p>A middle-aged man smiled. “No need. We’re neighbors.”</p><p>He picked up his own barrel and returned to the tavern as though he had done nothing worth mentioning.</p><p>Seren helped the woman to a long bench beside the street. She rubbed her ankle and looked toward the direction the young man had fled.</p><p>“Things have grown worse these last few years,” she murmured, almost to herself.</p><p>Seren did not answer.</p><p>After a while the woman shook her head. “Wonder whose child it is this time.”</p><p>The wind moved through the street and rocked the tavern sign. Around them, Rivergate resumed its evening business. Only a few crushed onions remained between the stones, their sharp scent rising where boots had broken them.</p><p>Seren was about to offer to walk the woman home when footsteps approached again.</p><p>These were slower than the guards who had given chase.</p><p>An older city officer came along the street carrying a roll of parchment, with two soldiers behind him. He stopped near the place where the fleeing man had stumbled and crouched.</p><p>Something lay between the paving stones.</p><p>He picked it up.</p><p>A copper seal.</p><p>One corner had cracked when it struck the street.</p><p>The officer rubbed the mud from its face with his thumb.</p><p>His expression changed.</p><p>He said nothing, but the casual air of the evening was gone from him. He stood slowly and slipped the seal inside his cloak, as though confirming something he had hoped not to find.</p><p>Then he turned to the soldiers behind him and spoke in a voice too low for Seren to hear.</p><p>One of them nodded and immediately hurried away.</p><p>The officer remained where he was.</p><p>His gaze traveled across the street: the merchants near the tavern, the cheese seller at her stall, the cooper putting away his tools.</p><p>At last his eyes came to Seren.</p><p>She felt the old woman shift beside her. Around them, the street had not truly fallen silent, yet the ordinary sounds seemed farther away now: a cup set down inside the tavern, a cart turning somewhere beyond the bridge, the river moving under stone. Seren had seen guards search barrels, riders pass unchecked, merchants swallow their anger, and neighbors quietly gather a stranger’s scattered food. Until this moment, all of it had belonged to the city around her. The cracked seal in the officer’s hand made the evening feel different. Something had entered her path. She simply did not know what it was.</p><p>More precisely, the officer’s eyes came to the basket she was still holding for the old woman.</p><div class="chapter-navigation"><a href="../chapter-13/index.html">← Previous</a><a href="../index.html">Part II Contents</a><a href="../chapter-15/index.html">Next →</a></div></main>
+<footer class="site-footer">
+<div class="footer-brand">Cornerstone</div>
+<div class="footer-tagline">Building stories that endure.</div>
+<div class="footer-studio">Created by Echoes Studio</div>
+<div class="footer-copyright">© 2026 Michael He. All Rights Reserved.</div>
+</footer>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const article = document.querySelector(".article");
+
+    if (!article) {
+        return;
+    }
+
+    const paragraphs = article.querySelectorAll("p");
+
+    paragraphs.forEach(function (paragraph) {
+        const text = paragraph.textContent.trim();
+
+        if (!text) {
+            return;
+        }
+
+        // 自动识别场景分隔符
+        if (text === "***" || text === "* * *") {
+            const divider = document.createElement("div");
+            divider.className = "divider";
+            divider.textContent = "❦";
+            paragraph.replaceWith(divider);
+            return;
+        }
+
+        // 自动识别以引号或长破折号开头的对白
+        const isDialogue =
+            text.startsWith('"') ||
+            text.startsWith("“") ||
+            text.startsWith("‘") ||
+            text.startsWith("'") ||
+            text.startsWith("—");
+
+        if (isDialogue) {
+            paragraph.classList.add("dialogue");
+        }
+    });
+});
+</script>
+<!-- GoatCounter: privacy-friendly page analytics -->
+<script async="" data-goatcounter="https://echoeskingdom.goatcounter.com/count" src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

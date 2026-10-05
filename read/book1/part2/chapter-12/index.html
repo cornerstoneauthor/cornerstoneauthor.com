@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Chapter 12: The Long Road | Echoes of the Kingdom</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&amp;family=Inter:wght@300;400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<style>
+.chapter-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  width: 100%;
+  margin-top: 100px;
+  padding-top: 40px;
+  border-top: 1px solid rgba(212, 184, 120, 0.18);
+}
+
+.chapter-navigation a {
+  color: #d8c49a;
+  font-family: Inter, sans-serif;
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+
+background:#070809;
+
+color:#ece2cf;
+
+font-family:"Cormorant Garamond",serif;
+
+line-height:1.9;
+
+}
+
+a{
+
+text-decoration:none;
+
+color:inherit;
+
+}
+
+.topbar{
+
+position:sticky;
+
+top:0;
+
+z-index:100;
+
+height:72px;
+
+background:rgba(7,8,9,.92);
+
+backdrop-filter:blur(10px);
+
+border-bottom:1px solid rgba(212,184,120,.12);
+
+display:flex;
+
+align-items:center;
+
+justify-content:space-between;
+
+padding:0 60px;
+
+}
+
+.logo{
+
+font-size:20px;
+
+letter-spacing:2px;
+
+color:#d8c08b;
+
+}
+
+.back{
+
+font-family:Inter,sans-serif;
+
+font-size:13px;
+
+letter-spacing:2px;
+
+text-transform:uppercase;
+
+color:#a89b7a;
+
+transition:.25s;
+
+}
+
+.back:hover{
+
+color:#e8d9b3;
+
+}
+
+.hero{
+
+padding:120px 20px 80px;
+
+text-align:center;
+
+}
+
+.eyebrow{
+
+font-size:18px;
+
+letter-spacing:6px;
+
+color:#a48c60;
+
+margin-bottom:20px;
+
+text-transform:uppercase;
+
+}
+
+h1{
+
+font-size:88px;
+
+font-weight:600;
+
+letter-spacing:2px;
+
+margin-bottom:24px;
+
+}
+
+.subtitle{
+
+max-width:700px;
+
+margin:auto;
+
+font-family:Inter,sans-serif;
+
+font-size:18px;
+
+color:#bfb5a2;
+
+line-height:1.8;
+
+}
+
+.article{
+
+max-width:680px;
+
+margin:100px auto 180px;
+
+padding:0 30px;
+
+font-size:28px;
+
+}
+
+.article p{
+  font-family:"Cormorant Garamond", serif;
+  font-size:28px;
+  line-height:2;
+  color:rgba(245,239,226,0.95);
+  margin-bottom:42px;
+}
+
+.dropcap::first-letter {
+  float: left;
+  font-size: 72px;
+  line-height: 0.8;
+  margin-right: 14px;
+  margin-top: 6px;
+  color: #d8c49a;
+}
+/* ===========================
+   Cornerstone Footer
+=========================== */
+
+.site-footer{
+    margin-top:120px;
+    padding:72px 24px 58px;
+    border-top:1px solid rgba(212,176,106,.18);
+    text-align:center;
+}
+
+.footer-brand{
+
+    font-family:"Cinzel", serif;
+
+    font-size:44px;
+
+    font-weight:500;
+
+    letter-spacing:.18em;
+
+    color:#D4B06A;
+
+    margin-bottom:10px;
+
+}
+
+.footer-tagline{
+    font-family:"Cormorant Garamond", serif;
+    font-style:italic;
+    font-size:18px;
+    color:#D8C8A8;
+    margin-bottom:32px;
+}
+
+.footer-studio{
+    font-family:Inter,sans-serif;
+    font-size:12px;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    color:rgba(245,239,226,.55);
+    margin-bottom:12px;
+}
+
+.footer-copyright{
+    font-family:Inter,sans-serif;
+    font-size:12px;
+    color:rgba(245,239,226,.35);
+}
+
+
+/* ===========================
+   Mobile Reading Layout
+=========================== */
+@media (max-width: 700px) {
+  html, body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .topbar {
+    height: auto;
+    min-height: 62px;
+    padding: 0 16px;
+    gap: 10px;
+  }
+
+  .logo {
+    min-width: 0;
+    white-space: nowrap;
+    font-size: 13px;
+    letter-spacing: 1.1px;
+    line-height: 1.2;
+  }
+
+  .back {
+    flex: 0 0 auto;
+    white-space: nowrap;
+    font-size: 10px;
+    letter-spacing: 1.1px;
+    line-height: 1.2;
+  }
+
+  .hero {
+    padding: 72px 18px 48px;
+  }
+
+  .eyebrow {
+    margin-bottom: 16px;
+    font-size: 13px;
+    letter-spacing: 4px;
+  }
+
+  h1 {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto 18px;
+    font-size: clamp(40px, 12vw, 54px);
+    line-height: 1.08;
+    letter-spacing: 1px;
+    overflow-wrap: break-word;
+    word-break: normal;
+  }
+
+  .subtitle {
+    max-width: 100%;
+    padding: 0 4px;
+    font-size: 16px;
+    line-height: 1.65;
+  }
+
+  .article {
+    width: 100%;
+    max-width: 100%;
+    margin: 48px auto 96px;
+    padding: 0 22px;
+    font-size: 22px;
+  }
+
+  .article p {
+    max-width: 100%;
+    font-size: 22px;
+    line-height: 1.78;
+    margin-bottom: 30px;
+  }
+
+  .dropcap::first-letter {
+    font-size: 58px;
+    line-height: .82;
+    margin-right: 10px;
+    margin-top: 5px;
+  }
+
+  .chapter-navigation {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    gap: 8px;
+    margin-top: 64px;
+    padding-top: 28px;
+  }
+
+  .chapter-navigation a {
+    min-width: 0;
+    font-size: 10px;
+    line-height: 1.4;
+    letter-spacing: 1.4px;
+  }
+
+  .chapter-navigation a:first-child { text-align: left; }
+  .chapter-navigation a:nth-child(2) { text-align: center; }
+  .chapter-navigation a:last-child { text-align: right; }
+
+  .site-footer {
+    margin-top: 72px;
+    padding: 54px 18px 40px;
+    overflow: hidden;
+  }
+
+  .footer-brand {
+    white-space: nowrap;
+    font-size: clamp(26px, 8vw, 32px);
+    letter-spacing: .12em;
+  }
+
+  .footer-tagline {
+    font-size: 16px;
+    margin-bottom: 28px;
+  }
+
+  .footer-studio,
+  .footer-copyright {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 390px) {
+  .topbar { padding: 0 12px; gap: 7px; }
+  .logo { font-size: 11.5px; letter-spacing: .9px; }
+  .back { font-size: 9px; letter-spacing: .9px; }
+  .hero { padding: 64px 16px 42px; }
+  h1 { font-size: clamp(38px, 11.5vw, 45px); }
+  .article { padding: 0 20px; }
+  .article p { font-size: 21px; line-height: 1.76; }
+  .chapter-navigation a { font-size: 9.5px; letter-spacing: 1.1px; }
+  .footer-brand { font-size: 27px; letter-spacing: .1em; }
+}
+
+/* Unified Cornerstone footer */
+.site-footer{margin-top:120px;padding:72px 24px 58px;border-top:1px solid rgba(212,176,106,.22);text-align:center;overflow:hidden}
+.footer-brand{font-family:"Cinzel",serif;font-size:44px;font-weight:500;letter-spacing:.14em;color:#D4B06A;margin:0 auto 10px;line-height:1.15;max-width:100%;white-space:nowrap}
+.footer-tagline{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:18px;color:#D8C8A8;margin-bottom:32px}
+.footer-studio{font-family:Inter,sans-serif;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:rgba(245,239,226,.55);margin-bottom:12px}
+.footer-copyright{font-family:Inter,sans-serif;font-size:12px;color:rgba(245,239,226,.35)}
+@media(max-width:700px){
+.site-footer{margin-top:72px;padding:50px 16px 40px}
+.footer-brand{font-size:clamp(23px,7.2vw,32px);letter-spacing:.08em;white-space:nowrap;overflow-wrap:normal;word-break:normal}
+.footer-tagline{font-size:16px;margin-bottom:26px}
+.footer-studio{font-size:11px;letter-spacing:.14em}
+.footer-copyright{font-size:11px;line-height:1.5}
+}
+
+</style>
+<style id="global-footer-unification">
+/* Final global footer override: keep every page visually identical. */
+.site-footer{
+  margin-top:120px !important;
+  padding:72px 24px 58px !important;
+  border-top:1px solid rgba(212,176,106,.22) !important;
+  text-align:center !important;
+  overflow:hidden !important;
+  box-sizing:border-box !important;
+}
+.footer-brand{
+  display:block !important;
+  font-family:"Cinzel",serif !important;
+  font-size:44px !important;
+  font-weight:500 !important;
+  letter-spacing:.10em !important;
+  line-height:1.12 !important;
+  color:#D4B06A !important;
+  width:auto !important;
+  max-width:100% !important;
+  margin:0 auto 10px !important;
+  padding:0 !important;
+  white-space:nowrap !important;
+  overflow-wrap:normal !important;
+  word-break:normal !important;
+  text-align:center !important;
+  box-sizing:border-box !important;
+}
+.footer-tagline{
+  font-family:"Cormorant Garamond",serif !important;
+  font-style:italic !important;
+  font-size:18px !important;
+  line-height:1.4 !important;
+  color:#D8C8A8 !important;
+  margin:0 auto 32px !important;
+}
+.footer-studio{
+  font-family:Inter,sans-serif !important;
+  font-size:12px !important;
+  line-height:1.5 !important;
+  letter-spacing:.18em !important;
+  text-transform:uppercase !important;
+  color:rgba(245,239,226,.55) !important;
+  margin:0 auto 12px !important;
+}
+.footer-copyright{
+  font-family:Inter,sans-serif !important;
+  font-size:12px !important;
+  line-height:1.5 !important;
+  color:rgba(245,239,226,.35) !important;
+  margin:0 auto !important;
+}
+@media (max-width:700px){
+  .site-footer{
+    margin-top:72px !important;
+    padding:48px 20px 38px !important;
+  }
+  .footer-brand{
+    font-size:clamp(22px,6.5vw,30px) !important;
+    letter-spacing:.06em !important;
+    line-height:1.12 !important;
+    max-width:calc(100% - 12px) !important;
+    margin:0 auto 12px !important;
+  }
+  .footer-tagline{font-size:16px !important;margin-bottom:26px !important;}
+  .footer-studio{font-size:11px !important;letter-spacing:.14em !important;margin-bottom:12px !important;}
+  .footer-copyright{font-size:11px !important;line-height:1.5 !important;}
+}
+@media (max-width:380px){
+  .site-footer{padding-left:16px !important;padding-right:16px !important;}
+  .footer-brand{font-size:21px !important;letter-spacing:.045em !important;max-width:100% !important;}
+}
+</style>
+</head>
+<body>
+<header class="topbar">
+<div class="logo"><a href="../../../../index.html" style="color:inherit;text-decoration:none">ECHOES OF THE KINGDOM</a></div>
+<a class="back" href="../index.html">← Back to Part II</a>
+</header>
+<section class="hero">
+<div class="eyebrow">CHAPTER 12</div>
+<h1>The Long Road</h1>
+</section>
+<main class="article"><p class="dropcap">Dawn had only begun to pale the sky when Seren woke. A thin mist lay over the shore, softening the line between sea and land, while the tide moved quietly against the rocks. Somewhere beyond the houses, seabirds called to one another in clear, lonely notes.</p><p>Wayne’s wife was already at work in the yard. A pot of soup simmered over the stove. Beside it lay several freshly baked flatbreads and a small bundle wrapped in coarse cloth.</p><p>She looked up when Seren came outside.</p><p>“Awake?”</p><p>“Aye.”</p><p>“Did you sleep well?”</p><p>Seren nodded. “I did.”</p><p>The old woman filled a wooden bowl and set it before her. “Drink while it’s hot. You’ve a long road ahead.”</p><p>Seren looked down at the steam rising from the fish soup and felt an unexpected tightness in her throat. She had stayed in this house only two nights, yet the old couple had treated her less like a passing stranger than a child who had returned from somewhere far away.</p><p>When breakfast was finished, Wayne’s wife pressed the cloth bundle into her hands.</p><p>“There’s bread inside, and some dried fish. Don’t save it so carefully that you go hungry.”</p><p>“You’ve already done too much for me,” Seren protested. “I can’t take more.”</p><p>But the old woman pushed the bundle gently against her chest. “The road is long. Take it. Someday you’ll meet another traveler who needs food. Give something to them then.”</p><p>Seren stopped resisting. She held the bundle with both hands and nodded. “Thank you.”</p><p>The gate creaked open. Wayne came through with his tools over one shoulder, already prepared for another day’s work. Someone in the village had asked him to help repair a boat. He wore the same mild expression Seren remembered from the first time she had seen him, as though yesterday’s labor and last night’s silence belonged to life in equal measure and neither gave him reason to greet the morning with bitterness.</p><p>“Ready to go?” he asked.</p><p>“Aye.”</p><p>“Don’t hurry yourself. The road won’t run away.”</p><p>Seren smiled. “All right.”</p><p>He handed her a leather waterskin, filled and tied shut. “There are stretches of coast ahead with no village nearby. Water matters more than food there.”</p><p>She accepted it carefully. For a moment she did not know what to say.</p><p>“Grandfather Wayne... I hope I see you again someday.”</p><p>Wayne smiled. “You will. A life has a great many roads in it. Keep walking long enough, and some of them cross twice.”</p><p>He spoke lightly, but the words seemed to belong to more than roads.</p><p>Wayne’s wife walked with Seren as far as the edge of the village. The wind lifted strands of her gray hair as she raised a hand in farewell.</p><p>“Take care of yourself.”</p><p>“I will.”</p><p>Seren turned for one last look at White Bay. Morning smoke was rising above the roofs. The house they had repaired the day before showed fresh pale timber in the early light. Beyond it, several fishing boats were already moving out from the harbor.</p><p>Wayne would spend the day helping someone with a boat. His wife would spread fish beneath the sun. Their son would go back to sea as he had done before. Nothing Seren had witnessed yesterday had stopped the village from waking or the tide from returning. Life had simply continued around the things people could not mend.</p><p>She drew a breath filled with salt, turned south, and walked on.</p><div class="divider">❦</div><p class="dropcap">On the first day the road still followed the sea.</p><p>The waves remained beside her like a familiar companion, sometimes near enough to throw spray across the stones, sometimes far below the path. Seren did not hurry. Now and then she stopped to watch the water rise and fold beneath the light. Once she crouched to pick up a small stone polished smooth by the tide, turned it over in her palm, then set it back where she had found it.</p><p>The sun climbed and descended.</p><p>Toward evening she found shelter behind a broad outcrop of rock and built a small fire where the wind could not reach it easily. It was the first night she had spent entirely alone.</p><p>The wind was stronger here than it had been in White Bay. She woke twice after darkness settled: once when branches scraped and shook above her, and once when a wolf howled somewhere beyond the ridge.</p><p>Seren drew her cloak tighter and looked up at the stars.</p><p>The road won’t run away.</p><p>Wayne’s words returned so clearly that she smiled into the dark. The fear did not vanish, but it loosened its hold. There was no need to defeat the whole road tonight. She only had to sleep, wake, and take the next part of it in the morning.</p><p>The second day became the third, and the third became the fourth.</p><p>The coast slowly changed. Long stretches of white sand gave way to black rocks and broken cliffs. Paths climbed above narrow coves, then descended again between slopes where wind-bent grass grew in thick patches. Seren began to meet more travelers: merchants carrying bundles on their backs, shepherds moving small flocks along the road, and men and women traveling together toward places whose names meant nothing to her.</p><p>Some greeted her. Some merely passed.</p><p>With every mile, the world seemed to widen.</p><p>On the sixth day rain came.</p><p>At first it was no more than a fine veil over the sea, so light that each drop vanished the moment it touched the gray water. By midday the wind had risen, and rain struck Seren’s cloak in quick, cold taps.</p><p>She pulled the fabric close and continued along the shore.</p><p>Nothing here resembled White Bay now. There was no soft sand beneath her boots, only slick stones washed smooth by years of tide. Waves broke against the cliff and threw white spray high into the air. Seren moved carefully, testing every foothold before trusting her weight to it.</p><p>By dusk she found an abandoned stone hut beneath the cliff. One corner of the roof had fallen in, but the remaining walls held back most of the wind and rain. She gathered what dry twigs she could find and coaxed a small fire into life.</p><p>Warm light trembled across the old stone.</p><p>Outside, the rain went on.</p><p>Seren sat with her back against the wall and broke one of the flatbreads Wayne’s wife had given her. She ate half and wrapped the rest again for morning.</p><p>Watching the fire, she thought of White Bay. At this hour the old woman would probably be setting fish soup on the table. Wayne might be in the yard cleaning his tools. His son might have just returned from the sea.</p><p>Seren did not follow the thought any farther. She pushed a blackening branch deeper into the fire, and the flame brightened.</p><div class="divider">❦</div><p class="dropcap">By the ninth day the rain had passed.</p><p>The air smelled of wet grass, and even the sea wind had lost some of its cold edge. Wheel ruts began to appear beside the road. Caravans passed more often now, their wagons heavy with goods and their drivers intent on the distance ahead.</p><p>Seren noticed something she had not expected. There were more people on the road, yet fewer of them stopped to speak. Everyone seemed to have business waiting somewhere: a market to reach, a village to supply, a family to return to, a promise to keep.</p><p>Only Seren still had no answer when she asked herself where she was going.</p><p>Strangely, the uncertainty no longer frightened her as it once had. She walked because the quiet direction within her had not changed. For now, that was enough.</p><div class="divider">❦</div><p class="dropcap">On the twelfth day she stopped beside a clear stream at noon.</p><p>Sunlight filtered through the leaves and broke into small pieces across the water. On the opposite bank, a father knelt beside a child of seven or eight, teaching him how to repair a little wooden fish trap.</p><p>The boy could not tie the knot correctly. Each time the cord slipped loose, the father patiently untied it and showed him again. He did not scold or seize the work from the child’s hands. He simply repeated the motion until, at last, the knot held.</p><p>The boy’s face lit with triumph. His father laughed and ruffled his hair.</p><p>Seren watched from across the stream.</p><p>For a moment she saw Wayne as he might have been many years before. Had he once crouched beside his own son in just that way? Had there been a time when words between them had come easily, before whatever had happened between them became too heavy to name?</p><p>The thought stayed only briefly. The wind moved across the water, and Seren let it pass.</p><p>She knelt, washed her face with cold water, and continued on.</p><p>After that she began to understand that she had changed in one small way. She watched people more carefully now—not from curiosity alone, but because each face made her wonder what remained unseen behind it.</p><p>Once, she had believed that what a person showed the world was nearly the whole of them. Now every stranger seemed like a book still closed in her hands. A smile, a silence, a worn coat, a hurried step—these were no more than the first page.</p><div class="divider">❦</div><p class="dropcap">By the fifteenth day the sea had begun to fall away behind the hills.</p><p>The path crossed long slopes covered in tall grass. Wind ran through them in broad waves, making the hills seem almost like another sea.</p><p>Seren no longer knew how far she had traveled. Each morning she rose with the sun, and each evening she found a place to rest. Along the way she learned things no one had ever taught her at home: which wild berries could be eaten, which streams were safe to drink from, which wood burned longest, which caves kept out the wind and which only gathered cold air.</p><p>None of it had seemed important before she left. Now each small piece of knowledge belonged to the road.</p><p>That evening she sat on a hillside and watched the sun sink beyond the land. The breeze against her face was soft and, for no reason she could explain, familiar.</p><p>Home came back to her all at once.</p><p>She remembered evenings from childhood: her mother preparing supper, her father sitting near the door repairing some broken household thing, smoke rising above the roof, lamps beginning to glow as daylight faded. At the time she had never thought such moments worth remembering. They had simply been life.</p><p>Now they returned with a clarity that hurt.</p><p>She wanted to go home.</p><p>Not because she was afraid, and not because the road had become too difficult. She wanted to see whether the tree still stood where it always had. She wanted to know whether the path before the house had changed, whether old Eden still sat in his usual place, whether her mother was moving about the kitchen at that very moment.</p><p>Seren wrapped her arms around her knees and watched the sky darken.</p><p>If she turned around now, she thought, she could still go back. It would take many days, but the road behind her existed. Nothing prevented her from walking it.</p><p>The thought remained for a long while.</p><p>At last she lowered her head and placed a small stone back into the earth beside her boot. Then she rose, settled the pack on her shoulders, and continued forward.</p><p>No voice told her to do it. No dream commanded her. She could not have explained why she did not turn back. She only knew that the quiet direction she had followed from the beginning still lay ahead.</p><p>As the days passed, she came to understand something else: leaving home did not make the longing for it disappear. Sometimes distance sharpened it. Familiar meals, familiar laughter, ordinary rooms and paths—things she had once scarcely noticed—became precious because she could no longer reach out and touch them.</p><p>She did not fight the longing. Neither did she allow it to stop her.</p><p>She carried home with her.</p><p>The first star appeared as night settled over the hills. Seren looked up and wondered whether growing older meant not that a person ceased to miss home, but that they learned to walk toward what they could not yet see while still carrying what they loved behind them.</p><div class="divider">❦</div><p class="dropcap">On the twentieth day the path finally turned away from the coast.</p><p>Rolling hills rose ahead. The wind remained strong, but there was no salt in it now.</p><p>Seren stopped and looked back. The sea had become a thin blue line in the distance. White Bay was long gone from sight.</p><p>When she had first left, she had imagined that no matter how far she walked, home would somehow remain close behind her. Only now did she understand what distance truly was. A person could indeed place one foot before another until everything familiar had vanished.</p><p>She smiled faintly and went on.</p><p>Near midday she climbed a long ridge. At the top, her steps slowed.</p><p>The world on the other side was different.</p><p>Instead of scattered fishing villages and isolated paths, a broad plain stretched toward the horizon. Several wide roads crossed it from different directions, joining and dividing like rivers. Wagons rolled along them in slow lines. Caravans raised pale trails of dust. Riders passed at speed. Great carts laden with goods moved among people dressed in clothes Seren had never seen before.</p><p>No one here seemed to know everyone else. People walked quickly, each carrying some destination in mind.</p><p>Seren stood on the ridge while the wind pulled at her cloak.</p><p>For the first time, she felt that she had truly stepped beyond the world she knew.</p><p>No one below knew her name. She knew none of theirs.</p><p>Yet she was not afraid.</p><p>She thought of Wayne and his wife, of the quiet supper table in White Bay, and then of her own home. Those places had fallen behind her, but distance had not removed them from her heart.</p><p>Seren drew a slow breath, adjusted the pack on her shoulders, and started down the hill.</p><p>The wind came from behind her and went on ahead.</p><p>She did not know whom she would meet next. She did not know where she would sleep tomorrow, or what place would eventually become her destination.</p><p>She only continued as she had for twenty days: one step, then another.</p><p>The great road swallowed her small figure into its flow, and before her the wider world opened at last.</p><div class="chapter-navigation"><a href="../chapter-11/index.html">← Previous</a><a href="../index.html">Part II Contents</a><a href="../chapter-13/index.html">Next →</a></div></main>
+<footer class="site-footer">
+<div class="footer-brand">Cornerstone</div>
+<div class="footer-tagline">Building stories that endure.</div>
+<div class="footer-studio">Created by Echoes Studio</div>
+<div class="footer-copyright">© 2026 Michael He. All Rights Reserved.</div>
+</footer>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const article = document.querySelector(".article");
+
+    if (!article) {
+        return;
+    }
+
+    const paragraphs = article.querySelectorAll("p");
+
+    paragraphs.forEach(function (paragraph) {
+        const text = paragraph.textContent.trim();
+
+        if (!text) {
+            return;
+        }
+
+        // 自动识别场景分隔符
+        if (text === "***" || text === "* * *") {
+            const divider = document.createElement("div");
+            divider.className = "divider";
+            divider.textContent = "❦";
+            paragraph.replaceWith(divider);
+            return;
+        }
+
+        // 自动识别以引号或长破折号开头的对白
+        const isDialogue =
+            text.startsWith('"') ||
+            text.startsWith("“") ||
+            text.startsWith("‘") ||
+            text.startsWith("'") ||
+            text.startsWith("—");
+
+        if (isDialogue) {
+            paragraph.classList.add("dialogue");
+        }
+    });
+});
+</script>
+<!-- GoatCounter: privacy-friendly page analytics -->
+<script async="" data-goatcounter="https://echoeskingdom.goatcounter.com/count" src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
