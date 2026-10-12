@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Chapter 16: The Summons | Echoes of the Kingdom</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&amp;family=Inter:wght@300;400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<style>
+.chapter-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  width: 100%;
+  margin-top: 100px;
+  padding-top: 40px;
+  border-top: 1px solid rgba(212, 184, 120, 0.18);
+}
+
+.chapter-navigation a {
+  color: #d8c49a;
+  font-family: Inter, sans-serif;
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+
+background:#070809;
+
+color:#ece2cf;
+
+font-family:"Cormorant Garamond",serif;
+
+line-height:1.9;
+
+}
+
+a{
+
+text-decoration:none;
+
+color:inherit;
+
+}
+
+.topbar{
+
+position:sticky;
+
+top:0;
+
+z-index:100;
+
+height:72px;
+
+background:rgba(7,8,9,.92);
+
+backdrop-filter:blur(10px);
+
+border-bottom:1px solid rgba(212,184,120,.12);
+
+display:flex;
+
+align-items:center;
+
+justify-content:space-between;
+
+padding:0 60px;
+
+}
+
+.logo{
+
+font-size:20px;
+
+letter-spacing:2px;
+
+color:#d8c08b;
+
+}
+
+.back{
+
+font-family:Inter,sans-serif;
+
+font-size:13px;
+
+letter-spacing:2px;
+
+text-transform:uppercase;
+
+color:#a89b7a;
+
+transition:.25s;
+
+}
+
+.back:hover{
+
+color:#e8d9b3;
+
+}
+
+.hero{
+
+padding:120px 20px 80px;
+
+text-align:center;
+
+}
+
+.eyebrow{
+
+font-size:18px;
+
+letter-spacing:6px;
+
+color:#a48c60;
+
+margin-bottom:20px;
+
+text-transform:uppercase;
+
+}
+
+h1{
+
+font-size:88px;
+
+font-weight:600;
+
+letter-spacing:2px;
+
+margin-bottom:24px;
+
+}
+
+.subtitle{
+
+max-width:700px;
+
+margin:auto;
+
+font-family:Inter,sans-serif;
+
+font-size:18px;
+
+color:#bfb5a2;
+
+line-height:1.8;
+
+}
+
+.article{
+
+max-width:680px;
+
+margin:100px auto 180px;
+
+padding:0 30px;
+
+font-size:28px;
+
+}
+
+.article p{
+  font-family:"Cormorant Garamond", serif;
+  font-size:28px;
+  line-height:2;
+  color:rgba(245,239,226,0.95);
+  margin-bottom:42px;
+}
+
+.dropcap::first-letter {
+  float: left;
+  font-size: 72px;
+  line-height: 0.8;
+  margin-right: 14px;
+  margin-top: 6px;
+  color: #d8c49a;
+}
+/* ===========================
+   Cornerstone Footer
+=========================== */
+
+.site-footer{
+    margin-top:120px;
+    padding:72px 24px 58px;
+    border-top:1px solid rgba(212,176,106,.18);
+    text-align:center;
+}
+
+.footer-brand{
+
+    font-family:"Cinzel", serif;
+
+    font-size:44px;
+
+    font-weight:500;
+
+    letter-spacing:.18em;
+
+    color:#D4B06A;
+
+    margin-bottom:10px;
+
+}
+
+.footer-tagline{
+    font-family:"Cormorant Garamond", serif;
+    font-style:italic;
+    font-size:18px;
+    color:#D8C8A8;
+    margin-bottom:32px;
+}
+
+.footer-studio{
+    font-family:Inter,sans-serif;
+    font-size:12px;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    color:rgba(245,239,226,.55);
+    margin-bottom:12px;
+}
+
+.footer-copyright{
+    font-family:Inter,sans-serif;
+    font-size:12px;
+    color:rgba(245,239,226,.35);
+}
+
+
+/* ===========================
+   Mobile Reading Layout
+=========================== */
+@media (max-width: 700px) {
+  html, body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .topbar {
+    height: auto;
+    min-height: 62px;
+    padding: 0 16px;
+    gap: 10px;
+  }
+
+  .logo {
+    min-width: 0;
+    white-space: nowrap;
+    font-size: 13px;
+    letter-spacing: 1.1px;
+    line-height: 1.2;
+  }
+
+  .back {
+    flex: 0 0 auto;
+    white-space: nowrap;
+    font-size: 10px;
+    letter-spacing: 1.1px;
+    line-height: 1.2;
+  }
+
+  .hero {
+    padding: 72px 18px 48px;
+  }
+
+  .eyebrow {
+    margin-bottom: 16px;
+    font-size: 13px;
+    letter-spacing: 4px;
+  }
+
+  h1 {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto 18px;
+    font-size: clamp(40px, 12vw, 54px);
+    line-height: 1.08;
+    letter-spacing: 1px;
+    overflow-wrap: break-word;
+    word-break: normal;
+  }
+
+  .subtitle {
+    max-width: 100%;
+    padding: 0 4px;
+    font-size: 16px;
+    line-height: 1.65;
+  }
+
+  .article {
+    width: 100%;
+    max-width: 100%;
+    margin: 48px auto 96px;
+    padding: 0 22px;
+    font-size: 22px;
+  }
+
+  .article p {
+    max-width: 100%;
+    font-size: 22px;
+    line-height: 1.78;
+    margin-bottom: 30px;
+  }
+
+  .dropcap::first-letter {
+    font-size: 58px;
+    line-height: .82;
+    margin-right: 10px;
+    margin-top: 5px;
+  }
+
+  .chapter-navigation {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    gap: 8px;
+    margin-top: 64px;
+    padding-top: 28px;
+  }
+
+  .chapter-navigation a {
+    min-width: 0;
+    font-size: 10px;
+    line-height: 1.4;
+    letter-spacing: 1.4px;
+  }
+
+  .chapter-navigation a:first-child { text-align: left; }
+  .chapter-navigation a:nth-child(2) { text-align: center; }
+  .chapter-navigation a:last-child { text-align: right; }
+
+  .site-footer {
+    margin-top: 72px;
+    padding: 54px 18px 40px;
+    overflow: hidden;
+  }
+
+  .footer-brand {
+    white-space: nowrap;
+    font-size: clamp(26px, 8vw, 32px);
+    letter-spacing: .12em;
+  }
+
+  .footer-tagline {
+    font-size: 16px;
+    margin-bottom: 28px;
+  }
+
+  .footer-studio,
+  .footer-copyright {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 390px) {
+  .topbar { padding: 0 12px; gap: 7px; }
+  .logo { font-size: 11.5px; letter-spacing: .9px; }
+  .back { font-size: 9px; letter-spacing: .9px; }
+  .hero { padding: 64px 16px 42px; }
+  h1 { font-size: clamp(38px, 11.5vw, 45px); }
+  .article { padding: 0 20px; }
+  .article p { font-size: 21px; line-height: 1.76; }
+  .chapter-navigation a { font-size: 9.5px; letter-spacing: 1.1px; }
+  .footer-brand { font-size: 27px; letter-spacing: .1em; }
+}
+
+/* Unified Cornerstone footer */
+.site-footer{margin-top:120px;padding:72px 24px 58px;border-top:1px solid rgba(212,176,106,.22);text-align:center;overflow:hidden}
+.footer-brand{font-family:"Cinzel",serif;font-size:44px;font-weight:500;letter-spacing:.14em;color:#D4B06A;margin:0 auto 10px;line-height:1.15;max-width:100%;white-space:nowrap}
+.footer-tagline{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:18px;color:#D8C8A8;margin-bottom:32px}
+.footer-studio{font-family:Inter,sans-serif;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:rgba(245,239,226,.55);margin-bottom:12px}
+.footer-copyright{font-family:Inter,sans-serif;font-size:12px;color:rgba(245,239,226,.35)}
+@media(max-width:700px){
+.site-footer{margin-top:72px;padding:50px 16px 40px}
+.footer-brand{font-size:clamp(23px,7.2vw,32px);letter-spacing:.08em;white-space:nowrap;overflow-wrap:normal;word-break:normal}
+.footer-tagline{font-size:16px;margin-bottom:26px}
+.footer-studio{font-size:11px;letter-spacing:.14em}
+.footer-copyright{font-size:11px;line-height:1.5}
+}
+
+</style>
+<style id="global-footer-unification">
+/* Final global footer override: keep every page visually identical. */
+.site-footer{
+  margin-top:120px !important;
+  padding:72px 24px 58px !important;
+  border-top:1px solid rgba(212,176,106,.22) !important;
+  text-align:center !important;
+  overflow:hidden !important;
+  box-sizing:border-box !important;
+}
+.footer-brand{
+  display:block !important;
+  font-family:"Cinzel",serif !important;
+  font-size:44px !important;
+  font-weight:500 !important;
+  letter-spacing:.10em !important;
+  line-height:1.12 !important;
+  color:#D4B06A !important;
+  width:auto !important;
+  max-width:100% !important;
+  margin:0 auto 10px !important;
+  padding:0 !important;
+  white-space:nowrap !important;
+  overflow-wrap:normal !important;
+  word-break:normal !important;
+  text-align:center !important;
+  box-sizing:border-box !important;
+}
+.footer-tagline{
+  font-family:"Cormorant Garamond",serif !important;
+  font-style:italic !important;
+  font-size:18px !important;
+  line-height:1.4 !important;
+  color:#D8C8A8 !important;
+  margin:0 auto 32px !important;
+}
+.footer-studio{
+  font-family:Inter,sans-serif !important;
+  font-size:12px !important;
+  line-height:1.5 !important;
+  letter-spacing:.18em !important;
+  text-transform:uppercase !important;
+  color:rgba(245,239,226,.55) !important;
+  margin:0 auto 12px !important;
+}
+.footer-copyright{
+  font-family:Inter,sans-serif !important;
+  font-size:12px !important;
+  line-height:1.5 !important;
+  color:rgba(245,239,226,.35) !important;
+  margin:0 auto !important;
+}
+@media (max-width:700px){
+  .site-footer{
+    margin-top:72px !important;
+    padding:48px 20px 38px !important;
+  }
+  .footer-brand{
+    font-size:clamp(22px,6.5vw,30px) !important;
+    letter-spacing:.06em !important;
+    line-height:1.12 !important;
+    max-width:calc(100% - 12px) !important;
+    margin:0 auto 12px !important;
+  }
+  .footer-tagline{font-size:16px !important;margin-bottom:26px !important;}
+  .footer-studio{font-size:11px !important;letter-spacing:.14em !important;margin-bottom:12px !important;}
+  .footer-copyright{font-size:11px !important;line-height:1.5 !important;}
+}
+@media (max-width:380px){
+  .site-footer{padding-left:16px !important;padding-right:16px !important;}
+  .footer-brand{font-size:21px !important;letter-spacing:.045em !important;max-width:100% !important;}
+}
+</style>
+</head>
+<body>
+<header class="topbar">
+<div class="logo"><a href="../../../../index.html" style="color:inherit;text-decoration:none">ECHOES OF THE KINGDOM</a></div>
+<a class="back" href="../index.html">← Back to Part II</a>
+</header>
+<section class="hero">
+<div class="eyebrow">CHAPTER 16</div>
+<h1>The Summons</h1>
+</section>
+<main class="article"><p class="dropcap">The old man stood gazing at the iron door that had closed before them. Silence had settled over the stone passage once more, broken only by the occasional crackle of the oil lamps along the walls. Seren did not press him to speak. She remained beside him, waiting until he was ready to continue.</p><p>“Two years ago, he wasn't living down there,” the old man said at last.</p><p>He lifted his eyes toward the upper floors, as though he could still see the halls and chambers of those earlier days through the heavy stone above them.</p><p>“Back then, he spent his days carrying stacks of account books from one hall to another. Sometimes he scarcely stopped from morning until night. Yet no matter how busy he was, everyone seemed to find some reason to seek him out.”</p><p>“Why was that?” Seren asked.</p><p>The old man considered the question before answering: “Because his word meant something. If he promised to finish a matter that day, he wouldn't leave it until the next. He could make sense of accounts that left other men scratching their heads. When merchants quarreled over a shipment, he had a way of settling matters that both sides could accept. If the docks were crowded with cargo, he knew which vessel ought to be unloaded first. Even the gentlemen upstairs often entrusted their affairs to him.” A faint smile touched his face, “We used to say that as long as he was here, this whole place could never fall into disorder.”</p><p>Seren looked again toward the iron door. She found it difficult to reconcile the man the old keeper described with the quiet young prisoner she had seen carrying a wooden bucket and sweeping the floor.</p><p>“He wasn't born in Rivergate,” the old man continued. “The master brought him here many years ago, when he was still a boy. He took a liking to him, and as the years passed, entrusted him with more and more responsibility. Before he was twenty-five, the lad was already overseeing a considerable portion of the master's holdings.”</p><p>The old man paused, his thoughts wandering back through the years. “When I first met him, he wasn't much older than you are now. Most of the scribes working here were older than he was, yet none of them begrudged him his position. He never put on airs. Whoever he met, he'd ask how their day was going. If he saw men struggling with a load, he'd lend a hand. If the scribes were overwhelmed, he'd sit down beside them and help with the writing.”</p><p>He shook his head with a quiet chuckle. “I remember one night when I was on duty. Rain was coming down hard, and some wooden crates had begun taking in water. I was trying to move them, but they were too heavy for me alone. Before I knew it, there he was, sleeves rolled up, helping me carry them. I laughed and told him, ‘Sir, this isn't work you ought to be doing.’”</p><p>The old man's smile lingered as he looked toward the door. “And do you know what he said? ‘Someone has to do it.’”</p><p>For a while, neither of them spoke.</p><p>The smile slowly faded from the old man's face, and when he finally resumed, his voice had grown quieter. “Then things began to change. That lady started taking an interest in him.”</p><p>He said nothing more about her. Instead, he gathered the keys into his hand, and their faint metallic clinking sounded unusually clear in the stillness of the passage.</p><p>“After that,” he murmured, looking down at them, “a great many things could never be as they had been.”</p><p>Seren waited, but the old man seemed unwilling to go any further. He finished wiping the last of his keys and fastened the ring to his belt.</p><p>“Well, you'd best get some rest,” he said, recovering a little of his earlier good humor. “Once they've cleared everything up tomorrow, you'll be free to go. Truth be told, there was hardly any need for you to be brought here in the first place.”</p><p>He gave a small laugh, and Seren nodded.</p><p>She was about to close the door when hurried footsteps sounded overhead.</p><p>There were several people running, their boots striking the stone floor as they passed through the main hall and continued toward the eastern corridor. Then someone shouted from above.</p><p>“Hurry! They've arrived!”</p><p>The footsteps receded, and silence returned to the passage.</p><p>Seren glanced at the old man, who had also raised his head to listen. A slight frown crossed his brow.</p><p>“Strange business today,” he muttered. “They haven't had a moment's peace upstairs.”</p><p>“Has something happened?” Seren asked.</p><p>“I couldn't tell you. Those matters aren't our concern.”</p><p>He patted the ring of keys at his waist and gave her a rueful smile.</p><p>“I've spent my life learning how to keep an eye on the people down here. As for the important gentlemen upstairs, well, whatever business they have is no business of mine.”</p><p>He had scarcely finished speaking when a young city guard came hurrying along the passage from the opposite end, nearly colliding with him.</p><p>“Evan! The bailiff wants you.”</p><p>The old man looked up in surprise. “Me?”</p><p>“Aye.” The guard was still catching his breath. “It's about the young man downstairs. You're to get him ready.”</p><p>Evan stared at him. “Ready for what?”</p><p>“I don't know. The order's just come down from above. He's to wash, put on some decent clothes, and be prepared. Someone will come for him in an hour and take him upstairs.”</p><p>With that, the guard hurried away as quickly as he had come.</p><p>Evan remained where he stood, the keys hanging forgotten at his side. For several moments he seemed unable to move. Then, slowly, a smile spread across his face.</p><p>There was surprise in it, certainly, but also something that resembled the relief of a man who had waited a long time for news he had scarcely dared to expect.</p><p>He drew a quiet breath. “I knew it,” he murmured, half to himself and half to Seren. “A man like him was never meant to remain down there forever.”</p><p>Without explaining further, he turned and made for the iron door. At the threshold, however, he stopped and looked back.</p><p>“Get some rest tonight, young lady. By tomorrow, I doubt you'll see him here again.”</p><p>He unlocked the door and disappeared into the stairwell, carrying his lamp before him. Its yellow light descended gradually into the darkness until the passage was left dim once more.</p><p>Seren remained where she was.</p><p>She knew nothing of the commotion upstairs, nor could she understand why a man who had spent two years below ground should suddenly be summoned into the upper halls. Yet something about the news had stirred an unfamiliar feeling within her.</p><p>It was neither curiosity nor concern. Rather, it was a quietness she could not explain, as though something long awaited had begun to unfold without anyone announcing its arrival.</p><p>From beyond the iron door came the murmur of voices. She could not distinguish their words until she heard Evan speak with unmistakable warmth.</p><p>“Come along, lad. Put these clothes on.”</p><p>A younger voice answered him.</p><p>“Very well.”</p><p>The reply was calm, almost ordinary. There was no surprise in it, no excitement, as though the young man had merely been asked to attend to some small duty of the day.</p><p>Before long, the iron door opened again.</p><p>Evan emerged first, holding the oil lamp high enough to light the steps behind him. Its glow rose from the underground stairwell, sending restless shadows across the walls. Footsteps followed, unhurried and measured, until the young man himself came into view.</p><p>For the first time, Seren could see him clearly.</p><p>He was younger than she had imagined, perhaps twenty-six or twenty-seven years of age. He was tall and slender without appearing frail, and his former garment of coarse gray cloth had been replaced by a dark blue robe. The robe was old, but it had been washed and arranged with care.</p><p>He carried no sword, nor did he wear any ornament that might suggest rank or privilege. Had Seren encountered him elsewhere, she would never have guessed that he had spent the last two years confined beneath this building.</p><p>He reached the final step and raised his head.</p><p>The lamplight fell across his face, revealing features that still retained their youth. His eyes were composed, and although the years had left no sign of age upon him, there was a steadiness in his expression that seemed uncommon in one so young.</p><p>It was not the stillness of someone crushed into submission, nor the indifference of a man who had ceased to care. It reminded Seren instead of water after a great storm, when the waves had passed and the surface had settled once more.</p><p>As she looked at him, something stirred within her. The feeling of familiarity she had experienced earlier returned, clearer now than before. She was certain she had never met him. There could be no mistake about that. Yet in that brief moment, the man standing before her did not seem entirely a stranger. She could not account for the thought, and almost immediately dismissed it.</p><p>No. It must be my imagination.</p><p>At that moment, the young man turned his eyes toward her.</p><p>His gaze rested upon her for no more than an instant. There was neither suspicion nor undue curiosity in it, and nothing that made her uncomfortable. He simply looked at her, as though acknowledging something he could not quite name, or perhaps acknowledging nothing at all.</p><p>Then he inclined his head in a small, courteous greeting.</p><p>It was an ordinary gesture, one she might have received from any stranger passing through a hall. Yet the strange familiarity returned again.</p><p>What unsettled her most was not his appearance, but the absence of anything she had expected to find in his expression.</p><p>A man being brought out of confinement after two years might reasonably have shown excitement, apprehension, or at least some eagerness to learn what awaited him. This young man showed none of those things. He seemed neither anxious to prove himself nor impatient to leave the place where he had been kept.</p><p>It was almost as though being summoned upstairs or remaining below could make no difference to whatever lay at the center of his being.</p><p>Seren found herself watching him longer than she intended.</p><p>His composure was unlike anything she had seen in someone of his age. Indeed, there was something about it that seemed to belong to a place far beyond the reach of these stone walls, like a river flowing silently through distant country, undisturbed by all that happened along its banks.</p><p>She did not understand the feeling, but as she stood there, the uneasiness within her gradually subsided.</p><p>Evan stepped closer to the young man and straightened the collar of his robe. He brushed a little dust from one shoulder, then smiled.</p><p>“Off you go. Best not keep the people upstairs waiting.”</p><p>“Thank you,” the young man replied quietly.</p><p>He turned and began walking toward the far end of the passage.</p><p>When he passed Seren, he did not stop. The fabric of his robe stirred faintly as he went by, and his footsteps continued at the same measured pace. Soon he had disappeared into the corridor leading to the upper floors.</p><p>The stone passage fell silent once more.</p><p>Seren remained where she stood, gazing toward the empty corridor long after he had gone.</p><div class="chapter-navigation"><a href="../chapter-15/index.html">← Previous</a><a href="../index.html">Part II Contents</a><a href="../../index.html">Book One</a><a href="../chapter-17/index.html">Next →</a></div></main>
+<footer class="site-footer">
+<div class="footer-brand">Cornerstone</div>
+<div class="footer-tagline">Building stories that endure.</div>
+<div class="footer-studio">Created by Echoes Studio</div>
+<div class="footer-copyright">© 2026 Michael He. All Rights Reserved.</div>
+</footer>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const article = document.querySelector(".article");
+
+    if (!article) {
+        return;
+    }
+
+    const paragraphs = article.querySelectorAll("p");
+
+    paragraphs.forEach(function (paragraph) {
+        const text = paragraph.textContent.trim();
+
+        if (!text) {
+            return;
+        }
+
+        // 自动识别场景分隔符
+        if (text === "***" || text === "* * *") {
+            const divider = document.createElement("div");
+            divider.className = "divider";
+            divider.textContent = "❦";
+            paragraph.replaceWith(divider);
+            return;
+        }
+
+        // 自动识别以引号或长破折号开头的对白
+        const isDialogue =
+            text.startsWith('"') ||
+            text.startsWith("“") ||
+            text.startsWith("‘") ||
+            text.startsWith("'") ||
+            text.startsWith("—");
+
+        if (isDialogue) {
+            paragraph.classList.add("dialogue");
+        }
+    });
+});
+</script>
+<!-- GoatCounter: privacy-friendly page analytics -->
+<script async="" data-goatcounter="https://echoeskingdom.goatcounter.com/count" src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Chapter 20: Bread in the Square | Echoes of the Kingdom</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&amp;family=Inter:wght@300;400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<style>
+.chapter-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  width: 100%;
+  margin-top: 100px;
+  padding-top: 40px;
+  border-top: 1px solid rgba(212, 184, 120, 0.18);
+}
+
+.chapter-navigation a {
+  color: #d8c49a;
+  font-family: Inter, sans-serif;
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+
+background:#070809;
+
+color:#ece2cf;
+
+font-family:"Cormorant Garamond",serif;
+
+line-height:1.9;
+
+}
+
+a{
+
+text-decoration:none;
+
+color:inherit;
+
+}
+
+.topbar{
+
+position:sticky;
+
+top:0;
+
+z-index:100;
+
+height:72px;
+
+background:rgba(7,8,9,.92);
+
+backdrop-filter:blur(10px);
+
+border-bottom:1px solid rgba(212,184,120,.12);
+
+display:flex;
+
+align-items:center;
+
+justify-content:space-between;
+
+padding:0 60px;
+
+}
+
+.logo{
+
+font-size:20px;
+
+letter-spacing:2px;
+
+color:#d8c08b;
+
+}
+
+.back{
+
+font-family:Inter,sans-serif;
+
+font-size:13px;
+
+letter-spacing:2px;
+
+text-transform:uppercase;
+
+color:#a89b7a;
+
+transition:.25s;
+
+}
+
+.back:hover{
+
+color:#e8d9b3;
+
+}
+
+.hero{
+
+padding:120px 20px 80px;
+
+text-align:center;
+
+}
+
+.eyebrow{
+
+font-size:18px;
+
+letter-spacing:6px;
+
+color:#a48c60;
+
+margin-bottom:20px;
+
+text-transform:uppercase;
+
+}
+
+h1{
+
+font-size:88px;
+
+font-weight:600;
+
+letter-spacing:2px;
+
+margin-bottom:24px;
+
+}
+
+.subtitle{
+
+max-width:700px;
+
+margin:auto;
+
+font-family:Inter,sans-serif;
+
+font-size:18px;
+
+color:#bfb5a2;
+
+line-height:1.8;
+
+}
+
+.article{
+
+max-width:680px;
+
+margin:100px auto 180px;
+
+padding:0 30px;
+
+font-size:28px;
+
+}
+
+.article p{
+  font-family:"Cormorant Garamond", serif;
+  font-size:28px;
+  line-height:2;
+  color:rgba(245,239,226,0.95);
+  margin-bottom:42px;
+}
+
+.dropcap::first-letter {
+  float: left;
+  font-size: 72px;
+  line-height: 0.8;
+  margin-right: 14px;
+  margin-top: 6px;
+  color: #d8c49a;
+}
+/* ===========================
+   Cornerstone Footer
+=========================== */
+
+.site-footer{
+    margin-top:120px;
+    padding:72px 24px 58px;
+    border-top:1px solid rgba(212,176,106,.18);
+    text-align:center;
+}
+
+.footer-brand{
+
+    font-family:"Cinzel", serif;
+
+    font-size:44px;
+
+    font-weight:500;
+
+    letter-spacing:.18em;
+
+    color:#D4B06A;
+
+    margin-bottom:10px;
+
+}
+
+.footer-tagline{
+    font-family:"Cormorant Garamond", serif;
+    font-style:italic;
+    font-size:18px;
+    color:#D8C8A8;
+    margin-bottom:32px;
+}
+
+.footer-studio{
+    font-family:Inter,sans-serif;
+    font-size:12px;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    color:rgba(245,239,226,.55);
+    margin-bottom:12px;
+}
+
+.footer-copyright{
+    font-family:Inter,sans-serif;
+    font-size:12px;
+    color:rgba(245,239,226,.35);
+}
+
+
+/* ===========================
+   Mobile Reading Layout
+=========================== */
+@media (max-width: 700px) {
+  html, body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .topbar {
+    height: auto;
+    min-height: 62px;
+    padding: 0 16px;
+    gap: 10px;
+  }
+
+  .logo {
+    min-width: 0;
+    white-space: nowrap;
+    font-size: 13px;
+    letter-spacing: 1.1px;
+    line-height: 1.2;
+  }
+
+  .back {
+    flex: 0 0 auto;
+    white-space: nowrap;
+    font-size: 10px;
+    letter-spacing: 1.1px;
+    line-height: 1.2;
+  }
+
+  .hero {
+    padding: 72px 18px 48px;
+  }
+
+  .eyebrow {
+    margin-bottom: 16px;
+    font-size: 13px;
+    letter-spacing: 4px;
+  }
+
+  h1 {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto 18px;
+    font-size: clamp(40px, 12vw, 54px);
+    line-height: 1.08;
+    letter-spacing: 1px;
+    overflow-wrap: break-word;
+    word-break: normal;
+  }
+
+  .subtitle {
+    max-width: 100%;
+    padding: 0 4px;
+    font-size: 16px;
+    line-height: 1.65;
+  }
+
+  .article {
+    width: 100%;
+    max-width: 100%;
+    margin: 48px auto 96px;
+    padding: 0 22px;
+    font-size: 22px;
+  }
+
+  .article p {
+    max-width: 100%;
+    font-size: 22px;
+    line-height: 1.78;
+    margin-bottom: 30px;
+  }
+
+  .dropcap::first-letter {
+    font-size: 58px;
+    line-height: .82;
+    margin-right: 10px;
+    margin-top: 5px;
+  }
+
+  .chapter-navigation {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    gap: 8px;
+    margin-top: 64px;
+    padding-top: 28px;
+  }
+
+  .chapter-navigation a {
+    min-width: 0;
+    font-size: 10px;
+    line-height: 1.4;
+    letter-spacing: 1.4px;
+  }
+
+  .chapter-navigation a:first-child { text-align: left; }
+  .chapter-navigation a:nth-child(2) { text-align: center; }
+  .chapter-navigation a:last-child { text-align: right; }
+
+  .site-footer {
+    margin-top: 72px;
+    padding: 54px 18px 40px;
+    overflow: hidden;
+  }
+
+  .footer-brand {
+    white-space: nowrap;
+    font-size: clamp(26px, 8vw, 32px);
+    letter-spacing: .12em;
+  }
+
+  .footer-tagline {
+    font-size: 16px;
+    margin-bottom: 28px;
+  }
+
+  .footer-studio,
+  .footer-copyright {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 390px) {
+  .topbar { padding: 0 12px; gap: 7px; }
+  .logo { font-size: 11.5px; letter-spacing: .9px; }
+  .back { font-size: 9px; letter-spacing: .9px; }
+  .hero { padding: 64px 16px 42px; }
+  h1 { font-size: clamp(38px, 11.5vw, 45px); }
+  .article { padding: 0 20px; }
+  .article p { font-size: 21px; line-height: 1.76; }
+  .chapter-navigation a { font-size: 9.5px; letter-spacing: 1.1px; }
+  .footer-brand { font-size: 27px; letter-spacing: .1em; }
+}
+
+/* Unified Cornerstone footer */
+.site-footer{margin-top:120px;padding:72px 24px 58px;border-top:1px solid rgba(212,176,106,.22);text-align:center;overflow:hidden}
+.footer-brand{font-family:"Cinzel",serif;font-size:44px;font-weight:500;letter-spacing:.14em;color:#D4B06A;margin:0 auto 10px;line-height:1.15;max-width:100%;white-space:nowrap}
+.footer-tagline{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:18px;color:#D8C8A8;margin-bottom:32px}
+.footer-studio{font-family:Inter,sans-serif;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:rgba(245,239,226,.55);margin-bottom:12px}
+.footer-copyright{font-family:Inter,sans-serif;font-size:12px;color:rgba(245,239,226,.35)}
+@media(max-width:700px){
+.site-footer{margin-top:72px;padding:50px 16px 40px}
+.footer-brand{font-size:clamp(23px,7.2vw,32px);letter-spacing:.08em;white-space:nowrap;overflow-wrap:normal;word-break:normal}
+.footer-tagline{font-size:16px;margin-bottom:26px}
+.footer-studio{font-size:11px;letter-spacing:.14em}
+.footer-copyright{font-size:11px;line-height:1.5}
+}
+
+</style>
+<style id="global-footer-unification">
+/* Final global footer override: keep every page visually identical. */
+.site-footer{
+  margin-top:120px !important;
+  padding:72px 24px 58px !important;
+  border-top:1px solid rgba(212,176,106,.22) !important;
+  text-align:center !important;
+  overflow:hidden !important;
+  box-sizing:border-box !important;
+}
+.footer-brand{
+  display:block !important;
+  font-family:"Cinzel",serif !important;
+  font-size:44px !important;
+  font-weight:500 !important;
+  letter-spacing:.10em !important;
+  line-height:1.12 !important;
+  color:#D4B06A !important;
+  width:auto !important;
+  max-width:100% !important;
+  margin:0 auto 10px !important;
+  padding:0 !important;
+  white-space:nowrap !important;
+  overflow-wrap:normal !important;
+  word-break:normal !important;
+  text-align:center !important;
+  box-sizing:border-box !important;
+}
+.footer-tagline{
+  font-family:"Cormorant Garamond",serif !important;
+  font-style:italic !important;
+  font-size:18px !important;
+  line-height:1.4 !important;
+  color:#D8C8A8 !important;
+  margin:0 auto 32px !important;
+}
+.footer-studio{
+  font-family:Inter,sans-serif !important;
+  font-size:12px !important;
+  line-height:1.5 !important;
+  letter-spacing:.18em !important;
+  text-transform:uppercase !important;
+  color:rgba(245,239,226,.55) !important;
+  margin:0 auto 12px !important;
+}
+.footer-copyright{
+  font-family:Inter,sans-serif !important;
+  font-size:12px !important;
+  line-height:1.5 !important;
+  color:rgba(245,239,226,.35) !important;
+  margin:0 auto !important;
+}
+@media (max-width:700px){
+  .site-footer{
+    margin-top:72px !important;
+    padding:48px 20px 38px !important;
+  }
+  .footer-brand{
+    font-size:clamp(22px,6.5vw,30px) !important;
+    letter-spacing:.06em !important;
+    line-height:1.12 !important;
+    max-width:calc(100% - 12px) !important;
+    margin:0 auto 12px !important;
+  }
+  .footer-tagline{font-size:16px !important;margin-bottom:26px !important;}
+  .footer-studio{font-size:11px !important;letter-spacing:.14em !important;margin-bottom:12px !important;}
+  .footer-copyright{font-size:11px !important;line-height:1.5 !important;}
+}
+@media (max-width:380px){
+  .site-footer{padding-left:16px !important;padding-right:16px !important;}
+  .footer-brand{font-size:21px !important;letter-spacing:.045em !important;max-width:100% !important;}
+}
+</style>
+</head>
+<body>
+<header class="topbar">
+<div class="logo"><a href="../../../../index.html" style="color:inherit;text-decoration:none">ECHOES OF THE KINGDOM</a></div>
+<a class="back" href="../index.html">← Back to Part II</a>
+</header>
+<section class="hero">
+<div class="eyebrow">CHAPTER 20</div>
+<h1>Bread in the Square</h1>
+</section>
+<main class="article"><p class="dropcap">Rivergate was already waking when the first light of dawn appeared above the rooftops. From the distant harbor came the sounding of horns as ships approached their berths. Wagons rumbled over the cobbled streets, their wheels striking the stones in a steady rhythm. Merchants began opening their shops, while fires were lit beneath the ovens and cooking pots along the roadsides. Before long, the morning air carried the familiar scents of freshly baked bread and hot soup.</p><p>Seren stood outside the inn with her traveling bag over one shoulder. The innkeeper, who had come to see her off, raised a hand in farewell.</p><p>“Safe travels.”</p><p>“Thank you,” Seren replied, returning his smile. She turned and joined the people making their way along the street. She had decided the previous evening that she would leave Rivergate today.</p><p>The city was vast, and in the short time she had spent within its walls, she had seen more of the world than she had expected. She had met people whose lives were very different from her own and witnessed things she could not easily explain. Yet even as she walked toward the city gate, something troubled her.</p><p>It was not that she wished to remain. She had no particular reason to do so, and there were still many roads ahead of her. Nevertheless, she could not shake the feeling that something remained unfinished.</p><p>She had felt that quiet guidance throughout her journey, and although it had led her into unfamiliar places more than once, she had gradually learned not to dismiss it.</p><p>Now, however, it seemed to offer no clear direction. So she continued with the crowd, following the road toward the gate. When she reached the street she had walked the previous afternoon, a familiar sound rose above the morning bustle.</p><p>The church bell.</p><p>Its deep, measured tone traveled across the rooftops and through the streets, carrying the same gentle resonance she remembered from the day before.</p><p>Seren stopped. She lifted her head and listened as the sound faded into the distance. Almost at once, the memory of the church returned to her. She remembered the quiet interior, the sunlight passing through the colored windows, and the stillness that had surrounded her as she sat upon the last bench.</p><p>Then came the memory of what she had seen.</p><p>The wide, open land beneath a clear sky. The great tree spreading its branches above the people gathered beneath it. And the figure who had walked among them, whose face she had never been able to see. The images remained as vivid as they had been the previous evening. Even now, Seren could recall the strange sense of belonging she had felt in that place, as though she had been shown something she had always known but somehow forgotten.</p><p>She tightened her fingers around the strap of her traveling bag. For a little while, she stood without moving. People passed her on either side, intent upon their morning business. A wagon rolled by, and two merchants crossed the street in conversation.</p><p>Seren scarcely noticed them. At last, she turned. Instead of continuing toward the city gate, she began walking in the direction of the bell.</p><p>The church was very different from the day before. Its heavy wooden doors stood wide open, and the small square before the building was filled with people. Several long tables had been arranged in orderly rows. Near one of them, a group of young men was carefully carrying a large cooking pot, steam rising from beneath its lid. Baskets of freshly baked bread stood nearby, filling the air with the warm scent of wheat. Children hurried between the tables with wooden bowls in their hands, while adults moved about preparing food and helping those who had already arrived.</p><p>An elderly man was being guided toward a bench by someone younger. Nearby, a woman holding an infant accepted a bowl of hot soup from a volunteer. Several travelers in worn clothing stood quietly in line, waiting for their turn.</p><p>The square was busy, yet Seren heard none of the shouting or impatient demands that often accompanied a crowd. No one seemed to be directing every movement. People simply went about their tasks, and whenever someone needed assistance, another person stepped forward to offer it.</p><p>Seren stopped at the edge of the square. She watched a young man carry a basket of bread toward the tables, then return to help another volunteer lift a heavy pot. Two children ran past him, nearly colliding with his legs, but he merely moved aside and continued his work.</p><p>There was an ease about the place that she had not expected.</p><p>Only yesterday, she had stood in the street of artisans and watched a dispute unfold between people who had all believed themselves to be acting properly. No one had wished to cause harm, yet the young carpenter had lost his sale, the family had lost the table they wanted, and the guild elder had walked away with an expression of unmistakable weariness.</p><p>Here, people of different ages and circumstances were gathered together, but no one seemed concerned with proving who had the greater right to be present.</p><p>Those who had come for food waited beside those who were helping prepare it. The elderly sat among the young, and travelers whose clothing showed the wear of long journeys were received without question. Seren remained where she was, taking it all in. Then a wooden door beside the bell tower opened.</p><p>An elderly man emerged, carrying a large wicker basket filled with bread. His hair was almost entirely gray, and he wore a faded robe with the sleeves rolled back to his elbows. There was a little mud upon his shoes, and his appearance suggested someone who had been working outdoors rather than attending to the affairs of an important institution.</p><p>Had Seren passed him in the street, she might easily have mistaken him for an elderly gardener.</p><p>Several children noticed him at once.</p><p>“Grandfather!” They hurried toward him, laughing.</p><p>The old man smiled broadly, the wrinkles around his eyes deepening. “Slowly now. The bread isn't going anywhere.” He set the basket down long enough to break a loaf into smaller pieces, distributing them among the children. When one little boy reached forward with both hands, the old man gave him his portion and gently ruffled his untidy hair.</p><p>The children soon scattered again, carrying their bread toward the benches.</p><p>The old man lifted his basket and looked across the square. His gaze settled upon Seren. For a moment, she wondered whether he intended to ask why she was standing apart from the others. Instead, he reached into the basket, took out a piece of bread that was still warm from the oven, and walked toward her.</p><p>When he reached her, he smiled and held it out. “Fresh from the oven. Best eat it while it's warm.”</p><p>Seren was taken aback.</p><p>She raised one hand in a small gesture of refusal. “Thank you, but…” She smiled awkwardly. “I haven't come to receive food.”</p><p>The old man glanced at the bread in his hand, then back at her. His smile did not change. “I know.” He nodded and offered it again. “We baked plenty today.”</p><p>Seren looked at him.</p><p>There was no insistence in his manner, nor any suggestion that she ought to accept because he had taken the trouble to bring it to her. He was simply offering her bread. She glanced around the square once more. The people were still busy at their tasks. Someone was helping an elderly woman settle onto a bench, while another volunteer carried bowls of soup toward a group of travelers.</p><p>Nothing about the scene was extraordinary. And yet, as Seren watched, a memory from the previous afternoon stirred within her. She thought of the land she had seen in the church, where people had lived without fear of one another, where children had laughed beside the lion, and where every living thing seemed to find its place without taking anything from another.</p><p>The square before her was nothing like that beautiful land.</p><p>Its stones were worn, its tables were old, and many of the people gathered there were plainly tired or hungry. The children were noisy, the volunteers were busy, and there was far more work to be done than could be finished in a single morning. Yet something about it reminded her of what she had seen. She could not have explained the resemblance.</p><p>It was simply there, in the way people made room for one another and offered what they had without waiting to be asked.</p><p>Seren finally extended both hands and accepted the bread.</p><p>“Thank you.” The old man smiled. He did not ask her name or question where she had come from. Having given her the bread, he merely turned and went back toward the tables, where another elderly visitor was waiting.</p><p>Seren remained at the edge of the square. The bread was still warm between her fingers. She broke off a small piece and tasted it. The flavor was simple, carrying the scent of wheat and a faint trace of the oven in which it had been baked. It was not the finest bread she had ever eaten, nor was there anything unusual about the way it had been prepared.</p><p>Nevertheless, she found it unexpectedly comforting. She ate slowly as she watched the people around her. At one of the tables, someone was adding water to a pot of soup. Another volunteer carried an empty bread basket back toward the kitchen, while two young men worked together to move a heavy wooden bench closer to the tables.</p><p>Nearby, an elderly woman had finished her soup and was preparing to carry her wooden bowl away.</p><p>Before she could rise, a girl of perhaps twelve or thirteen hurried over. “Here, let me take that.”</p><p>The elderly woman smiled and shook her head. “I can still walk, you know.”</p><p>The girl took the bowl anyway, though she did not try to make the woman remain seated.</p><p>“Then I'll walk with you.” She offered her hand.</p><p>The woman accepted it, and together they made their way toward the table where the empty bowls were being collected.</p><p>Seren watched them go.</p><p>No one had instructed the girl to help. No one praised her for what she had done, and she had not looked around to see whether anyone had noticed.</p><p>She had simply seen an elderly woman and decided to accompany her. A little farther away, two young men were carrying another large pot of soup toward the tables. They had almost reached their destination when one of them slipped. The pot tilted dangerously. For an instant, the steaming soup threatened to spill over the rim.</p><p>Several people nearby reacted at once. One caught the side of the pot, another steadied the young man who had lost his footing, and someone else bent to retrieve a wooden ladle that had fallen to the ground. Within moments, the pot was secure.</p><p>The young man straightened, looking embarrassed. The others exchanged smiles, and the work continued. No one scolded him.</p><p>There was no argument over who should have been more careful, nor any attempt to place blame for what had nearly happened.</p><p>Seren looked on quietly. The square was growing busier.</p><p>More people arrived from the surrounding streets, and before long, a long line had formed outside the church.</p><p>The old man with the wicker basket continued distributing bread. He moved from one person to another, offering each a portion with the same easy smile he had given Seren.</p><p>Now and then, someone stopped to speak with him, and he listened before returning to his work. He appeared to know many of the people who came, though he treated the strangers no differently from those who greeted him by name.</p><p>Seren finished the last of her bread. She was considering whether she ought to continue on her way when a young woman entered the square carrying two children.</p><p>One, a little girl, was asleep in her arms. The other, a young boy, was crying loudly and refusing to settle.</p><p>The woman looked exhausted. She tried to adjust the sleeping child without waking her, but the little boy continued struggling and crying. Each time she shifted her hold, one child seemed about to slip from her arms.</p><p>The old man noticed her and began to move in her direction. At that moment, several elderly people approached the bread table together, and the volunteers nearby were already occupied with serving those waiting in line.</p><p>For a brief while, everyone seemed to have more work than they could manage.</p><p>Seren watched the young mother struggling with the children. Then she glanced down at the traveling bag hanging from her shoulder. She had intended to leave Rivergate that morning.</p><p>Her belongings were packed, and the road beyond the city gate was waiting for her.</p><p>She had already spent longer here than she had expected, and she still did not know where the next part of her journey would lead. Yet the woman before her needed help now.</p><p>Seren did not spend another moment considering it. She walked to a bench at the edge of the square and set down her bag. Then she rolled up her sleeves and hurried toward the young mother. “Here, let me help.”</p><p>The woman looked at her in surprise.</p><p>Seren reached out carefully and took the crying little boy into her arms.</p><p>She was not particularly practiced at holding a child, and her movements were a little awkward at first. The boy stared up at her, his face still wet with tears. For a moment, Seren wondered whether he would begin crying even louder. Instead, his sobs gradually grew quieter.</p><p>He watched her with solemn curiosity, as though trying to decide who this stranger might be. With her hands finally free, the young mother adjusted the sleeping girl in her arms and let out a long breath of relief.</p><p>“Thank you,” she said. Her gratitude was plain in her tired face.</p><p>Seren smiled and shook her head. “It's all right.”</p><p>She shifted the little boy more comfortably in her arms.</p><p>He had stopped crying now, though he continued to study her with wide eyes.</p><p>Across the square, the elderly man was placing the last few pieces of bread into a basket. He looked up and noticed Seren standing beside the young mother, holding the child she had taken from her arms. For a moment, he watched them. He said nothing. A quiet smile appeared upon his face. Then he lowered his head and returned to the work before him.</p><div class="chapter-navigation"><a href="../chapter-19/index.html">← Previous</a><a href="../index.html">Part II Contents</a><a href="../../index.html">Book One</a></div></main>
+<footer class="site-footer">
+<div class="footer-brand">Cornerstone</div>
+<div class="footer-tagline">Building stories that endure.</div>
+<div class="footer-studio">Created by Echoes Studio</div>
+<div class="footer-copyright">© 2026 Michael He. All Rights Reserved.</div>
+</footer>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const article = document.querySelector(".article");
+
+    if (!article) {
+        return;
+    }
+
+    const paragraphs = article.querySelectorAll("p");
+
+    paragraphs.forEach(function (paragraph) {
+        const text = paragraph.textContent.trim();
+
+        if (!text) {
+            return;
+        }
+
+        // 自动识别场景分隔符
+        if (text === "***" || text === "* * *") {
+            const divider = document.createElement("div");
+            divider.className = "divider";
+            divider.textContent = "❦";
+            paragraph.replaceWith(divider);
+            return;
+        }
+
+        // 自动识别以引号或长破折号开头的对白
+        const isDialogue =
+            text.startsWith('"') ||
+            text.startsWith("“") ||
+            text.startsWith("‘") ||
+            text.startsWith("'") ||
+            text.startsWith("—");
+
+        if (isDialogue) {
+            paragraph.classList.add("dialogue");
+        }
+    });
+});
+</script>
+<!-- GoatCounter: privacy-friendly page analytics -->
+<script async="" data-goatcounter="https://echoeskingdom.goatcounter.com/count" src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

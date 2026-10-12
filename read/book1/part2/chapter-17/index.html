@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Chapter 17: The Young Carpenter | Echoes of the Kingdom</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&amp;family=Inter:wght@300;400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<style>
+.chapter-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  width: 100%;
+  margin-top: 100px;
+  padding-top: 40px;
+  border-top: 1px solid rgba(212, 184, 120, 0.18);
+}
+
+.chapter-navigation a {
+  color: #d8c49a;
+  font-family: Inter, sans-serif;
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+
+background:#070809;
+
+color:#ece2cf;
+
+font-family:"Cormorant Garamond",serif;
+
+line-height:1.9;
+
+}
+
+a{
+
+text-decoration:none;
+
+color:inherit;
+
+}
+
+.topbar{
+
+position:sticky;
+
+top:0;
+
+z-index:100;
+
+height:72px;
+
+background:rgba(7,8,9,.92);
+
+backdrop-filter:blur(10px);
+
+border-bottom:1px solid rgba(212,184,120,.12);
+
+display:flex;
+
+align-items:center;
+
+justify-content:space-between;
+
+padding:0 60px;
+
+}
+
+.logo{
+
+font-size:20px;
+
+letter-spacing:2px;
+
+color:#d8c08b;
+
+}
+
+.back{
+
+font-family:Inter,sans-serif;
+
+font-size:13px;
+
+letter-spacing:2px;
+
+text-transform:uppercase;
+
+color:#a89b7a;
+
+transition:.25s;
+
+}
+
+.back:hover{
+
+color:#e8d9b3;
+
+}
+
+.hero{
+
+padding:120px 20px 80px;
+
+text-align:center;
+
+}
+
+.eyebrow{
+
+font-size:18px;
+
+letter-spacing:6px;
+
+color:#a48c60;
+
+margin-bottom:20px;
+
+text-transform:uppercase;
+
+}
+
+h1{
+
+font-size:88px;
+
+font-weight:600;
+
+letter-spacing:2px;
+
+margin-bottom:24px;
+
+}
+
+.subtitle{
+
+max-width:700px;
+
+margin:auto;
+
+font-family:Inter,sans-serif;
+
+font-size:18px;
+
+color:#bfb5a2;
+
+line-height:1.8;
+
+}
+
+.article{
+
+max-width:680px;
+
+margin:100px auto 180px;
+
+padding:0 30px;
+
+font-size:28px;
+
+}
+
+.article p{
+  font-family:"Cormorant Garamond", serif;
+  font-size:28px;
+  line-height:2;
+  color:rgba(245,239,226,0.95);
+  margin-bottom:42px;
+}
+
+.dropcap::first-letter {
+  float: left;
+  font-size: 72px;
+  line-height: 0.8;
+  margin-right: 14px;
+  margin-top: 6px;
+  color: #d8c49a;
+}
+/* ===========================
+   Cornerstone Footer
+=========================== */
+
+.site-footer{
+    margin-top:120px;
+    padding:72px 24px 58px;
+    border-top:1px solid rgba(212,176,106,.18);
+    text-align:center;
+}
+
+.footer-brand{
+
+    font-family:"Cinzel", serif;
+
+    font-size:44px;
+
+    font-weight:500;
+
+    letter-spacing:.18em;
+
+    color:#D4B06A;
+
+    margin-bottom:10px;
+
+}
+
+.footer-tagline{
+    font-family:"Cormorant Garamond", serif;
+    font-style:italic;
+    font-size:18px;
+    color:#D8C8A8;
+    margin-bottom:32px;
+}
+
+.footer-studio{
+    font-family:Inter,sans-serif;
+    font-size:12px;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    color:rgba(245,239,226,.55);
+    margin-bottom:12px;
+}
+
+.footer-copyright{
+    font-family:Inter,sans-serif;
+    font-size:12px;
+    color:rgba(245,239,226,.35);
+}
+
+
+/* ===========================
+   Mobile Reading Layout
+=========================== */
+@media (max-width: 700px) {
+  html, body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .topbar {
+    height: auto;
+    min-height: 62px;
+    padding: 0 16px;
+    gap: 10px;
+  }
+
+  .logo {
+    min-width: 0;
+    white-space: nowrap;
+    font-size: 13px;
+    letter-spacing: 1.1px;
+    line-height: 1.2;
+  }
+
+  .back {
+    flex: 0 0 auto;
+    white-space: nowrap;
+    font-size: 10px;
+    letter-spacing: 1.1px;
+    line-height: 1.2;
+  }
+
+  .hero {
+    padding: 72px 18px 48px;
+  }
+
+  .eyebrow {
+    margin-bottom: 16px;
+    font-size: 13px;
+    letter-spacing: 4px;
+  }
+
+  h1 {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto 18px;
+    font-size: clamp(40px, 12vw, 54px);
+    line-height: 1.08;
+    letter-spacing: 1px;
+    overflow-wrap: break-word;
+    word-break: normal;
+  }
+
+  .subtitle {
+    max-width: 100%;
+    padding: 0 4px;
+    font-size: 16px;
+    line-height: 1.65;
+  }
+
+  .article {
+    width: 100%;
+    max-width: 100%;
+    margin: 48px auto 96px;
+    padding: 0 22px;
+    font-size: 22px;
+  }
+
+  .article p {
+    max-width: 100%;
+    font-size: 22px;
+    line-height: 1.78;
+    margin-bottom: 30px;
+  }
+
+  .dropcap::first-letter {
+    font-size: 58px;
+    line-height: .82;
+    margin-right: 10px;
+    margin-top: 5px;
+  }
+
+  .chapter-navigation {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    gap: 8px;
+    margin-top: 64px;
+    padding-top: 28px;
+  }
+
+  .chapter-navigation a {
+    min-width: 0;
+    font-size: 10px;
+    line-height: 1.4;
+    letter-spacing: 1.4px;
+  }
+
+  .chapter-navigation a:first-child { text-align: left; }
+  .chapter-navigation a:nth-child(2) { text-align: center; }
+  .chapter-navigation a:last-child { text-align: right; }
+
+  .site-footer {
+    margin-top: 72px;
+    padding: 54px 18px 40px;
+    overflow: hidden;
+  }
+
+  .footer-brand {
+    white-space: nowrap;
+    font-size: clamp(26px, 8vw, 32px);
+    letter-spacing: .12em;
+  }
+
+  .footer-tagline {
+    font-size: 16px;
+    margin-bottom: 28px;
+  }
+
+  .footer-studio,
+  .footer-copyright {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 390px) {
+  .topbar { padding: 0 12px; gap: 7px; }
+  .logo { font-size: 11.5px; letter-spacing: .9px; }
+  .back { font-size: 9px; letter-spacing: .9px; }
+  .hero { padding: 64px 16px 42px; }
+  h1 { font-size: clamp(38px, 11.5vw, 45px); }
+  .article { padding: 0 20px; }
+  .article p { font-size: 21px; line-height: 1.76; }
+  .chapter-navigation a { font-size: 9.5px; letter-spacing: 1.1px; }
+  .footer-brand { font-size: 27px; letter-spacing: .1em; }
+}
+
+/* Unified Cornerstone footer */
+.site-footer{margin-top:120px;padding:72px 24px 58px;border-top:1px solid rgba(212,176,106,.22);text-align:center;overflow:hidden}
+.footer-brand{font-family:"Cinzel",serif;font-size:44px;font-weight:500;letter-spacing:.14em;color:#D4B06A;margin:0 auto 10px;line-height:1.15;max-width:100%;white-space:nowrap}
+.footer-tagline{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:18px;color:#D8C8A8;margin-bottom:32px}
+.footer-studio{font-family:Inter,sans-serif;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:rgba(245,239,226,.55);margin-bottom:12px}
+.footer-copyright{font-family:Inter,sans-serif;font-size:12px;color:rgba(245,239,226,.35)}
+@media(max-width:700px){
+.site-footer{margin-top:72px;padding:50px 16px 40px}
+.footer-brand{font-size:clamp(23px,7.2vw,32px);letter-spacing:.08em;white-space:nowrap;overflow-wrap:normal;word-break:normal}
+.footer-tagline{font-size:16px;margin-bottom:26px}
+.footer-studio{font-size:11px;letter-spacing:.14em}
+.footer-copyright{font-size:11px;line-height:1.5}
+}
+
+</style>
+<style id="global-footer-unification">
+/* Final global footer override: keep every page visually identical. */
+.site-footer{
+  margin-top:120px !important;
+  padding:72px 24px 58px !important;
+  border-top:1px solid rgba(212,176,106,.22) !important;
+  text-align:center !important;
+  overflow:hidden !important;
+  box-sizing:border-box !important;
+}
+.footer-brand{
+  display:block !important;
+  font-family:"Cinzel",serif !important;
+  font-size:44px !important;
+  font-weight:500 !important;
+  letter-spacing:.10em !important;
+  line-height:1.12 !important;
+  color:#D4B06A !important;
+  width:auto !important;
+  max-width:100% !important;
+  margin:0 auto 10px !important;
+  padding:0 !important;
+  white-space:nowrap !important;
+  overflow-wrap:normal !important;
+  word-break:normal !important;
+  text-align:center !important;
+  box-sizing:border-box !important;
+}
+.footer-tagline{
+  font-family:"Cormorant Garamond",serif !important;
+  font-style:italic !important;
+  font-size:18px !important;
+  line-height:1.4 !important;
+  color:#D8C8A8 !important;
+  margin:0 auto 32px !important;
+}
+.footer-studio{
+  font-family:Inter,sans-serif !important;
+  font-size:12px !important;
+  line-height:1.5 !important;
+  letter-spacing:.18em !important;
+  text-transform:uppercase !important;
+  color:rgba(245,239,226,.55) !important;
+  margin:0 auto 12px !important;
+}
+.footer-copyright{
+  font-family:Inter,sans-serif !important;
+  font-size:12px !important;
+  line-height:1.5 !important;
+  color:rgba(245,239,226,.35) !important;
+  margin:0 auto !important;
+}
+@media (max-width:700px){
+  .site-footer{
+    margin-top:72px !important;
+    padding:48px 20px 38px !important;
+  }
+  .footer-brand{
+    font-size:clamp(22px,6.5vw,30px) !important;
+    letter-spacing:.06em !important;
+    line-height:1.12 !important;
+    max-width:calc(100% - 12px) !important;
+    margin:0 auto 12px !important;
+  }
+  .footer-tagline{font-size:16px !important;margin-bottom:26px !important;}
+  .footer-studio{font-size:11px !important;letter-spacing:.14em !important;margin-bottom:12px !important;}
+  .footer-copyright{font-size:11px !important;line-height:1.5 !important;}
+}
+@media (max-width:380px){
+  .site-footer{padding-left:16px !important;padding-right:16px !important;}
+  .footer-brand{font-size:21px !important;letter-spacing:.045em !important;max-width:100% !important;}
+}
+</style>
+</head>
+<body>
+<header class="topbar">
+<div class="logo"><a href="../../../../index.html" style="color:inherit;text-decoration:none">ECHOES OF THE KINGDOM</a></div>
+<a class="back" href="../index.html">← Back to Part II</a>
+</header>
+<section class="hero">
+<div class="eyebrow">CHAPTER 17</div>
+<h1>The Young Carpenter</h1>
+</section>
+<main class="article"><p class="dropcap">The bailiff returned the following morning, just as he had promised. After examining several records and asking Seren a few final questions, he rolled up the parchment and looked at her with a smile.</p><p>“Everything has been cleared up. I'm sorry for the trouble we put you through yesterday. You're free to go.”</p><p>He gave her a formal nod, which Seren returned before gathering her belongings and leaving.</p><p>Morning sunlight lay across the broad stone steps outside Town Hall. The square that had seemed so unfamiliar the day before was already bustling with activity. Porters pushed wooden carts along the streets, merchants sorted their goods beside waiting wagons, and the steady ringing of hammers drifted from the blacksmiths' workshops. The air carried a mixture of timber, leather, coal smoke, and freshly baked bread.</p><p>Rivergate, it seemed, began each day in much the same way, regardless of what had happened the night before.</p><p>Seren paused at the foot of the steps. She had no particular reason to remain near Town Hall, yet neither did she feel ready to leave the city. The quiet sense of guidance that had accompanied her for so long was still there, though it offered her no explanation of where she ought to go.</p><p>So she began walking, allowing the streets to lead her onward.</p><p>As she moved farther from the square, the sounds around her gradually changed. The ringing of iron against iron gave way to the softer, more irregular knocking of hammers against wood. Workshops stood close together along both sides of the street, their open doors revealing carpenters bent over benches or carrying planks across sawdust-covered floors.</p><p>Outside the shops stood unfinished barrels, wagon wheels, chairs, and window frames. The scent of freshly cut timber grew stronger with every step, and when a breeze passed between the buildings, fine wood shavings drifted through the sunlight.</p><p>Seren slowed her pace.</p><p>There was nothing particularly remarkable about the little workshop where she finally stopped. It was narrower than most of its neighbors, with a modest doorway and an old wooden table standing outside. Unlike the larger shops, it had no grand display of furniture or polished sign proclaiming the master's name.</p><p>Instead, the table was covered with small wooden objects.</p><p>There was a bird no larger than her palm, a little boat scarcely the length of her hand, several finely carved boxes, and a row of wooden spoons of different sizes. None had been painted. Their surfaces had simply been sanded smooth, leaving the natural grain of the wood visible.</p><p>Seren reached for the little bird.</p><p>The moment her fingers touched one of its wings, it moved.</p><p>She paused, surprised, then gently pushed the wing again. This time both wings unfolded together, guided by a cleverly concealed wooden mechanism. When she released them, they slowly folded back against the bird's body.</p><p>A smile appeared on her face.</p><p>“Do you like it?” The voice came from inside the workshop.</p><p>Seren turned and saw a young carpenter seated beside the window. Morning light fell across his workbench, where he was carefully trimming the rim of a wooden cup with a small carving knife. Fine shavings gathered on the leather apron spread across his knees.</p><p>He looked up from his work and smiled. “Go on, try it.”</p><p>Seren glanced down at the bird, then back at him. “Oh, no. I can pay for it.”</p><p>The carpenter set his knife aside and rose from his seat. “It's hardly worth anything,” he said as he approached. “I make these little things when I have time to spare.” He took the bird from the table and pressed a small piece of wood beneath its base. The wings began to move. They rose and fell in a slow, simple rhythm, as though the little creature were making an earnest attempt to fly. The movement was not especially lifelike, yet the ingenuity of it delighted Seren.</p><p>“Did you make this yourself?” she asked.</p><p>The young man nodded. “When I was little, I used to watch birds flying overhead. I always thought there ought to be some way to make wood fly as well.” He glanced at the bird in his hand. “It took quite a few attempts, but eventually I managed something.”</p><p>He spoke as though the accomplishment were hardly worth mentioning.</p><p>Seren looked again at the other objects arranged across the table. The boxes had been fitted with delicate lids, the little boat had a carefully shaped hull, and even the plain wooden spoons had been finished with an attention to detail that seemed unnecessary for such ordinary things.</p><p>“Do these sell well?” she asked.</p><p>“These?” He touched one of the spoons with his fingertips. “Well enough. At least no one bothers me about them.” He gave a brief smile, as though he had said rather more than he intended, but offered no further explanation. Instead, he turned and walked back into the workshop.</p><p>It was then that Seren noticed the table standing against the far wall.</p><p>Unlike the little objects outside, this was a substantial piece of furniture: a long oak table with a broad, carefully finished surface. Its grain ran in fine patterns along the length of the wood, and the sunlight entering through the window brought out a warm, golden-brown sheen.</p><p>Seren knew very little about carpentry, but even she could see that the young man had devoted considerable care to it.</p><p>The carpenter followed her gaze. “Nearly finished,” he said. He walked over and brushed a few stray shavings from the tabletop. There was something unusually attentive in the gesture, as though he were tending to an object that mattered to him beyond the work it represented.</p><p>Seren approached and ran her hand across the surface.</p><p>The wood was smooth beneath her fingers, without a rough edge or uneven place. When she bent to examine the legs, she found that the four supports were joined to the crossbeams without a single iron nail. Each piece had been fitted into the next with remarkable precision.</p><p>She could not have explained how the joints worked, but she could see that they had been made with great skill.</p><p>“It's beautiful,” she said quietly.</p><p>The carpenter looked at her, and his expression softened. “Thank you.”</p><p>There was no pride in his voice. If anything, he seemed pleased simply because someone had taken the time to look at his work properly.</p><p>A breeze passed through the open doorway, stirring the wooden wind chimes hanging outside. Their small pieces knocked together with a clear, delicate sound.</p><p>The carpenter picked up a soft cloth and began polishing the tabletop again.</p><p>“Has someone ordered it?” Seren asked.</p><p>“Aye. We settled the matter yesterday. They're coming to collect it this afternoon.” He paused, then added, “If all goes well.”</p><p>Seren looked at him. “Why wouldn't it?”</p><p>The carpenter continued wiping the wood for a moment before answering. “Those of us who work with wood prefer to finish a thing before worrying about anything else. Until it's sold and carried away, you never quite know what might happen.” He spoke with the same easy manner in which another man might have remarked upon the weather.</p><p>Seren did not press him further.</p><p>Near his workbench lay several pieces of wood that had been carved only halfway. One bore the outline of a tree, while another showed a pair of crossed tools—a mallet and a carpenter's rule.</p><p>She picked up the second piece and examined it. “Is this a sign for your workshop?”</p><p>The carpenter shook his head. “No. It's a guild mark.” He glanced at the carving and gave a faint smile. “Or rather, it's my attempt to copy one.”</p><p>Seren raised her eyes. “You don't have one of your own?”</p><p>For a moment he said nothing. Then he shook his head again, without any apparent embarrassment. “Not yet.”</p><p>There was neither resentment nor disappointment in the answer. He said it as plainly as he might have told her that the wood was oak or that the table was almost finished. “But I will, someday.” He returned the carved piece to the workbench.</p><p>At that moment, the sound of a wagon coming to a halt reached them from outside. A young couple was crossing the street toward the workshop. The man wore a linen coat faded from repeated washing, while the woman carried a child who was still too young to walk. Resting against his mother's shoulder, the little boy watched the workshop with wide, curious eyes.</p><p>The carpenter's face brightened when he saw them. “You've come.”</p><p>The husband nodded, though his attention had already settled upon the oak table standing near the wall. He went straight to it. For a while he said nothing, merely walking around the table and examining it from different angles. He pressed a hand against one corner, then crouched to inspect the legs and the joints beneath the tabletop. Finally, he stood and smiled. “It's even better than I expected.”</p><p>His wife came closer and laid her hand upon the polished oak. She moved her fingers slowly across the surface, her expression filled with quiet pleasure. “Our child will eat his meals here,” she said. She looked down at the little boy in her arms. “And when he's a little older, perhaps he'll sit here and learn to write.”</p><p>The carpenter smiled. “Then I hope it serves your family for many years.” The husband laughed softly.</p><p>Reaching inside his coat, he drew out a heavy leather purse and placed it upon the table. The weight of the coins made a dull sound against the wood. The carpenter did not immediately reach for the money. Instead, he looked at the table for a moment and released a long, quiet breath. He had spent months shaping and fitting the wood, working each joint until it sat properly and smoothing every surface by hand. Now the finished table stood before the people who would use it.</p><p>It was no longer merely something he had made. It had found a home. The husband stepped forward and bent to take hold of one end, preparing to lift it.</p><p>Before he could move the table, however, a voice came from across the street. “Please, wait a moment.” The words were spoken clearly, without any particular force, yet everyone inside the workshop stopped what they were doing.</p><p>Seren turned toward the doorway.</p><div class="chapter-navigation"><a href="../chapter-16/index.html">← Previous</a><a href="../index.html">Part II Contents</a><a href="../../index.html">Book One</a><a href="../chapter-18/index.html">Next →</a></div></main>
+<footer class="site-footer">
+<div class="footer-brand">Cornerstone</div>
+<div class="footer-tagline">Building stories that endure.</div>
+<div class="footer-studio">Created by Echoes Studio</div>
+<div class="footer-copyright">© 2026 Michael He. All Rights Reserved.</div>
+</footer>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const article = document.querySelector(".article");
+
+    if (!article) {
+        return;
+    }
+
+    const paragraphs = article.querySelectorAll("p");
+
+    paragraphs.forEach(function (paragraph) {
+        const text = paragraph.textContent.trim();
+
+        if (!text) {
+            return;
+        }
+
+        // 自动识别场景分隔符
+        if (text === "***" || text === "* * *") {
+            const divider = document.createElement("div");
+            divider.className = "divider";
+            divider.textContent = "❦";
+            paragraph.replaceWith(divider);
+            return;
+        }
+
+        // 自动识别以引号或长破折号开头的对白
+        const isDialogue =
+            text.startsWith('"') ||
+            text.startsWith("“") ||
+            text.startsWith("‘") ||
+            text.startsWith("'") ||
+            text.startsWith("—");
+
+        if (isDialogue) {
+            paragraph.classList.add("dialogue");
+        }
+    });
+});
+</script>
+<!-- GoatCounter: privacy-friendly page analytics -->
+<script async="" data-goatcounter="https://echoeskingdom.goatcounter.com/count" src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
