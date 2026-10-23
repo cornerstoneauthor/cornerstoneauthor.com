@@ -94,6 +94,23 @@
   .footer-brand{font-size:21px !important;letter-spacing:.045em !important;max-width:100% !important;}
 }
 </style>
+<link rel="icon" href="/favicon.ico" sizes="any"/>
+<link rel="icon" type="image/png" href="/assets/images/favicon-32.png" sizes="32x32"/>
+<link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png"/>
+<meta property="og:type" content="website"/>
+<meta property="og:site_name" content="Echoes of the Kingdom"/>
+<meta property="og:title" content="Echoes of the Kingdom"/>
+<meta property="og:description" content="Echoes of the Kingdom — a slow-burn epic fantasy by Michael He. A boy, an ancient road, and a world quietly forgetting its own past."/>
+<meta property="og:url" content="https://cornerstoneauthor.com/"/>
+<meta property="og:image" content="https://cornerstoneauthor.com/assets/images/og-image.jpg"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="Echoes of the Kingdom"/>
+<meta name="twitter:description" content="Echoes of the Kingdom — a slow-burn epic fantasy by Michael He. A boy, an ancient road, and a world quietly forgetting its own past."/>
+<meta name="twitter:image" content="https://cornerstoneauthor.com/assets/images/og-image.jpg"/>
+
+<style>#eotk-continue{display:none;text-align:center;padding:12px 16px;border-bottom:1px solid rgba(216,192,139,.25);color:#d8c08b;font-family:Cinzel,serif;letter-spacing:2px;font-size:13px;text-decoration:none}
+#eotk-continue:hover{background:rgba(216,192,139,.08)}</style>
+<style>.book-byline{font-family:Cinzel,serif;letter-spacing:2px;font-size:12px;color:rgba(216,192,139,.75);margin-top:10px}.book-byline a{color:#d8c08b;text-decoration:none}</style>
 </head>
 <body>
 <header class="site-header">
@@ -108,6 +125,7 @@
 <a href="./assets/join/index.html">JOIN</a>
 </nav>
 </header>
+<a id="eotk-continue" href="#"></a>
 <main>
 <section class="home-hero">
 <div class="home-hero-overlay"></div>
@@ -232,6 +250,7 @@
                     the question no one else will ask: who built the
                     Old Stone Road, and where does it go?
                 </p>
+<p class="book-byline">by <a href="./assets/about/index.html">Michael He</a></p>
 </div>
 </div>
 </div>
@@ -356,5 +375,8 @@
   <!-- GoatCounter: privacy-friendly page analytics -->
   <script data-goatcounter="https://echoeskingdom.goatcounter.com/count"
           async src="//gc.zgo.at/count.js"></script>
+
+<script>(function(){try{var d=JSON.parse(localStorage.getItem('eotk-last-read')||'null');if(!d||!d.url||location.pathname===d.url)return;
+var a=document.getElementById('eotk-continue');a.href=d.url;a.textContent='❦ CONTINUE READING — '+d.title.toUpperCase()+' →';a.style.display='block';}catch(e){}})();</script>
 </body>
 </html>

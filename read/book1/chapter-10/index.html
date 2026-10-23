@@ -466,7 +466,31 @@ font-size:28px;
   .site-footer{padding-left:16px !important;padding-right:16px !important;}
   .footer-brand{font-size:21px !important;letter-spacing:.045em !important;max-width:100% !important;}
 }
+
+/* eotk reader tools */
+#eotk-progress{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,#8a6d3b,#d8c08b);z-index:999}
+.reader-tools{display:flex;gap:8px;align-items:center;justify-content:flex-end;max-width:760px;margin:10px auto 0;padding:0 20px}
+.reader-tools span{font-family:Cinzel,serif;font-size:10px;letter-spacing:2px;color:rgba(216,192,139,.6);margin-right:2px}
+.reader-tools button{background:none;border:1px solid rgba(216,192,139,.35);color:#d8c08b;font-family:Cinzel,serif;cursor:pointer;padding:3px 10px;font-size:12px}
+.reader-tools button.on{background:rgba(216,192,139,.18)}
+body.font-lg .article p{font-size:32px}
+body.font-sm .article p{font-size:24px}
+@media (max-width:768px){body.font-lg .article p{font-size:26px}body.font-sm .article p{font-size:19px}}
+.chapter-navigation-top{margin-top:26px}
 </style>
+<link rel="icon" href="/favicon.ico" sizes="any"/>
+<link rel="icon" type="image/png" href="/assets/images/favicon-32.png" sizes="32x32"/>
+<link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png"/>
+<meta property="og:type" content="article"/>
+<meta property="og:site_name" content="Echoes of the Kingdom"/>
+<meta property="og:title" content="Chapter 10: The Road Beyond the Vale | Echoes of the Kingdom"/>
+<meta property="og:description" content="Echoes of the Kingdom — a slow-burn epic fantasy by Michael He. A boy, an ancient road, and a world quietly forgetting its own past."/>
+<meta property="og:url" content="https://cornerstoneauthor.com/read/book1/chapter-10/"/>
+<meta property="og:image" content="https://cornerstoneauthor.com/assets/images/og-image.jpg"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="Chapter 10: The Road Beyond the Vale | Echoes of the Kingdom"/>
+<meta name="twitter:description" content="Echoes of the Kingdom — a slow-burn epic fantasy by Michael He. A boy, an ancient road, and a world quietly forgetting its own past."/>
+<meta name="twitter:image" content="https://cornerstoneauthor.com/assets/images/og-image.jpg"/>
 </head>
 <body>
 <header class="topbar">
@@ -477,12 +501,15 @@ ECHOES OF THE KINGDOM
 </div>
 <a class="back" href="../part1/index.html">← Back to Part I</a>
 </header>
+<div id="eotk-progress"></div>
+<div class="reader-tools"><span>TEXT SIZE</span><button data-f="sm">A−</button><button data-f="md">A</button><button data-f="lg">A+</button></div>
 <section class="hero">
 <div class="eyebrow">CHAPTER 15</div>
 <h1>
 The Road Beyond the Vale
 </h1>
 </section>
+<div class="chapter-navigation chapter-navigation-top"><a href="../chapter-09/index.html">← Previous</a><a href="../part1/index.html">Part I Contents</a><a href="../chapter-11/index.html">Next →</a></div>
 <main class="article">
 <p class="dropcap">Years passed after the flooding of Thomas's wood-yard. Winters came down from the crags and loosened their grip again; by the time the latest cold finally receded, Ashvale had shifted its skin more than once.</p>
 <p>Snow had buried the vale and melted away; spring floods had turned the lanes to mud; harvests had risen gold and vanished beneath the sickle. The changes came so slowly that Aether rarely noticed them until something familiar suddenly felt smaller than he remembered.</p>
@@ -648,5 +675,21 @@ document.addEventListener("DOMContentLoaded", function () {
 </script>
 <!-- GoatCounter: privacy-friendly page analytics -->
 <script async="" data-goatcounter="https://echoeskingdom.goatcounter.com/count" src="//gc.zgo.at/count.js"></script>
+
+<script>
+(function(){
+  var bar=document.getElementById('eotk-progress');
+  function upd(){var h=document.documentElement;var max=h.scrollHeight-h.clientHeight;bar.style.width=(max>0?(h.scrollTop/max)*100:0)+'%';}
+  document.addEventListener('scroll',upd,{passive:true});upd();
+  var saved='md';try{saved=localStorage.getItem('eotk-font')||'md';}catch(e){}
+  function apply(f){document.body.classList.remove('font-lg','font-sm');if(f!=='md')document.body.classList.add('font-'+f);
+    document.querySelectorAll('.reader-tools button').forEach(function(b){b.classList.toggle('on',b.getAttribute('data-f')===f);});}
+  apply(saved);
+  document.querySelectorAll('.reader-tools button').forEach(function(b){b.addEventListener('click',function(){
+    var f=b.getAttribute('data-f');apply(f);try{localStorage.setItem('eotk-font',f);}catch(e){}});});
+  var h1=document.querySelector('.hero h1');
+  if(h1){try{localStorage.setItem('eotk-last-read',JSON.stringify({url:location.pathname,title:h1.textContent.trim()}));}catch(e){}}
+})();
+</script>
 </body>
 </html>
