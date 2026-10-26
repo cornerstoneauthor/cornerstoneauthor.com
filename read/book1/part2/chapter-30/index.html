@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Chapter 30: The Wayhouse | Echoes of the Kingdom</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&amp;family=Inter:wght@300;400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<style>
+.chapter-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  width: 100%;
+  margin-top: 100px;
+  padding-top: 40px;
+  border-top: 1px solid rgba(212, 184, 120, 0.18);
+}
+
+.chapter-navigation a {
+  color: #d8c49a;
+  font-family: Inter, sans-serif;
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+
+background:#070809;
+
+color:#ece2cf;
+
+font-family:"Cormorant Garamond",serif;
+
+line-height:1.9;
+
+}
+
+a{
+
+text-decoration:none;
+
+color:inherit;
+
+}
+
+.topbar{
+
+position:sticky;
+
+top:0;
+
+z-index:100;
+
+height:72px;
+
+background:rgba(7,8,9,.92);
+
+backdrop-filter:blur(10px);
+
+border-bottom:1px solid rgba(212,184,120,.12);
+
+display:flex;
+
+align-items:center;
+
+justify-content:space-between;
+
+padding:0 60px;
+
+}
+
+.logo{
+
+font-size:20px;
+
+letter-spacing:2px;
+
+color:#d8c08b;
+
+}
+
+.back{
+
+font-family:Inter,sans-serif;
+
+font-size:13px;
+
+letter-spacing:2px;
+
+text-transform:uppercase;
+
+color:#a89b7a;
+
+transition:.25s;
+
+}
+
+.back:hover{
+
+color:#e8d9b3;
+
+}
+
+.hero{
+
+padding:120px 20px 80px;
+
+text-align:center;
+
+}
+
+.eyebrow{
+
+font-size:18px;
+
+letter-spacing:6px;
+
+color:#a48c60;
+
+margin-bottom:20px;
+
+text-transform:uppercase;
+
+}
+
+h1{
+
+font-size:88px;
+
+font-weight:600;
+
+letter-spacing:2px;
+
+margin-bottom:24px;
+
+}
+
+.subtitle{
+
+max-width:700px;
+
+margin:auto;
+
+font-family:Inter,sans-serif;
+
+font-size:18px;
+
+color:#bfb5a2;
+
+line-height:1.8;
+
+}
+
+.article{
+
+max-width:680px;
+
+margin:100px auto 180px;
+
+padding:0 30px;
+
+font-size:28px;
+
+}
+
+.article p{
+  font-family:"Cormorant Garamond", serif;
+  font-size:28px;
+  line-height:2;
+  color:rgba(245,239,226,0.95);
+  margin-bottom:42px;
+}
+
+.dropcap::first-letter {
+  float: left;
+  font-size: 72px;
+  line-height: 0.8;
+  margin-right: 14px;
+  margin-top: 6px;
+  color: #d8c49a;
+}
+/* ===========================
+   Cornerstone Footer
+=========================== */
+
+.site-footer{
+    margin-top:120px;
+    padding:72px 24px 58px;
+    border-top:1px solid rgba(212,176,106,.18);
+    text-align:center;
+}
+
+.footer-brand{
+
+    font-family:"Cinzel", serif;
+
+    font-size:44px;
+
+    font-weight:500;
+
+    letter-spacing:.18em;
+
+    color:#D4B06A;
+
+    margin-bottom:10px;
+
+}
+
+.footer-tagline{
+    font-family:"Cormorant Garamond", serif;
+    font-style:italic;
+    font-size:18px;
+    color:#D8C8A8;
+    margin-bottom:32px;
+}
+
+.footer-studio{
+    font-family:Inter,sans-serif;
+    font-size:12px;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    color:rgba(245,239,226,.55);
+    margin-bottom:12px;
+}
+
+.footer-copyright{
+    font-family:Inter,sans-serif;
+    font-size:12px;
+    color:rgba(245,239,226,.35);
+}
+
+
+/* ===========================
+   Mobile Reading Layout
+=========================== */
+@media (max-width: 700px) {
+  html, body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .topbar {
+    height: auto;
+    min-height: 62px;
+    padding: 0 16px;
+    gap: 10px;
+  }
+
+  .logo {
+    min-width: 0;
+    white-space: nowrap;
+    font-size: 13px;
+    letter-spacing: 1.1px;
+    line-height: 1.2;
+  }
+
+  .back {
+    flex: 0 0 auto;
+    white-space: nowrap;
+    font-size: 10px;
+    letter-spacing: 1.1px;
+    line-height: 1.2;
+  }
+
+  .hero {
+    padding: 72px 18px 48px;
+  }
+
+  .eyebrow {
+    margin-bottom: 16px;
+    font-size: 13px;
+    letter-spacing: 4px;
+  }
+
+  h1 {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto 18px;
+    font-size: clamp(40px, 12vw, 54px);
+    line-height: 1.08;
+    letter-spacing: 1px;
+    overflow-wrap: break-word;
+    word-break: normal;
+  }
+
+  .subtitle {
+    max-width: 100%;
+    padding: 0 4px;
+    font-size: 16px;
+    line-height: 1.65;
+  }
+
+  .article {
+    width: 100%;
+    max-width: 100%;
+    margin: 48px auto 96px;
+    padding: 0 22px;
+    font-size: 22px;
+  }
+
+  .article p {
+    max-width: 100%;
+    font-size: 22px;
+    line-height: 1.78;
+    margin-bottom: 30px;
+  }
+
+  .dropcap::first-letter {
+    font-size: 58px;
+    line-height: .82;
+    margin-right: 10px;
+    margin-top: 5px;
+  }
+
+  .chapter-navigation {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    gap: 8px;
+    margin-top: 64px;
+    padding-top: 28px;
+  }
+
+  .chapter-navigation a {
+    min-width: 0;
+    font-size: 10px;
+    line-height: 1.4;
+    letter-spacing: 1.4px;
+  }
+
+  .chapter-navigation a:first-child { text-align: left; }
+  .chapter-navigation a:nth-child(2) { text-align: center; }
+  .chapter-navigation a:last-child { text-align: right; }
+
+  .site-footer {
+    margin-top: 72px;
+    padding: 54px 18px 40px;
+    overflow: hidden;
+  }
+
+  .footer-brand {
+    white-space: nowrap;
+    font-size: clamp(26px, 8vw, 32px);
+    letter-spacing: .12em;
+  }
+
+  .footer-tagline {
+    font-size: 16px;
+    margin-bottom: 28px;
+  }
+
+  .footer-studio,
+  .footer-copyright {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 390px) {
+  .topbar { padding: 0 12px; gap: 7px; }
+  .logo { font-size: 11.5px; letter-spacing: .9px; }
+  .back { font-size: 9px; letter-spacing: .9px; }
+  .hero { padding: 64px 16px 42px; }
+  h1 { font-size: clamp(38px, 11.5vw, 45px); }
+  .article { padding: 0 20px; }
+  .article p { font-size: 21px; line-height: 1.76; }
+  .chapter-navigation a { font-size: 9.5px; letter-spacing: 1.1px; }
+  .footer-brand { font-size: 27px; letter-spacing: .1em; }
+}
+
+/* Unified Cornerstone footer */
+.site-footer{margin-top:120px;padding:72px 24px 58px;border-top:1px solid rgba(212,176,106,.22);text-align:center;overflow:hidden}
+.footer-brand{font-family:"Cinzel",serif;font-size:44px;font-weight:500;letter-spacing:.14em;color:#D4B06A;margin:0 auto 10px;line-height:1.15;max-width:100%;white-space:nowrap}
+.footer-tagline{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:18px;color:#D8C8A8;margin-bottom:32px}
+.footer-studio{font-family:Inter,sans-serif;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:rgba(245,239,226,.55);margin-bottom:12px}
+.footer-copyright{font-family:Inter,sans-serif;font-size:12px;color:rgba(245,239,226,.35)}
+@media(max-width:700px){
+.site-footer{margin-top:72px;padding:50px 16px 40px}
+.footer-brand{font-size:clamp(23px,7.2vw,32px);letter-spacing:.08em;white-space:nowrap;overflow-wrap:normal;word-break:normal}
+.footer-tagline{font-size:16px;margin-bottom:26px}
+.footer-studio{font-size:11px;letter-spacing:.14em}
+.footer-copyright{font-size:11px;line-height:1.5}
+}
+
+</style>
+<style id="global-footer-unification">
+/* Final global footer override: keep every page visually identical. */
+.site-footer{
+  margin-top:120px !important;
+  padding:72px 24px 58px !important;
+  border-top:1px solid rgba(212,176,106,.22) !important;
+  text-align:center !important;
+  overflow:hidden !important;
+  box-sizing:border-box !important;
+}
+.footer-brand{
+  display:block !important;
+  font-family:"Cinzel",serif !important;
+  font-size:44px !important;
+  font-weight:500 !important;
+  letter-spacing:.10em !important;
+  line-height:1.12 !important;
+  color:#D4B06A !important;
+  width:auto !important;
+  max-width:100% !important;
+  margin:0 auto 10px !important;
+  padding:0 !important;
+  white-space:nowrap !important;
+  overflow-wrap:normal !important;
+  word-break:normal !important;
+  text-align:center !important;
+  box-sizing:border-box !important;
+}
+.footer-tagline{
+  font-family:"Cormorant Garamond",serif !important;
+  font-style:italic !important;
+  font-size:18px !important;
+  line-height:1.4 !important;
+  color:#D8C8A8 !important;
+  margin:0 auto 32px !important;
+}
+.footer-studio{
+  font-family:Inter,sans-serif !important;
+  font-size:12px !important;
+  line-height:1.5 !important;
+  letter-spacing:.18em !important;
+  text-transform:uppercase !important;
+  color:rgba(245,239,226,.55) !important;
+  margin:0 auto 12px !important;
+}
+.footer-copyright{
+  font-family:Inter,sans-serif !important;
+  font-size:12px !important;
+  line-height:1.5 !important;
+  color:rgba(245,239,226,.35) !important;
+  margin:0 auto !important;
+}
+@media (max-width:700px){
+  .site-footer{
+    margin-top:72px !important;
+    padding:48px 20px 38px !important;
+  }
+  .footer-brand{
+    font-size:clamp(22px,6.5vw,30px) !important;
+    letter-spacing:.06em !important;
+    line-height:1.12 !important;
+    max-width:calc(100% - 12px) !important;
+    margin:0 auto 12px !important;
+  }
+  .footer-tagline{font-size:16px !important;margin-bottom:26px !important;}
+  .footer-studio{font-size:11px !important;letter-spacing:.14em !important;margin-bottom:12px !important;}
+  .footer-copyright{font-size:11px !important;line-height:1.5 !important;}
+}
+@media (max-width:380px){
+  .site-footer{padding-left:16px !important;padding-right:16px !important;}
+  .footer-brand{font-size:21px !important;letter-spacing:.045em !important;max-width:100% !important;}
+}
+
+/* eotk reader tools */
+#eotk-progress{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,#8a6d3b,#d8c08b);z-index:999}
+.reader-tools{display:flex;gap:8px;align-items:center;justify-content:flex-end;max-width:760px;margin:10px auto 0;padding:0 20px}
+.reader-tools span{font-family:Cinzel,serif;font-size:10px;letter-spacing:2px;color:rgba(216,192,139,.6);margin-right:2px}
+.reader-tools button{background:none;border:1px solid rgba(216,192,139,.35);color:#d8c08b;font-family:Cinzel,serif;cursor:pointer;padding:3px 10px;font-size:12px}
+.reader-tools button.on{background:rgba(216,192,139,.18)}
+body.font-lg .article p{font-size:32px}
+body.font-sm .article p{font-size:24px}
+@media (max-width:768px){body.font-lg .article p{font-size:26px}body.font-sm .article p{font-size:19px}}
+.chapter-navigation-top{margin-top:26px}
+</style>
+<link rel="icon" href="/favicon.ico" sizes="any"/>
+<link rel="icon" type="image/png" href="/assets/images/favicon-32.png" sizes="32x32"/>
+<link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png"/>
+<meta property="og:type" content="article"/>
+<meta property="og:site_name" content="Echoes of the Kingdom"/>
+<meta property="og:title" content="Chapter 30: The Wayhouse | Echoes of the Kingdom"/>
+<meta property="og:description" content="Echoes of the Kingdom — a slow-burn epic fantasy by Michael He. A boy, an ancient road, and a world quietly forgetting its own past."/>
+<meta property="og:url" content="https://cornerstoneauthor.com/read/book1/part2/chapter-30/"/>
+<meta property="og:image" content="https://cornerstoneauthor.com/assets/images/og-image.jpg"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="Chapter 30: The Wayhouse | Echoes of the Kingdom"/>
+<meta name="twitter:description" content="Echoes of the Kingdom — a slow-burn epic fantasy by Michael He. A boy, an ancient road, and a world quietly forgetting its own past."/>
+<meta name="twitter:image" content="https://cornerstoneauthor.com/assets/images/og-image.jpg"/>
+</head>
+<body>
+<header class="topbar">
+<div class="logo"><a href="../../../../index.html" style="color:inherit;text-decoration:none">ECHOES OF THE KINGDOM</a></div>
+<a class="back" href="../index.html">← Back to Part II</a>
+</header>
+<div id="eotk-progress"></div>
+<div class="reader-tools"><span>TEXT SIZE</span><button data-f="sm">A−</button><button data-f="md">A</button><button data-f="lg">A+</button></div>
+<section class="hero">
+<div class="eyebrow">CHAPTER 30</div>
+<h1>The Wayhouse</h1>
+</section>
+<div class="chapter-navigation chapter-navigation-top"><a href="../chapter-29/index.html">← Previous</a><a href="../index.html">Part II Contents</a></div>
+<main class="article"><p class="dropcap">The wayhouse was far warmer than the road outside. Flames roared in a broad hearth, casting light across rough stone walls and the faces of travelers gathered around wooden tables. Some ate quietly, others hung damp cloaks near the fire, while two merchants argued over a creased map and the quickest route to their destination. The arrival of three strangers drew little attention. At an inn beside a busy road, unfamiliar faces were simply part of the day&#x27;s business.</p><p>Behind the counter stood a broad-shouldered man whose hair had begun to turn gray. He was polishing a wooden cup and looked up only when they approached. His gaze moved over the three travelers and came to rest on Elowen&#x27;s bandaged arm. “Trouble in the woods?”</p><p>“Yes,” Kael said.</p><p>The innkeeper asked nothing more. He set the cup on a shelf. “There&#x27;s stew left. One room upstairs, too. The other one&#x27;s taken by merchants.”</p><p>Kael turned to the women. Seren and Elowen spoke briefly and agreed to share the room, while Kael would find somewhere to rest downstairs. The innkeeper produced a key and promised to have hot water sent up. He also mentioned that someone would look after the horses in the yard. Kael paid, and the man gestured toward an empty table near the fire. “Eat first. Stew isn&#x27;t as good once it&#x27;s cold.”</p><p>They chose a table with a clear view of the entrance. Kael set down his pack and, as he sat, automatically noted the positions of the stairs and back door. Elowen noticed but said nothing. Before long the innkeeper&#x27;s wife arrived with a heavy iron pot filled with tender stewed meat, carrots, onions, and potatoes. She brought a whole loaf of rye bread and a little butter as well. As the steam rose, Seren realized how light-headed she was with hunger.</p><p>“You&#x27;re in luck today,” the woman said, setting out wooden bowls. “A hunter brought us a deer this morning, but all the venison&#x27;s gone. I&#x27;m afraid it&#x27;s only stew now.”</p><p>“This is more than good enough,” Kael said sincerely.</p><p>The woman smiled and left them to their meal. Seren scooped up a spoonful of broth and tasted it before it had cooled, drawing in a quick breath when it burned her tongue. Elowen handed her some bread. “I think this tastes even better than what we had in Rivergate,” Seren said.</p><p>“Because you&#x27;ve walked farther today,” Kael replied.</p><p>Elowen looked at him. “Is that something experience taught you?”</p><p>“Only that food usually tastes better when you&#x27;re hungry.” He broke his bread with perfect seriousness. An elderly merchant at the next table overheard him, smiled, and returned to his supper.</p><p>After a few mouthfuls, Seren felt herself reviving and began to notice the conversations around them. Three merchants at a nearby table had spread out a map. One, an old man with a gray beard, pressed a finger against the northern road and declared he would never use that trade route again. His younger companion asked whether rumors had frightened him. The old man took a drink of ale. “I have grandchildren,” he said. He had not raised his voice, but the others stopped joking. After a while a third merchant sighed. “The goods still have to reach Riverport.” The old man nodded. “Someone will take them. It won&#x27;t be me.”</p><p>Two young guards sat near a window. One rubbed his aching shoulder and complained that the price of hiring protection had doubled since the previous year. His companion laughed and asked why he was complaining about higher wages. The first raised his cup. “The money&#x27;s doubled. My chances of coming back alive haven&#x27;t.” They both laughed, but only briefly, and the sound was soon lost among the other conversations.</p><p>Seren was not deliberately eavesdropping. The words came from all sides and were difficult to ignore. She had heard rumors of unsafe roads in Rivergate, but sitting among people whose livelihoods depended on those roads showed her what the rumors meant in practice. Merchants had to decide whether to travel at all; guards had to decide what risks their wages justified; innkeepers had to wonder how many guests would still come tomorrow.</p><p>“Has it always been like this out here?” she asked Kael quietly.</p><p>He looked around and shook his head. “People used to argue about which roads had been repaired, where the harvest was good, or which inn served ale worth making a detour for. Now it&#x27;s guards, grain, closed trade routes, and the beast calamities nobody can explain.” He put down his spoon. “Once people become afraid, almost any conversation finds its way back to whatever worries them.”</p><p>Seren watched the merchants. The old man had folded his map and was carefully wiping his cup, as though the argument no longer mattered. Yet he would still have to choose a road in the morning. She thought of the fork where she and Kael had made their choice. Had they taken the other road, they would never have met Elowen or sat here listening to these lives unfold. She kept the thought to herself and drank a little of her cooling soup.</p><p>The door opened again, letting a gust of night wind and road dust into the room. Two messengers stood in the entrance, their cloaks streaked with dried mud and fresh damp earth still clinging to their boots. Without removing their packs, they went straight to the counter and asked whether any rooms remained. When the innkeeper shook his head, one said, “Then two bowls of hot soup. We have to be on the road again before dawn.”</p><p>Kael watched them. “They&#x27;re in a hurry,” he murmured.</p><p>“Aren&#x27;t messengers always?” Seren asked.</p><p>“Not all of them.” He nodded toward their boots. “They won&#x27;t even put down their packs for a meal. Whatever they&#x27;re afraid of losing isn&#x27;t just time.” He did not speculate about the contents of their messages, but returned to his food. Elowen glanced toward the counter, then lowered her eyes. Her fingers tightened slightly around her spoon.</p><p>As night deepened, the common room began to empty. Kael pushed aside his bowl and said he would check the animals and their belongings outside. Seren was accustomed to this by now. Whether they camped in the open or stayed at an inn, he always made one last inspection before sleeping. Elowen watched him go. “Is he always so careful?”</p><p>“Yes.” Seren smiled. “At first I thought he simply didn&#x27;t talk much. Then I realized he does far more than he says.”</p><p>“You don&#x27;t meet many people like that.” Elowen touched the bandage on her arm, then looked at the empty bowls. “If you hadn&#x27;t come along today, I don&#x27;t know where I&#x27;d be.”</p><p>“And we had no idea we&#x27;d find you in those woods,” Seren replied. She did not try to give their meeting a meaning she could not yet understand. Instead she wrapped the leftover bread and put it away for the next day&#x27;s journey.</p><p>The yard had grown colder since sunset. Kael checked the horses and their reins, then stopped beside the fence on his way back. Fresh footprints marked the wet soil. They were not his companions&#x27;, nor did they resemble the confused tracks left by the day&#x27;s wagons. They followed the fence toward the stable, lingered near the shed, then turned back toward the main road without approaching the inn door. Kael crouched and touched the mud. Its surface had not dried; whoever had made the marks had left recently.</p><p>He looked down the dark road. Wind moved from the distant trees, but nothing else stirred. A few footprints were not proof that someone had followed them, and he had no wish to alarm the whole inn over a suspicion. He memorized their position and direction, brushed the dirt from his hands, and went inside.</p><p>Seren and Elowen had gathered their belongings. The innkeeper handed them an oil lamp and told them their room was at the far end of the landing, on the right. Hot water had already been brought upstairs. When Seren thanked him, he smiled. “Get some sleep. Tomorrow&#x27;s road won&#x27;t grow shorter just because you&#x27;re tired today.”</p><p>“Does everyone who&#x27;s spent years traveling talk like that?” Seren asked.</p><p>“More or less.” He returned a wooden cup to its shelf. “There are only so many lessons the road can teach.”</p><p>Kael returned to the table and picked up his pack without mentioning the tracks outside. After confirming that he had somewhere to rest downstairs, he accompanied the women up the stairs. The wooden steps creaked beneath them. As they climbed, the firelight from the common room disappeared behind the floorboards. Elowen supported her injured arm, Seren carried the lamp, and Kael followed close enough to make sure neither missed a step. A day earlier they had been strangers. Now, at least, they could rest for a little while beneath the same roof. Tomorrow&#x27;s road could wait until morning.</p><div class="chapter-end-cta" style="max-width:680px;margin:40px auto 0;padding:28px 30px;border:1px solid rgba(212,184,120,.25);text-align:center;">
+<p style="font-family:Inter,sans-serif;font-size:15px;line-height:1.8;color:#bfb5a2;margin-bottom:14px;">Enjoying Echoes of the Kingdom? New chapters every Monday, Wednesday, Friday and Sunday.</p>
+<a href="https://www.royalroad.com/fiction/186472/echoes-of-the-kingdom" style="color:#d8c49a;font-family:Inter,sans-serif;font-size:13px;letter-spacing:2px;text-transform:uppercase;">Follow on Royal Road</a>
+<span style="color:#6b6252;margin:0 10px;">·</span>
+<a href="#" style="color:#d8c49a;font-family:Inter,sans-serif;font-size:13px;letter-spacing:2px;text-transform:uppercase;">Get Letters from Elarion</a>
+</div>
+<div class="chapter-navigation"><a href="../chapter-29/index.html">← Previous</a><a href="../index.html">Part II Contents</a></div></main>
+<footer class="site-footer">
+<div class="footer-brand">Cornerstone</div>
+<div class="footer-tagline">Building stories that endure.</div>
+<div class="footer-studio">Created by Echoes Studio</div>
+<div class="footer-copyright">© 2026 Michael He. All Rights Reserved.</div>
+</footer>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const article = document.querySelector(".article");
+
+    if (!article) {
+        return;
+    }
+
+    const paragraphs = article.querySelectorAll("p");
+
+    paragraphs.forEach(function (paragraph) {
+        const text = paragraph.textContent.trim();
+
+        if (!text) {
+            return;
+        }
+
+        // 自动识别场景分隔符
+        if (text === "***" || text === "* * *") {
+            const divider = document.createElement("div");
+            divider.className = "divider";
+            divider.textContent = "❦";
+            paragraph.replaceWith(divider);
+            return;
+        }
+
+        // 自动识别以引号或长破折号开头的对白
+        const isDialogue =
+            text.startsWith('"') ||
+            text.startsWith("“") ||
+            text.startsWith("‘") ||
+            text.startsWith("'") ||
+            text.startsWith("—");
+
+        if (isDialogue) {
+            paragraph.classList.add("dialogue");
+        }
+    });
+});
+</script>
+<!-- GoatCounter: privacy-friendly page analytics -->
+<script async="" data-goatcounter="https://echoeskingdom.goatcounter.com/count" src="//gc.zgo.at/count.js"></script>
+
+<script>
+(function(){
+  var bar=document.getElementById('eotk-progress');
+  function upd(){var h=document.documentElement;var max=h.scrollHeight-h.clientHeight;bar.style.width=(max>0?(h.scrollTop/max)*100:0)+'%';}
+  document.addEventListener('scroll',upd,{passive:true});upd();
+  var saved='md';try{saved=localStorage.getItem('eotk-font')||'md';}catch(e){}
+  function apply(f){document.body.classList.remove('font-lg','font-sm');if(f!=='md')document.body.classList.add('font-'+f);
+    document.querySelectorAll('.reader-tools button').forEach(function(b){b.classList.toggle('on',b.getAttribute('data-f')===f);});}
+  apply(saved);
+  document.querySelectorAll('.reader-tools button').forEach(function(b){b.addEventListener('click',function(){
+    var f=b.getAttribute('data-f');apply(f);try{localStorage.setItem('eotk-font',f);}catch(e){}});});
+  var h1=document.querySelector('.hero h1');
+  if(h1){try{localStorage.setItem('eotk-last-read',JSON.stringify({url:location.pathname,title:h1.textContent.trim()}));}catch(e){}}
+})();
+</script>
+</body>
+</html>

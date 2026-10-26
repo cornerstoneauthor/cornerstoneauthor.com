@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Chapter 27: An Unexpected Battle | Echoes of the Kingdom</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&amp;family=Inter:wght@300;400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<style>
+.chapter-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  width: 100%;
+  margin-top: 100px;
+  padding-top: 40px;
+  border-top: 1px solid rgba(212, 184, 120, 0.18);
+}
+
+.chapter-navigation a {
+  color: #d8c49a;
+  font-family: Inter, sans-serif;
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+
+background:#070809;
+
+color:#ece2cf;
+
+font-family:"Cormorant Garamond",serif;
+
+line-height:1.9;
+
+}
+
+a{
+
+text-decoration:none;
+
+color:inherit;
+
+}
+
+.topbar{
+
+position:sticky;
+
+top:0;
+
+z-index:100;
+
+height:72px;
+
+background:rgba(7,8,9,.92);
+
+backdrop-filter:blur(10px);
+
+border-bottom:1px solid rgba(212,184,120,.12);
+
+display:flex;
+
+align-items:center;
+
+justify-content:space-between;
+
+padding:0 60px;
+
+}
+
+.logo{
+
+font-size:20px;
+
+letter-spacing:2px;
+
+color:#d8c08b;
+
+}
+
+.back{
+
+font-family:Inter,sans-serif;
+
+font-size:13px;
+
+letter-spacing:2px;
+
+text-transform:uppercase;
+
+color:#a89b7a;
+
+transition:.25s;
+
+}
+
+.back:hover{
+
+color:#e8d9b3;
+
+}
+
+.hero{
+
+padding:120px 20px 80px;
+
+text-align:center;
+
+}
+
+.eyebrow{
+
+font-size:18px;
+
+letter-spacing:6px;
+
+color:#a48c60;
+
+margin-bottom:20px;
+
+text-transform:uppercase;
+
+}
+
+h1{
+
+font-size:88px;
+
+font-weight:600;
+
+letter-spacing:2px;
+
+margin-bottom:24px;
+
+}
+
+.subtitle{
+
+max-width:700px;
+
+margin:auto;
+
+font-family:Inter,sans-serif;
+
+font-size:18px;
+
+color:#bfb5a2;
+
+line-height:1.8;
+
+}
+
+.article{
+
+max-width:680px;
+
+margin:100px auto 180px;
+
+padding:0 30px;
+
+font-size:28px;
+
+}
+
+.article p{
+  font-family:"Cormorant Garamond", serif;
+  font-size:28px;
+  line-height:2;
+  color:rgba(245,239,226,0.95);
+  margin-bottom:42px;
+}
+
+.dropcap::first-letter {
+  float: left;
+  font-size: 72px;
+  line-height: 0.8;
+  margin-right: 14px;
+  margin-top: 6px;
+  color: #d8c49a;
+}
+/* ===========================
+   Cornerstone Footer
+=========================== */
+
+.site-footer{
+    margin-top:120px;
+    padding:72px 24px 58px;
+    border-top:1px solid rgba(212,176,106,.18);
+    text-align:center;
+}
+
+.footer-brand{
+
+    font-family:"Cinzel", serif;
+
+    font-size:44px;
+
+    font-weight:500;
+
+    letter-spacing:.18em;
+
+    color:#D4B06A;
+
+    margin-bottom:10px;
+
+}
+
+.footer-tagline{
+    font-family:"Cormorant Garamond", serif;
+    font-style:italic;
+    font-size:18px;
+    color:#D8C8A8;
+    margin-bottom:32px;
+}
+
+.footer-studio{
+    font-family:Inter,sans-serif;
+    font-size:12px;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    color:rgba(245,239,226,.55);
+    margin-bottom:12px;
+}
+
+.footer-copyright{
+    font-family:Inter,sans-serif;
+    font-size:12px;
+    color:rgba(245,239,226,.35);
+}
+
+
+/* ===========================
+   Mobile Reading Layout
+=========================== */
+@media (max-width: 700px) {
+  html, body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .topbar {
+    height: auto;
+    min-height: 62px;
+    padding: 0 16px;
+    gap: 10px;
+  }
+
+  .logo {
+    min-width: 0;
+    white-space: nowrap;
+    font-size: 13px;
+    letter-spacing: 1.1px;
+    line-height: 1.2;
+  }
+
+  .back {
+    flex: 0 0 auto;
+    white-space: nowrap;
+    font-size: 10px;
+    letter-spacing: 1.1px;
+    line-height: 1.2;
+  }
+
+  .hero {
+    padding: 72px 18px 48px;
+  }
+
+  .eyebrow {
+    margin-bottom: 16px;
+    font-size: 13px;
+    letter-spacing: 4px;
+  }
+
+  h1 {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto 18px;
+    font-size: clamp(40px, 12vw, 54px);
+    line-height: 1.08;
+    letter-spacing: 1px;
+    overflow-wrap: break-word;
+    word-break: normal;
+  }
+
+  .subtitle {
+    max-width: 100%;
+    padding: 0 4px;
+    font-size: 16px;
+    line-height: 1.65;
+  }
+
+  .article {
+    width: 100%;
+    max-width: 100%;
+    margin: 48px auto 96px;
+    padding: 0 22px;
+    font-size: 22px;
+  }
+
+  .article p {
+    max-width: 100%;
+    font-size: 22px;
+    line-height: 1.78;
+    margin-bottom: 30px;
+  }
+
+  .dropcap::first-letter {
+    font-size: 58px;
+    line-height: .82;
+    margin-right: 10px;
+    margin-top: 5px;
+  }
+
+  .chapter-navigation {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    gap: 8px;
+    margin-top: 64px;
+    padding-top: 28px;
+  }
+
+  .chapter-navigation a {
+    min-width: 0;
+    font-size: 10px;
+    line-height: 1.4;
+    letter-spacing: 1.4px;
+  }
+
+  .chapter-navigation a:first-child { text-align: left; }
+  .chapter-navigation a:nth-child(2) { text-align: center; }
+  .chapter-navigation a:last-child { text-align: right; }
+
+  .site-footer {
+    margin-top: 72px;
+    padding: 54px 18px 40px;
+    overflow: hidden;
+  }
+
+  .footer-brand {
+    white-space: nowrap;
+    font-size: clamp(26px, 8vw, 32px);
+    letter-spacing: .12em;
+  }
+
+  .footer-tagline {
+    font-size: 16px;
+    margin-bottom: 28px;
+  }
+
+  .footer-studio,
+  .footer-copyright {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 390px) {
+  .topbar { padding: 0 12px; gap: 7px; }
+  .logo { font-size: 11.5px; letter-spacing: .9px; }
+  .back { font-size: 9px; letter-spacing: .9px; }
+  .hero { padding: 64px 16px 42px; }
+  h1 { font-size: clamp(38px, 11.5vw, 45px); }
+  .article { padding: 0 20px; }
+  .article p { font-size: 21px; line-height: 1.76; }
+  .chapter-navigation a { font-size: 9.5px; letter-spacing: 1.1px; }
+  .footer-brand { font-size: 27px; letter-spacing: .1em; }
+}
+
+/* Unified Cornerstone footer */
+.site-footer{margin-top:120px;padding:72px 24px 58px;border-top:1px solid rgba(212,176,106,.22);text-align:center;overflow:hidden}
+.footer-brand{font-family:"Cinzel",serif;font-size:44px;font-weight:500;letter-spacing:.14em;color:#D4B06A;margin:0 auto 10px;line-height:1.15;max-width:100%;white-space:nowrap}
+.footer-tagline{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:18px;color:#D8C8A8;margin-bottom:32px}
+.footer-studio{font-family:Inter,sans-serif;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:rgba(245,239,226,.55);margin-bottom:12px}
+.footer-copyright{font-family:Inter,sans-serif;font-size:12px;color:rgba(245,239,226,.35)}
+@media(max-width:700px){
+.site-footer{margin-top:72px;padding:50px 16px 40px}
+.footer-brand{font-size:clamp(23px,7.2vw,32px);letter-spacing:.08em;white-space:nowrap;overflow-wrap:normal;word-break:normal}
+.footer-tagline{font-size:16px;margin-bottom:26px}
+.footer-studio{font-size:11px;letter-spacing:.14em}
+.footer-copyright{font-size:11px;line-height:1.5}
+}
+
+</style>
+<style id="global-footer-unification">
+/* Final global footer override: keep every page visually identical. */
+.site-footer{
+  margin-top:120px !important;
+  padding:72px 24px 58px !important;
+  border-top:1px solid rgba(212,176,106,.22) !important;
+  text-align:center !important;
+  overflow:hidden !important;
+  box-sizing:border-box !important;
+}
+.footer-brand{
+  display:block !important;
+  font-family:"Cinzel",serif !important;
+  font-size:44px !important;
+  font-weight:500 !important;
+  letter-spacing:.10em !important;
+  line-height:1.12 !important;
+  color:#D4B06A !important;
+  width:auto !important;
+  max-width:100% !important;
+  margin:0 auto 10px !important;
+  padding:0 !important;
+  white-space:nowrap !important;
+  overflow-wrap:normal !important;
+  word-break:normal !important;
+  text-align:center !important;
+  box-sizing:border-box !important;
+}
+.footer-tagline{
+  font-family:"Cormorant Garamond",serif !important;
+  font-style:italic !important;
+  font-size:18px !important;
+  line-height:1.4 !important;
+  color:#D8C8A8 !important;
+  margin:0 auto 32px !important;
+}
+.footer-studio{
+  font-family:Inter,sans-serif !important;
+  font-size:12px !important;
+  line-height:1.5 !important;
+  letter-spacing:.18em !important;
+  text-transform:uppercase !important;
+  color:rgba(245,239,226,.55) !important;
+  margin:0 auto 12px !important;
+}
+.footer-copyright{
+  font-family:Inter,sans-serif !important;
+  font-size:12px !important;
+  line-height:1.5 !important;
+  color:rgba(245,239,226,.35) !important;
+  margin:0 auto !important;
+}
+@media (max-width:700px){
+  .site-footer{
+    margin-top:72px !important;
+    padding:48px 20px 38px !important;
+  }
+  .footer-brand{
+    font-size:clamp(22px,6.5vw,30px) !important;
+    letter-spacing:.06em !important;
+    line-height:1.12 !important;
+    max-width:calc(100% - 12px) !important;
+    margin:0 auto 12px !important;
+  }
+  .footer-tagline{font-size:16px !important;margin-bottom:26px !important;}
+  .footer-studio{font-size:11px !important;letter-spacing:.14em !important;margin-bottom:12px !important;}
+  .footer-copyright{font-size:11px !important;line-height:1.5 !important;}
+}
+@media (max-width:380px){
+  .site-footer{padding-left:16px !important;padding-right:16px !important;}
+  .footer-brand{font-size:21px !important;letter-spacing:.045em !important;max-width:100% !important;}
+}
+
+/* eotk reader tools */
+#eotk-progress{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,#8a6d3b,#d8c08b);z-index:999}
+.reader-tools{display:flex;gap:8px;align-items:center;justify-content:flex-end;max-width:760px;margin:10px auto 0;padding:0 20px}
+.reader-tools span{font-family:Cinzel,serif;font-size:10px;letter-spacing:2px;color:rgba(216,192,139,.6);margin-right:2px}
+.reader-tools button{background:none;border:1px solid rgba(216,192,139,.35);color:#d8c08b;font-family:Cinzel,serif;cursor:pointer;padding:3px 10px;font-size:12px}
+.reader-tools button.on{background:rgba(216,192,139,.18)}
+body.font-lg .article p{font-size:32px}
+body.font-sm .article p{font-size:24px}
+@media (max-width:768px){body.font-lg .article p{font-size:26px}body.font-sm .article p{font-size:19px}}
+.chapter-navigation-top{margin-top:26px}
+</style>
+<link rel="icon" href="/favicon.ico" sizes="any"/>
+<link rel="icon" type="image/png" href="/assets/images/favicon-32.png" sizes="32x32"/>
+<link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png"/>
+<meta property="og:type" content="article"/>
+<meta property="og:site_name" content="Echoes of the Kingdom"/>
+<meta property="og:title" content="Chapter 27: An Unexpected Battle | Echoes of the Kingdom"/>
+<meta property="og:description" content="Echoes of the Kingdom — a slow-burn epic fantasy by Michael He. A boy, an ancient road, and a world quietly forgetting its own past."/>
+<meta property="og:url" content="https://cornerstoneauthor.com/read/book1/part2/chapter-27/"/>
+<meta property="og:image" content="https://cornerstoneauthor.com/assets/images/og-image.jpg"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="Chapter 27: An Unexpected Battle | Echoes of the Kingdom"/>
+<meta name="twitter:description" content="Echoes of the Kingdom — a slow-burn epic fantasy by Michael He. A boy, an ancient road, and a world quietly forgetting its own past."/>
+<meta name="twitter:image" content="https://cornerstoneauthor.com/assets/images/og-image.jpg"/>
+</head>
+<body>
+<header class="topbar">
+<div class="logo"><a href="../../../../index.html" style="color:inherit;text-decoration:none">ECHOES OF THE KINGDOM</a></div>
+<a class="back" href="../index.html">← Back to Part II</a>
+</header>
+<div id="eotk-progress"></div>
+<div class="reader-tools"><span>TEXT SIZE</span><button data-f="sm">A−</button><button data-f="md">A</button><button data-f="lg">A+</button></div>
+<section class="hero">
+<div class="eyebrow">CHAPTER 27</div>
+<h1>An Unexpected Battle</h1>
+</section>
+<div class="chapter-navigation chapter-navigation-top"><a href="../chapter-26/index.html">← Previous</a><a href="../index.html">Part II Contents</a><a href="../chapter-28/index.html">Next →</a></div>
+<main class="article"><p class="dropcap">Near midday the following day, Kael found a suitable place to rest just inside the woods. It was only a short distance from the main road, on slightly higher ground where passing travelers could not easily see them, but close enough that they could retreat without losing their bearings. He made a brief circuit of the trees, checking for signs of a recent campfire, before telling Seren to put down her pack. She had come to understand why he disliked making camp in plain view. Most travelers had no wish to cause trouble, but a conspicuous fire invited strangers to decide for themselves whether to approach.</p><p>A narrow stream ran nearby between mossy stones. While Seren filled their waterskins, Kael gathered branches beside a fallen trunk, discarding damp wood and keeping dry bark and twigs. Soon a small fire was burning. They had bread and dried meat left from the previous day, and Seren meant to heat some water so they could at least drink something warm. Birds called among the trees, and now and then the muted rumble of wagon wheels carried from the road. Without the rumors they had heard in recent days, it might have been an entirely ordinary halt.</p><p>Kael sat on the fallen trunk, shaving the bark from a branch with his knife. Seren had just placed the kettle near the fire and was about to ask what he intended to make when his hand stopped. A shaving fell beside his boot, but his eyes were fixed beyond the flames, deeper into the forest. Seren swallowed her question. She had seen him listen this way before, identifying distant hooves or an animal moving through brush. This time his concentration was sharper.</p><p>He raised one hand for silence. They listened as wind moved through the leaves. Just as it began to fade, there came a brief metallic clash from somewhere far ahead, as though two iron objects had struck together in haste. Then nothing. Seren almost doubted she had heard it. Kael set down the knife without turning his head and waited.</p><p>“What was that?” she whispered.</p><p>“Not sure yet. Someone may be using blades in the woods.”</p><p>They waited longer. The wind shifted, bringing the crack of branches beneath running feet and the indistinct shouts of a man. The sounds were distant and broken by the trees, but there was no mistaking the anger in his voice. Then came a stifled cry of pain, as though someone had tried desperately not to cry out and failed.</p><p>Kael rose. He spread the burning wood apart and covered the embers with damp earth. There was no haste in his movements, but nothing wasted either. As he tightened his pack straps and checked the position of his sword, Seren realized that she had mostly known him as an injured traveler, plainspoken and reluctant to explain himself. Now she was seeing a different kind of experience emerge.</p><p>“Someone&#x27;s fighting?” she asked.</p><p>“It doesn&#x27;t sound like an ordinary argument. Someone&#x27;s fighting for their life.”</p><p>“Should we go and look?”</p><p>Kael did not agree at once. He checked the route behind them and listened again, as though weighing the possibility of more people concealed nearby. “We can get closer and see what&#x27;s happening. But stay behind me. If I tell you to stop, stop.”</p><p>“I know.”</p><p>“I mean don&#x27;t get ahead of me.” He regarded her seriously. “You&#x27;ve been walking faster these last few days.”</p><p>Her tense expression softened. “I promise not to overtake you.” Then she saw him draw his sword and grew serious again. “What about your shoulder?”</p><p>“I can use it.” He tested his arm without exaggerating his strength. “If there&#x27;s trouble, I won&#x27;t pretend it&#x27;s fully healed.”</p><p>They moved through the woods toward the sounds. Leaves lay thick underfoot. Kael chose exposed roots and firm patches of earth, pausing behind trees that blocked his view before moving on. He did not simply rush forward; he chose each approach so he could see ahead and still leave himself room to withdraw. Seren followed his steps. At first she controlled her breathing, but as the clash of weapons grew clearer, her heart began to race. Stories of bandits, blocked roads, and the beast calamity had been things other people spoke about. Now something like them was happening in the woods ahead.</p><p>Kael abruptly crouched and held out an arm to stop her. They sheltered behind a great oak and looked through a gap in the branches. A wagon had overturned between two trees. One wheel had split, and planks along the body were broken. Several crates lay scattered in the mud, some hacked open. Instead of cloth or metal goods, they contained rolls of parchment, heavy books, and little bags of medicinal herbs. The horses lay near the shafts; one still struggled to rise, scraping helplessly at the earth.</p><p>A man lay beside the wagon, his clothes dark with blood, a weapon fallen near his hand. Kael glanced at him, then focused on five attackers farther ahead. Four carried blades and had cornered a young woman against an old tree. The fifth stood apart with a shortbow, searching for a clear shot. Blood darkened the woman&#x27;s left sleeve, but her right hand held a short sword steadily. She made no attempt to pursue anyone, using the smallest movements she could to drive back each man who approached.</p><p>“She&#x27;s been trained,” Kael murmured.</p><p>Seren tried to make out her face through the branches, seeing only a pale profile and the effort of each breath. “How long can she hold them?”</p><p>“Not much longer. See the archer? The others are trying to force her away from the trunk. He&#x27;s waiting for an opening.”</p><p>As he spoke, the woman struck out to repel a man reaching for her, then stumbled. The archer loosed an arrow at once. She twisted aside, and it buried itself in the tree behind her. Before she could recover, another man advanced, while the archer reached for a second shaft. Kael&#x27;s injured shoulder tightened for an instant. Then he made his decision.</p><p>“Stay here. Keep away from the blades.” He slipped forward through the shadows between the trees.</p><p>Seren wanted to call after him but could not force out the words. He approached along the narrowest route, moving with surprising speed without plunging into the center of the fight. By the time the archer noticed someone coming from the side, Kael was only a few paces away. The man wheeled, unable to draw his bow fully before Kael struck him with his whole weight. They fell together into the leaves, the bow flying from the archer&#x27;s grasp. As the man reached for the knife at his belt, Kael caught his wrist. Steel flashed amid the struggle. When Kael pushed himself upright, the archer no longer moved.</p><p>“Another one!” an attacker shouted. The four men surrounding the woman broke apart. One rushed Kael with a blade, while two others closed in behind him. Kael sidestepped the first blow beside a tree, letting the edge pass close to his shoulder, then drove his sword hilt into the man&#x27;s face. The attacker staggered back, blood dripping from his nose into his beard. Kael did not pursue him. The others were already near, and the cramped spaces between trunks gave them little room to swing their weapons together.</p><p>He retreated beside an old tree, keeping the trunk at his back. Anyone attempting to circle behind him would have to take the long way around; he could watch the narrow ground in front. The woman used the momentary break in the attack to steady herself against her tree, but did not drop her sword. When one man turned, she forced him back with a short thrust and edged toward clearer ground near the wagon. Kael saw her movement and the blood still flowing from her arm. She knew when to fight, he thought, and when not to gamble with her strength.</p><p>A short blade darted at him from the side. Kael caught it on his sword, the impact jarring his injured shoulder. The man pressed forward, trying to drive him against the tree with his weight. Rather than resist directly, Kael yielded half a step at the instant his opponent committed himself, then kicked the inside of the man&#x27;s knee as he lost his balance. The attacker fell screaming, his knife striking the earth. Kael stepped away, pain pulsing through his shoulder, and changed his grip before anyone could notice.</p><p>The remaining men stopped charging one at a time. A bearded attacker began moving sideways, testing for an opening, while two others exchanged glances and prepared to rush together. Kael read their intention and shifted to keep the tree behind him, forcing them into awkward positions relative to one another. When all three moved, he stepped forward rather than back, crowding the first man so the others had to check their blows. The first blade fell past his side. Kael&#x27;s sword cut across the second man&#x27;s forearm, forcing him to release his weapon, and a kick to the chest sent him crashing against a trunk.</p><p>The third man was already too close for a proper sword stroke. Kael knocked his arm aside and drove the hilt against his jaw. The attacker reeled backward, but the movement sent a sharp pain through Kael&#x27;s shoulder, and he had to steady his breathing. Across the clearing, the woman took the chance to move around the wagon, finally escaping the ring of men. She tightened her grip on her short sword. Neither she nor Kael spoke; they exchanged one quick glance before turning their attention to those still armed.</p><p>The bearded man looked at the fallen archer and his injured companions. His aggression had given way to calculation. They had expected an overturned wagon and a wounded woman. Instead they faced a fighter who understood terrain and refused to offer an easy opening. They might still win, but the price was becoming much higher than expected.</p><p>Then hurried footsteps sounded from the other side of the clearing. Seren had come around the oak, following Kael&#x27;s route. She was not running fast, but several branches cracked beneath her feet, loud in the sudden pause. The bearded man turned sharply, unable to tell whether more reinforcements were coming. He spat into the dirt, muttered a curse, and shouted, “Go!” The men still able to move helped their wounded companions into the trees and disappeared.</p><p>Kael did not pursue them. He stood listening until their footsteps faded, then sheathed his sword. Seren reached him, pale and breathing hard. She first checked whether his shoulder had been cut, then hurried to the young woman. A long gash ran down her left arm from above the elbow toward the wrist, soaking her sleeve. She remained upright, but her lips had lost nearly all their color.</p><p>“You&#x27;re hurt. Let me see,” Seren said.</p><p>“It&#x27;s only a surface wound.” The woman looked down as though only now able to feel the pain. Her fingers stiffened when she tried to sheath her sword.</p><p>“Sit down first.” Seren helped her against a level stone and took clean strips of cloth from her pack. The old caretaker in Rivergate had supplied them before their departure. She had hoped not to need them, but was grateful now that they were close at hand. Without asking who the stranger was, she asked her to press on the wound while she fetched water to wash away the blood and dirt.</p><p>Kael examined the fallen guard, then rose in silence. He inspected the scattered possessions, passing his eyes over muddy parchment, herbs, and broken crates until he noticed an arrow snapped beside a wagon wheel. Black fletching remained at its tail. He turned it over, frowning slightly. The shaft and the careful trimming of the feathers did not look like the improvised equipment of ordinary roadside thieves. He could not yet say where it had come from.</p><p>He tucked the broken arrow inside his cloak without questioning the woman, then returned to Seren. Her voice still trembled a little from the shock, but her hands remained busy. He set his waterskin beside her and passed her another clean cloth.</p><p>“Will those men come back?” Seren asked.</p><p>“I don&#x27;t know. But we shouldn&#x27;t stay here long.”</p><p>The young woman looked up as though she meant to speak, then merely nodded. Kael did not hurry them. He placed his sword within reach and went to see what could be salvaged from the wagon and horses. The fight was over, but it had left more than a wound to dress: a ruined wagon, a dead guard, and questions none of them could yet answer.</p><div class="chapter-end-cta" style="max-width:680px;margin:40px auto 0;padding:28px 30px;border:1px solid rgba(212,184,120,.25);text-align:center;">
+<p style="font-family:Inter,sans-serif;font-size:15px;line-height:1.8;color:#bfb5a2;margin-bottom:14px;">Enjoying Echoes of the Kingdom? New chapters every Monday, Wednesday, Friday and Sunday.</p>
+<a href="https://www.royalroad.com/fiction/186472/echoes-of-the-kingdom" style="color:#d8c49a;font-family:Inter,sans-serif;font-size:13px;letter-spacing:2px;text-transform:uppercase;">Follow on Royal Road</a>
+<span style="color:#6b6252;margin:0 10px;">·</span>
+<a href="#" style="color:#d8c49a;font-family:Inter,sans-serif;font-size:13px;letter-spacing:2px;text-transform:uppercase;">Get Letters from Elarion</a>
+</div>
+<div class="chapter-navigation"><a href="../chapter-26/index.html">← Previous</a><a href="../index.html">Part II Contents</a><a href="../chapter-28/index.html">Next →</a></div></main>
+<footer class="site-footer">
+<div class="footer-brand">Cornerstone</div>
+<div class="footer-tagline">Building stories that endure.</div>
+<div class="footer-studio">Created by Echoes Studio</div>
+<div class="footer-copyright">© 2026 Michael He. All Rights Reserved.</div>
+</footer>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const article = document.querySelector(".article");
+
+    if (!article) {
+        return;
+    }
+
+    const paragraphs = article.querySelectorAll("p");
+
+    paragraphs.forEach(function (paragraph) {
+        const text = paragraph.textContent.trim();
+
+        if (!text) {
+            return;
+        }
+
+        // 自动识别场景分隔符
+        if (text === "***" || text === "* * *") {
+            const divider = document.createElement("div");
+            divider.className = "divider";
+            divider.textContent = "❦";
+            paragraph.replaceWith(divider);
+            return;
+        }
+
+        // 自动识别以引号或长破折号开头的对白
+        const isDialogue =
+            text.startsWith('"') ||
+            text.startsWith("“") ||
+            text.startsWith("‘") ||
+            text.startsWith("'") ||
+            text.startsWith("—");
+
+        if (isDialogue) {
+            paragraph.classList.add("dialogue");
+        }
+    });
+});
+</script>
+<!-- GoatCounter: privacy-friendly page analytics -->
+<script async="" data-goatcounter="https://echoeskingdom.goatcounter.com/count" src="//gc.zgo.at/count.js"></script>
+
+<script>
+(function(){
+  var bar=document.getElementById('eotk-progress');
+  function upd(){var h=document.documentElement;var max=h.scrollHeight-h.clientHeight;bar.style.width=(max>0?(h.scrollTop/max)*100:0)+'%';}
+  document.addEventListener('scroll',upd,{passive:true});upd();
+  var saved='md';try{saved=localStorage.getItem('eotk-font')||'md';}catch(e){}
+  function apply(f){document.body.classList.remove('font-lg','font-sm');if(f!=='md')document.body.classList.add('font-'+f);
+    document.querySelectorAll('.reader-tools button').forEach(function(b){b.classList.toggle('on',b.getAttribute('data-f')===f);});}
+  apply(saved);
+  document.querySelectorAll('.reader-tools button').forEach(function(b){b.addEventListener('click',function(){
+    var f=b.getAttribute('data-f');apply(f);try{localStorage.setItem('eotk-font',f);}catch(e){}});});
+  var h1=document.querySelector('.hero h1');
+  if(h1){try{localStorage.setItem('eotk-last-read',JSON.stringify({url:location.pathname,title:h1.textContent.trim()}));}catch(e){}}
+})();
+</script>
+</body>
+</html>

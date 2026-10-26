@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Chapter 26: The Journey Through the Woods | Echoes of the Kingdom</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&amp;family=Inter:wght@300;400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<style>
+.chapter-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  width: 100%;
+  margin-top: 100px;
+  padding-top: 40px;
+  border-top: 1px solid rgba(212, 184, 120, 0.18);
+}
+
+.chapter-navigation a {
+  color: #d8c49a;
+  font-family: Inter, sans-serif;
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+
+background:#070809;
+
+color:#ece2cf;
+
+font-family:"Cormorant Garamond",serif;
+
+line-height:1.9;
+
+}
+
+a{
+
+text-decoration:none;
+
+color:inherit;
+
+}
+
+.topbar{
+
+position:sticky;
+
+top:0;
+
+z-index:100;
+
+height:72px;
+
+background:rgba(7,8,9,.92);
+
+backdrop-filter:blur(10px);
+
+border-bottom:1px solid rgba(212,184,120,.12);
+
+display:flex;
+
+align-items:center;
+
+justify-content:space-between;
+
+padding:0 60px;
+
+}
+
+.logo{
+
+font-size:20px;
+
+letter-spacing:2px;
+
+color:#d8c08b;
+
+}
+
+.back{
+
+font-family:Inter,sans-serif;
+
+font-size:13px;
+
+letter-spacing:2px;
+
+text-transform:uppercase;
+
+color:#a89b7a;
+
+transition:.25s;
+
+}
+
+.back:hover{
+
+color:#e8d9b3;
+
+}
+
+.hero{
+
+padding:120px 20px 80px;
+
+text-align:center;
+
+}
+
+.eyebrow{
+
+font-size:18px;
+
+letter-spacing:6px;
+
+color:#a48c60;
+
+margin-bottom:20px;
+
+text-transform:uppercase;
+
+}
+
+h1{
+
+font-size:88px;
+
+font-weight:600;
+
+letter-spacing:2px;
+
+margin-bottom:24px;
+
+}
+
+.subtitle{
+
+max-width:700px;
+
+margin:auto;
+
+font-family:Inter,sans-serif;
+
+font-size:18px;
+
+color:#bfb5a2;
+
+line-height:1.8;
+
+}
+
+.article{
+
+max-width:680px;
+
+margin:100px auto 180px;
+
+padding:0 30px;
+
+font-size:28px;
+
+}
+
+.article p{
+  font-family:"Cormorant Garamond", serif;
+  font-size:28px;
+  line-height:2;
+  color:rgba(245,239,226,0.95);
+  margin-bottom:42px;
+}
+
+.dropcap::first-letter {
+  float: left;
+  font-size: 72px;
+  line-height: 0.8;
+  margin-right: 14px;
+  margin-top: 6px;
+  color: #d8c49a;
+}
+/* ===========================
+   Cornerstone Footer
+=========================== */
+
+.site-footer{
+    margin-top:120px;
+    padding:72px 24px 58px;
+    border-top:1px solid rgba(212,176,106,.18);
+    text-align:center;
+}
+
+.footer-brand{
+
+    font-family:"Cinzel", serif;
+
+    font-size:44px;
+
+    font-weight:500;
+
+    letter-spacing:.18em;
+
+    color:#D4B06A;
+
+    margin-bottom:10px;
+
+}
+
+.footer-tagline{
+    font-family:"Cormorant Garamond", serif;
+    font-style:italic;
+    font-size:18px;
+    color:#D8C8A8;
+    margin-bottom:32px;
+}
+
+.footer-studio{
+    font-family:Inter,sans-serif;
+    font-size:12px;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    color:rgba(245,239,226,.55);
+    margin-bottom:12px;
+}
+
+.footer-copyright{
+    font-family:Inter,sans-serif;
+    font-size:12px;
+    color:rgba(245,239,226,.35);
+}
+
+
+/* ===========================
+   Mobile Reading Layout
+=========================== */
+@media (max-width: 700px) {
+  html, body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .topbar {
+    height: auto;
+    min-height: 62px;
+    padding: 0 16px;
+    gap: 10px;
+  }
+
+  .logo {
+    min-width: 0;
+    white-space: nowrap;
+    font-size: 13px;
+    letter-spacing: 1.1px;
+    line-height: 1.2;
+  }
+
+  .back {
+    flex: 0 0 auto;
+    white-space: nowrap;
+    font-size: 10px;
+    letter-spacing: 1.1px;
+    line-height: 1.2;
+  }
+
+  .hero {
+    padding: 72px 18px 48px;
+  }
+
+  .eyebrow {
+    margin-bottom: 16px;
+    font-size: 13px;
+    letter-spacing: 4px;
+  }
+
+  h1 {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto 18px;
+    font-size: clamp(40px, 12vw, 54px);
+    line-height: 1.08;
+    letter-spacing: 1px;
+    overflow-wrap: break-word;
+    word-break: normal;
+  }
+
+  .subtitle {
+    max-width: 100%;
+    padding: 0 4px;
+    font-size: 16px;
+    line-height: 1.65;
+  }
+
+  .article {
+    width: 100%;
+    max-width: 100%;
+    margin: 48px auto 96px;
+    padding: 0 22px;
+    font-size: 22px;
+  }
+
+  .article p {
+    max-width: 100%;
+    font-size: 22px;
+    line-height: 1.78;
+    margin-bottom: 30px;
+  }
+
+  .dropcap::first-letter {
+    font-size: 58px;
+    line-height: .82;
+    margin-right: 10px;
+    margin-top: 5px;
+  }
+
+  .chapter-navigation {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    gap: 8px;
+    margin-top: 64px;
+    padding-top: 28px;
+  }
+
+  .chapter-navigation a {
+    min-width: 0;
+    font-size: 10px;
+    line-height: 1.4;
+    letter-spacing: 1.4px;
+  }
+
+  .chapter-navigation a:first-child { text-align: left; }
+  .chapter-navigation a:nth-child(2) { text-align: center; }
+  .chapter-navigation a:last-child { text-align: right; }
+
+  .site-footer {
+    margin-top: 72px;
+    padding: 54px 18px 40px;
+    overflow: hidden;
+  }
+
+  .footer-brand {
+    white-space: nowrap;
+    font-size: clamp(26px, 8vw, 32px);
+    letter-spacing: .12em;
+  }
+
+  .footer-tagline {
+    font-size: 16px;
+    margin-bottom: 28px;
+  }
+
+  .footer-studio,
+  .footer-copyright {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 390px) {
+  .topbar { padding: 0 12px; gap: 7px; }
+  .logo { font-size: 11.5px; letter-spacing: .9px; }
+  .back { font-size: 9px; letter-spacing: .9px; }
+  .hero { padding: 64px 16px 42px; }
+  h1 { font-size: clamp(38px, 11.5vw, 45px); }
+  .article { padding: 0 20px; }
+  .article p { font-size: 21px; line-height: 1.76; }
+  .chapter-navigation a { font-size: 9.5px; letter-spacing: 1.1px; }
+  .footer-brand { font-size: 27px; letter-spacing: .1em; }
+}
+
+/* Unified Cornerstone footer */
+.site-footer{margin-top:120px;padding:72px 24px 58px;border-top:1px solid rgba(212,176,106,.22);text-align:center;overflow:hidden}
+.footer-brand{font-family:"Cinzel",serif;font-size:44px;font-weight:500;letter-spacing:.14em;color:#D4B06A;margin:0 auto 10px;line-height:1.15;max-width:100%;white-space:nowrap}
+.footer-tagline{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:18px;color:#D8C8A8;margin-bottom:32px}
+.footer-studio{font-family:Inter,sans-serif;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:rgba(245,239,226,.55);margin-bottom:12px}
+.footer-copyright{font-family:Inter,sans-serif;font-size:12px;color:rgba(245,239,226,.35)}
+@media(max-width:700px){
+.site-footer{margin-top:72px;padding:50px 16px 40px}
+.footer-brand{font-size:clamp(23px,7.2vw,32px);letter-spacing:.08em;white-space:nowrap;overflow-wrap:normal;word-break:normal}
+.footer-tagline{font-size:16px;margin-bottom:26px}
+.footer-studio{font-size:11px;letter-spacing:.14em}
+.footer-copyright{font-size:11px;line-height:1.5}
+}
+
+</style>
+<style id="global-footer-unification">
+/* Final global footer override: keep every page visually identical. */
+.site-footer{
+  margin-top:120px !important;
+  padding:72px 24px 58px !important;
+  border-top:1px solid rgba(212,176,106,.22) !important;
+  text-align:center !important;
+  overflow:hidden !important;
+  box-sizing:border-box !important;
+}
+.footer-brand{
+  display:block !important;
+  font-family:"Cinzel",serif !important;
+  font-size:44px !important;
+  font-weight:500 !important;
+  letter-spacing:.10em !important;
+  line-height:1.12 !important;
+  color:#D4B06A !important;
+  width:auto !important;
+  max-width:100% !important;
+  margin:0 auto 10px !important;
+  padding:0 !important;
+  white-space:nowrap !important;
+  overflow-wrap:normal !important;
+  word-break:normal !important;
+  text-align:center !important;
+  box-sizing:border-box !important;
+}
+.footer-tagline{
+  font-family:"Cormorant Garamond",serif !important;
+  font-style:italic !important;
+  font-size:18px !important;
+  line-height:1.4 !important;
+  color:#D8C8A8 !important;
+  margin:0 auto 32px !important;
+}
+.footer-studio{
+  font-family:Inter,sans-serif !important;
+  font-size:12px !important;
+  line-height:1.5 !important;
+  letter-spacing:.18em !important;
+  text-transform:uppercase !important;
+  color:rgba(245,239,226,.55) !important;
+  margin:0 auto 12px !important;
+}
+.footer-copyright{
+  font-family:Inter,sans-serif !important;
+  font-size:12px !important;
+  line-height:1.5 !important;
+  color:rgba(245,239,226,.35) !important;
+  margin:0 auto !important;
+}
+@media (max-width:700px){
+  .site-footer{
+    margin-top:72px !important;
+    padding:48px 20px 38px !important;
+  }
+  .footer-brand{
+    font-size:clamp(22px,6.5vw,30px) !important;
+    letter-spacing:.06em !important;
+    line-height:1.12 !important;
+    max-width:calc(100% - 12px) !important;
+    margin:0 auto 12px !important;
+  }
+  .footer-tagline{font-size:16px !important;margin-bottom:26px !important;}
+  .footer-studio{font-size:11px !important;letter-spacing:.14em !important;margin-bottom:12px !important;}
+  .footer-copyright{font-size:11px !important;line-height:1.5 !important;}
+}
+@media (max-width:380px){
+  .site-footer{padding-left:16px !important;padding-right:16px !important;}
+  .footer-brand{font-size:21px !important;letter-spacing:.045em !important;max-width:100% !important;}
+}
+
+/* eotk reader tools */
+#eotk-progress{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,#8a6d3b,#d8c08b);z-index:999}
+.reader-tools{display:flex;gap:8px;align-items:center;justify-content:flex-end;max-width:760px;margin:10px auto 0;padding:0 20px}
+.reader-tools span{font-family:Cinzel,serif;font-size:10px;letter-spacing:2px;color:rgba(216,192,139,.6);margin-right:2px}
+.reader-tools button{background:none;border:1px solid rgba(216,192,139,.35);color:#d8c08b;font-family:Cinzel,serif;cursor:pointer;padding:3px 10px;font-size:12px}
+.reader-tools button.on{background:rgba(216,192,139,.18)}
+body.font-lg .article p{font-size:32px}
+body.font-sm .article p{font-size:24px}
+@media (max-width:768px){body.font-lg .article p{font-size:26px}body.font-sm .article p{font-size:19px}}
+.chapter-navigation-top{margin-top:26px}
+</style>
+<link rel="icon" href="/favicon.ico" sizes="any"/>
+<link rel="icon" type="image/png" href="/assets/images/favicon-32.png" sizes="32x32"/>
+<link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png"/>
+<meta property="og:type" content="article"/>
+<meta property="og:site_name" content="Echoes of the Kingdom"/>
+<meta property="og:title" content="Chapter 26: The Journey Through the Woods | Echoes of the Kingdom"/>
+<meta property="og:description" content="Echoes of the Kingdom — a slow-burn epic fantasy by Michael He. A boy, an ancient road, and a world quietly forgetting its own past."/>
+<meta property="og:url" content="https://cornerstoneauthor.com/read/book1/part2/chapter-26/"/>
+<meta property="og:image" content="https://cornerstoneauthor.com/assets/images/og-image.jpg"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="Chapter 26: The Journey Through the Woods | Echoes of the Kingdom"/>
+<meta name="twitter:description" content="Echoes of the Kingdom — a slow-burn epic fantasy by Michael He. A boy, an ancient road, and a world quietly forgetting its own past."/>
+<meta name="twitter:image" content="https://cornerstoneauthor.com/assets/images/og-image.jpg"/>
+</head>
+<body>
+<header class="topbar">
+<div class="logo"><a href="../../../../index.html" style="color:inherit;text-decoration:none">ECHOES OF THE KINGDOM</a></div>
+<a class="back" href="../index.html">← Back to Part II</a>
+</header>
+<div id="eotk-progress"></div>
+<div class="reader-tools"><span>TEXT SIZE</span><button data-f="sm">A−</button><button data-f="md">A</button><button data-f="lg">A+</button></div>
+<section class="hero">
+<div class="eyebrow">CHAPTER 26</div>
+<h1>The Journey Through the Woods</h1>
+</section>
+<div class="chapter-navigation chapter-navigation-top"><a href="../chapter-25/index.html">← Previous</a><a href="../index.html">Part II Contents</a><a href="../chapter-27/index.html">Next →</a></div>
+<main class="article"><p class="dropcap">On the third day after leaving Rivergate, the road divided among a series of low, rolling hills. The southern branch followed the river, broad enough for wagons, with ruts of varying depth pressed into the hard earth. The other ran eastward over a grassy rise and vanished among the distant trees. At the fork stood a weathered stone marker, its lettering worn by years of rain until only a few place-names remained legible.</p><p>Seren stopped beside it. She studied the road along the river, then turned toward the forest without choosing either. A few paces behind her, Kael shifted the weight of his pack and waited. During their days together he had begun to notice these pauses. She would sometimes stop in the middle of walking, as though there were something she needed to understand before going on. At first he had taken it for uncertainty about the route, but she did it even when there was only one road to follow.</p><p>“Can you still read the marker?” he asked.</p><p>“Some of it.” Seren bent to brush dust from the stone. “Both roads eventually lead east. The southern one takes a longer way around.”</p><p>“The forest road is shorter,” Kael said, “but harder going. Rainwater collects in the low places, and we might not find anywhere suitable to sleep.”</p><p>Seren nodded. She had heard his warning, yet her attention remained on the path beneath the trees. Wind crossed the hillside and stirred the hem of her cloak. She closed her eyes, allowing thoughts of distance, fading daylight, and unknown dangers to settle. No voice spoke to her, and no answer arrived that she could have explained to another person. When she opened her eyes, she was still looking toward the forest, but the uncertainty had passed.</p><p>“Let&#x27;s take this one,” she said.</p><p>Kael looked from her to the trees. He had meant to say more about the condition of the road, but something stopped him as she turned. The familiar peace had returned, so clearly that for a moment he forgot the weight on his injured shoulder. It was neither the relief of an easy journey nor the pleasure of recovering his strength. It resembled the stillness he had briefly known during the worst nights of his illness, arriving now without warning. He could not explain it, or why certain decisions Seren made seemed to bring it so near.</p><p>“All right,” he said at last.</p><p>She had already started along the narrow path and noticed nothing unusual. Kael followed, watching the ground and the brush on either side. He still judged the road, calculated how far they might travel before nightfall, and took every precaution he thought necessary. The peace did none of that work for him. It simply made him willing to keep going.</p><p>The track narrowed beneath a canopy that hid most of the sky. Sunlight broke through the leaves in shifting patches, while roots rose unexpectedly through the soil. Kael took the lead and warned Seren wherever the footing was poor. Before long she began to recognize the choices he made: which leaves might conceal mud, which stones looked secure but would turn beneath a boot. They did not speak continuously, yet their silence no longer felt like something that needed managing.</p><p>Near midday they stopped beside a shallow stream. Water ran between moss-covered stones, clear enough to reveal pale sand and small fish moving beneath the surface. Seren filled their waterskins while Kael collected fallen branches and built a modest fire on dry ground above the bank. They still had some of the rye bread the elderly church caretaker had packed for them. She divided it, handed him half, and set the kettle near the flames to warm.</p><p>“Thank you.” Kael sat on a fallen log, easing his shoulder before beginning to eat.</p><p>Seren noticed but did not immediately ask whether it hurt. She had asked often enough over the previous days, and he always insisted he could go on. She was learning that letting him decide when to rest told her more than questioning him did. His movements were easier today, though he still lowered himself onto the log with care. She moved the kettle closer to the fire, thinking they might linger a little longer.</p><p>A gray squirrel appeared at the edge of the stream, carrying a nut almost as large as its head. It hid behind a stone and surveyed the bank before laboriously climbing onto a flat rock. Seren raised a finger to her lips. Kael stopped eating and followed her gaze. The squirrel finally reached the top, slipped, and dropped its prize into the water. It crouched at the edge, tail held stiffly behind it, watching its lunch drift away. Seren managed not to laugh until the creature scurried several helpless steps along the bank in pursuit.</p><p>Kael watched the squirrel, then the nut disappearing downstream. “It&#x27;ll have to rearrange its afternoon.”</p><p>“Are you trying to comfort it?” Seren asked, laughing.</p><p>“No.” He considered the question seriously. “I just don&#x27;t think its day is going particularly well.”</p><p>“I never expected you to worry about a squirrel.”</p><p>“Spend enough time on the road and you start noticing things you used to overlook.” He broke off another piece of bread. The squirrel had abandoned the chase and was searching among the stones again, apparently ready to begin anew.</p><p>Seren did not tease him further. She remembered the children at the church in Rivergate, always finding reasons to gather around him. He spoke with almost excessive seriousness, yet he remembered which child had missed a share of bread, and when one fell, he checked for injuries before helping the child up. He probably had no idea why they liked his company.</p><p>They extinguished the fire after lunch and continued deeper into the woods. Travelers became scarce, and the old marks of wagon wheels appeared only occasionally. Kael stopped beside a patch of crushed undergrowth and crouched to inspect several broken branches. The fractures were fresh; the soil beneath had been disturbed, and a deep impression lay partly hidden by leaves.</p><p>“Something passed through here,” he said.</p><p>“An animal?” Seren asked.</p><p>Kael moved the leaves aside and examined the flattened grass. “I hope so.”</p><p>He was not trying to frighten her. The tracks did not resemble those of ordinary travelers, but he could not identify their cause from a single glance. He stood, checked that his sword was within easy reach, and led her onward. Seren noticed how often he looked between the trees now, and chose not to ask again.</p><p>By evening they found an open patch of grass near a slow-moving river. The ground rose slightly above the bank, with no dense brush to conceal anyone approaching. Kael walked the perimeter before indicating a sheltered spot. “Here for tonight.”</p><p>Seren went to fetch water while he sorted the dry wood and set aside enough fuel for the night. They had settled into an unspoken division of labor: Kael checked the campsite and tended the fire, while Seren managed food, water, and bedding. Whoever finished first helped the other. Dinner was still bread and wild berries, though warming the bread made it smell considerably better than it had at noon.</p><p>Kael stirred the fire with a stick. A damp log cracked, sending sparks onto the leather of his boot. He looked down, stamped them out, and pushed the offending wood toward the edge of the flames.</p><p>“I don&#x27;t think it likes you,” Seren observed.</p><p>“Perhaps not.” He inspected his boot. “But it was easier to deal with than those wet branches earlier.”</p><p>Seren laughed. Kael looked up, apparently unable to see what was amusing. She told him that the children at the church often laughed at him in much the same way.</p><p>“They like me?” he asked, genuinely surprised.</p><p>“Of course. Even if you always look so stern.”</p><p>Kael glanced down at himself as though presented with a fact requiring careful reconsideration. “Maybe because I&#x27;m taller than they are.”</p><p>That only made her laugh harder. “I don&#x27;t think that&#x27;s it.”</p><p>He did not pursue the matter. After adding another piece of wood, he gave a brief, quiet chuckle of his own. Night wind moved through the grass, and distant birds called across the river. Firelight fell on their packs. Seren offered him the last piece of warm bread; he accepted it without ceremony, broke it in two, and handed half back.</p><p>Kael rose before dawn and walked down to the river. Mist clung to the water. On a level stretch of ground he slowly loosened his shoulder, drew his sword, and began practicing the simplest cuts and parries. He deliberately kept his movements slow, attending to the feeling around the wound each time he turned. Only days earlier, lifting his arm too high had brought a sharp pulling pain. This morning he reached his twelfth stroke before realizing the pain he had been expecting had not come.</p><p>He lowered the blade and tried again. Still nothing beyond a faint stiffness. He flexed the fingers of his left hand and sheathed the sword. The wound had not vanished overnight, and he knew better than to test his full strength, but his body was beginning to obey him again. He stood by the river for some time, quietly appreciating that small improvement.</p><p>Seren woke in time to see him putting the sword away. “How is it today?”</p><p>“Much better.”</p><p>She glanced at his shoulder without asking him to prove it. “Good. I&#x27;ll get some water. We can leave a little earlier.”</p><p>Kael picked up another waterskin and joined her. He remembered the days when he had scarcely been able to sit upright in bed. Carrying water, walking, even holding a sword—ordinary things he had once taken for granted—now seemed worth appreciating. Seren did not ask what he was thinking. They worked together at the river, then packed up their camp.</p><p>As the sun rose, the trees thinned and their track joined a wider road. There were more people here: farmers driving animals, small merchants pushing carts, and travelers hurrying beneath heavy packs. Kael noticed how tightly some had bound their belongings, and how they studied strangers before deciding whether to offer a greeting. The caution was seldom overt, but these roads no longer felt quite like the ones he remembered.</p><p>Near noon an ox cart approached. A white-haired man held the reins, with a boy of about ten beside him. Several large wooden crates stood beneath coarse coverings. The old man nodded as they passed, and Seren smiled. “May you have peace.”</p><p>The man gave a rueful smile. “Those words are worth more now than they used to be.” He flicked the reins and continued on. The boy looked back once before his grandfather told him to sit properly.</p><p>Kael watched the cart until it had gone some distance. When Seren asked what he had seen, he answered, “He&#x27;s packed the grain at the very back.”</p><p>“How can you tell there&#x27;s grain in there?”</p><p>“The wheel ruts are deep, and a little husk is caught along the edge of one crate. The front boxes are light; the rear ones sit more firmly.” Kael glanced back. “People used to keep grain sacks on the outside. Easier to unload, and nobody worried about others seeing them. Now some would rather make extra work for themselves than let strangers know what they have.”</p><p>Seren remembered the old man&#x27;s bitter smile. The boy had seemed too young to understand why the cargo needed hiding; he had been occupied simply with holding the cart steady as it jolted along.</p><p>That afternoon they passed a roadside tavern. A wooden sign swung in the wind, horses stood tethered outside, and the open windows carried the smell of food and ale. Kael did not stop, though he slowed. Seren initially thought he wanted something to eat, until she heard the men inside arguing in low voices.</p><p>“Another northern trade road&#x27;s been closed,” one said.</p><p>“Where did you hear that?”</p><p>“My cousin got back yesterday. Nearly lost his life out there.”</p><p>“Bandits again?”</p><p>“Doesn&#x27;t sound like it. Something else happened.”</p><p>Someone demanded to know what. After a silence, a voice replied, “Nobody knows.”</p><p>They had walked a long way before Seren asked, “Do you believe them?”</p><p>“Which part?”</p><p>“That nobody knows.”</p><p>Kael thought about it. “Whenever someone says that with such certainty, I want to ask how they found out.”</p><p>“Something else you learned on the road?”</p><p>“More or less. Some people repeat guesses as news. Others know something but won&#x27;t say it plainly.” He paused. “And I get things wrong often enough myself.”</p><p>Seren smiled. “At least you&#x27;re willing to admit it.”</p><p>“If you won&#x27;t admit you&#x27;re wrong, you&#x27;ll make a bigger mistake next time.”</p><p>He spoke as though stating the obvious, but Seren remembered it. The stories she had heard about distant places always seemed to know where danger came from and how a brave person ought to meet it. On the road, most people could see only a short distance ahead, even someone as experienced as Kael. Yet uncertainty did not stop him from making judgments. It simply meant he admitted what he could not know.</p><p>“Thank you,” she said suddenly.</p><p>Kael turned. “For what?”</p><p>“For showing me things I would never have noticed before. Traveling with you, the world doesn&#x27;t feel quite so unfamiliar.”</p><p>He did not answer immediately. Instead he slowed until they were walking at the same pace. The road stretched ahead, pale in the slanting sunlight, while passing wagons raised little clouds of dust. They discussed where to sleep and whether to buy provisions at the next settlement. Kael had not forgotten the rumors about the northern roads. At every blind bend, he looked ahead before signaling Seren to follow.</p><div class="chapter-end-cta" style="max-width:680px;margin:40px auto 0;padding:28px 30px;border:1px solid rgba(212,184,120,.25);text-align:center;">
+<p style="font-family:Inter,sans-serif;font-size:15px;line-height:1.8;color:#bfb5a2;margin-bottom:14px;">Enjoying Echoes of the Kingdom? New chapters every Monday, Wednesday, Friday and Sunday.</p>
+<a href="https://www.royalroad.com/fiction/186472/echoes-of-the-kingdom" style="color:#d8c49a;font-family:Inter,sans-serif;font-size:13px;letter-spacing:2px;text-transform:uppercase;">Follow on Royal Road</a>
+<span style="color:#6b6252;margin:0 10px;">·</span>
+<a href="#" style="color:#d8c49a;font-family:Inter,sans-serif;font-size:13px;letter-spacing:2px;text-transform:uppercase;">Get Letters from Elarion</a>
+</div>
+<div class="chapter-navigation"><a href="../chapter-25/index.html">← Previous</a><a href="../index.html">Part II Contents</a><a href="../chapter-27/index.html">Next →</a></div></main>
+<footer class="site-footer">
+<div class="footer-brand">Cornerstone</div>
+<div class="footer-tagline">Building stories that endure.</div>
+<div class="footer-studio">Created by Echoes Studio</div>
+<div class="footer-copyright">© 2026 Michael He. All Rights Reserved.</div>
+</footer>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const article = document.querySelector(".article");
+
+    if (!article) {
+        return;
+    }
+
+    const paragraphs = article.querySelectorAll("p");
+
+    paragraphs.forEach(function (paragraph) {
+        const text = paragraph.textContent.trim();
+
+        if (!text) {
+            return;
+        }
+
+        // 自动识别场景分隔符
+        if (text === "***" || text === "* * *") {
+            const divider = document.createElement("div");
+            divider.className = "divider";
+            divider.textContent = "❦";
+            paragraph.replaceWith(divider);
+            return;
+        }
+
+        // 自动识别以引号或长破折号开头的对白
+        const isDialogue =
+            text.startsWith('"') ||
+            text.startsWith("“") ||
+            text.startsWith("‘") ||
+            text.startsWith("'") ||
+            text.startsWith("—");
+
+        if (isDialogue) {
+            paragraph.classList.add("dialogue");
+        }
+    });
+});
+</script>
+<!-- GoatCounter: privacy-friendly page analytics -->
+<script async="" data-goatcounter="https://echoeskingdom.goatcounter.com/count" src="//gc.zgo.at/count.js"></script>
+
+<script>
+(function(){
+  var bar=document.getElementById('eotk-progress');
+  function upd(){var h=document.documentElement;var max=h.scrollHeight-h.clientHeight;bar.style.width=(max>0?(h.scrollTop/max)*100:0)+'%';}
+  document.addEventListener('scroll',upd,{passive:true});upd();
+  var saved='md';try{saved=localStorage.getItem('eotk-font')||'md';}catch(e){}
+  function apply(f){document.body.classList.remove('font-lg','font-sm');if(f!=='md')document.body.classList.add('font-'+f);
+    document.querySelectorAll('.reader-tools button').forEach(function(b){b.classList.toggle('on',b.getAttribute('data-f')===f);});}
+  apply(saved);
+  document.querySelectorAll('.reader-tools button').forEach(function(b){b.addEventListener('click',function(){
+    var f=b.getAttribute('data-f');apply(f);try{localStorage.setItem('eotk-font',f);}catch(e){}});});
+  var h1=document.querySelector('.hero h1');
+  if(h1){try{localStorage.setItem('eotk-last-read',JSON.stringify({url:location.pathname,title:h1.textContent.trim()}));}catch(e){}}
+})();
+</script>
+</body>
+</html>
