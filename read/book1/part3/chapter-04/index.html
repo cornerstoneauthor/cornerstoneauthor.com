@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Chapter 4: The Harbor Records | Echoes of the Kingdom</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&amp;family=Inter:wght@300;400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<style>
+.chapter-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  width: 100%;
+  margin-top: 100px;
+  padding-top: 40px;
+  border-top: 1px solid rgba(212, 184, 120, 0.18);
+}
+
+.chapter-navigation a {
+  color: #d8c49a;
+  font-family: Inter, sans-serif;
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+
+background:#070809;
+
+color:#ece2cf;
+
+font-family:"Cormorant Garamond",serif;
+
+line-height:1.9;
+
+}
+
+a{
+
+text-decoration:none;
+
+color:inherit;
+
+}
+
+.topbar{
+
+position:sticky;
+
+top:0;
+
+z-index:100;
+
+height:72px;
+
+background:rgba(7,8,9,.92);
+
+backdrop-filter:blur(10px);
+
+border-bottom:1px solid rgba(212,184,120,.12);
+
+display:flex;
+
+align-items:center;
+
+justify-content:space-between;
+
+padding:0 60px;
+
+}
+
+.logo{
+
+font-size:20px;
+
+letter-spacing:2px;
+
+color:#d8c08b;
+
+}
+
+.back{
+
+font-family:Inter,sans-serif;
+
+font-size:13px;
+
+letter-spacing:2px;
+
+text-transform:uppercase;
+
+color:#a89b7a;
+
+transition:.25s;
+
+}
+
+.back:hover{
+
+color:#e8d9b3;
+
+}
+
+.hero{
+
+padding:120px 20px 80px;
+
+text-align:center;
+
+}
+
+.eyebrow{
+
+font-size:18px;
+
+letter-spacing:6px;
+
+color:#a48c60;
+
+margin-bottom:20px;
+
+text-transform:uppercase;
+
+}
+
+h1{
+
+font-size:88px;
+
+font-weight:600;
+
+letter-spacing:2px;
+
+margin-bottom:24px;
+
+}
+
+.subtitle{
+
+max-width:700px;
+
+margin:auto;
+
+font-family:Inter,sans-serif;
+
+font-size:18px;
+
+color:#bfb5a2;
+
+line-height:1.8;
+
+}
+
+.article{
+
+max-width:680px;
+
+margin:100px auto 180px;
+
+padding:0 30px;
+
+font-size:28px;
+
+}
+
+.article p{
+  font-family:"Cormorant Garamond", serif;
+  font-size:28px;
+  line-height:2;
+  color:rgba(245,239,226,0.95);
+  margin-bottom:42px;
+}
+
+.dropcap::first-letter {
+  float: left;
+  font-size: 72px;
+  line-height: 0.8;
+  margin-right: 14px;
+  margin-top: 6px;
+  color: #d8c49a;
+}
+/* ===========================
+   Cornerstone Footer
+=========================== */
+
+.site-footer{
+    margin-top:120px;
+    padding:72px 24px 58px;
+    border-top:1px solid rgba(212,176,106,.18);
+    text-align:center;
+}
+
+.footer-brand{
+
+    font-family:"Cinzel", serif;
+
+    font-size:44px;
+
+    font-weight:500;
+
+    letter-spacing:.18em;
+
+    color:#D4B06A;
+
+    margin-bottom:10px;
+
+}
+
+.footer-tagline{
+    font-family:"Cormorant Garamond", serif;
+    font-style:italic;
+    font-size:18px;
+    color:#D8C8A8;
+    margin-bottom:32px;
+}
+
+.footer-studio{
+    font-family:Inter,sans-serif;
+    font-size:12px;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    color:rgba(245,239,226,.55);
+    margin-bottom:12px;
+}
+
+.footer-copyright{
+    font-family:Inter,sans-serif;
+    font-size:12px;
+    color:rgba(245,239,226,.35);
+}
+
+
+/* ===========================
+   Mobile Reading Layout
+=========================== */
+@media (max-width: 700px) {
+  html, body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .topbar {
+    height: auto;
+    min-height: 62px;
+    padding: 0 16px;
+    gap: 10px;
+  }
+
+  .logo {
+    min-width: 0;
+    white-space: nowrap;
+    font-size: 13px;
+    letter-spacing: 1.1px;
+    line-height: 1.2;
+  }
+
+  .back {
+    flex: 0 0 auto;
+    white-space: nowrap;
+    font-size: 10px;
+    letter-spacing: 1.1px;
+    line-height: 1.2;
+  }
+
+  .hero {
+    padding: 72px 18px 48px;
+  }
+
+  .eyebrow {
+    margin-bottom: 16px;
+    font-size: 13px;
+    letter-spacing: 4px;
+  }
+
+  h1 {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto 18px;
+    font-size: clamp(40px, 12vw, 54px);
+    line-height: 1.08;
+    letter-spacing: 1px;
+    overflow-wrap: break-word;
+    word-break: normal;
+  }
+
+  .subtitle {
+    max-width: 100%;
+    padding: 0 4px;
+    font-size: 16px;
+    line-height: 1.65;
+  }
+
+  .article {
+    width: 100%;
+    max-width: 100%;
+    margin: 48px auto 96px;
+    padding: 0 22px;
+    font-size: 22px;
+  }
+
+  .article p {
+    max-width: 100%;
+    font-size: 22px;
+    line-height: 1.78;
+    margin-bottom: 30px;
+  }
+
+  .dropcap::first-letter {
+    font-size: 58px;
+    line-height: .82;
+    margin-right: 10px;
+    margin-top: 5px;
+  }
+
+  .chapter-navigation {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    gap: 8px;
+    margin-top: 64px;
+    padding-top: 28px;
+  }
+
+  .chapter-navigation a {
+    min-width: 0;
+    font-size: 10px;
+    line-height: 1.4;
+    letter-spacing: 1.4px;
+  }
+
+  .chapter-navigation a:first-child { text-align: left; }
+  .chapter-navigation a:nth-child(2) { text-align: center; }
+  .chapter-navigation a:last-child { text-align: right; }
+
+  .site-footer {
+    margin-top: 72px;
+    padding: 54px 18px 40px;
+    overflow: hidden;
+  }
+
+  .footer-brand {
+    white-space: nowrap;
+    font-size: clamp(26px, 8vw, 32px);
+    letter-spacing: .12em;
+  }
+
+  .footer-tagline {
+    font-size: 16px;
+    margin-bottom: 28px;
+  }
+
+  .footer-studio,
+  .footer-copyright {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 390px) {
+  .topbar { padding: 0 12px; gap: 7px; }
+  .logo { font-size: 11.5px; letter-spacing: .9px; }
+  .back { font-size: 9px; letter-spacing: .9px; }
+  .hero { padding: 64px 16px 42px; }
+  h1 { font-size: clamp(38px, 11.5vw, 45px); }
+  .article { padding: 0 20px; }
+  .article p { font-size: 21px; line-height: 1.76; }
+  .chapter-navigation a { font-size: 9.5px; letter-spacing: 1.1px; }
+  .footer-brand { font-size: 27px; letter-spacing: .1em; }
+}
+
+/* Unified Cornerstone footer */
+.site-footer{margin-top:120px;padding:72px 24px 58px;border-top:1px solid rgba(212,176,106,.22);text-align:center;overflow:hidden}
+.footer-brand{font-family:"Cinzel",serif;font-size:44px;font-weight:500;letter-spacing:.14em;color:#D4B06A;margin:0 auto 10px;line-height:1.15;max-width:100%;white-space:nowrap}
+.footer-tagline{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:18px;color:#D8C8A8;margin-bottom:32px}
+.footer-studio{font-family:Inter,sans-serif;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:rgba(245,239,226,.55);margin-bottom:12px}
+.footer-copyright{font-family:Inter,sans-serif;font-size:12px;color:rgba(245,239,226,.35)}
+@media(max-width:700px){
+.site-footer{margin-top:72px;padding:50px 16px 40px}
+.footer-brand{font-size:clamp(23px,7.2vw,32px);letter-spacing:.08em;white-space:nowrap;overflow-wrap:normal;word-break:normal}
+.footer-tagline{font-size:16px;margin-bottom:26px}
+.footer-studio{font-size:11px;letter-spacing:.14em}
+.footer-copyright{font-size:11px;line-height:1.5}
+}
+
+</style>
+<style id="global-footer-unification">
+/* Final global footer override: keep every page visually identical. */
+.site-footer{
+  margin-top:120px !important;
+  padding:72px 24px 58px !important;
+  border-top:1px solid rgba(212,176,106,.22) !important;
+  text-align:center !important;
+  overflow:hidden !important;
+  box-sizing:border-box !important;
+}
+.footer-brand{
+  display:block !important;
+  font-family:"Cinzel",serif !important;
+  font-size:44px !important;
+  font-weight:500 !important;
+  letter-spacing:.10em !important;
+  line-height:1.12 !important;
+  color:#D4B06A !important;
+  width:auto !important;
+  max-width:100% !important;
+  margin:0 auto 10px !important;
+  padding:0 !important;
+  white-space:nowrap !important;
+  overflow-wrap:normal !important;
+  word-break:normal !important;
+  text-align:center !important;
+  box-sizing:border-box !important;
+}
+.footer-tagline{
+  font-family:"Cormorant Garamond",serif !important;
+  font-style:italic !important;
+  font-size:18px !important;
+  line-height:1.4 !important;
+  color:#D8C8A8 !important;
+  margin:0 auto 32px !important;
+}
+.footer-studio{
+  font-family:Inter,sans-serif !important;
+  font-size:12px !important;
+  line-height:1.5 !important;
+  letter-spacing:.18em !important;
+  text-transform:uppercase !important;
+  color:rgba(245,239,226,.55) !important;
+  margin:0 auto 12px !important;
+}
+.footer-copyright{
+  font-family:Inter,sans-serif !important;
+  font-size:12px !important;
+  line-height:1.5 !important;
+  color:rgba(245,239,226,.35) !important;
+  margin:0 auto !important;
+}
+@media (max-width:700px){
+  .site-footer{
+    margin-top:72px !important;
+    padding:48px 20px 38px !important;
+  }
+  .footer-brand{
+    font-size:clamp(22px,6.5vw,30px) !important;
+    letter-spacing:.06em !important;
+    line-height:1.12 !important;
+    max-width:calc(100% - 12px) !important;
+    margin:0 auto 12px !important;
+  }
+  .footer-tagline{font-size:16px !important;margin-bottom:26px !important;}
+  .footer-studio{font-size:11px !important;letter-spacing:.14em !important;margin-bottom:12px !important;}
+  .footer-copyright{font-size:11px !important;line-height:1.5 !important;}
+}
+@media (max-width:380px){
+  .site-footer{padding-left:16px !important;padding-right:16px !important;}
+  .footer-brand{font-size:21px !important;letter-spacing:.045em !important;max-width:100% !important;}
+}
+
+/* eotk reader tools */
+#eotk-progress{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,#8a6d3b,#d8c08b);z-index:999}
+.reader-tools{display:flex;gap:8px;align-items:center;justify-content:flex-end;max-width:760px;margin:10px auto 0;padding:0 20px}
+.reader-tools span{font-family:Cinzel,serif;font-size:10px;letter-spacing:2px;color:rgba(216,192,139,.6);margin-right:2px}
+.reader-tools button{background:none;border:1px solid rgba(216,192,139,.35);color:#d8c08b;font-family:Cinzel,serif;cursor:pointer;padding:3px 10px;font-size:12px}
+.reader-tools button.on{background:rgba(216,192,139,.18)}
+body.font-lg .article p{font-size:32px}
+body.font-sm .article p{font-size:24px}
+@media (max-width:768px){body.font-lg .article p{font-size:26px}body.font-sm .article p{font-size:19px}}
+.chapter-navigation-top{margin-top:26px}
+</style>
+<link rel="icon" href="/favicon.ico" sizes="any"/>
+<link rel="icon" type="image/png" href="/assets/images/favicon-32.png" sizes="32x32"/>
+<link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png"/>
+<meta property="og:type" content="article"/>
+<meta property="og:site_name" content="Echoes of the Kingdom"/>
+<meta property="og:title" content="Chapter 4: The Harbor Records | Echoes of the Kingdom"/>
+<meta property="og:description" content="Echoes of the Kingdom — a slow-burn epic fantasy by Michael He. A boy, an ancient road, and a world quietly forgetting its own past."/>
+<meta property="og:url" content="https://cornerstoneauthor.com/read/book1/part3/chapter-04/"/>
+<meta property="og:image" content="https://cornerstoneauthor.com/assets/images/og-image.jpg"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="Chapter 4: The Harbor Records | Echoes of the Kingdom"/>
+<meta name="twitter:description" content="Echoes of the Kingdom — a slow-burn epic fantasy by Michael He. A boy, an ancient road, and a world quietly forgetting its own past."/>
+<meta name="twitter:image" content="https://cornerstoneauthor.com/assets/images/og-image.jpg"/>
+</head>
+<body>
+<header class="topbar">
+<div class="logo"><a href="../../../../index.html" style="color:inherit;text-decoration:none">ECHOES OF THE KINGDOM</a></div>
+<a class="back" href="../index.html">← Back to Part III</a>
+</header>
+<div id="eotk-progress"></div>
+<div class="reader-tools"><span>TEXT SIZE</span><button data-f="sm">A−</button><button data-f="md">A</button><button data-f="lg">A+</button></div>
+<section class="hero">
+<div class="eyebrow">CHAPTER 4</div>
+<h1>The Harbor Records</h1>
+</section>
+<div class="chapter-navigation chapter-navigation-top"><a href="../chapter-03/index.html">← Previous</a><a href="../index.html">Part III Contents</a><a href="../chapter-05/index.html">Next →</a></div>
+<main class="article"><p class="dropcap">The Merchants' Guild was not far from the harbor, and before they drew near, the air had already taken on the salt of the sea wind. A broad road of stone slabs ran all the way down to the bank, where ships of every size lay moored along the quays. Workers carried crate after crate of goods ashore and loaded them onto waiting wagons, while voices called out cargo lists, other hands checked the marks burned into the wooden boxes, and clerks with thick ledgers in their arms wove back and forth through the crowds. It was busier here than at the guild — and yet, somehow, more orderly.</p><p>Edwin slowed his pace. "The Harbor Records Office first." Kaelan nodded and was about to walk on, when Aether's gaze came to rest on the far side of the quay.</p><p>A grain ship flying the banner of the Order had just come in, and several brothers were unloading sacks of grain with the dockworkers, while a row of wagons waited nearby. Among the crowd, a young woman stood talking with an elderly brother, a gentle smile on her face, perfectly at ease, as though she had known these men of the Order for years. Another young woman stood quietly at her side, watching the passing crowds, and a little apart from them a young man kept his place, his eyes moving slowly over everything around them — never drawing too near, never straying too far, quietly mindful of all that passed.</p><p>Aether looked only for a moment. There was something about the three of them that set them apart from the merchants coming and going on the quay, though he could not have said what it was, and he thought no more of it. Edwin was already walking toward the Harbor Records Office; Aether drew his gaze back and followed. And on the other side of the harbor, the three of them never noticed him at all.</p><p>On that other side of the quay, the grain ship had come in under the Order's banner, and the brothers were directing the workers as sack after sack of grain went onto the wagons drawn up along the shore. Not far off, a harbor clerk checked a cargo list, while several representatives of the Merchants' Guild stood by, speaking in low voices with the brothers who had escorted the shipment, and along the quay two finely dressed nobles walked with a harbor official on his rounds. The whole harbor went on with its work as it always did, but with a formality that was not there on ordinary days.</p><p>Elowen stood watching it all in silence. Everything here was strange to her. She knew the Order, but she had never truly seen the harbor of Riverport. An elderly brother caught sight of her, and a gentle smile spread across his face. "Elowen. You are back at last." Elowen bowed slightly, and the old man nodded, still smiling. "It is enough that the road kept you safe. This grain goes out this afternoon, to several houses of ours north of the city and east of the river. There are more people in need this year than in years past." Elowen nodded gently and did not press him with questions.</p><p>Seren stood beside her, watching the crowds stream past, and asked in a low voice, "Why did Lord Odren send us here?" Elowen shook her head slightly. "He did not explain. He only told me to come along today and look."</p><p>At that moment, two nobles passing nearby slowed and stopped, and one of them glanced toward Elowen and murmured, "So that is Odren's niece?" The other nodded faintly. "Raised in the Order all her life, they say. Only recently returned." They did not linger, but walked on toward the harbor official.</p><p>Elowen seemed not to have heard them. Her eyes stayed on the men carrying the grain. There was none of the Order's quiet here, no sound of prayer — only ships' bells, work-songs, and the endless coming and going of people. And it came to her, all at once, that what her uncle had sent her to see was perhaps not the grain ship at all, but the city itself.</p><p>The nobles drifted away, and the harbor settled back into its usual noise. Elowen went on watching the crowds, let out a slow breath, and smiled a little. "Truly, I still do not understand why my uncle arranges things this way." Seren turned to look at her. "You do not like it?" Elowen shook her head. "It is not that." She watched a small boat pulling slowly away from the quay. "It is only... unfamiliar. Yesterday the market in the city, today the harbor. Every day my uncle sends me somewhere different to look, and he never once tells me why." She smiled helplessly. "Every time, it is a single sentence: 'Go and look.'"</p><p>Seren listened in silence, in no hurry to answer. After a while she said softly, "Perhaps... he simply wants you to know this city first." Elowen was quiet for a moment, then nodded gently. "Perhaps. Only, such a life is so unlike the Order." She looked down at her own hands, and her voice softened without her willing it. "In the Order of the Sacred Lamp, I knew what every day would ask of me — prayer, study, caring for the children, helping those who came seeking help. The days were simple, but they were solid. Now I wake each morning not knowing where my uncle will send me."</p><p>Seren smiled at her. "Then where would you most like to go?" Elowen barely had to think. "The Order." She said it quite naturally. "There are brothers at the Order's house here who were at the house where I used to live. When I was small, they taught me to sing the hymns." A touch of longing came into her eyes. "I wonder whether they still remember me." Seren laughed softly. "Then go and look." But Elowen shook her head. "Better to wait a while. If my uncle wants me to know Riverport first, he has his reasons." She raised her head and looked out over the busy harbor, a note of resignation in her voice, and something like release as well. "But when there is time, I should still like to go and see the Order. The Order of the Sacred Lamp has houses in so many places."</p><p>Kael, standing not far off, had never once broken in. He simply watched the far end of the quay in silence, and only when he had seen the last of the grain wagons roll slowly out of the harbor did he turn his gaze back. "We should go," he said. "Matthew will be back soon."</p><p>Night came down, and in a room on the inn's upper floor the oil lamp had been lit. On the table the maps were spread out once more: the map of the Patrol Office, the trade-route chart of the Merchants' Guild, and several pages of notes copied out that afternoon at the Harbor Records Office. Kaelan smoothed the last sheet of parchment flat and took up his charcoal, adding a few new marks along the map's edge, and for a while the room held no sound but the scratch of the point across the page.</p><p>It was a long time before Edwin set the records down. "Today's journey was not wasted." Kaelan looked up. "The harbor records are far more detailed than the guild's. Not only the goods — where they came from, and where they were bound." As he spoke he laid the pages beside the map. "Over the past half year, less and less timber has come out of the northern forests. The grain from the east is down on past years as well. Beast hides, though, are more than before."</p><p>Edwin nodded slowly. "The harbor records officer said those are only accounts. As for why things have come to this — they never ask. They only write it down."</p><p>The room fell quiet again. Aether looked at the maps on the table and said nothing. The Patrol Office recorded danger. The Guild recorded roads. The harbor recorded the flow of goods. Every record had been kept with care, and every one was true — and still, they were only part of the world.</p><p>"At least we know one thing now," Edwin said slowly. "These changes are not confined to the lands around Riverport. So much of this freight comes out of different lords' domains. If the goods have begun to change, then the change has already happened in places farther away." Kaelan nodded. "Should we go and call on those lords?" Aether was silent for a moment, and the room quieted once more.</p><p>Edwin looked at him and, instead, smiled faintly. "It seems we still have another map to find." With that, he opened his leather bag and took out a clean sheet of parchment, and the small bottle of ink he carried with him. Kaelan glanced at him. "A letter?" "Mm." Edwin nodded. "Whitestone should know what we have found." He thought for a while, then lifted his quill and wrote the first line slowly across the parchment: To the Patrol Hall and the Council of Whitestone.</p><p>The lamp flame swayed gently, and the room was quiet again, with only the sound of the quill moving over parchment. Aether rose and went to the window. Riverport lay below in scattered lamplight, and at the far harbor a few moored ships could still be made out. He stood looking at the city in silence, while map after map of those he had seen that day rose again in his mind — every one of them recording what was true, and every one of them stopping at its own edge.</p><p>Behind him, Edwin's quill did not stop. The letter reached for no conclusions; it set down, one by one, the facts their investigation had gathered. At the end, he paused for a long while before writing the final sentence: From all we have seen, the harm of the beast calamity has already spread far beyond any single place or city. The investigation will continue. Edwin blew the ink dry and rolled the parchment slowly up. "First thing tomorrow, I will send this letter." Then he looked up at the other two. "Tomorrow, we go to the harbor again."</p><p>Edwin left the inn early the next morning with the letter written the night before, and when he returned, the three of them came once more to the Harbor Records Office. The old man who had handled their registration the day before saw them from a distance and could not help laughing. "I knew it. I knew you would be back." Edwin smiled as well. "We went through the records again last night, and the more we sorted them, the more we felt there was one piece that would not fit." The old man set down the ledger in his hands. "Let me hear it."</p><p>Kaelan spread the pages they had copied onto the table. "These goods come from different domains. In some places the grain has fallen off. In others the timber is less. And in others still, the beast hides keep growing more." The old man nodded. "That is so." Edwin went on, "But we still do not know why. These numbers tell us that a change has happened. They do not tell us how the change began."</p><p>The old man listened, and gave no answer at once. Instead, he picked up the pages and read them through again before setting them gently back on the table. "Because these were never written for your eyes," he said, and smiled. "They are only accounts. When goods arrive, we write it down. When they do not, we write that down too. As for why they never came..." The old man spread his hands lightly. "No one writes that here."</p><p>The room was quiet for a while. Aether had stood beside the table without speaking, his gaze resting still on the names of those different domains. Edwin considered for a moment, then asked again, "Then if we wanted to know what has truly happened in those places — who should we ask?"</p><p>The old man did not answer at once. He looked out of the window. On the quay, a company of brothers was leaving slowly with several wagons, loaded with the grain unloaded the day before. He watched for a while, then suddenly smiled. "Ask the lords?" He shook his own head first. "No. A lord knows his own domain, but he knows nothing of what is happening in anyone else's." Then he fell silent again, as though he were truly thinking it through for them, and after a while said slowly, "If anyone knows the state of these lands better than we do, it would be the Order."</p><p>Edwin looked up. "The Order?" The old man nodded. "They are on the roads in every season of the year. Carrying grain. Carrying medicine. Visiting the villages far from the roads. Caring for orphans. Burying those who have no one to care for them." His voice was as even as ever. "The harbor records goods. The Guild records roads. The Patrol Office records danger." The old man looked at the three of them and said gently, "Only the Order records people."</p><p>The room went suddenly still, and Aether slowly raised his head, taking his eyes from the maps for the first time. The old man went on, "Though you had best not hope for too much. The Order may not know why, either. They only know in which places people's lives have grown harder." Edwin nodded and bowed to him. "That is already enough." The old man waved a hand, smiling. "Sometimes an investigation is not a road that can be walked in a day. Sometimes, knowing where the next step lies is already something gained."</p><p>The three of them gathered up their maps and walked out of the Harbor Records Office, into streets as full of people as ever. No one there knew where they meant to go next. Aether looked back at the harbor behind him and said softly, "All this time, we have been investigating the beasts." He turned his gaze toward the other end of Riverport, where the roof of the Order could just be made out behind the bell tower. "And we forgot about people — about ourselves."</p><p>The house of the Order stood on the eastern side of Riverport. It had none of the high walls of the lord's manor, and none of the endless stream of people that passed through the Merchants' Guild. A few grey-white stone houses stood around a small chapel. In the yard, tall plane trees rose overhead, and in their shade several children were gathered around an elderly brother, learning their letters. On the other side, a young brother was gently re-bandaging an old man's hand. The gate stood open at all hours. People came in, people left; some sat a while on the benches to rest, and others stepped into the chapel, prayed quietly for a moment, and slipped away again. There was none of the guild's clamor here, and none of the harbor's bustle, and yet the place never truly fell quiet — because everyone who came here came with a need of his own.</p><p>Edwin stopped and looked at it all. "It seems we have come to the right place," he said softly. Kaelan said nothing, only went on watching each person in the yard. Aether's gaze came to rest on the wooden board beside the gate. No rule of the Order was written on it, and no notice of any kind. Only one short line: May the Creator keep you and bless you.</p><p>Edwin bowed slightly to a young brother who was sorting herbs. "Forgive the intrusion. We have come from Whitestone, and we are looking into the beast calamity that has spread through these lands over the past half year." The young brother set down his work, listened carefully to the end, and did not answer at once. He only nodded gently. "Wait a moment, please. Several of our brothers have come back from the road today. They may be able to help you." With that, he turned and walked toward the back of the yard.</p><p>Before long, several brothers in robes of different colors came over one by one. One still had the mud of the mountain roads on his shoes; another's sleeves carried the faint green stain of herbs; and an elderly brother had only just set the pack down from his shoulders, his face still wearing the tiredness of a long journey home. When the young brother had briefly explained the visitors' purpose, they sat down quite naturally — none of them behaved as though he were being questioned. It was more like a company of travelers newly returned, sharing what they had seen along the way with a company of travelers still on the road.</p><div class="chapter-end-cta" style="max-width:680px;margin:40px auto 0;padding:28px 30px;border:1px solid rgba(212,184,120,.25);text-align:center;">
+<p style="font-family:Inter,sans-serif;font-size:15px;line-height:1.8;color:#bfb5a2;margin-bottom:14px;">Enjoying Echoes of the Kingdom? New chapters every Monday, Wednesday, Friday and Sunday.</p>
+<a href="https://www.royalroad.com/fiction/186472/echoes-of-the-kingdom" style="color:#d8c49a;font-family:Inter,sans-serif;font-size:13px;letter-spacing:2px;text-transform:uppercase;">Follow on Royal Road</a>
+<span style="color:#6b6252;margin:0 10px;">·</span>
+<a href="#" style="color:#d8c49a;font-family:Inter,sans-serif;font-size:13px;letter-spacing:2px;text-transform:uppercase;">Get Letters from Elarion</a>
+</div>
+<div class="chapter-navigation"><a href="../chapter-03/index.html">← Previous</a><a href="../index.html">Part III Contents</a><a href="../chapter-05/index.html">Next →</a></div></main>
+<footer class="site-footer">
+<div class="footer-brand">Cornerstone</div>
+<div class="footer-tagline">Building stories that endure.</div>
+<div class="footer-studio">Created by Echoes Studio</div>
+<div class="footer-copyright">© 2026 Michael He. All Rights Reserved.</div>
+</footer>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const article = document.querySelector(".article");
+
+    if (!article) {
+        return;
+    }
+
+    const paragraphs = article.querySelectorAll("p");
+
+    paragraphs.forEach(function (paragraph) {
+        const text = paragraph.textContent.trim();
+
+        if (!text) {
+            return;
+        }
+
+        // 自动识别场景分隔符
+        if (text === "***" || text === "* * *") {
+            const divider = document.createElement("div");
+            divider.className = "divider";
+            divider.textContent = "❦";
+            paragraph.replaceWith(divider);
+            return;
+        }
+
+        // 自动识别以引号或长破折号开头的对白
+        const isDialogue =
+            text.startsWith('"') ||
+            text.startsWith("“") ||
+            text.startsWith("‘") ||
+            text.startsWith("'") ||
+            text.startsWith("—");
+
+        if (isDialogue) {
+            paragraph.classList.add("dialogue");
+        }
+    });
+});
+</script>
+<!-- GoatCounter: privacy-friendly page analytics -->
+<script async="" data-goatcounter="https://echoeskingdom.goatcounter.com/count" src="//gc.zgo.at/count.js"></script>
+
+<script>
+(function(){
+  var bar=document.getElementById('eotk-progress');
+  function upd(){var h=document.documentElement;var max=h.scrollHeight-h.clientHeight;bar.style.width=(max>0?(h.scrollTop/max)*100:0)+'%';}
+  document.addEventListener('scroll',upd,{passive:true});upd();
+  var saved='md';try{saved=localStorage.getItem('eotk-font')||'md';}catch(e){}
+  function apply(f){document.body.classList.remove('font-lg','font-sm');if(f!=='md')document.body.classList.add('font-'+f);
+    document.querySelectorAll('.reader-tools button').forEach(function(b){b.classList.toggle('on',b.getAttribute('data-f')===f);});}
+  apply(saved);
+  document.querySelectorAll('.reader-tools button').forEach(function(b){b.addEventListener('click',function(){
+    var f=b.getAttribute('data-f');apply(f);try{localStorage.setItem('eotk-font',f);}catch(e){}});});
+  var h1=document.querySelector('.hero h1');
+  if(h1){try{localStorage.setItem('eotk-last-read',JSON.stringify({url:location.pathname,title:h1.textContent.trim()}));}catch(e){}}
+})();
+</script>
+</body>
+</html>

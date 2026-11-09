@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Chapter 1: Riverport | Echoes of the Kingdom</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&amp;family=Inter:wght@300;400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<style>
+.chapter-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  width: 100%;
+  margin-top: 100px;
+  padding-top: 40px;
+  border-top: 1px solid rgba(212, 184, 120, 0.18);
+}
+
+.chapter-navigation a {
+  color: #d8c49a;
+  font-family: Inter, sans-serif;
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+
+background:#070809;
+
+color:#ece2cf;
+
+font-family:"Cormorant Garamond",serif;
+
+line-height:1.9;
+
+}
+
+a{
+
+text-decoration:none;
+
+color:inherit;
+
+}
+
+.topbar{
+
+position:sticky;
+
+top:0;
+
+z-index:100;
+
+height:72px;
+
+background:rgba(7,8,9,.92);
+
+backdrop-filter:blur(10px);
+
+border-bottom:1px solid rgba(212,184,120,.12);
+
+display:flex;
+
+align-items:center;
+
+justify-content:space-between;
+
+padding:0 60px;
+
+}
+
+.logo{
+
+font-size:20px;
+
+letter-spacing:2px;
+
+color:#d8c08b;
+
+}
+
+.back{
+
+font-family:Inter,sans-serif;
+
+font-size:13px;
+
+letter-spacing:2px;
+
+text-transform:uppercase;
+
+color:#a89b7a;
+
+transition:.25s;
+
+}
+
+.back:hover{
+
+color:#e8d9b3;
+
+}
+
+.hero{
+
+padding:120px 20px 80px;
+
+text-align:center;
+
+}
+
+.eyebrow{
+
+font-size:18px;
+
+letter-spacing:6px;
+
+color:#a48c60;
+
+margin-bottom:20px;
+
+text-transform:uppercase;
+
+}
+
+h1{
+
+font-size:88px;
+
+font-weight:600;
+
+letter-spacing:2px;
+
+margin-bottom:24px;
+
+}
+
+.subtitle{
+
+max-width:700px;
+
+margin:auto;
+
+font-family:Inter,sans-serif;
+
+font-size:18px;
+
+color:#bfb5a2;
+
+line-height:1.8;
+
+}
+
+.article{
+
+max-width:680px;
+
+margin:100px auto 180px;
+
+padding:0 30px;
+
+font-size:28px;
+
+}
+
+.article p{
+  font-family:"Cormorant Garamond", serif;
+  font-size:28px;
+  line-height:2;
+  color:rgba(245,239,226,0.95);
+  margin-bottom:42px;
+}
+
+.dropcap::first-letter {
+  float: left;
+  font-size: 72px;
+  line-height: 0.8;
+  margin-right: 14px;
+  margin-top: 6px;
+  color: #d8c49a;
+}
+/* ===========================
+   Cornerstone Footer
+=========================== */
+
+.site-footer{
+    margin-top:120px;
+    padding:72px 24px 58px;
+    border-top:1px solid rgba(212,176,106,.18);
+    text-align:center;
+}
+
+.footer-brand{
+
+    font-family:"Cinzel", serif;
+
+    font-size:44px;
+
+    font-weight:500;
+
+    letter-spacing:.18em;
+
+    color:#D4B06A;
+
+    margin-bottom:10px;
+
+}
+
+.footer-tagline{
+    font-family:"Cormorant Garamond", serif;
+    font-style:italic;
+    font-size:18px;
+    color:#D8C8A8;
+    margin-bottom:32px;
+}
+
+.footer-studio{
+    font-family:Inter,sans-serif;
+    font-size:12px;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    color:rgba(245,239,226,.55);
+    margin-bottom:12px;
+}
+
+.footer-copyright{
+    font-family:Inter,sans-serif;
+    font-size:12px;
+    color:rgba(245,239,226,.35);
+}
+
+
+/* ===========================
+   Mobile Reading Layout
+=========================== */
+@media (max-width: 700px) {
+  html, body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .topbar {
+    height: auto;
+    min-height: 62px;
+    padding: 0 16px;
+    gap: 10px;
+  }
+
+  .logo {
+    min-width: 0;
+    white-space: nowrap;
+    font-size: 13px;
+    letter-spacing: 1.1px;
+    line-height: 1.2;
+  }
+
+  .back {
+    flex: 0 0 auto;
+    white-space: nowrap;
+    font-size: 10px;
+    letter-spacing: 1.1px;
+    line-height: 1.2;
+  }
+
+  .hero {
+    padding: 72px 18px 48px;
+  }
+
+  .eyebrow {
+    margin-bottom: 16px;
+    font-size: 13px;
+    letter-spacing: 4px;
+  }
+
+  h1 {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto 18px;
+    font-size: clamp(40px, 12vw, 54px);
+    line-height: 1.08;
+    letter-spacing: 1px;
+    overflow-wrap: break-word;
+    word-break: normal;
+  }
+
+  .subtitle {
+    max-width: 100%;
+    padding: 0 4px;
+    font-size: 16px;
+    line-height: 1.65;
+  }
+
+  .article {
+    width: 100%;
+    max-width: 100%;
+    margin: 48px auto 96px;
+    padding: 0 22px;
+    font-size: 22px;
+  }
+
+  .article p {
+    max-width: 100%;
+    font-size: 22px;
+    line-height: 1.78;
+    margin-bottom: 30px;
+  }
+
+  .dropcap::first-letter {
+    font-size: 58px;
+    line-height: .82;
+    margin-right: 10px;
+    margin-top: 5px;
+  }
+
+  .chapter-navigation {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    gap: 8px;
+    margin-top: 64px;
+    padding-top: 28px;
+  }
+
+  .chapter-navigation a {
+    min-width: 0;
+    font-size: 10px;
+    line-height: 1.4;
+    letter-spacing: 1.4px;
+  }
+
+  .chapter-navigation a:first-child { text-align: left; }
+  .chapter-navigation a:nth-child(2) { text-align: center; }
+  .chapter-navigation a:last-child { text-align: right; }
+
+  .site-footer {
+    margin-top: 72px;
+    padding: 54px 18px 40px;
+    overflow: hidden;
+  }
+
+  .footer-brand {
+    white-space: nowrap;
+    font-size: clamp(26px, 8vw, 32px);
+    letter-spacing: .12em;
+  }
+
+  .footer-tagline {
+    font-size: 16px;
+    margin-bottom: 28px;
+  }
+
+  .footer-studio,
+  .footer-copyright {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 390px) {
+  .topbar { padding: 0 12px; gap: 7px; }
+  .logo { font-size: 11.5px; letter-spacing: .9px; }
+  .back { font-size: 9px; letter-spacing: .9px; }
+  .hero { padding: 64px 16px 42px; }
+  h1 { font-size: clamp(38px, 11.5vw, 45px); }
+  .article { padding: 0 20px; }
+  .article p { font-size: 21px; line-height: 1.76; }
+  .chapter-navigation a { font-size: 9.5px; letter-spacing: 1.1px; }
+  .footer-brand { font-size: 27px; letter-spacing: .1em; }
+}
+
+/* Unified Cornerstone footer */
+.site-footer{margin-top:120px;padding:72px 24px 58px;border-top:1px solid rgba(212,176,106,.22);text-align:center;overflow:hidden}
+.footer-brand{font-family:"Cinzel",serif;font-size:44px;font-weight:500;letter-spacing:.14em;color:#D4B06A;margin:0 auto 10px;line-height:1.15;max-width:100%;white-space:nowrap}
+.footer-tagline{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:18px;color:#D8C8A8;margin-bottom:32px}
+.footer-studio{font-family:Inter,sans-serif;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:rgba(245,239,226,.55);margin-bottom:12px}
+.footer-copyright{font-family:Inter,sans-serif;font-size:12px;color:rgba(245,239,226,.35)}
+@media(max-width:700px){
+.site-footer{margin-top:72px;padding:50px 16px 40px}
+.footer-brand{font-size:clamp(23px,7.2vw,32px);letter-spacing:.08em;white-space:nowrap;overflow-wrap:normal;word-break:normal}
+.footer-tagline{font-size:16px;margin-bottom:26px}
+.footer-studio{font-size:11px;letter-spacing:.14em}
+.footer-copyright{font-size:11px;line-height:1.5}
+}
+
+</style>
+<style id="global-footer-unification">
+/* Final global footer override: keep every page visually identical. */
+.site-footer{
+  margin-top:120px !important;
+  padding:72px 24px 58px !important;
+  border-top:1px solid rgba(212,176,106,.22) !important;
+  text-align:center !important;
+  overflow:hidden !important;
+  box-sizing:border-box !important;
+}
+.footer-brand{
+  display:block !important;
+  font-family:"Cinzel",serif !important;
+  font-size:44px !important;
+  font-weight:500 !important;
+  letter-spacing:.10em !important;
+  line-height:1.12 !important;
+  color:#D4B06A !important;
+  width:auto !important;
+  max-width:100% !important;
+  margin:0 auto 10px !important;
+  padding:0 !important;
+  white-space:nowrap !important;
+  overflow-wrap:normal !important;
+  word-break:normal !important;
+  text-align:center !important;
+  box-sizing:border-box !important;
+}
+.footer-tagline{
+  font-family:"Cormorant Garamond",serif !important;
+  font-style:italic !important;
+  font-size:18px !important;
+  line-height:1.4 !important;
+  color:#D8C8A8 !important;
+  margin:0 auto 32px !important;
+}
+.footer-studio{
+  font-family:Inter,sans-serif !important;
+  font-size:12px !important;
+  line-height:1.5 !important;
+  letter-spacing:.18em !important;
+  text-transform:uppercase !important;
+  color:rgba(245,239,226,.55) !important;
+  margin:0 auto 12px !important;
+}
+.footer-copyright{
+  font-family:Inter,sans-serif !important;
+  font-size:12px !important;
+  line-height:1.5 !important;
+  color:rgba(245,239,226,.35) !important;
+  margin:0 auto !important;
+}
+@media (max-width:700px){
+  .site-footer{
+    margin-top:72px !important;
+    padding:48px 20px 38px !important;
+  }
+  .footer-brand{
+    font-size:clamp(22px,6.5vw,30px) !important;
+    letter-spacing:.06em !important;
+    line-height:1.12 !important;
+    max-width:calc(100% - 12px) !important;
+    margin:0 auto 12px !important;
+  }
+  .footer-tagline{font-size:16px !important;margin-bottom:26px !important;}
+  .footer-studio{font-size:11px !important;letter-spacing:.14em !important;margin-bottom:12px !important;}
+  .footer-copyright{font-size:11px !important;line-height:1.5 !important;}
+}
+@media (max-width:380px){
+  .site-footer{padding-left:16px !important;padding-right:16px !important;}
+  .footer-brand{font-size:21px !important;letter-spacing:.045em !important;max-width:100% !important;}
+}
+
+/* eotk reader tools */
+#eotk-progress{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,#8a6d3b,#d8c08b);z-index:999}
+.reader-tools{display:flex;gap:8px;align-items:center;justify-content:flex-end;max-width:760px;margin:10px auto 0;padding:0 20px}
+.reader-tools span{font-family:Cinzel,serif;font-size:10px;letter-spacing:2px;color:rgba(216,192,139,.6);margin-right:2px}
+.reader-tools button{background:none;border:1px solid rgba(216,192,139,.35);color:#d8c08b;font-family:Cinzel,serif;cursor:pointer;padding:3px 10px;font-size:12px}
+.reader-tools button.on{background:rgba(216,192,139,.18)}
+body.font-lg .article p{font-size:32px}
+body.font-sm .article p{font-size:24px}
+@media (max-width:768px){body.font-lg .article p{font-size:26px}body.font-sm .article p{font-size:19px}}
+.chapter-navigation-top{margin-top:26px}
+</style>
+<link rel="icon" href="/favicon.ico" sizes="any"/>
+<link rel="icon" type="image/png" href="/assets/images/favicon-32.png" sizes="32x32"/>
+<link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png"/>
+<meta property="og:type" content="article"/>
+<meta property="og:site_name" content="Echoes of the Kingdom"/>
+<meta property="og:title" content="Chapter 1: Riverport | Echoes of the Kingdom"/>
+<meta property="og:description" content="Echoes of the Kingdom — a slow-burn epic fantasy by Michael He. A boy, an ancient road, and a world quietly forgetting its own past."/>
+<meta property="og:url" content="https://cornerstoneauthor.com/read/book1/part3/chapter-01/"/>
+<meta property="og:image" content="https://cornerstoneauthor.com/assets/images/og-image.jpg"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="Chapter 1: Riverport | Echoes of the Kingdom"/>
+<meta name="twitter:description" content="Echoes of the Kingdom — a slow-burn epic fantasy by Michael He. A boy, an ancient road, and a world quietly forgetting its own past."/>
+<meta name="twitter:image" content="https://cornerstoneauthor.com/assets/images/og-image.jpg"/>
+</head>
+<body>
+<header class="topbar">
+<div class="logo"><a href="../../../../index.html" style="color:inherit;text-decoration:none">ECHOES OF THE KINGDOM</a></div>
+<a class="back" href="../index.html">← Back to Part III</a>
+</header>
+<div id="eotk-progress"></div>
+<div class="reader-tools"><span>TEXT SIZE</span><button data-f="sm">A−</button><button data-f="md">A</button><button data-f="lg">A+</button></div>
+<section class="hero">
+<div class="eyebrow">CHAPTER 1</div>
+<h1>Riverport</h1>
+</section>
+<div class="chapter-navigation chapter-navigation-top"><a href="../index.html">← Part III</a><a href="../index.html">Part III Contents</a><a href="../chapter-02/index.html">Next →</a></div>
+<main class="article"><p class="dropcap">Dawn had not yet driven off the night when the road was already awake. A wagon loaded high with timber rolled slowly past, its heavy wheels pressing into earth still wet from the night's rain with a low, steady rhythm. The old driver flicked his reins, and his two great draft horses swerved smoothly around an oncoming caravan — without a word of argument, without the least confusion, as though the road repeated the same scene every morning of the year.</p><p>Kael stood at the roadside and watched the wagon draw away. Seren came to stand beside him and followed his gaze. "What is it?" she asked.</p><p>He shook his head slightly. "Nothing." It was the truth. He had only felt, suddenly, that this road was already nothing like the road of a few days before.</p><p>After the wolves, they had traveled another day and night without meeting danger again. The forest had drawn back to either side, giving way to a road that widened as they went. At first only a wagon or two had passed them; after that, every quarter of an hour brought a new caravan, new travelers, even couriers at the gallop who went by them like a gust of wind. The smell of the air had changed with the road. The damp breath of the forest thinned, and in its place came timber and leather, ale and spice, and the smell of the river, all mingled together — as though the whole world had blown in on the same wind.</p><p>Elowen walked quietly behind the two of them, still carrying her small cloth bundle, her eyes moving over everything along the road: a carpenter's shop, a smithy, warehouse sheds where men were loading and unloading goods, small stalls thrown up by the roadside where fresh bread was just coming out of the oven, its scent drifting far on the cool morning air. Children with baskets ran past them, and one boy nearly ran full into Kael. He stopped in time, grinned an apology, and raced on after his companions.</p><p>Kael laughed despite himself. "The children here run faster than rabbits in the hills."</p><p>Elowen smiled. "They do not seem to fear strangers at all."</p><p>"So many people come through every day," Kael said. "They have long since grown used to it."</p><p>The road widened further as they went on. The mud track had become a level road of stone slabs, with neat drainage channels cut along both sides, and here and there men in matching short robes were repairing the surface while fresh wagons waited patiently beside them; no one raised his voice to hurry them. Seren noticed the wooden signposts set at intervals along the way, carved with the names of places in different directions — some pointing to the harbor, some to the warehouse quarter, some to the market — and some names none of them had ever heard. "It seems a great many strangers come here every day," she said softly.</p><p>Kael nodded. "Otherwise they would never have made the signposts so thorough."</p><p>As they spoke, another caravan came toward them, larger than any they had yet seen. Dozens of great pack beasts moved slowly past, wooden boxes lashed thick along their backs, every box stamped with the mark of a different guild. The guards were armed each after his own fashion: one carried a longbow, another a longsword at his hip, and among them walked men who had clearly come from far away, dark-skinned and curled-haired, speaking a tongue the three of them could not understand at all. As the caravan passed, one of its elders nodded kindly toward them. Elowen returned the courtesy with a small bow, and the old man smiled and walked on with his people.</p><p>Seren watched the caravan recede. "Where do they come from?"</p><p>"I do not know," Kael answered. "But they cannot all come from the same place."</p><p>They had seen so many kinds of people on this road — different clothes, different tongues, different faces, even weapons of shapes they had never seen before. Only now did they truly understand that the world was far larger than they had imagined.</p><p>They walked on for perhaps half an hour, and then the stream of people ahead of them thickened all at once. The road bent slowly to the right, the last of the trees fell away behind them, and a broad, great river opened before their eyes. Boats of every size moved up and down its surface, some putting in to shore, others already spreading sail for the off-going tide. Along the banks, workers beyond counting hurried back and forth, carrying crate after crate down from the ships and loading them onto wagons that had waited long for their turn. Voices called out the tallies of goods. Clerks wrote swiftly in their ledgers. Men waved signal flags again and again, guiding the next vessel in to the wharves. The whole riverfront never rested for a single moment.</p><p>Seren stopped without meaning to. She had never seen such a place. It had none of the solemn, awe-commanding majesty of Rivergate, nor any architecture grand enough to steal the breath; yet the city seemed to breathe with a life of its own. The river kept bringing new ships. The road kept bringing new travelers. Goods, news, wealth, and people — everything streamed together here, and from here flowed out again to every corner of the world.</p><p>Kael looked toward the crowded forest of the wharves and let out a slow breath. "We are here at last."</p><p>Seren did not answer. She only stood and watched the city waking little by little in the morning light. Then she gathered her gaze back, and walked on.</p><p>As the crowds thickened around them, they were truly swallowed into the great road that led to Riverport. The fields along the way had all but vanished, replaced by warehouses of every size. Many of the great doors stood open, and porters went in and out with boxes on their shoulders, while at every doorway a clerk kept his ledger and somewhere a voice called out the tally of a load. A wagon that had just been emptied rolled slowly out of one warehouse gate, and another was already waiting in line at the door. It all proceeded in perfect order; no one shouted for haste, and no one stood idle, as though every person there knew exactly what he was to do next.</p><p>"Now I understand," Kael said quietly, "why we met more and more caravans the closer we came."</p><p>Seren nodded. "Because in the end, they all come here."</p><p>She had barely finished when a long horn call sounded from the river, and every head turned toward the harbor. A great merchant ship was coming slowly in to berth, her hull broader than any vessel they had seen on the road, an unfamiliar banner flying from her high mast. On the shore, the signal men began at once to wave their flags. Clerks hurried forward to meet the ship, and more porters already stood waiting with their wooden carts along the bank. The ship had not even come fully to rest before the whole machinery of unloading had begun to turn.</p><p>Seren laughed softly. "The people here seem unwilling to waste a single minute."</p><p>An old man pushing a cart past them happened to hear her, and answered with a grin, "Young one, in Riverport, time is worth more than timber." He waved a hand and pushed his cart on into the crowd.</p><p>The three of them looked at one another and smiled. It was only a sentence thrown out in passing, and yet it let them feel, for the first time, the true air of this city. No one here was busy for the sake of seeming busy. They were simply busy.</p><p>The walls drew nearer as they walked. The walls of Riverport were not high, but they were built very thick, and time had left its mottled marks on the gray-white stone; in a few places the newer stone of repairs showed a paler color, plain evidence that the city was forever being enlarged and mended. Yet it was not the walls that drew the eye. It was the gate. The broad gatehouse could pass four wagons abreast, and the people entering formed several lines without the least confusion: caravans kept to the caravan lane, ordinary travelers to another, and the wagons loaded with goods drew aside to be registered. Several tax officers sat behind a long table, turning the pages of their ledgers with practiced ease, now and then confirming a count of goods with the leader of a caravan. Beside them, soldiers helped to keep the order; they were neither overbearing nor bent on searching every comer, but spent themselves rather in guiding travelers to the right line, and where there were old people or children, they let them pass through first of their own accord.</p><p>"It does not feel like a city being guarded," Seren said softly.</p><p>Kael looked at the soldiers. "They are keeping a city running."</p><p>At last it was their turn. An older guard raised his head and looked the three of them over. "Your first time in Riverport?"</p><p>"Yes."</p><p>"How long do you mean to stay?"</p><p>Elowen shook her head slightly. "We do not know yet."</p><p>The guard nodded, and his quill moved swiftly across several lines of the register. "Come to visit kin, or on business?"</p><p>Elowen answered quite naturally. "To visit my uncle."</p><p>"His name?"</p><p>"Odren."</p><p>The quill stopped.</p><p>The guard raised his head slowly and studied the young girl before him, travel-worn from the road, with real attention. His eyes moved to Seren and to Kael. For the space of two breaths he said nothing. Then he closed the register. "Wait here a moment, please."</p><p>He handed the register to the younger guard beside him and walked quickly toward the watch house by the gate.</p><p>"It seems your uncle truly is no ordinary man," Kael said under his breath.</p><p>Elowen pressed her lips together. "I… do not know either." She knew only that the elder of the Order, when he spoke of this uncle of hers, had said he held a post in Riverport, and had never said more than that. As for why the Order of the Sacred Lamp had sent her to him, she knew no more of that than anyone else.</p><p>Before long, an officer in a dark blue uniform came striding out. He was perhaps forty years old, steady in bearing, and when he reached them, he first bowed slightly to Elowen. "May I ask — are you Miss Elowen?"</p><p>"I am."</p><p>The officer's expression softened visibly. "My lord has been waiting for word of you. Welcome to Riverport." He glanced then at Seren and at Kael, a trace of puzzlement in his eyes, but he asked nothing. "The three of you may enter the city. If you wish, I can have men escort you to my lord's residence."</p><p>"Thank you, but there is no need," Elowen said quickly. "We have traveled far, and we would like to rest one night at an inn first, and pay our visit properly tomorrow."</p><p>The officer was taken aback for a moment; then he smiled and nodded. "Of course. If you need anything at all, come to the gate watch and ask for us." He stepped aside from the road as he spoke. "Welcome to Riverport."</p><p>The three of them bowed their thanks and passed through the gate with the stream of people. The moment they crossed beneath it, it was as though they had stepped into another world. There was no single broad avenue, as they had imagined; instead, streets crossed and branched in every direction, binding the whole city into one vast net, and every little way led off toward the harbor, with wagons and pack beasts and walkers passing endlessly along them all.</p><p>The buildings along the streets were mostly of stone and timber, one to three stories high, and nearly every ground floor was a shop — cloth merchants, grain shops, smithies, hide dealers, woodworkers, spice sellers — with newly arrived goods piled at every door, and people stopping to ask a price and hurrying on again. No one cried his wares aloud. Buying and selling seemed to have found a rhythm of its own: a merchant came out of a grain shop, and another man was already coming to meet him, and the two walked on swiftly side by side, talking in low voices without ever breaking stride. At a street corner, a young courier swung up onto a fast horse; at a short whistle the horse shot away down another street and was gone among the crowd in moments.</p><p>Seren watched the courier vanish. "How many letters must this city send in a day?"</p><p>An old man pushing a wine barrel past them heard the question and answered with a laugh, "More than anyone could count. But if a day ever comes when no courier is running in these streets — that is the day something has truly gone wrong." He pushed his barrel on.</p><p>Seren could not help smiling. Everyone she had seen along this road had business of his own; no one stopped to stare about him. They were simply parts of the city's turning, each in his place.</p><p>Elowen slowed her steps, and her gaze traveled down the street into the distance, where the roads ran on and divided and ran on again, and somewhere a tall bell tower rose above the roofs. Farther still lay the administrative quarter, built against the hill; there was no clamor of the harbor there, no crowding of the market, only a great quiet. She knew that her uncle must be in that direction. And yet, for no reason she could name, she was suddenly nervous. All along the road she had imagined her reunion with him, many times over; now that she was truly here, she did not know what the first words ought to be.</p><p>Seren seemed to sense the change in her. "Nervous?"</p><p>Elowen laughed a little. "A little. It has been many years since I saw my uncle."</p><p>"At least he has not forgotten you," Kael said, deliberately light. "That officer at the gate did not react as though he were welcoming an ordinary relative."</p><p>All three of them laughed, and some of the tightness went out of the air.</p><div class="chapter-end-cta" style="max-width:680px;margin:40px auto 0;padding:28px 30px;border:1px solid rgba(212,184,120,.25);text-align:center;">
+<p style="font-family:Inter,sans-serif;font-size:15px;line-height:1.8;color:#bfb5a2;margin-bottom:14px;">Enjoying Echoes of the Kingdom? New chapters every Monday, Wednesday, Friday and Sunday.</p>
+<a href="https://www.royalroad.com/fiction/186472/echoes-of-the-kingdom" style="color:#d8c49a;font-family:Inter,sans-serif;font-size:13px;letter-spacing:2px;text-transform:uppercase;">Follow on Royal Road</a>
+<span style="color:#6b6252;margin:0 10px;">·</span>
+<a href="#" style="color:#d8c49a;font-family:Inter,sans-serif;font-size:13px;letter-spacing:2px;text-transform:uppercase;">Get Letters from Elarion</a>
+</div>
+<div class="chapter-navigation"><a href="../index.html">← Part III</a><a href="../index.html">Part III Contents</a><a href="../chapter-02/index.html">Next →</a></div></main>
+<footer class="site-footer">
+<div class="footer-brand">Cornerstone</div>
+<div class="footer-tagline">Building stories that endure.</div>
+<div class="footer-studio">Created by Echoes Studio</div>
+<div class="footer-copyright">© 2026 Michael He. All Rights Reserved.</div>
+</footer>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const article = document.querySelector(".article");
+
+    if (!article) {
+        return;
+    }
+
+    const paragraphs = article.querySelectorAll("p");
+
+    paragraphs.forEach(function (paragraph) {
+        const text = paragraph.textContent.trim();
+
+        if (!text) {
+            return;
+        }
+
+        // 自动识别场景分隔符
+        if (text === "***" || text === "* * *") {
+            const divider = document.createElement("div");
+            divider.className = "divider";
+            divider.textContent = "❦";
+            paragraph.replaceWith(divider);
+            return;
+        }
+
+        // 自动识别以引号或长破折号开头的对白
+        const isDialogue =
+            text.startsWith('"') ||
+            text.startsWith("“") ||
+            text.startsWith("‘") ||
+            text.startsWith("'") ||
+            text.startsWith("—");
+
+        if (isDialogue) {
+            paragraph.classList.add("dialogue");
+        }
+    });
+});
+</script>
+<!-- GoatCounter: privacy-friendly page analytics -->
+<script async="" data-goatcounter="https://echoeskingdom.goatcounter.com/count" src="//gc.zgo.at/count.js"></script>
+
+<script>
+(function(){
+  var bar=document.getElementById('eotk-progress');
+  function upd(){var h=document.documentElement;var max=h.scrollHeight-h.clientHeight;bar.style.width=(max>0?(h.scrollTop/max)*100:0)+'%';}
+  document.addEventListener('scroll',upd,{passive:true});upd();
+  var saved='md';try{saved=localStorage.getItem('eotk-font')||'md';}catch(e){}
+  function apply(f){document.body.classList.remove('font-lg','font-sm');if(f!=='md')document.body.classList.add('font-'+f);
+    document.querySelectorAll('.reader-tools button').forEach(function(b){b.classList.toggle('on',b.getAttribute('data-f')===f);});}
+  apply(saved);
+  document.querySelectorAll('.reader-tools button').forEach(function(b){b.addEventListener('click',function(){
+    var f=b.getAttribute('data-f');apply(f);try{localStorage.setItem('eotk-font',f);}catch(e){}});});
+  var h1=document.querySelector('.hero h1');
+  if(h1){try{localStorage.setItem('eotk-last-read',JSON.stringify({url:location.pathname,title:h1.textContent.trim()}));}catch(e){}}
+})();
+</script>
+</body>
+</html>
