@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Chapter 8: The North River Valley | Echoes of the Kingdom</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&amp;family=Inter:wght@300;400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<style>
+.chapter-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  width: 100%;
+  margin-top: 100px;
+  padding-top: 40px;
+  border-top: 1px solid rgba(212, 184, 120, 0.18);
+}
+
+.chapter-navigation a {
+  color: #d8c49a;
+  font-family: Inter, sans-serif;
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+
+background:#070809;
+
+color:#ece2cf;
+
+font-family:"Cormorant Garamond",serif;
+
+line-height:1.9;
+
+}
+
+a{
+
+text-decoration:none;
+
+color:inherit;
+
+}
+
+.topbar{
+
+position:sticky;
+
+top:0;
+
+z-index:100;
+
+height:72px;
+
+background:rgba(7,8,9,.92);
+
+backdrop-filter:blur(10px);
+
+border-bottom:1px solid rgba(212,184,120,.12);
+
+display:flex;
+
+align-items:center;
+
+justify-content:space-between;
+
+padding:0 60px;
+
+}
+
+.logo{
+
+font-size:20px;
+
+letter-spacing:2px;
+
+color:#d8c08b;
+
+}
+
+.back{
+
+font-family:Inter,sans-serif;
+
+font-size:13px;
+
+letter-spacing:2px;
+
+text-transform:uppercase;
+
+color:#a89b7a;
+
+transition:.25s;
+
+}
+
+.back:hover{
+
+color:#e8d9b3;
+
+}
+
+.hero{
+
+padding:120px 20px 80px;
+
+text-align:center;
+
+}
+
+.eyebrow{
+
+font-size:18px;
+
+letter-spacing:6px;
+
+color:#a48c60;
+
+margin-bottom:20px;
+
+text-transform:uppercase;
+
+}
+
+h1{
+
+font-size:88px;
+
+font-weight:600;
+
+letter-spacing:2px;
+
+margin-bottom:24px;
+
+}
+
+.subtitle{
+
+max-width:700px;
+
+margin:auto;
+
+font-family:Inter,sans-serif;
+
+font-size:18px;
+
+color:#bfb5a2;
+
+line-height:1.8;
+
+}
+
+.article{
+
+max-width:680px;
+
+margin:100px auto 180px;
+
+padding:0 30px;
+
+font-size:28px;
+
+}
+
+.article p{
+  font-family:"Cormorant Garamond", serif;
+  font-size:28px;
+  line-height:2;
+  color:rgba(245,239,226,0.95);
+  margin-bottom:42px;
+}
+
+.dropcap::first-letter {
+  float: left;
+  font-size: 72px;
+  line-height: 0.8;
+  margin-right: 14px;
+  margin-top: 6px;
+  color: #d8c49a;
+}
+/* ===========================
+   Cornerstone Footer
+=========================== */
+
+.site-footer{
+    margin-top:120px;
+    padding:72px 24px 58px;
+    border-top:1px solid rgba(212,176,106,.18);
+    text-align:center;
+}
+
+.footer-brand{
+
+    font-family:"Cinzel", serif;
+
+    font-size:44px;
+
+    font-weight:500;
+
+    letter-spacing:.18em;
+
+    color:#D4B06A;
+
+    margin-bottom:10px;
+
+}
+
+.footer-tagline{
+    font-family:"Cormorant Garamond", serif;
+    font-style:italic;
+    font-size:18px;
+    color:#D8C8A8;
+    margin-bottom:32px;
+}
+
+.footer-studio{
+    font-family:Inter,sans-serif;
+    font-size:12px;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    color:rgba(245,239,226,.55);
+    margin-bottom:12px;
+}
+
+.footer-copyright{
+    font-family:Inter,sans-serif;
+    font-size:12px;
+    color:rgba(245,239,226,.35);
+}
+
+
+/* ===========================
+   Mobile Reading Layout
+=========================== */
+@media (max-width: 700px) {
+  html, body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .topbar {
+    height: auto;
+    min-height: 62px;
+    padding: 0 16px;
+    gap: 10px;
+  }
+
+  .logo {
+    min-width: 0;
+    white-space: nowrap;
+    font-size: 13px;
+    letter-spacing: 1.1px;
+    line-height: 1.2;
+  }
+
+  .back {
+    flex: 0 0 auto;
+    white-space: nowrap;
+    font-size: 10px;
+    letter-spacing: 1.1px;
+    line-height: 1.2;
+  }
+
+  .hero {
+    padding: 72px 18px 48px;
+  }
+
+  .eyebrow {
+    margin-bottom: 16px;
+    font-size: 13px;
+    letter-spacing: 4px;
+  }
+
+  h1 {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto 18px;
+    font-size: clamp(40px, 12vw, 54px);
+    line-height: 1.08;
+    letter-spacing: 1px;
+    overflow-wrap: break-word;
+    word-break: normal;
+  }
+
+  .subtitle {
+    max-width: 100%;
+    padding: 0 4px;
+    font-size: 16px;
+    line-height: 1.65;
+  }
+
+  .article {
+    width: 100%;
+    max-width: 100%;
+    margin: 48px auto 96px;
+    padding: 0 22px;
+    font-size: 22px;
+  }
+
+  .article p {
+    max-width: 100%;
+    font-size: 22px;
+    line-height: 1.78;
+    margin-bottom: 30px;
+  }
+
+  .dropcap::first-letter {
+    font-size: 58px;
+    line-height: .82;
+    margin-right: 10px;
+    margin-top: 5px;
+  }
+
+  .chapter-navigation {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    gap: 8px;
+    margin-top: 64px;
+    padding-top: 28px;
+  }
+
+  .chapter-navigation a {
+    min-width: 0;
+    font-size: 10px;
+    line-height: 1.4;
+    letter-spacing: 1.4px;
+  }
+
+  .chapter-navigation a:first-child { text-align: left; }
+  .chapter-navigation a:nth-child(2) { text-align: center; }
+  .chapter-navigation a:last-child { text-align: right; }
+
+  .site-footer {
+    margin-top: 72px;
+    padding: 54px 18px 40px;
+    overflow: hidden;
+  }
+
+  .footer-brand {
+    white-space: nowrap;
+    font-size: clamp(26px, 8vw, 32px);
+    letter-spacing: .12em;
+  }
+
+  .footer-tagline {
+    font-size: 16px;
+    margin-bottom: 28px;
+  }
+
+  .footer-studio,
+  .footer-copyright {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 390px) {
+  .topbar { padding: 0 12px; gap: 7px; }
+  .logo { font-size: 11.5px; letter-spacing: .9px; }
+  .back { font-size: 9px; letter-spacing: .9px; }
+  .hero { padding: 64px 16px 42px; }
+  h1 { font-size: clamp(38px, 11.5vw, 45px); }
+  .article { padding: 0 20px; }
+  .article p { font-size: 21px; line-height: 1.76; }
+  .chapter-navigation a { font-size: 9.5px; letter-spacing: 1.1px; }
+  .footer-brand { font-size: 27px; letter-spacing: .1em; }
+}
+
+/* Unified Cornerstone footer */
+.site-footer{margin-top:120px;padding:72px 24px 58px;border-top:1px solid rgba(212,176,106,.22);text-align:center;overflow:hidden}
+.footer-brand{font-family:"Cinzel",serif;font-size:44px;font-weight:500;letter-spacing:.14em;color:#D4B06A;margin:0 auto 10px;line-height:1.15;max-width:100%;white-space:nowrap}
+.footer-tagline{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:18px;color:#D8C8A8;margin-bottom:32px}
+.footer-studio{font-family:Inter,sans-serif;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:rgba(245,239,226,.55);margin-bottom:12px}
+.footer-copyright{font-family:Inter,sans-serif;font-size:12px;color:rgba(245,239,226,.35)}
+@media(max-width:700px){
+.site-footer{margin-top:72px;padding:50px 16px 40px}
+.footer-brand{font-size:clamp(23px,7.2vw,32px);letter-spacing:.08em;white-space:nowrap;overflow-wrap:normal;word-break:normal}
+.footer-tagline{font-size:16px;margin-bottom:26px}
+.footer-studio{font-size:11px;letter-spacing:.14em}
+.footer-copyright{font-size:11px;line-height:1.5}
+}
+
+</style>
+<style id="global-footer-unification">
+/* Final global footer override: keep every page visually identical. */
+.site-footer{
+  margin-top:120px !important;
+  padding:72px 24px 58px !important;
+  border-top:1px solid rgba(212,176,106,.22) !important;
+  text-align:center !important;
+  overflow:hidden !important;
+  box-sizing:border-box !important;
+}
+.footer-brand{
+  display:block !important;
+  font-family:"Cinzel",serif !important;
+  font-size:44px !important;
+  font-weight:500 !important;
+  letter-spacing:.10em !important;
+  line-height:1.12 !important;
+  color:#D4B06A !important;
+  width:auto !important;
+  max-width:100% !important;
+  margin:0 auto 10px !important;
+  padding:0 !important;
+  white-space:nowrap !important;
+  overflow-wrap:normal !important;
+  word-break:normal !important;
+  text-align:center !important;
+  box-sizing:border-box !important;
+}
+.footer-tagline{
+  font-family:"Cormorant Garamond",serif !important;
+  font-style:italic !important;
+  font-size:18px !important;
+  line-height:1.4 !important;
+  color:#D8C8A8 !important;
+  margin:0 auto 32px !important;
+}
+.footer-studio{
+  font-family:Inter,sans-serif !important;
+  font-size:12px !important;
+  line-height:1.5 !important;
+  letter-spacing:.18em !important;
+  text-transform:uppercase !important;
+  color:rgba(245,239,226,.55) !important;
+  margin:0 auto 12px !important;
+}
+.footer-copyright{
+  font-family:Inter,sans-serif !important;
+  font-size:12px !important;
+  line-height:1.5 !important;
+  color:rgba(245,239,226,.35) !important;
+  margin:0 auto !important;
+}
+@media (max-width:700px){
+  .site-footer{
+    margin-top:72px !important;
+    padding:48px 20px 38px !important;
+  }
+  .footer-brand{
+    font-size:clamp(22px,6.5vw,30px) !important;
+    letter-spacing:.06em !important;
+    line-height:1.12 !important;
+    max-width:calc(100% - 12px) !important;
+    margin:0 auto 12px !important;
+  }
+  .footer-tagline{font-size:16px !important;margin-bottom:26px !important;}
+  .footer-studio{font-size:11px !important;letter-spacing:.14em !important;margin-bottom:12px !important;}
+  .footer-copyright{font-size:11px !important;line-height:1.5 !important;}
+}
+@media (max-width:380px){
+  .site-footer{padding-left:16px !important;padding-right:16px !important;}
+  .footer-brand{font-size:21px !important;letter-spacing:.045em !important;max-width:100% !important;}
+}
+
+/* eotk reader tools */
+#eotk-progress{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,#8a6d3b,#d8c08b);z-index:999}
+.reader-tools{display:flex;gap:8px;align-items:center;justify-content:flex-end;max-width:760px;margin:10px auto 0;padding:0 20px}
+.reader-tools span{font-family:Cinzel,serif;font-size:10px;letter-spacing:2px;color:rgba(216,192,139,.6);margin-right:2px}
+.reader-tools button{background:none;border:1px solid rgba(216,192,139,.35);color:#d8c08b;font-family:Cinzel,serif;cursor:pointer;padding:3px 10px;font-size:12px}
+.reader-tools button.on{background:rgba(216,192,139,.18)}
+body.font-lg .article p{font-size:32px}
+body.font-sm .article p{font-size:24px}
+@media (max-width:768px){body.font-lg .article p{font-size:26px}body.font-sm .article p{font-size:19px}}
+.chapter-navigation-top{margin-top:26px}
+</style>
+<link rel="icon" href="/favicon.ico" sizes="any"/>
+<link rel="icon" type="image/png" href="/assets/images/favicon-32.png" sizes="32x32"/>
+<link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png"/>
+<meta property="og:type" content="article"/>
+<meta property="og:site_name" content="Echoes of the Kingdom"/>
+<meta property="og:title" content="Chapter 8: The North River Valley | Echoes of the Kingdom"/>
+<meta property="og:description" content="Echoes of the Kingdom — a slow-burn epic fantasy by Michael He. A boy, an ancient road, and a world quietly forgetting its own past."/>
+<meta property="og:url" content="https://cornerstoneauthor.com/read/book1/part3/chapter-08/"/>
+<meta property="og:image" content="https://cornerstoneauthor.com/assets/images/og-image.jpg"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="Chapter 8: The North River Valley | Echoes of the Kingdom"/>
+<meta name="twitter:description" content="Echoes of the Kingdom — a slow-burn epic fantasy by Michael He. A boy, an ancient road, and a world quietly forgetting its own past."/>
+<meta name="twitter:image" content="https://cornerstoneauthor.com/assets/images/og-image.jpg"/>
+</head>
+<body>
+<header class="topbar">
+<div class="logo"><a href="../../../../index.html" style="color:inherit;text-decoration:none">ECHOES OF THE KINGDOM</a></div>
+<a class="back" href="../index.html">← Back to Part III</a>
+</header>
+<div id="eotk-progress"></div>
+<div class="reader-tools"><span>TEXT SIZE</span><button data-f="sm">A−</button><button data-f="md">A</button><button data-f="lg">A+</button></div>
+<section class="hero">
+<div class="eyebrow">CHAPTER 8</div>
+<h1>The North River Valley</h1>
+</section>
+<div class="chapter-navigation chapter-navigation-top"><a href="../chapter-07/index.html">← Previous</a><a href="../index.html">Part III Contents</a><a href="../chapter-09/index.html">Next →</a></div>
+<main class="article"><p class="dropcap">Hobbes knocked gently at the door. "My lord." "Come in." Odren folded the letter again and put it back into its envelope. Hobbes came in. "My lord, there is one more matter." Odren nodded slightly. "Speak." "Today the Patrol Office sent word: outside the North River Valley, another village has asked for aid. They say it is because of the beast calamity as well." Odren's brow furrowed slightly. "The same direction as before?" "Yes." Hobbes nodded. "And the Harbor Records Office sent over a supplementary record this afternoon: in the last month, the grain carts coming into Riverport from the North River Valley have been three-tenths fewer than in the same period last year."</p><p>Odren did not speak at once. He walked slowly to the wall, where a map of the lands around Riverport hung, and gazed at the position of the North River Valley for a long time without moving his eyes away. After a while, he spoke softly. "Tomorrow, have the North River Valley's patrol records of the last half year, its harbor records, and the documents the lords have submitted — all of them drawn together and set in order." Hobbes started slightly. Those things were ordinarily kept in different places, and seldom did anyone call for them all at once. But he did not ask anything further. He only nodded. "Yes, my lord."</p><p>After Hobbes had gone, quiet returned to the study. Odren still stood before the map, and in his mind there rose, unbidden, the words Elowen had spoken during the day: there is not a single place that can draw all of these things together. Slowly he raised his hand, and his finger came to rest on the position of the North River Valley, then moved gradually toward Riverport, and stopped at last on the unremarkable road between the two. For the first time, he did not first ask himself what order he ought to give. He asked instead: among all these matters, what is there that I have not yet seen? Outside the window the night deepened, and Riverport's lamps still had not gone out. No one knew that an administrator who had governed this city for more than twenty years, because of the investigation of a few young men, had begun to look again at the world he had always known so well.</p><p>The night had grown deep. When the three of them returned to their lodging, none of them was in a hurry to rest. Edwin spread out on the table, one by one, the maps, records, and notes he had carried all along the road. The candlelight swayed gently, and the room was so quiet that only the turning of pages could be heard: the map of beast sightings drawn by the Patrol Office, the trade routes marked by the Guild, the flow of goods copied down from the Harbor Records Office, and the things several brothers of the Order had said today — everything laid out together, yet still like fragments that had nothing to do with one another. Kaelen leaned by the window, looked at the maps on the table, and sighed softly. "Broken again."</p><p>Edwin said nothing. He only set the maps slowly side by side, one against another. A long time passed before he spoke, slowly. "We have investigated all the way from Whitestone to Riverport. The Patrol Office, the Guild, the harbor, the Order — everyone we should ask, we have asked. But at every step, we can only learn that one step." He set down the pen in his hand gently. "And further on, the road breaks again."</p><p>The room fell quiet once more. Aether had not spoken all this while. His gaze stayed among the maps on the table, and in his mind he turned over again and again the things he had heard along the road: the men of the Patrol Office had told them where the danger was; the Guild had told them which trade roads had been abandoned; the Harbor Records Office had told them where the goods came from and where they were sent; the people of the Order had told them that more and more villages were beginning to need relief. Every person had answered their questions in earnest, and not one of them had held anything back. And yet... what they knew was always only the part before their own eyes.</p><p>Slowly Aether reached out and pushed the maps a little apart, and suddenly he spoke. "All this time, we have been asking." Edwin raised his head and looked at him. Aether was not looking at anyone; he only gazed at the maps on the table. "All this time, we have been asking who knows what happened. The Patrol Office knows the beasts. The Guild knows the roads. The harbor knows the goods. The Order knows the people." He paused, and his voice slowly lowered. "But... the people who have truly lived through these things — we have not met a single one of them." For a time, no one in the room spoke. Kaelen's brow furrowed slightly. "You mean..." Aether raised his head. "The villages. And those lords. They live there every day. What they have seen is where the beast calamity is truly happening." Edwin watched Aether and did not interrupt. Aether went on, "Ever since we came to Riverport, we have stayed in the city. The people of the city know a great deal, but what they know is also news that others have brought to them. If we stay here all along —" He pressed his hand gently on the map. "Then what we investigate will only ever be Riverport."</p><p>At those words, the room fell silent again. Edwin lowered his head and looked at the maps on the table. A long time passed, and then a faint smile appeared on his face. "So. You have finally stepped out of it." Aether blinked. Edwin reached out and gently set the harbor records to one side. "An investigation is not a matter of walking forward all along the road. Sometimes it is also a matter of turning back, to see whether you have been walking the same road all this time." Kaelen, too, walked slowly to the table now. His finger came to rest lightly on the grain-route map the Order had left with them today, and he looked at it for a while before he said slowly, "The true traces are never in the city." A hunter's words, very soft, and yet all three of them fell quiet. Aether looked at that simple route map, and suddenly there rose in his mind the words of the brothers at the Order today — they were not investigating anything. They only walked, again and again, into the places that were most remote, most poor, and most easily forgotten. Perhaps there were no maps there, no tallies, no records; but the people living there were the ones truly living through all of this. Slowly Aether drew the grain-route map to the center of the table and laid it beside the other maps, and said softly, "Tomorrow, we go to the Order again." This time, no one raised a question. Edwin nodded gently, and Kaelen did not object. The candlelight burned on in quiet, and the maps on the table, for the first time, looked as though they were beginning to join into a new road.</p><p>Early the next morning, Riverport had not yet fully woken, but voices were already gradually rising in the streets. From the direction of the docks came the sound of wooden wheels rolling, as cart after cart of goods moved slowly toward the harbor; in the distance, shops opened their wooden doors one after another, and the shop hands began sweeping the streets before their doors; the patrol soldiers relieved the companions who had kept watch through the night and began a new day's rounds. The whole city was like a machine slowly beginning to turn. But the Order had long since begun its day's work.</p><p>When Aether and his companions walked into the Order's courtyard, the yard was already filled with sacks of grain waiting to be loaded onto the carts. Several brothers were busy checking the wooden crates, and on the other side, others were placing medicinal herbs, small clay jars, and several copied scrolls of scripture into separate carts. No one hurried anyone else, and no one spoke loudly; everyone was quietly doing his own work. The elder brother who had received them yesterday stood in the center of the yard, going over today's route with several other brothers. Hearing footsteps, he turned around, and when he saw the three of them, a gentle smile came to his face. "You have come." Aether bowed slightly. "Forgive the intrusion." The elder brother shook his head with a smile. "I guessed you would come back today." Kaelen was a little surprised. "You knew?" The brother smiled gently. "Yesterday, you kept asking about things inside Riverport. But what truly stopped you and set you thinking was not the city." He looked toward the grain carts in the yard, one after another, made ready to set out. "So I thought you would probably come today to look at what lies outside the city." Aether did not deny it. He nodded. "After we went back yesterday, we put our whole investigation in order again. And we found that all this time we have been asking the people who hold the news, and never truly gone to meet the people who have lived through these things." The brother listened in quiet. Aether paused and looked at the sacks of grain in the yard. "Maps do not go hungry, and records do not feel fear. The ones who truly know what has happened are the people still living there." The yard went quiet for a moment, and several brothers who were carrying grain could not help glancing this way. The elder brother was silent for a while, and the smile on his face gradually softened. "It seems yesterday's journey was not wasted." He nodded slowly. "Since that is so — today, come with us." Aether started slightly. But the brother added a sentence more. "Only, today, do not think about investigating, first of all." All three of them were somewhat puzzled. The brother looked at the grain carts waiting to depart and said slowly, "Today, first come with us to deliver grain. When you have truly arrived there, then decide what to ask." Aether looked at the elder brother before him, and suddenly he understood what the man meant: some things are not found by going in search of answers with questions in hand; it is by first walking into people's lives that the answers slowly show themselves. He nodded gravely. "Good."</p><p>Just then, from not far away, there came a familiar voice. "Brother, the cart on the north side is ready." Aether looked toward the sound. A young brother came walking quickly, and behind him were several more who were putting the grain sacks in order, and some sisters besides. And among the crowd, a familiar figure was crouching beside a cart, carefully tying fast several bundles of medicinal herbs again. The morning sunlight fell across her pale hair. She seemed not yet to have noticed Aether and his companions on the other side of the yard; she was only checking, in earnest, every item that was to be sent to the villages. And not far from her, Seren was quietly helping an elderly sister sort cloth sacks, while Kael stood, as he always did, near the yard gate, his gaze resting calmly on everything around him. In the very instant Aether looked over, Kael's gaze, too, fell once more upon the three of them. This was the fourth time — the Guild, the harbor, the Order, and now, meeting again in the same grain-delivery company. Kael made no movement at all; he only watched them quietly. That unspeakable wariness had not weakened with each encounter. In his heart, it had only grown clearer.</p><p>Elowen set the last bundle of herbs gently into a wooden crate and raised her head, and saw that several more grain carts stood ready to depart in the yard. A brother came quickly over and said softly, "Elowen, everything is ready on this side." She nodded. "Thank you for your trouble." The brother smiled. "It is you — you only came back yesterday, and this morning you are here again." Elowen looked toward the grain carts in the yard and said softly, "After I went back yesterday, I kept thinking about the things the brothers said. Several more villages in the North River Valley have asked for aid. If it is truly as they investigated, and more and more places are being affected..." She paused. "The people there must be having a hard time of it now." The brother did not answer. He only nodded gently, then turned and went back to his work. Seren set a roll of coarse cloth into a cart and walked slowly to her side. "Did you not sleep well last night?" Elowen smiled slightly. "A little. My uncle talked with me for a long time last night, too." She looked at the people coming and going in the yard. "I kept thinking — if those villages are truly growing harder pressed, then right now there must be people going hungry, and there must be people who, for want of medicine, will not last through this winter." She lowered her head and gently smoothed the sacking over the wooden crate, her voice very soft. "I do not know what it is they have found, and I do not know why the beast calamity keeps growing worse. But... if there are people waiting for this grain, then we should come today." Seren watched her in silence. The morning light spilled across the yard, and across Elowen's calm yet earnest face as well. After a while, Seren said softly, "You are still the same as you were before." Elowen looked at her, a little puzzled. A faint smile touched Seren's face. "You always care about the people first." Elowen was silent for a moment, then she smiled too. "In the old days at the Order of the Sacred Lamp, the Elder often said that the grain we send out is not only to fill bellies. What matters more is to let them know that there are still people who have not forgotten them." Seren nodded gently. She said nothing more. She only looked quietly toward the yard gate — where Aether and his companions had already begun, following the elder brother, to help carry the last few sacks of grain up onto the carts. The echo remained quiet. It did not urge her, and it did not explain.</p><div class="chapter-end-cta" style="max-width:680px;margin:40px auto 0;padding:28px 30px;border:1px solid rgba(212,184,120,.25);text-align:center;">
+<p style="font-family:Inter,sans-serif;font-size:15px;line-height:1.8;color:#bfb5a2;margin-bottom:14px;">Enjoying Echoes of the Kingdom? New chapters every Monday, Wednesday, Friday and Sunday.</p>
+<a href="https://www.royalroad.com/fiction/186472/echoes-of-the-kingdom" style="color:#d8c49a;font-family:Inter,sans-serif;font-size:13px;letter-spacing:2px;text-transform:uppercase;">Follow on Royal Road</a>
+<span style="color:#6b6252;margin:0 10px;">·</span>
+<a href="#" style="color:#d8c49a;font-family:Inter,sans-serif;font-size:13px;letter-spacing:2px;text-transform:uppercase;">Get Letters from Elarion</a>
+</div>
+<div class="chapter-navigation"><a href="../chapter-07/index.html">← Previous</a><a href="../index.html">Part III Contents</a><a href="../chapter-09/index.html">Next →</a></div></main>
+<footer class="site-footer">
+<div class="footer-brand">Cornerstone</div>
+<div class="footer-tagline">Building stories that endure.</div>
+<div class="footer-studio">Created by Echoes Studio</div>
+<div class="footer-copyright">© 2026 Michael He. All Rights Reserved.</div>
+</footer>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const article = document.querySelector(".article");
+
+    if (!article) {
+        return;
+    }
+
+    const paragraphs = article.querySelectorAll("p");
+
+    paragraphs.forEach(function (paragraph) {
+        const text = paragraph.textContent.trim();
+
+        if (!text) {
+            return;
+        }
+
+        // 自动识别场景分隔符
+        if (text === "***" || text === "* * *") {
+            const divider = document.createElement("div");
+            divider.className = "divider";
+            divider.textContent = "❦";
+            paragraph.replaceWith(divider);
+            return;
+        }
+
+        // 自动识别以引号或长破折号开头的对白
+        const isDialogue =
+            text.startsWith('"') ||
+            text.startsWith("“") ||
+            text.startsWith("‘") ||
+            text.startsWith("'") ||
+            text.startsWith("—");
+
+        if (isDialogue) {
+            paragraph.classList.add("dialogue");
+        }
+    });
+});
+</script>
+<!-- GoatCounter: privacy-friendly page analytics -->
+<script async="" data-goatcounter="https://echoeskingdom.goatcounter.com/count" src="//gc.zgo.at/count.js"></script>
+
+<script>
+(function(){
+  var bar=document.getElementById('eotk-progress');
+  function upd(){var h=document.documentElement;var max=h.scrollHeight-h.clientHeight;bar.style.width=(max>0?(h.scrollTop/max)*100:0)+'%';}
+  document.addEventListener('scroll',upd,{passive:true});upd();
+  var saved='md';try{saved=localStorage.getItem('eotk-font')||'md';}catch(e){}
+  function apply(f){document.body.classList.remove('font-lg','font-sm');if(f!=='md')document.body.classList.add('font-'+f);
+    document.querySelectorAll('.reader-tools button').forEach(function(b){b.classList.toggle('on',b.getAttribute('data-f')===f);});}
+  apply(saved);
+  document.querySelectorAll('.reader-tools button').forEach(function(b){b.addEventListener('click',function(){
+    var f=b.getAttribute('data-f');apply(f);try{localStorage.setItem('eotk-font',f);}catch(e){}});});
+  var h1=document.querySelector('.hero h1');
+  if(h1){try{localStorage.setItem('eotk-last-read',JSON.stringify({url:location.pathname,title:h1.textContent.trim()}));}catch(e){}}
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Chapter 7: The Elder's Letter | Echoes of the Kingdom</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&amp;family=Inter:wght@300;400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<style>
+.chapter-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  width: 100%;
+  margin-top: 100px;
+  padding-top: 40px;
+  border-top: 1px solid rgba(212, 184, 120, 0.18);
+}
+
+.chapter-navigation a {
+  color: #d8c49a;
+  font-family: Inter, sans-serif;
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+
+background:#070809;
+
+color:#ece2cf;
+
+font-family:"Cormorant Garamond",serif;
+
+line-height:1.9;
+
+}
+
+a{
+
+text-decoration:none;
+
+color:inherit;
+
+}
+
+.topbar{
+
+position:sticky;
+
+top:0;
+
+z-index:100;
+
+height:72px;
+
+background:rgba(7,8,9,.92);
+
+backdrop-filter:blur(10px);
+
+border-bottom:1px solid rgba(212,184,120,.12);
+
+display:flex;
+
+align-items:center;
+
+justify-content:space-between;
+
+padding:0 60px;
+
+}
+
+.logo{
+
+font-size:20px;
+
+letter-spacing:2px;
+
+color:#d8c08b;
+
+}
+
+.back{
+
+font-family:Inter,sans-serif;
+
+font-size:13px;
+
+letter-spacing:2px;
+
+text-transform:uppercase;
+
+color:#a89b7a;
+
+transition:.25s;
+
+}
+
+.back:hover{
+
+color:#e8d9b3;
+
+}
+
+.hero{
+
+padding:120px 20px 80px;
+
+text-align:center;
+
+}
+
+.eyebrow{
+
+font-size:18px;
+
+letter-spacing:6px;
+
+color:#a48c60;
+
+margin-bottom:20px;
+
+text-transform:uppercase;
+
+}
+
+h1{
+
+font-size:88px;
+
+font-weight:600;
+
+letter-spacing:2px;
+
+margin-bottom:24px;
+
+}
+
+.subtitle{
+
+max-width:700px;
+
+margin:auto;
+
+font-family:Inter,sans-serif;
+
+font-size:18px;
+
+color:#bfb5a2;
+
+line-height:1.8;
+
+}
+
+.article{
+
+max-width:680px;
+
+margin:100px auto 180px;
+
+padding:0 30px;
+
+font-size:28px;
+
+}
+
+.article p{
+  font-family:"Cormorant Garamond", serif;
+  font-size:28px;
+  line-height:2;
+  color:rgba(245,239,226,0.95);
+  margin-bottom:42px;
+}
+
+.dropcap::first-letter {
+  float: left;
+  font-size: 72px;
+  line-height: 0.8;
+  margin-right: 14px;
+  margin-top: 6px;
+  color: #d8c49a;
+}
+/* ===========================
+   Cornerstone Footer
+=========================== */
+
+.site-footer{
+    margin-top:120px;
+    padding:72px 24px 58px;
+    border-top:1px solid rgba(212,176,106,.18);
+    text-align:center;
+}
+
+.footer-brand{
+
+    font-family:"Cinzel", serif;
+
+    font-size:44px;
+
+    font-weight:500;
+
+    letter-spacing:.18em;
+
+    color:#D4B06A;
+
+    margin-bottom:10px;
+
+}
+
+.footer-tagline{
+    font-family:"Cormorant Garamond", serif;
+    font-style:italic;
+    font-size:18px;
+    color:#D8C8A8;
+    margin-bottom:32px;
+}
+
+.footer-studio{
+    font-family:Inter,sans-serif;
+    font-size:12px;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    color:rgba(245,239,226,.55);
+    margin-bottom:12px;
+}
+
+.footer-copyright{
+    font-family:Inter,sans-serif;
+    font-size:12px;
+    color:rgba(245,239,226,.35);
+}
+
+
+/* ===========================
+   Mobile Reading Layout
+=========================== */
+@media (max-width: 700px) {
+  html, body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .topbar {
+    height: auto;
+    min-height: 62px;
+    padding: 0 16px;
+    gap: 10px;
+  }
+
+  .logo {
+    min-width: 0;
+    white-space: nowrap;
+    font-size: 13px;
+    letter-spacing: 1.1px;
+    line-height: 1.2;
+  }
+
+  .back {
+    flex: 0 0 auto;
+    white-space: nowrap;
+    font-size: 10px;
+    letter-spacing: 1.1px;
+    line-height: 1.2;
+  }
+
+  .hero {
+    padding: 72px 18px 48px;
+  }
+
+  .eyebrow {
+    margin-bottom: 16px;
+    font-size: 13px;
+    letter-spacing: 4px;
+  }
+
+  h1 {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto 18px;
+    font-size: clamp(40px, 12vw, 54px);
+    line-height: 1.08;
+    letter-spacing: 1px;
+    overflow-wrap: break-word;
+    word-break: normal;
+  }
+
+  .subtitle {
+    max-width: 100%;
+    padding: 0 4px;
+    font-size: 16px;
+    line-height: 1.65;
+  }
+
+  .article {
+    width: 100%;
+    max-width: 100%;
+    margin: 48px auto 96px;
+    padding: 0 22px;
+    font-size: 22px;
+  }
+
+  .article p {
+    max-width: 100%;
+    font-size: 22px;
+    line-height: 1.78;
+    margin-bottom: 30px;
+  }
+
+  .dropcap::first-letter {
+    font-size: 58px;
+    line-height: .82;
+    margin-right: 10px;
+    margin-top: 5px;
+  }
+
+  .chapter-navigation {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    gap: 8px;
+    margin-top: 64px;
+    padding-top: 28px;
+  }
+
+  .chapter-navigation a {
+    min-width: 0;
+    font-size: 10px;
+    line-height: 1.4;
+    letter-spacing: 1.4px;
+  }
+
+  .chapter-navigation a:first-child { text-align: left; }
+  .chapter-navigation a:nth-child(2) { text-align: center; }
+  .chapter-navigation a:last-child { text-align: right; }
+
+  .site-footer {
+    margin-top: 72px;
+    padding: 54px 18px 40px;
+    overflow: hidden;
+  }
+
+  .footer-brand {
+    white-space: nowrap;
+    font-size: clamp(26px, 8vw, 32px);
+    letter-spacing: .12em;
+  }
+
+  .footer-tagline {
+    font-size: 16px;
+    margin-bottom: 28px;
+  }
+
+  .footer-studio,
+  .footer-copyright {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 390px) {
+  .topbar { padding: 0 12px; gap: 7px; }
+  .logo { font-size: 11.5px; letter-spacing: .9px; }
+  .back { font-size: 9px; letter-spacing: .9px; }
+  .hero { padding: 64px 16px 42px; }
+  h1 { font-size: clamp(38px, 11.5vw, 45px); }
+  .article { padding: 0 20px; }
+  .article p { font-size: 21px; line-height: 1.76; }
+  .chapter-navigation a { font-size: 9.5px; letter-spacing: 1.1px; }
+  .footer-brand { font-size: 27px; letter-spacing: .1em; }
+}
+
+/* Unified Cornerstone footer */
+.site-footer{margin-top:120px;padding:72px 24px 58px;border-top:1px solid rgba(212,176,106,.22);text-align:center;overflow:hidden}
+.footer-brand{font-family:"Cinzel",serif;font-size:44px;font-weight:500;letter-spacing:.14em;color:#D4B06A;margin:0 auto 10px;line-height:1.15;max-width:100%;white-space:nowrap}
+.footer-tagline{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:18px;color:#D8C8A8;margin-bottom:32px}
+.footer-studio{font-family:Inter,sans-serif;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:rgba(245,239,226,.55);margin-bottom:12px}
+.footer-copyright{font-family:Inter,sans-serif;font-size:12px;color:rgba(245,239,226,.35)}
+@media(max-width:700px){
+.site-footer{margin-top:72px;padding:50px 16px 40px}
+.footer-brand{font-size:clamp(23px,7.2vw,32px);letter-spacing:.08em;white-space:nowrap;overflow-wrap:normal;word-break:normal}
+.footer-tagline{font-size:16px;margin-bottom:26px}
+.footer-studio{font-size:11px;letter-spacing:.14em}
+.footer-copyright{font-size:11px;line-height:1.5}
+}
+
+</style>
+<style id="global-footer-unification">
+/* Final global footer override: keep every page visually identical. */
+.site-footer{
+  margin-top:120px !important;
+  padding:72px 24px 58px !important;
+  border-top:1px solid rgba(212,176,106,.22) !important;
+  text-align:center !important;
+  overflow:hidden !important;
+  box-sizing:border-box !important;
+}
+.footer-brand{
+  display:block !important;
+  font-family:"Cinzel",serif !important;
+  font-size:44px !important;
+  font-weight:500 !important;
+  letter-spacing:.10em !important;
+  line-height:1.12 !important;
+  color:#D4B06A !important;
+  width:auto !important;
+  max-width:100% !important;
+  margin:0 auto 10px !important;
+  padding:0 !important;
+  white-space:nowrap !important;
+  overflow-wrap:normal !important;
+  word-break:normal !important;
+  text-align:center !important;
+  box-sizing:border-box !important;
+}
+.footer-tagline{
+  font-family:"Cormorant Garamond",serif !important;
+  font-style:italic !important;
+  font-size:18px !important;
+  line-height:1.4 !important;
+  color:#D8C8A8 !important;
+  margin:0 auto 32px !important;
+}
+.footer-studio{
+  font-family:Inter,sans-serif !important;
+  font-size:12px !important;
+  line-height:1.5 !important;
+  letter-spacing:.18em !important;
+  text-transform:uppercase !important;
+  color:rgba(245,239,226,.55) !important;
+  margin:0 auto 12px !important;
+}
+.footer-copyright{
+  font-family:Inter,sans-serif !important;
+  font-size:12px !important;
+  line-height:1.5 !important;
+  color:rgba(245,239,226,.35) !important;
+  margin:0 auto !important;
+}
+@media (max-width:700px){
+  .site-footer{
+    margin-top:72px !important;
+    padding:48px 20px 38px !important;
+  }
+  .footer-brand{
+    font-size:clamp(22px,6.5vw,30px) !important;
+    letter-spacing:.06em !important;
+    line-height:1.12 !important;
+    max-width:calc(100% - 12px) !important;
+    margin:0 auto 12px !important;
+  }
+  .footer-tagline{font-size:16px !important;margin-bottom:26px !important;}
+  .footer-studio{font-size:11px !important;letter-spacing:.14em !important;margin-bottom:12px !important;}
+  .footer-copyright{font-size:11px !important;line-height:1.5 !important;}
+}
+@media (max-width:380px){
+  .site-footer{padding-left:16px !important;padding-right:16px !important;}
+  .footer-brand{font-size:21px !important;letter-spacing:.045em !important;max-width:100% !important;}
+}
+
+/* eotk reader tools */
+#eotk-progress{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,#8a6d3b,#d8c08b);z-index:999}
+.reader-tools{display:flex;gap:8px;align-items:center;justify-content:flex-end;max-width:760px;margin:10px auto 0;padding:0 20px}
+.reader-tools span{font-family:Cinzel,serif;font-size:10px;letter-spacing:2px;color:rgba(216,192,139,.6);margin-right:2px}
+.reader-tools button{background:none;border:1px solid rgba(216,192,139,.35);color:#d8c08b;font-family:Cinzel,serif;cursor:pointer;padding:3px 10px;font-size:12px}
+.reader-tools button.on{background:rgba(216,192,139,.18)}
+body.font-lg .article p{font-size:32px}
+body.font-sm .article p{font-size:24px}
+@media (max-width:768px){body.font-lg .article p{font-size:26px}body.font-sm .article p{font-size:19px}}
+.chapter-navigation-top{margin-top:26px}
+</style>
+<link rel="icon" href="/favicon.ico" sizes="any"/>
+<link rel="icon" type="image/png" href="/assets/images/favicon-32.png" sizes="32x32"/>
+<link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png"/>
+<meta property="og:type" content="article"/>
+<meta property="og:site_name" content="Echoes of the Kingdom"/>
+<meta property="og:title" content="Chapter 7: The Elder's Letter | Echoes of the Kingdom"/>
+<meta property="og:description" content="Echoes of the Kingdom — a slow-burn epic fantasy by Michael He. A boy, an ancient road, and a world quietly forgetting its own past."/>
+<meta property="og:url" content="https://cornerstoneauthor.com/read/book1/part3/chapter-07/"/>
+<meta property="og:image" content="https://cornerstoneauthor.com/assets/images/og-image.jpg"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="Chapter 7: The Elder's Letter | Echoes of the Kingdom"/>
+<meta name="twitter:description" content="Echoes of the Kingdom — a slow-burn epic fantasy by Michael He. A boy, an ancient road, and a world quietly forgetting its own past."/>
+<meta name="twitter:image" content="https://cornerstoneauthor.com/assets/images/og-image.jpg"/>
+</head>
+<body>
+<header class="topbar">
+<div class="logo"><a href="../../../../index.html" style="color:inherit;text-decoration:none">ECHOES OF THE KINGDOM</a></div>
+<a class="back" href="../index.html">← Back to Part III</a>
+</header>
+<div id="eotk-progress"></div>
+<div class="reader-tools"><span>TEXT SIZE</span><button data-f="sm">A−</button><button data-f="md">A</button><button data-f="lg">A+</button></div>
+<section class="hero">
+<div class="eyebrow">CHAPTER 7</div>
+<h1>The Elder's Letter</h1>
+</section>
+<div class="chapter-navigation chapter-navigation-top"><a href="../chapter-06/index.html">← Previous</a><a href="../index.html">Part III Contents</a><a href="../chapter-08/index.html">Next →</a></div>
+<main class="article"><p class="dropcap">Odren looked at her, and a very faint smile touched his face. "Good. At least today you did not only see a few people — you have begun to see why they have come together." When he had finished, his gaze went back to the documents on the desk, and his voice slowly deepened. "Riverport receives a great many reports every day. The ones the Patrol Office sends, the ones the harbor sends, the ones the Guild sends, and the ones the various lords send. In themselves they are already hard to tell true from false — let alone that even the true ones, ah..." He tapped the documents on the desk lightly. "But the hardest part of governing a city has never been having too little news. It is that, so often, these reports cover a man's eyes."</p><p>The study was quiet for a moment. Odren rose slowly and walked to the window. The lamps of Riverport were gradually coming alight, and in the harbor far away a few merchant ships had only just come in to shore. He gazed out of the window and said slowly, "This afternoon, I met with several envoys sent by the lords." Elowen listened in silence. "The lord in the north says the wild beasts have grown more numerous of late, and asks for more patrols. The lord in the west says the harvest this year is poor, and hopes for lighter taxes. The lord in the south says the displaced are increasing, and asks that more granaries be opened. Yet the men of the Guild tell me that the goods coming through the harbor this year have fallen, and if taxes are cut any further, they will not be able to hold on much longer." He smiled faintly, but there was helplessness in the smile. "Every one of them speaks with great reason, and every one of them can produce grounds of his own. But if I grant one side, the other sides will very soon feel it."</p><p>For the first time, Elowen did not hurry to answer. All at once she realized that what her uncle faced every day was not a string of separate matters, but a great web in which everything pulled on everything else. Odren turned around and looked at her. "That is why a man who governs cannot only ask who is right. He must also ask — who has not yet spoken?" Elowen started slightly. Odren sat back down at his desk and picked up one of the letters from the lords. "Sometimes, it is the silent ones who hold the most important answers." He set the letter gently back down, and his gaze returned to Elowen. "What you have told me today is not what they have investigated. It is what they have discovered: that there are many people who have never brought the things they have seen together with anyone else's." He paused, and something more serious entered his eyes. "That is worth my meeting them. But..." Odren tapped the desk lightly. "Before I meet them, I want to know one thing first: over this half year of investigation, how exactly did they make their way to Riverport, step by step? If it is only guesswork, I have no need to see them. But if every step rests on evidence, then I am willing to hear the judgment they have formed behind it." Elowen nodded gently. She knew her uncle had finally decided to meet them — not because she had spoken, and not because the three men came from Whitestone, but because every step of the road they had traveled rested on careful investigation. That, she knew, was worth a governor's hearing them out in person.</p><p>The study fell quiet again. Odren rose slowly, walked to the bookshelf, and from within a thick ledger drew out a letter that had already been opened. The paper had yellowed somewhat with age; clearly, in this stretch of time, he had read it more than once. He laid the letter gently on the desk. "Do you remember this letter?" Elowen looked at the familiar seal and nodded slightly. "I remember. When I left the Order, the Elder asked me to deliver it to you with my own hands." Odren answered softly. "There are two matters written in it. One of them, I can tell you now." He raised his head and looked at Elowen, his tone still calm. "The Elder hopes that I will arrange for you to take part in this selection — the choosing of a wife for the city lord."</p><p>Elowen plainly froze for a moment. She looked at the letter on the desk and did not speak for a long time. Only after a long while did she open her mouth softly. "Did the Elder... decide this long ago?" Odren nodded. "We have been writing to each other for some time. We simply never told you." Elowen lowered her head gently. All at once she thought of the day she left the Order, when the Elder had only placed the letter in her hands and said to her: when you reach Riverport, give it to Odren yourself. Beyond that, he had explained nothing. At the time she had thought little of it; only now did she know that her own name had been written in that letter all along. After a moment of silence, Elowen raised her head at last. "Why?" Odren did not answer at once. He only watched, quietly, the girl before him who had grown up in the Order from childhood. A long time passed before he said slowly, "The Elder believes that some roads, when the time comes, a person must walk for herself." He paused. "And I promised him that I would open that door for you. As for whether you walk through it — that is for you to decide."</p><p>The study fell quiet once more. Elowen did not answer right away. She knew that if this were only her uncle's arrangement, she might perhaps have refused it lightly enough; but now that she knew it was a decision her uncle and the Elder had reached together, her heart felt, instead, a few degrees heavier. She looked at the letter on the desk and suddenly asked in a low voice, "And the other matter?" Odren lowered his head and glanced at the letter, then reached out and put it away again, his movements very gentle. "Later. When the time comes, I will tell you." With that, he did not pursue the subject. Instead he looked at Elowen, his expression growing more earnest. "But before that, there is one thing I still want to ask you. If there were no letter, no Elder, and no me — only yourself — would you be willing to take part in this selection?"</p><p>When the words fell, the study returned to stillness. This time, no one answered in her place, and no one decided for her. Odren only waited quietly, waiting for her to give an answer that was her own. Elowen was silent for a long time. She did not avoid Odren's gaze, yet she did not answer at once either. After a moment, she shook her head gently. "I do not know." Her voice was very soft, but very honest. "I have never thought about such a thing. In the Order, no one ever told me that such a day would come. And I have never felt that I am suited to that place." Odren listened quietly, no surprise at all on his face, as if this were exactly the answer he had expected. Elowen went on, "Uncle, if it were only to become the city lord's wife, I have no interest in it. If it were only to enter the city lord's residence, I do not know what meaning there would be in that, either." She raised her head and looked at Odren in earnest. "I only want to know why the Elder believes I should walk this road."</p><p>Odren did not answer at once. He rose and walked to the window. Night had fallen completely, and along both banks of Riverport the lamps were lighting one by one. After a long silence, he said slowly, "That is also why I never told you." Elowen watched his back in silence. "If I had told you from the very beginning, then after you came to Riverport, everything you saw would have carried a purpose with it. You would have thought about how to present yourself, how to win others' approval, and you might even have bent yourself, without knowing it, to meet some people's expectations." Odren shook his head gently. "Then what you saw would not have been Riverport as it truly is." He turned around and looked at Elowen. "So the Elder and I agreed: first let you go and see, go and listen, go and come to know the people here. When you have begun to think with your own eyes, then I would tell you of this." All at once Elowen thought of the conversation at the Order today — of those brothers, of the maps on the table, and of the young man who had been quietly putting the maps in order all along. She said softly, "So... today is the time you thought fitting?" Odren nodded. "Because today, you came to me. Not for one person, and not for one sentence, but for something you believed concerned Riverport." A smile of quiet satisfaction touched his face. "That tells me you have begun to learn to think from your own place — not from within the Order, and not from behind me." Elowen lowered her head and clasped her hands gently together. She still did not know whether she should take part in the selection, but she knew that after tonight, some things were no longer the same as they had been on the first day she came to Riverport.</p><p>The study was quiet for a long while again. Odren did not pursue the subject of the selection any further — he knew that some answers cannot be hurried, just as some roads are only truly understood after a person has walked them. He sat back down at his desk, opened the documents he had set down before, and after a moment of silence said slowly, "Those three who are investigating — what do you make of them?" Elowen thought for a moment. "They are somewhat unusual. All along their road they have been in a hurry to find answers, yet they have never let themselves be tied down to the single thread of the beast packs." Odren nodded gently. "And the older man among them?" "Very steady," Elowen answered. "All along the road it is he who speaks; the two younger men seldom hurry to offer their own views." A faint smile appeared on Odren's face. "It seems they know what they are doing." Elowen nodded gently. "Especially the young man called Aether. He does not say much, but every sentence he speaks seems to draw together everything everyone before him has said." Odren raised his head. "He is very young?" "Very young. Younger even than I am." Odren asked nothing more; he only tapped the desk lightly with his fingers. After a while, he said slowly, "A young man willing to spend half a year continually overturning his own judgments — there are not many such young men." Elowen looked at her uncle, and all at once she realized that what held Odren's attention was not what they had investigated, but the way they had gone about investigating. Odren slowly closed the document. "Hobbes says they have taken lodging in Riverport. Since that is so, there is no need to hurry to invite them here." He paused, then went on, "Let them go on investigating for now. I would like to see where their next step leads." Elowen was a little surprised. "Uncle, you will not meet them?" Odren shook his head gently. "If I meet them now, what they will tell me is still the things they heard today. In a few more days, what they tell me may be their own judgment." He looked out of the window, his voice calm and far-reaching. "The true worth of an investigation is not in how much news has been gathered along the road, but in the moment when that news slowly becomes a person's own thinking." The study fell quiet again. Elowen did not press further. Dimly, she felt that her uncle had already decided to meet them — only, he was willing to wait a little longer, to let them walk a little further, and to let them see this road of investigation a little more clearly.</p><p>Elowen rose gently to her feet and bowed slightly to Odren. "Uncle, I will think about it carefully." Odren nodded. "There is no hurry. Some answers are simply not to be had today." Elowen said nothing more. She withdrew quietly from the study, and the door closed slowly behind her. Quiet returned to the room. Odren sat there and did not go back to the documents on his desk. Instead, he looked toward the letter from the Order in the corner of the desk. After a long silence, he reached out slowly and picked the letter up again. The candlelight swayed gently. The handwriting on the page — he had read it he did not know how many times, yet every time he read it again, his heart held a few feelings more than before. At last his gaze came to rest on one passage of the writing. For a long time he looked at it. Then he sighed softly and said in a low voice, "I hope... this time, neither of us has chosen wrong."</p><div class="chapter-end-cta" style="max-width:680px;margin:40px auto 0;padding:28px 30px;border:1px solid rgba(212,184,120,.25);text-align:center;">
+<p style="font-family:Inter,sans-serif;font-size:15px;line-height:1.8;color:#bfb5a2;margin-bottom:14px;">Enjoying Echoes of the Kingdom? New chapters every Monday, Wednesday, Friday and Sunday.</p>
+<a href="https://www.royalroad.com/fiction/186472/echoes-of-the-kingdom" style="color:#d8c49a;font-family:Inter,sans-serif;font-size:13px;letter-spacing:2px;text-transform:uppercase;">Follow on Royal Road</a>
+<span style="color:#6b6252;margin:0 10px;">·</span>
+<a href="#" style="color:#d8c49a;font-family:Inter,sans-serif;font-size:13px;letter-spacing:2px;text-transform:uppercase;">Get Letters from Elarion</a>
+</div>
+<div class="chapter-navigation"><a href="../chapter-06/index.html">← Previous</a><a href="../index.html">Part III Contents</a><a href="../chapter-08/index.html">Next →</a></div></main>
+<footer class="site-footer">
+<div class="footer-brand">Cornerstone</div>
+<div class="footer-tagline">Building stories that endure.</div>
+<div class="footer-studio">Created by Echoes Studio</div>
+<div class="footer-copyright">© 2026 Michael He. All Rights Reserved.</div>
+</footer>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const article = document.querySelector(".article");
+
+    if (!article) {
+        return;
+    }
+
+    const paragraphs = article.querySelectorAll("p");
+
+    paragraphs.forEach(function (paragraph) {
+        const text = paragraph.textContent.trim();
+
+        if (!text) {
+            return;
+        }
+
+        // 自动识别场景分隔符
+        if (text === "***" || text === "* * *") {
+            const divider = document.createElement("div");
+            divider.className = "divider";
+            divider.textContent = "❦";
+            paragraph.replaceWith(divider);
+            return;
+        }
+
+        // 自动识别以引号或长破折号开头的对白
+        const isDialogue =
+            text.startsWith('"') ||
+            text.startsWith("“") ||
+            text.startsWith("‘") ||
+            text.startsWith("'") ||
+            text.startsWith("—");
+
+        if (isDialogue) {
+            paragraph.classList.add("dialogue");
+        }
+    });
+});
+</script>
+<!-- GoatCounter: privacy-friendly page analytics -->
+<script async="" data-goatcounter="https://echoeskingdom.goatcounter.com/count" src="//gc.zgo.at/count.js"></script>
+
+<script>
+(function(){
+  var bar=document.getElementById('eotk-progress');
+  function upd(){var h=document.documentElement;var max=h.scrollHeight-h.clientHeight;bar.style.width=(max>0?(h.scrollTop/max)*100:0)+'%';}
+  document.addEventListener('scroll',upd,{passive:true});upd();
+  var saved='md';try{saved=localStorage.getItem('eotk-font')||'md';}catch(e){}
+  function apply(f){document.body.classList.remove('font-lg','font-sm');if(f!=='md')document.body.classList.add('font-'+f);
+    document.querySelectorAll('.reader-tools button').forEach(function(b){b.classList.toggle('on',b.getAttribute('data-f')===f);});}
+  apply(saved);
+  document.querySelectorAll('.reader-tools button').forEach(function(b){b.addEventListener('click',function(){
+    var f=b.getAttribute('data-f');apply(f);try{localStorage.setItem('eotk-font',f);}catch(e){}});});
+  var h1=document.querySelector('.hero h1');
+  if(h1){try{localStorage.setItem('eotk-last-read',JSON.stringify({url:location.pathname,title:h1.textContent.trim()}));}catch(e){}}
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Chapter 10: Grayrock | Echoes of the Kingdom</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&amp;family=Inter:wght@300;400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<style>
+.chapter-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  width: 100%;
+  margin-top: 100px;
+  padding-top: 40px;
+  border-top: 1px solid rgba(212, 184, 120, 0.18);
+}
+
+.chapter-navigation a {
+  color: #d8c49a;
+  font-family: Inter, sans-serif;
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+
+background:#070809;
+
+color:#ece2cf;
+
+font-family:"Cormorant Garamond",serif;
+
+line-height:1.9;
+
+}
+
+a{
+
+text-decoration:none;
+
+color:inherit;
+
+}
+
+.topbar{
+
+position:sticky;
+
+top:0;
+
+z-index:100;
+
+height:72px;
+
+background:rgba(7,8,9,.92);
+
+backdrop-filter:blur(10px);
+
+border-bottom:1px solid rgba(212,184,120,.12);
+
+display:flex;
+
+align-items:center;
+
+justify-content:space-between;
+
+padding:0 60px;
+
+}
+
+.logo{
+
+font-size:20px;
+
+letter-spacing:2px;
+
+color:#d8c08b;
+
+}
+
+.back{
+
+font-family:Inter,sans-serif;
+
+font-size:13px;
+
+letter-spacing:2px;
+
+text-transform:uppercase;
+
+color:#a89b7a;
+
+transition:.25s;
+
+}
+
+.back:hover{
+
+color:#e8d9b3;
+
+}
+
+.hero{
+
+padding:120px 20px 80px;
+
+text-align:center;
+
+}
+
+.eyebrow{
+
+font-size:18px;
+
+letter-spacing:6px;
+
+color:#a48c60;
+
+margin-bottom:20px;
+
+text-transform:uppercase;
+
+}
+
+h1{
+
+font-size:88px;
+
+font-weight:600;
+
+letter-spacing:2px;
+
+margin-bottom:24px;
+
+}
+
+.subtitle{
+
+max-width:700px;
+
+margin:auto;
+
+font-family:Inter,sans-serif;
+
+font-size:18px;
+
+color:#bfb5a2;
+
+line-height:1.8;
+
+}
+
+.article{
+
+max-width:680px;
+
+margin:100px auto 180px;
+
+padding:0 30px;
+
+font-size:28px;
+
+}
+
+.article p{
+  font-family:"Cormorant Garamond", serif;
+  font-size:28px;
+  line-height:2;
+  color:rgba(245,239,226,0.95);
+  margin-bottom:42px;
+}
+
+.dropcap::first-letter {
+  float: left;
+  font-size: 72px;
+  line-height: 0.8;
+  margin-right: 14px;
+  margin-top: 6px;
+  color: #d8c49a;
+}
+/* ===========================
+   Cornerstone Footer
+=========================== */
+
+.site-footer{
+    margin-top:120px;
+    padding:72px 24px 58px;
+    border-top:1px solid rgba(212,176,106,.18);
+    text-align:center;
+}
+
+.footer-brand{
+
+    font-family:"Cinzel", serif;
+
+    font-size:44px;
+
+    font-weight:500;
+
+    letter-spacing:.18em;
+
+    color:#D4B06A;
+
+    margin-bottom:10px;
+
+}
+
+.footer-tagline{
+    font-family:"Cormorant Garamond", serif;
+    font-style:italic;
+    font-size:18px;
+    color:#D8C8A8;
+    margin-bottom:32px;
+}
+
+.footer-studio{
+    font-family:Inter,sans-serif;
+    font-size:12px;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    color:rgba(245,239,226,.55);
+    margin-bottom:12px;
+}
+
+.footer-copyright{
+    font-family:Inter,sans-serif;
+    font-size:12px;
+    color:rgba(245,239,226,.35);
+}
+
+
+/* ===========================
+   Mobile Reading Layout
+=========================== */
+@media (max-width: 700px) {
+  html, body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .topbar {
+    height: auto;
+    min-height: 62px;
+    padding: 0 16px;
+    gap: 10px;
+  }
+
+  .logo {
+    min-width: 0;
+    white-space: nowrap;
+    font-size: 13px;
+    letter-spacing: 1.1px;
+    line-height: 1.2;
+  }
+
+  .back {
+    flex: 0 0 auto;
+    white-space: nowrap;
+    font-size: 10px;
+    letter-spacing: 1.1px;
+    line-height: 1.2;
+  }
+
+  .hero {
+    padding: 72px 18px 48px;
+  }
+
+  .eyebrow {
+    margin-bottom: 16px;
+    font-size: 13px;
+    letter-spacing: 4px;
+  }
+
+  h1 {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto 18px;
+    font-size: clamp(40px, 12vw, 54px);
+    line-height: 1.08;
+    letter-spacing: 1px;
+    overflow-wrap: break-word;
+    word-break: normal;
+  }
+
+  .subtitle {
+    max-width: 100%;
+    padding: 0 4px;
+    font-size: 16px;
+    line-height: 1.65;
+  }
+
+  .article {
+    width: 100%;
+    max-width: 100%;
+    margin: 48px auto 96px;
+    padding: 0 22px;
+    font-size: 22px;
+  }
+
+  .article p {
+    max-width: 100%;
+    font-size: 22px;
+    line-height: 1.78;
+    margin-bottom: 30px;
+  }
+
+  .dropcap::first-letter {
+    font-size: 58px;
+    line-height: .82;
+    margin-right: 10px;
+    margin-top: 5px;
+  }
+
+  .chapter-navigation {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    gap: 8px;
+    margin-top: 64px;
+    padding-top: 28px;
+  }
+
+  .chapter-navigation a {
+    min-width: 0;
+    font-size: 10px;
+    line-height: 1.4;
+    letter-spacing: 1.4px;
+  }
+
+  .chapter-navigation a:first-child { text-align: left; }
+  .chapter-navigation a:nth-child(2) { text-align: center; }
+  .chapter-navigation a:last-child { text-align: right; }
+
+  .site-footer {
+    margin-top: 72px;
+    padding: 54px 18px 40px;
+    overflow: hidden;
+  }
+
+  .footer-brand {
+    white-space: nowrap;
+    font-size: clamp(26px, 8vw, 32px);
+    letter-spacing: .12em;
+  }
+
+  .footer-tagline {
+    font-size: 16px;
+    margin-bottom: 28px;
+  }
+
+  .footer-studio,
+  .footer-copyright {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 390px) {
+  .topbar { padding: 0 12px; gap: 7px; }
+  .logo { font-size: 11.5px; letter-spacing: .9px; }
+  .back { font-size: 9px; letter-spacing: .9px; }
+  .hero { padding: 64px 16px 42px; }
+  h1 { font-size: clamp(38px, 11.5vw, 45px); }
+  .article { padding: 0 20px; }
+  .article p { font-size: 21px; line-height: 1.76; }
+  .chapter-navigation a { font-size: 9.5px; letter-spacing: 1.1px; }
+  .footer-brand { font-size: 27px; letter-spacing: .1em; }
+}
+
+/* Unified Cornerstone footer */
+.site-footer{margin-top:120px;padding:72px 24px 58px;border-top:1px solid rgba(212,176,106,.22);text-align:center;overflow:hidden}
+.footer-brand{font-family:"Cinzel",serif;font-size:44px;font-weight:500;letter-spacing:.14em;color:#D4B06A;margin:0 auto 10px;line-height:1.15;max-width:100%;white-space:nowrap}
+.footer-tagline{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:18px;color:#D8C8A8;margin-bottom:32px}
+.footer-studio{font-family:Inter,sans-serif;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:rgba(245,239,226,.55);margin-bottom:12px}
+.footer-copyright{font-family:Inter,sans-serif;font-size:12px;color:rgba(245,239,226,.35)}
+@media(max-width:700px){
+.site-footer{margin-top:72px;padding:50px 16px 40px}
+.footer-brand{font-size:clamp(23px,7.2vw,32px);letter-spacing:.08em;white-space:nowrap;overflow-wrap:normal;word-break:normal}
+.footer-tagline{font-size:16px;margin-bottom:26px}
+.footer-studio{font-size:11px;letter-spacing:.14em}
+.footer-copyright{font-size:11px;line-height:1.5}
+}
+
+</style>
+<style id="global-footer-unification">
+/* Final global footer override: keep every page visually identical. */
+.site-footer{
+  margin-top:120px !important;
+  padding:72px 24px 58px !important;
+  border-top:1px solid rgba(212,176,106,.22) !important;
+  text-align:center !important;
+  overflow:hidden !important;
+  box-sizing:border-box !important;
+}
+.footer-brand{
+  display:block !important;
+  font-family:"Cinzel",serif !important;
+  font-size:44px !important;
+  font-weight:500 !important;
+  letter-spacing:.10em !important;
+  line-height:1.12 !important;
+  color:#D4B06A !important;
+  width:auto !important;
+  max-width:100% !important;
+  margin:0 auto 10px !important;
+  padding:0 !important;
+  white-space:nowrap !important;
+  overflow-wrap:normal !important;
+  word-break:normal !important;
+  text-align:center !important;
+  box-sizing:border-box !important;
+}
+.footer-tagline{
+  font-family:"Cormorant Garamond",serif !important;
+  font-style:italic !important;
+  font-size:18px !important;
+  line-height:1.4 !important;
+  color:#D8C8A8 !important;
+  margin:0 auto 32px !important;
+}
+.footer-studio{
+  font-family:Inter,sans-serif !important;
+  font-size:12px !important;
+  line-height:1.5 !important;
+  letter-spacing:.18em !important;
+  text-transform:uppercase !important;
+  color:rgba(245,239,226,.55) !important;
+  margin:0 auto 12px !important;
+}
+.footer-copyright{
+  font-family:Inter,sans-serif !important;
+  font-size:12px !important;
+  line-height:1.5 !important;
+  color:rgba(245,239,226,.35) !important;
+  margin:0 auto !important;
+}
+@media (max-width:700px){
+  .site-footer{
+    margin-top:72px !important;
+    padding:48px 20px 38px !important;
+  }
+  .footer-brand{
+    font-size:clamp(22px,6.5vw,30px) !important;
+    letter-spacing:.06em !important;
+    line-height:1.12 !important;
+    max-width:calc(100% - 12px) !important;
+    margin:0 auto 12px !important;
+  }
+  .footer-tagline{font-size:16px !important;margin-bottom:26px !important;}
+  .footer-studio{font-size:11px !important;letter-spacing:.14em !important;margin-bottom:12px !important;}
+  .footer-copyright{font-size:11px !important;line-height:1.5 !important;}
+}
+@media (max-width:380px){
+  .site-footer{padding-left:16px !important;padding-right:16px !important;}
+  .footer-brand{font-size:21px !important;letter-spacing:.045em !important;max-width:100% !important;}
+}
+
+/* eotk reader tools */
+#eotk-progress{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,#8a6d3b,#d8c08b);z-index:999}
+.reader-tools{display:flex;gap:8px;align-items:center;justify-content:flex-end;max-width:760px;margin:10px auto 0;padding:0 20px}
+.reader-tools span{font-family:Cinzel,serif;font-size:10px;letter-spacing:2px;color:rgba(216,192,139,.6);margin-right:2px}
+.reader-tools button{background:none;border:1px solid rgba(216,192,139,.35);color:#d8c08b;font-family:Cinzel,serif;cursor:pointer;padding:3px 10px;font-size:12px}
+.reader-tools button.on{background:rgba(216,192,139,.18)}
+body.font-lg .article p{font-size:32px}
+body.font-sm .article p{font-size:24px}
+@media (max-width:768px){body.font-lg .article p{font-size:26px}body.font-sm .article p{font-size:19px}}
+.chapter-navigation-top{margin-top:26px}
+</style>
+<link rel="icon" href="/favicon.ico" sizes="any"/>
+<link rel="icon" type="image/png" href="/assets/images/favicon-32.png" sizes="32x32"/>
+<link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png"/>
+<meta property="og:type" content="article"/>
+<meta property="og:site_name" content="Echoes of the Kingdom"/>
+<meta property="og:title" content="Chapter 10: Grayrock | Echoes of the Kingdom"/>
+<meta property="og:description" content="Echoes of the Kingdom — a slow-burn epic fantasy by Michael He. A boy, an ancient road, and a world quietly forgetting its own past."/>
+<meta property="og:url" content="https://cornerstoneauthor.com/read/book1/part3/chapter-10/"/>
+<meta property="og:image" content="https://cornerstoneauthor.com/assets/images/og-image.jpg"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="Chapter 10: Grayrock | Echoes of the Kingdom"/>
+<meta name="twitter:description" content="Echoes of the Kingdom — a slow-burn epic fantasy by Michael He. A boy, an ancient road, and a world quietly forgetting its own past."/>
+<meta name="twitter:image" content="https://cornerstoneauthor.com/assets/images/og-image.jpg"/>
+</head>
+<body>
+<header class="topbar">
+<div class="logo"><a href="../../../../index.html" style="color:inherit;text-decoration:none">ECHOES OF THE KINGDOM</a></div>
+<a class="back" href="../index.html">← Back to Part III</a>
+</header>
+<div id="eotk-progress"></div>
+<div class="reader-tools"><span>TEXT SIZE</span><button data-f="sm">A−</button><button data-f="md">A</button><button data-f="lg">A+</button></div>
+<section class="hero">
+<div class="eyebrow">CHAPTER 10</div>
+<h1>Grayrock</h1>
+</section>
+<div class="chapter-navigation chapter-navigation-top"><a href="../chapter-09/index.html">← Previous</a><a href="../index.html">Part III Contents</a></div>
+<main class="article"><p class="dropcap">By now the grain outside the yard had all been handed out, and several of the brothers were preparing to climb back onto the carts. The elder brother looked toward the villagers gathered at the village entrance, his face wearing the same gentle smile as always. He raised his right hand slightly. His voice was not loud, yet it was enough for everyone around to hear. "May the Creator bless you, and give you peace." The villagers did not hesitate at all, as if it were a sentence that had already been spoken times beyond counting: some bowed their heads gently, some waved with a smile, and some looked at the brothers and answered in sincerity, "May the Creator bless you as well. Have a safe road." The old man with the white hair stood at the front of the crowd and said softly, too, "May the Creator remember all that you have done." The elder brother only nodded with a smile and said nothing more. Then he turned and climbed back onto the cart. The wooden wheels began to turn slowly once more, and the company set off toward the next village.</p><p>Aether, on horseback, looked back once. The people at the village entrance were still standing there: some waved, some watched in silence, and only when the grain carts had gradually drawn far away did they slowly disperse, each returning to his own life. In that moment, Aether suddenly felt that between the Order and these villages there was already far more than the giving of grain and the receiving of relief. It was more like a company of people who remembered one another and blessed one another. And this bond had not been built by a single act of aid. It had been woven, little by little through the years, out of countless meetings, countless partings, and countless blessings.</p><p>After leaving the first village, the company went on north along the mountain road. Toward noon, the elder brother suddenly slowed his pace. He looked ahead and said softly, "Ahead of us is the second village." Aether followed his gaze. Unlike the quiet little village before, this one could be seen from far off to have several guards with spears in hand standing at the crossing. At the village entrance stood a stone tablet carved with the emblem of the domain, and along both sides of the road ran a wooden fence — not high, but very sturdy. Kaelen's brow furrowed slightly. "This place has guards." The elder brother nodded. "This land belongs to the Grayrock domain. Its lord sets great store by order."</p><p>The company drew slowly closer, and two guards stretched out their hands and barred the way. "Halt." One of them glanced at the Order's emblem on the grain carts, and his expression eased somewhat, but he still did not step aside. "Please wait a moment. We must first report to the steward." Aether was a little surprised — at the village before, the Order had been able to come and go almost freely; here it was entirely different. But the elder brother only nodded, without the least impatience. "Of course. That is your duty." The guard started slightly, then bowed his head in acknowledgment and ran quickly into the village. During the wait, no one complained; several of the young brothers even took the idle moment to tie fast again the ropes that had loosened somewhat along the road.</p><p>Before long, a middle-aged man in his forties came quickly out. His clothes were far neater than an ordinary farmer's, yet he wore no sword; at his waist hung a bunch of keys and a thick ledger. He came before the company and first bowed to the elder brother. "Brother, you have been kept waiting." The elder brother returned the bow with a smile. "Not long at all. How have things been in the village lately?" The man did not answer at once. He only glanced back at the guards behind him, then lowered his voice. "Let us go in first, then speak." Aether noticed that there was no hostility in the man's expression, but there was a measure of caution — as if, here, every sentence had to be thought over before it could be spoken aloud.</p><p>Just as they were about to move on, a sudden rush of hoofbeats came from within the village. A young knight galloped up to the village entrance, swung down from his horse, and came quickly to the steward's side, where he whispered a few words into his ear. The steward's face changed slightly. He was silent for a moment before he looked at the elder brother again, a measure of apology in his expression. "Brother, I am afraid... today's grain cannot be handed out directly, as it was before." The yard fell quiet at once. Several of the young brothers exchanged glances, but no one spoke. The elder brother remained calm. "What has happened?" The steward drew a soft breath and said slowly, "The lord has just given the order: all relief grain must be registered first, and only then handed out in a unified manner. No one may receive it privately." Aether's brow furrowed slightly. This was the first time along the whole road that they had met a way of doing things different from the Order's. He looked instinctively toward the elder brother, wanting to know how he would answer. But to his surprise, the elder brother was only silent for a moment, then nodded gently. "Very well. Then we will do it according to the lord's rules." Aether blinked. He had thought the brother would argue the matter on principle, but the old man before him did not dispute a single sentence. He only began calling everyone together and moving the grain carts slowly toward the yard where the registration would be done. Watching his back, Aether understood for the first time: what was truly complicated was not conflict, but the fact that every person might have a responsibility of his own to bear.</p><p>The grain carts rolled slowly into the village. Unlike the first village, the people here did not gather around at once. Many of the villagers only stood far off at the roadside, watching the familiar company of the Order in silence. There was no coldness in their expressions, but there was an added restraint, as if they were all waiting for something. The yard stood at the center of the village. Before its gate several long tables had already been set out, and the men in charge of the records were opening ledger after ledger, while two guards kept order at the side. The elder brother swung down from the cart and nodded to the steward with a smile. "Let us begin." The steward sighed softly, then raised his voice. "Everyone, please line up, and receive according to each household's registration." The villagers did not scramble or push. They only formed a long line in silence. Aether stood to one side, watching the scene before him, and suddenly he noticed that every portion of grain anyone received was carefully written down by someone: how many mouths in the household, how many old people, how many children, when they had last received, and how much they received this time — all of it recorded clearly.</p><p>Just then, a slight commotion rose from the back of the line. A middle-aged woman walked quickly up to the table, her expression somewhat anxious. "Steward, could you... give me a little more?" She bit her lip lightly. "My younger brother's family fled here a few days ago. They brought nothing with them at all, and the two children have not eaten their fill for two days." The young man in charge of the registration stopped his pen and looked instinctively toward the steward. The yard fell quiet at once, and everyone's gaze came to rest on the middle-aged steward. He was silent for a moment. His voice was very soft, yet held not a trace of blame. "Have they been registered?" The woman shook her head. "They only arrived last night." The steward closed the ledger gently and said slowly, "Then today, first receive according to the numbers of your own household." The light went out of the woman's eyes in an instant, and several of the villagers around her sighed softly as well. Aether's brow furrowed slightly; he was almost ready to speak. But the steward went on, "When the registration is finished this afternoon, if they have truly settled in, I will enter them into the new rolls. Tonight, I will bring the grain to them myself." The woman froze, and for a moment she did not know what to say. The steward only nodded gently. "The rules must not be broken. But neither can people be left to go hungry." With that, he opened the ledger again and went on registering the next household. Aether stood there and did not speak for a long time. All at once he realized that in those few short sentences just now, this man had been holding fast to two things at once: on one side, the rules; on the other, the people. And the hardest part was not choosing one of them, but finding a way to let go of neither.</p><p>The registration went on. Aether said nothing more. He only stood quietly to one side, watching the ledgers turn page after page. Every household, every sack of grain, every date of receiving — all recorded with the greatest care. The middle-aged steward wrote very slowly, and now and then he would stop and ask a villager beside him, "Last month — did your younger son come home?" The villager nodded. "He came back for three days, then went to Riverport again to look for work." The steward made a small mark beside the name, then went on with his recording. The longer Aether watched, the more surprised he grew: these numbers were not cold at all, for behind every name stood a real person he had only just seen.</p><p>Just then, the sound of an argument came from outside the yard. It was not loud, but it made many people stop what they were doing. A young man in his twenties walked quickly into the yard, his clothes covered in mud and a freshly scabbed cut on his forehead, his expression deeply anxious. "Steward, the people from the direction of the pass have come over. They want to enter the village." The yard went silent in an instant. The steward set down his pen slowly. "How many?" "More than a dozen. There are old people and children among them." The young man was breathing lightly and fast. "They say the beast packs in the mountains have moved south again, and their village could not be held anymore." Several of the villagers exchanged glances. Some clenched their fists without thinking, and some lowered their heads and said nothing. Aether noticed that the expressions on their faces were not coldness, but tension. The steward was silent for a while, then looked toward the guard at his side. "Notify the east watchtower. Do not let them in yet." A few low cries of surprise rose in the yard at once. An old woman could not help speaking up. "But they have children with them..." The steward did not raise his voice. He only answered calmly, "I know. That is why I will go myself." He looked toward the young man and went on, "Take two carts of grain, and medicine as well. And call the patrol company. Before tonight, we must find out clearly what the situation is." The young man nodded at once and ran out.</p><p>Aether stood there, and his heart stirred slightly. Almost without thinking, he felt: why not let them into the village first? But in the next moment he saw the steward rub his brow gently and open the ledger again, as if nothing had happened, and go on registering the next household. Only this time, the hand that held the pen was plainly heavier than before. The elder brother had stood to the side all along and had not interjected. Only when the registration had come to a pause did he walk gently to Aether's side. He did not explain what had just happened. He only said in a low voice, "You feel that letting them in first would be easier, do you not?" Aether nodded in silence. The elder brother gazed at the road outside the yard that led toward the pass, and said softly, "Perhaps. But what if what follows behind them is not only people fleeing for refuge?" Aether started slightly. The old brother went on, "Sometimes, to hold one village fast is also to protect another company of people." When he had finished, he offered no further explanation. He only patted Aether's shoulder lightly. "Do not be in a hurry. Wait, and see."</p><div class="chapter-end-cta" style="max-width:680px;margin:40px auto 0;padding:28px 30px;border:1px solid rgba(212,184,120,.25);text-align:center;">
+<p style="font-family:Inter,sans-serif;font-size:15px;line-height:1.8;color:#bfb5a2;margin-bottom:14px;">Enjoying Echoes of the Kingdom? New chapters every Monday, Wednesday, Friday and Sunday.</p>
+<a href="https://www.royalroad.com/fiction/186472/echoes-of-the-kingdom" style="color:#d8c49a;font-family:Inter,sans-serif;font-size:13px;letter-spacing:2px;text-transform:uppercase;">Follow on Royal Road</a>
+<span style="color:#6b6252;margin:0 10px;">·</span>
+<a href="#" style="color:#d8c49a;font-family:Inter,sans-serif;font-size:13px;letter-spacing:2px;text-transform:uppercase;">Get Letters from Elarion</a>
+</div>
+<div class="chapter-navigation"><a href="../chapter-09/index.html">← Previous</a><a href="../index.html">Part III Contents</a></div></main>
+<footer class="site-footer">
+<div class="footer-brand">Cornerstone</div>
+<div class="footer-tagline">Building stories that endure.</div>
+<div class="footer-studio">Created by Echoes Studio</div>
+<div class="footer-copyright">© 2026 Michael He. All Rights Reserved.</div>
+</footer>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const article = document.querySelector(".article");
+
+    if (!article) {
+        return;
+    }
+
+    const paragraphs = article.querySelectorAll("p");
+
+    paragraphs.forEach(function (paragraph) {
+        const text = paragraph.textContent.trim();
+
+        if (!text) {
+            return;
+        }
+
+        // 自动识别场景分隔符
+        if (text === "***" || text === "* * *") {
+            const divider = document.createElement("div");
+            divider.className = "divider";
+            divider.textContent = "❦";
+            paragraph.replaceWith(divider);
+            return;
+        }
+
+        // 自动识别以引号或长破折号开头的对白
+        const isDialogue =
+            text.startsWith('"') ||
+            text.startsWith("“") ||
+            text.startsWith("‘") ||
+            text.startsWith("'") ||
+            text.startsWith("—");
+
+        if (isDialogue) {
+            paragraph.classList.add("dialogue");
+        }
+    });
+});
+</script>
+<!-- GoatCounter: privacy-friendly page analytics -->
+<script async="" data-goatcounter="https://echoeskingdom.goatcounter.com/count" src="//gc.zgo.at/count.js"></script>
+
+<script>
+(function(){
+  var bar=document.getElementById('eotk-progress');
+  function upd(){var h=document.documentElement;var max=h.scrollHeight-h.clientHeight;bar.style.width=(max>0?(h.scrollTop/max)*100:0)+'%';}
+  document.addEventListener('scroll',upd,{passive:true});upd();
+  var saved='md';try{saved=localStorage.getItem('eotk-font')||'md';}catch(e){}
+  function apply(f){document.body.classList.remove('font-lg','font-sm');if(f!=='md')document.body.classList.add('font-'+f);
+    document.querySelectorAll('.reader-tools button').forEach(function(b){b.classList.toggle('on',b.getAttribute('data-f')===f);});}
+  apply(saved);
+  document.querySelectorAll('.reader-tools button').forEach(function(b){b.addEventListener('click',function(){
+    var f=b.getAttribute('data-f');apply(f);try{localStorage.setItem('eotk-font',f);}catch(e){}});});
+  var h1=document.querySelector('.hero h1');
+  if(h1){try{localStorage.setItem('eotk-last-read',JSON.stringify({url:location.pathname,title:h1.textContent.trim()}));}catch(e){}}
+})();
+</script>
+</body>
+</html>
